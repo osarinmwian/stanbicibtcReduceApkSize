@@ -1,0 +1,21 @@
+{
+  "source": {
+    "include": ["src"],
+    "includePattern": "\\.(jsx|js|ts|tsx)$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": ["plugins/markdown", "node_modules/better-docs/typescript"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs/",
+    "readme": "./README.md",
+    "template": "node_modules/better-docs"
+  },
+  "tags": {
+    "allowUnknownTags": ["optional"]
+  }
+}
