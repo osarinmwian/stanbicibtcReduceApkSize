@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "SIBTC",
+    "slug": "SIBTC",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "SIBTC"
+}
