@@ -100,7 +100,10 @@ module.exports = {
     "unicorn/filename-case": [
       "error",
       {
-        case: "pascalCase",
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+        },
       },
     ],
     "unicorn/no-null": "off",
