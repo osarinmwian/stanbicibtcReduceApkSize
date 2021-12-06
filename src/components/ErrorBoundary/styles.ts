@@ -1,5 +1,13 @@
 import { StyleSheet } from "react-native";
 
+const boundaryStyles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    flex: 1,
+    justifyContent: "center",
+  },
+});
+
 const fallbackStyles = StyleSheet.create({
   container: {
     alignItems: "center",
@@ -16,4 +24,4 @@ const fallbackStyles = StyleSheet.create({
   },
 });
 
-export { fallbackStyles };
+export { boundaryStyles, fallbackStyles };

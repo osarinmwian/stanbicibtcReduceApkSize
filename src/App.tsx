@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
   },
 });
 
+/**
+ * Root component of the application.
+ */
 function App() {
   return (
     <ErrorBoundary>
