@@ -108,22 +108,31 @@
 <p>Then install the dependencies using yarn:</p>
 <pre class="prettyprint source lang-shell"><code>yarn install
 </code></pre>
-<p><a href="https://classic.yarnpkg.com/en/" title="yarn">Yarn</a> is the preffered package manager, the project uses expo bare configurations of which it's tooling is built around <code>yarn</code>, and also for consistency.</p>
+<p><a href="https://classic.yarnpkg.com/en/" title="yarn">Yarn</a> is the preffered package manager, the project uses expo bare configurations of which it's default tooling is built around <code>yarn</code>. Also for consistency and to avoid <a href="https://en.wikipedia.org/wiki/Dependency_hell" title="hell">dependency hell</a>.</p>
 <blockquote>
 <p>Important: Some of the packages depend on node engines <code>12.22.0</code> or <code>14.17.0</code> or <code>&gt;=16.0.0</code></p>
 </blockquote>
 <p>If your current node engine version is not the same as one of the above, kindly update or a temporal fix would be to run:</p>
 <pre class="prettyprint source lang-shell"><code>yarn config set ignore-engines true
 </code></pre>
-<h2>Contributing</h2>
-<p>Please do note that the project has specific rules on how you structre your files, each <code>component/assets/utils etc...</code> should be modularized (contained within their own folders), also the accepted file naming convention is either <code>PascalCase</code> for <code>coponents/screens</code> etc.. and <code>camelCase</code> otherwise.</p>
-<p>Checkout the <a href="./.eslintrc.js">eslint</a> for more insights on the rules/conventions.</p>
+<h1>Contributing</h1>
+<p>Please do note that the project has specific rules on how you structre your files, each <code>components/assets/utils etc...</code> should be modularized (contained within their own folders), also the accepted file naming convention is either <code>PascalCase</code> for <code>components/screens</code> etc.. and <code>camelCase</code> otherwise.</p>
+<p>Checkout the <a href="./.eslintrc.js" title="eslint">eslint</a> for more insights on the rules/conventions.</p>
 <h2>Building Animations</h2>
 <p>To achieve a smooth user experience at <code>60fps</code> with low end devices as well as high end ones, the preffered libraries for constructing animations are:</p>
 <ul>
 <li><a href="https://moti.fyi/" title="moti">React Native Moti</a>: For high level animations.</li>
-<li><a href="https://docs.swmansion.com/react-native-reanimated/docs/" title="Reanimated">React Native Reanimated</a>: For more detailed animations.</li>
-</ul></article>
+<li><a href="https://docs.swmansion.com/react-native-reanimated/docs/" title="reanimated">React Native Reanimated</a>: For more detailed animations.</li>
+</ul>
+<h2>Simplify Relative Imports</h2>
+<p>Simplify your import from local modules by creating an alias and specifying the paths in <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a>.</p>
+<p>So imports from say <code>components</code> would be transformed from:</p>
+<pre class="prettyprint source lang-tsx"><code>import { foo } from &quot;../../../../../components/bar&quot;;
+</code></pre>
+<p>To:</p>
+<pre class="prettyprint source lang-tsx"><code>import { foo } from &quot;@/components/bar&quot;;
+</code></pre>
+<p>That way if the folder structure changes, you only need to update the paths in both <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a> for the second example. But for the first example you'd have to go into every file where <code>bar</code> is imported to update it.</p></article>
     </section>
 
 

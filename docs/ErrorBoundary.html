@@ -87,10 +87,11 @@
     
         <h2><span class="attribs"><span class="type-signature"></span></span>ErrorBoundary<span class="signature">()</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>ErrorBoundary component to catch errors in its children and display a fallback UI.
+            <div class="class-description"><p>ErrorBoundary component to catch errors in its children and display a Fallback Screen.
 We can get the information about which part in our component tree threw the error by using
 the <code>getDerivedStateFromError</code> method and <code>componentDidCatch</code> lifecycle method.
-This information can be forwarded to a logging service</p></div>
+This information can be forwarded to a logging service</p>
+<p>We use the component to wrap our entire application.</p></div>
         
     
 </header>
@@ -170,7 +171,7 @@ This information can be forwarded to a logging service</p></div>
         <p class="tag-source">
             <a href="components_ErrorBoundary_ErrorBoundary.tsx.html" class="button">View Source</a>
             <span>
-                <a href="components_ErrorBoundary_ErrorBoundary.tsx.html">components/ErrorBoundary/ErrorBoundary.tsx</a>, <a href="components_ErrorBoundary_ErrorBoundary.tsx.html#line12">line 12</a>
+                <a href="components_ErrorBoundary_ErrorBoundary.tsx.html">components/ErrorBoundary/ErrorBoundary.tsx</a>, <a href="components_ErrorBoundary_ErrorBoundary.tsx.html#line22">line 22</a>
             </span>
         </p>
     
@@ -194,6 +195,13 @@ This information can be forwarded to a logging service</p></div>
 
 
 
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>```tsxconst App = () => (   &lt;ErrorBoundary>     &lt;MyApp />   &lt;/ErrorBoundary>);```</code></pre>
+    
 
 
 

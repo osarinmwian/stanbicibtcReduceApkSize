@@ -12,7 +12,8 @@ const handleRestart = () => {
 };
 
 /**
- * Fallback Screen for ErrorBoundary
+ * Fallback Screen for ErrorBoundary, this screen is displayed when the app crashes
+ * due to an error in our component tree.
  */
 function FallBack() {
   return (

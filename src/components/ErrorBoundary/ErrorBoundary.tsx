@@ -15,10 +15,20 @@ interface Props {
 }
 
 /**
- * ErrorBoundary component to catch errors in its children and display a fallback UI.
+ * ErrorBoundary component to catch errors in its children and display a Fallback Screen.
  * We can get the information about which part in our component tree threw the error by using
  * the `getDerivedStateFromError` method and `componentDidCatch` lifecycle method.
  * This information can be forwarded to a logging service
+ *
+ * We use the component to wrap our entire application.
+ * @example
+ * ```tsx
+ * const App = () => (
+ *    <ErrorBoundary>
+ *      <MyApp />
+ *    </ErrorBoundary>
+ * );
+ * ```
  */
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
