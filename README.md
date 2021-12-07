@@ -32,7 +32,7 @@ Checkout the [eslint](./.eslintrc.js "eslint") for more insights on the rules/co
 
 ## Building Animations
 
-To achieve a smooth user experience at `60fps` with low end devices as well as high end ones, the preffered libraries for constructing animations are:
+To achieve smooth user experiences at `60fps` with low end devices as well as high end ones, the preffered libraries for constructing animations are:
 
 - [React Native Moti](https://moti.fyi/ "moti"): For high level animations.
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/ "reanimated"): For more detailed animations.
@@ -41,16 +41,40 @@ To achieve a smooth user experience at `60fps` with low end devices as well as h
 
 Simplify your import from local modules by creating an alias and specifying the paths in [babel config](./babel.config.js "babel") and [tsconfig](./tsconfig.json "tsconfig").
 
-So imports from say `components` would be transformed from:
+So imports from say let's `components` module would be transformed from:
 
 ```tsx
 import { foo } from "../../../../../components/bar";
 ```
 
-To:
+to:
 
 ```tsx
 import { foo } from "@/components/bar";
 ```
 
-That way if the folder structure changes, you only need to update the paths in both [babel config](./babel.config.js "babel") and [tsconfig](./tsconfig.json "tsconfig") for the second example. But for the first example you'd have to go into every file where `bar` is imported to update it.
+That way if the folder structure changes or the components folder is moved elsewhere, you only need to update the paths in both [babel config](./babel.config.js "babel") and [tsconfig](./tsconfig.json "tsconfig") for the second example. But for the first example you'd have to go into every file where `bar` is imported to update it.
+
+## Documentation and Comments
+
+Add [jsdoc comments](https://jsdoc.app/ "jsdoc") to your components, util classes and functions. It is very important.
+
+This comment is used to generate a [documentation](./docs "docs") folder automatically immediately you commit your files.
+
+To get started, any comments you want to use for generating documentation should use this syntax:
+
+```tsx
+/**
+ * This comment goes into the documentation
+ * /
+```
+
+rather than this;
+
+```tsx
+// This comment does not go into the documentation
+```
+
+You do not have to specify the types in the jsdoc comments since the project uses typescript, but a general comment on what your `component/function/class` etc.. does alonsgide an example if need be should suffice.
+
+Checkout the [docs](https://jsdoc.app/ "jsdoc") to get an idea of the different tags you can use to add a better description.

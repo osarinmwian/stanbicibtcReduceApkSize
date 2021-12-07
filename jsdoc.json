@@ -7,7 +7,8 @@
   "plugins": ["plugins/markdown", "node_modules/better-docs/typescript"],
   "templates": {
     "cleverLinks": true,
-    "monospaceLinks": true
+    "monospaceLinks": true,
+    "search": true
   },
   "opts": {
     "recurse": true,
