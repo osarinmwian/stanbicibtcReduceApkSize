@@ -82,7 +82,7 @@ module.exports = {
     ],
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
-    "react/destructuring-assignment": ["error", "never"],
+    "react/destructuring-assignment": "off",
     "react/function-component-definition": "off",
     "react/jsx-sort-props": [
       "error",

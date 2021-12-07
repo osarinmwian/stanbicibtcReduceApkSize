@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> ErrorBoundary</title>
+  <title> components/ErrorBoundary/Fallback.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,159 +75,48 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Class</p>
-                    <h1>ErrorBoundary</h1>
+                    <p>Source</p>
+                    <h1>components/ErrorBoundary/Fallback.tsx</h1>
                 </header>
                 
 
 
 
-
-<section>
-
-<header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>ErrorBoundary<span class="signature">()</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description"><p>ErrorBoundary component to catch errors in its children and display a fallback UI.
-We can get the information about which part in our component tree threw the error by using
-the <code>getDerivedStateFromError</code> method and <code>componentDidCatch</code> lifecycle method.
-This information can be forwarded to a logging service</p></div>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class='vertical-section'>
-                <div class="members">
-                    <div class="member">
-                        <div class=name>
-                            <span class="tag">Constructor</span>
-                        </div>
-                        
-
-
-    
-    <h4 class="name" id="ErrorBoundary">
-        <a class="href-link" href="#ErrorBoundary">#</a>
-        
-        <span class="code-name">
-            
-                new ErrorBoundary<span class="signature">()</span><span class="type-signature"></span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="components_ErrorBoundary_ErrorBoundary.tsx.html" class="button">View Source</a>
-            <span>
-                <a href="components_ErrorBoundary_ErrorBoundary.tsx.html">components/ErrorBoundary/ErrorBoundary.tsx</a>, <a href="components_ErrorBoundary_ErrorBoundary.tsx.html#line12">line 12</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        
-    
-    </div>
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import { Pressable, Text, View } from "react-native";
+import RNRestart from "react-native-restart";
+
+import { fallbackStyles as styles } from "./styles";
+
+/**
+ * Restarts the app on press
+ */
+const handleRestart = () => {
+  RNRestart.Restart();
+};
+
+/**
+ * Fallback Screen for ErrorBoundary
+ */
+function FallBack() {
+  return (
+    &lt;View style={styles.container}>
+      &lt;Text style={styles.titleText}>Oops 😞!&lt;/Text>
+      &lt;Text style={styles.descriptionText}>We Encountered an error,&lt;/Text>
+      &lt;Pressable onPress={handleRestart}>
+        &lt;Text>Restart the app&lt;/Text>
+      &lt;/Pressable>
+    &lt;/View>
+  );
+}
+
+export default FallBack;
+</code></pre>
+        </article>
+    </section>
 
 
 

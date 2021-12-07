@@ -5,7 +5,7 @@
   "scripts": {
     "android": "expo run:android",
     "androidrelease": "react-native run-android --variant=release",
-    "doc": "jsdoc -c jsdoc.json",
+    "doc": "jsdoc -c jsdoc.json && git add .",
     "ios": "expo run:ios",
     "web": "expo start --web",
     "start": "react-native start",

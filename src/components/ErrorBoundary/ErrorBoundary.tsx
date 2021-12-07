@@ -15,9 +15,10 @@ interface Props {
 }
 
 /**
- * ErrorBoundary is a component that catches errors in its children and displays a fallback UI.
- * We can get the information about which part of our code threw the error by using the `getDerivedStateFromError` method.
- * And forwarding this message to a logging service
+ * ErrorBoundary component to catch errors in its children and display a fallback UI.
+ * We can get the information about which part in our component tree threw the error by using
+ * the `getDerivedStateFromError` method and `componentDidCatch` lifecycle method.
+ * This information can be forwarded to a logging service
  */
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {

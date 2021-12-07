@@ -68,7 +68,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li></ul></div>
                 
             </nav>
         </div>
@@ -89,9 +89,10 @@
 import { ScrollView, Text } from "react-native";
 
 import Fallback from "./Fallback";
+import { boundaryStyles as styles } from "./styles";
 
 interface State {
-  errormessage: string;
+  errorMessage: string;
   hasError: boolean;
   info: ErrorInfo;
 }
@@ -101,30 +102,35 @@ interface Props {
 }
 
 /**
- * ErrorBoundary is a component that catches errors in its children and displays a fallback UI.
+ * ErrorBoundary component to catch errors in its children and display a fallback UI.
+ * We can get the information about which part in our component tree threw the error by using
+ * the `getDerivedStateFromError` method and `componentDidCatch` lifecycle method.
+ * This information can be forwarded to a logging service
  */
 class ErrorBoundary extends Component&lt;Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      errormessage: "",
+      errorMessage: "",
       hasError: false,
       info: { componentStack: "" },
     };
   }
 
+  static getderivedStateFromError() {
+    return { haError: true };
+  }
+
   componentDidCatch(error: Error, info: ErrorInfo) {
-    this.setState({ errormessage: error.message, hasError: true, info });
+    this.setState({ errorMessage: error.message, info });
   }
 
   render() {
     if (this.state.hasError) {
       if (__DEV__) {
         return (
-          &lt;ScrollView
-            style={{ alignItems: "center", flex: 1, justifyContent: "center" }}
-          >
-            &lt;Text>{this.state.errormessage}&lt;/Text>
+          &lt;ScrollView style={styles.container}>
+            &lt;Text>{this.state.errorMessage}&lt;/Text>
             &lt;Text>{this.state.info?.componentStack}&lt;/Text>
           &lt;/ScrollView>
         );

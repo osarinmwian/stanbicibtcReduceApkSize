@@ -66,7 +66,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li></ul></div>
                 
             </nav>
         </div>
@@ -100,26 +100,30 @@
 
 
     <section>
-        <article><h1>Stanbic IBTC Mobile App Revamp</h1>
+        <article><h1>Stanbic IBTC Mobile App</h1>
 <h2>Welcome</h2>
-<p>Welcome to the new repository for Stanbic IBTC Mobile App, to clone the project run:</p>
+<p>Welcome to the repository for Stanbic IBTC Mobile App, to clone the project run:</p>
 <pre class="prettyprint source lang-shell"><code>git clone https://stanbicibtcdev.visualstudio.com/MobileBanking.FrontEnd.Contributors/_git/NewMobileBanking.Frontend.Project
 </code></pre>
 <p>Then install the dependencies using yarn:</p>
 <pre class="prettyprint source lang-shell"><code>yarn install
 </code></pre>
-<blockquote>
-<p>Note: <a href="https://classic.yarnpkg.com/en/" title="yarn">Yarn</a> is the preffered package manager, the project uses expo bare configurations of which it's tooling is built around <code>yarn</code>, and also for consistency.</p>
-</blockquote>
-<h2>Contributing</h2>
-<p>Please do note that the project has specific rules on how you structre your files, each <code>component/assets/utils etc...</code> should be modularized (contained within their own folders), also the accepted file naming convention is either <code>PascalCase</code> for <code>coponents/screens</code> etc.. and <code>camelCase</code> otherwise.</p>
-<p>Checkout the <a href="./.eslintrc.js">eslint</a> for more insights on the rules/conventions.</p>
+<p><a href="https://classic.yarnpkg.com/en/" title="yarn">Yarn</a> is the preffered package manager, the project uses expo bare configurations of which it's tooling is built around <code>yarn</code>, and also for consistency.</p>
 <blockquote>
 <p>Important: Some of the packages depend on node engines <code>12.22.0</code> or <code>14.17.0</code> or <code>&gt;=16.0.0</code></p>
 </blockquote>
-<p>If you current node engine version is not the same as one of the above, kindly update or a temporal fix would be to run:</p>
+<p>If your current node engine version is not the same as one of the above, kindly update or a temporal fix would be to run:</p>
 <pre class="prettyprint source lang-shell"><code>yarn config set ignore-engines true
-</code></pre></article>
+</code></pre>
+<h2>Contributing</h2>
+<p>Please do note that the project has specific rules on how you structre your files, each <code>component/assets/utils etc...</code> should be modularized (contained within their own folders), also the accepted file naming convention is either <code>PascalCase</code> for <code>coponents/screens</code> etc.. and <code>camelCase</code> otherwise.</p>
+<p>Checkout the <a href="./.eslintrc.js">eslint</a> for more insights on the rules/conventions.</p>
+<h2>Building Animations</h2>
+<p>To achieve a smooth user experience at <code>60fps</code> with low end devices as well as high end ones, the preffered libraries for constructing animations are:</p>
+<ul>
+<li><a href="https://moti.fyi/" title="moti">React Native Moti</a>: For high level animations.</li>
+<li><a href="https://docs.swmansion.com/react-native-reanimated/docs/" title="Reanimated">React Native Reanimated</a>: For more detailed animations.</li>
+</ul></article>
     </section>
 
 
