@@ -128,6 +128,10 @@
 <li><a href="https://moti.fyi/" title="moti">React Native Moti</a>: For high level animations.</li>
 <li><a href="https://docs.swmansion.com/react-native-reanimated/docs/" title="reanimated">React Native Reanimated</a>: For more detailed animations.</li>
 </ul>
+<p>If you are more familiar with the API of <a href="https://github.com/oblador/react-native-animatable" title="Animatable">React Native Animatable</a>, checkout <a href="https://docs.swmansion.com/react-native-reanimated/docs/api/LayoutAnimations/entryAnimations" title="Layout">Layout Animations</a> by Reanimated.</p>
+<blockquote>
+<p>Note: <code>React Native Animatable</code> should not be used, it's based on the slower Animated API</p>
+</blockquote>
 <h2>Simplify Relative Imports</h2>
 <p>Simplify your import from local modules by creating an alias and specifying the paths in <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a>.</p>
 <p>So imports from say let's <code>components</code> module would be transformed from:</p>
@@ -137,6 +141,8 @@
 <pre class="prettyprint source lang-tsx"><code>import { foo } from &quot;@/components/bar&quot;;
 </code></pre>
 <p>That way if the folder structure changes or the components folder is moved elsewhere, you only need to update the paths in both <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a> for the second example. But for the first example you'd have to go into every file where <code>bar</code> is imported to update it.</p>
+<h2>Commit Message Convention</h2>
+<p>Your commit message should follow the conventional commits standard, you can check the <a href="https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional" title="conventional commits">github</a> for more info or rules and conventions for your commits.</p>
 <h2>Documentation and Comments</h2>
 <p>Add <a href="https://jsdoc.app/" title="jsdoc">jsdoc comments</a> to your components, util classes and functions. It is very important.</p>
 <p>This comment is used to generate a <a href="./docs" title="docs">documentation</a> folder automatically immediately you commit your files.</p>

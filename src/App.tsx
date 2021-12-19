@@ -1,6 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import Animated, {
+  Layout,
+  LightSpeedInLeft,
+  LightSpeedOutRight,
+} from "react-native-reanimated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -22,7 +27,13 @@ function App() {
     <ErrorBoundary>
       <SafeAreaProvider>
         <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
+          <Animated.Text
+            entering={LightSpeedInLeft.springify()}
+            exiting={LightSpeedOutRight}
+            layout={Layout.springify()}
+          >
+            Open up App.js to start working on your app!
+          </Animated.Text>
           <StatusBar style="auto" />
         </View>
       </SafeAreaProvider>

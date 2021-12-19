@@ -37,6 +37,10 @@ To achieve smooth user experiences at `60fps` with low end devices as well as hi
 - [React Native Moti](https://moti.fyi/ "moti"): For high level animations.
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/ "reanimated"): For more detailed animations.
 
+If you are more familiar with the API of [React Native Animatable](https://github.com/oblador/react-native-animatable "Animatable"), checkout [Layout Animations](https://docs.swmansion.com/react-native-reanimated/docs/api/LayoutAnimations/entryAnimations "Layout") by Reanimated.
+
+> Note: `React Native Animatable` should not be used, it's based on the slower Animated API
+
 ## Simplify Relative Imports
 
 Simplify your import from local modules by creating an alias and specifying the paths in [babel config](./babel.config.js "babel") and [tsconfig](./tsconfig.json "tsconfig").
@@ -54,6 +58,10 @@ import { foo } from "@/components/bar";
 ```
 
 That way if the folder structure changes or the components folder is moved elsewhere, you only need to update the paths in both [babel config](./babel.config.js "babel") and [tsconfig](./tsconfig.json "tsconfig") for the second example. But for the first example you'd have to go into every file where `bar` is imported to update it.
+
+## Commit Message Convention
+
+Your commit message should follow the conventional commits standard, you can check the [github](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional "conventional commits") for more info or rules and conventions for your commits.
 
 ## Documentation and Comments
 
