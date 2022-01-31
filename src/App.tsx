@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Animated, {
   Layout,
   LightSpeedInLeft,
@@ -17,6 +18,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
   },
+  gestureFlex: {
+    flex: 1,
+  },
 });
 
 /**
@@ -25,18 +29,20 @@ const styles = StyleSheet.create({
 function App() {
   return (
     <ErrorBoundary>
-      <SafeAreaProvider>
-        <View style={styles.container}>
-          <Animated.Text
-            entering={LightSpeedInLeft.springify()}
-            exiting={LightSpeedOutRight}
-            layout={Layout.springify()}
-          >
-            Open up App.js to start working on your app!
-          </Animated.Text>
-          <StatusBar style="auto" />
-        </View>
-      </SafeAreaProvider>
+      <GestureHandlerRootView style={styles.gestureFlex}>
+        <SafeAreaProvider>
+          <View style={styles.container}>
+            <Animated.Text
+              entering={LightSpeedInLeft.springify()}
+              exiting={LightSpeedOutRight}
+              layout={Layout.springify()}
+            >
+              Open up App.js to start working on your app!
+            </Animated.Text>
+            <StatusBar style="auto" />
+          </View>
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
     </ErrorBoundary>
   );
 }

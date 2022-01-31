@@ -109,53 +109,11 @@
 <p>Welcome to the repository for Stanbic IBTC Mobile App, to clone the project run:</p>
 <pre class="prettyprint source lang-shell"><code>git clone https://stanbicibtcdev.visualstudio.com/MobileBanking.FrontEnd.Contributors/_git/NewMobileBanking.Frontend.Project
 </code></pre>
-<p>Then install the dependencies using yarn:</p>
-<pre class="prettyprint source lang-shell"><code>yarn install
-</code></pre>
-<p><a href="https://classic.yarnpkg.com/en/" title="yarn">Yarn</a> is the preffered package manager, the project uses expo bare configurations of which it's default tooling is built around <code>yarn</code>. Also for consistency and to avoid <a href="https://en.wikipedia.org/wiki/Dependency_hell" title="hell">dependency hell</a>.</p>
-<blockquote>
-<p>Important: Some of the packages depend on node engines <code>12.22.0</code> or <code>14.17.0</code> or <code>&gt;=16.0.0</code></p>
-</blockquote>
-<p>If your current node engine version is not the same as one of the above, kindly update or a temporal fix would be to run:</p>
-<pre class="prettyprint source lang-shell"><code>yarn config set ignore-engines true
+<p>Then install the dependencies using npm:</p>
+<pre class="prettyprint source lang-shell"><code>npm install
 </code></pre>
 <h1>Contributing</h1>
-<p>Please do note that the project has specific rules on how you structre your files, each <code>components/assets/utils etc...</code> should be modularized (contained within their own folders), also the accepted file naming convention is either <code>PascalCase</code> for <code>components/screens</code> etc.. and <code>camelCase</code> otherwise.</p>
-<p>Checkout the <a href="./.eslintrc.js" title="eslint">eslint</a> for more insights on the rules/conventions.</p>
-<h2>Building Animations</h2>
-<p>To achieve smooth user experiences at <code>60fps</code> with low end devices as well as high end ones, the preffered libraries for constructing animations are:</p>
-<ul>
-<li><a href="https://moti.fyi/" title="moti">React Native Moti</a>: For high level animations.</li>
-<li><a href="https://docs.swmansion.com/react-native-reanimated/docs/" title="reanimated">React Native Reanimated</a>: For more detailed animations.</li>
-</ul>
-<p>If you are more familiar with the API of <a href="https://github.com/oblador/react-native-animatable" title="Animatable">React Native Animatable</a>, checkout <a href="https://docs.swmansion.com/react-native-reanimated/docs/api/LayoutAnimations/entryAnimations" title="Layout">Layout Animations</a> by Reanimated.</p>
-<blockquote>
-<p>Note: <code>React Native Animatable</code> should not be used, it's based on the slower Animated API</p>
-</blockquote>
-<h2>Simplify Relative Imports</h2>
-<p>Simplify your import from local modules by creating an alias and specifying the paths in <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a>.</p>
-<p>So imports from say let's <code>components</code> module would be transformed from:</p>
-<pre class="prettyprint source lang-tsx"><code>import { foo } from &quot;../../../../../components/bar&quot;;
-</code></pre>
-<p>to:</p>
-<pre class="prettyprint source lang-tsx"><code>import { foo } from &quot;@/components/bar&quot;;
-</code></pre>
-<p>That way if the folder structure changes or the components folder is moved elsewhere, you only need to update the paths in both <a href="./babel.config.js" title="babel">babel config</a> and <a href="./tsconfig.json" title="tsconfig">tsconfig</a> for the second example. But for the first example you'd have to go into every file where <code>bar</code> is imported to update it.</p>
-<h2>Commit Message Convention</h2>
-<p>Your commit message should follow the conventional commits standard, you can check the <a href="https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional" title="conventional commits">github</a> for more info or rules and conventions for your commits.</p>
-<h2>Documentation and Comments</h2>
-<p>Add <a href="https://jsdoc.app/" title="jsdoc">jsdoc comments</a> to your components, util classes and functions. It is very important.</p>
-<p>This comment is used to generate a <a href="./docs" title="docs">documentation</a> folder automatically immediately you commit your files.</p>
-<p>To get started, any comments you want to use for generating documentation should use this syntax:</p>
-<pre class="prettyprint source lang-tsx"><code>/**
- * This comment goes into the documentation
- * /
-</code></pre>
-<p>rather than this;</p>
-<pre class="prettyprint source lang-tsx"><code>// This comment does not go into the documentation
-</code></pre>
-<p>You do not have to specify the types in the jsdoc comments since the project uses typescript, but a general comment on what your <code>component/function/class</code> etc.. does alonsgide an example if need be should suffice.</p>
-<p>Checkout the <a href="https://jsdoc.app/" title="jsdoc">docs</a> to get an idea of the different tags you can use to add a better description.</p></article>
+<p>Please refer to the <a href="./CONTRIBUTING.md" title="standards">Contributor's guide</a> for proper guide on how to contribute/ coding standards.</p></article>
     </section>
 
 
