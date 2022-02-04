@@ -40,19 +40,15 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getderivedStateFromError() {
-    return { haError: true };
-  }
-
   componentDidCatch(error: Error, info: ErrorInfo) {
-    this.setState({ errorMessage: error.message, info });
+    this.setState({ errorMessage: error.message, hasError: true, info });
   }
 
   render() {
     if (this.state.hasError) {
       if (__DEV__) {
         return (
-          <ScrollView style={styles.container}>
+          <ScrollView contentContainerStyle={styles.container}>
             <Text>{this.state.errorMessage}</Text>
             <Text>{this.state.info?.componentStack}</Text>
           </ScrollView>
