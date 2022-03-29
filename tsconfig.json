@@ -14,9 +14,14 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@/assets": ["./src/assets/*"],
-      "@/components": ["./src/components/*"]
+      "@/stanbic/components": ["./src/shared/components/*"],
+      "@/stanbic": ["./src/shared/*"],
+      "@/ease": ["./src/@ease/*"],
+      "@/insurance": ["./src/insurance/*"],
+      "@/mutualfunds": ["./src/mutualfunds/*"],
+      "@/mybank": ["./src/mybank/*"],
+      "@/pension": ["./src/pension/*"],
+      "@/stocks": ["./src/stocks/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

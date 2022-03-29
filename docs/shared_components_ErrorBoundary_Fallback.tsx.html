@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> App.tsx</title>
+  <title> shared/components/ErrorBoundary/Fallback.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>App.tsx</h1>
+                    <h1>shared/components/ErrorBoundary/Fallback.tsx</h1>
                 </header>
                 
 
@@ -89,60 +89,36 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { ThemeProvider } from "@shopify/restyle";
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Animated, {
-  Layout,
-  LightSpeedInLeft,
-  LightSpeedOutRight,
-} from "react-native-reanimated";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import { Pressable, Text, View } from "react-native";
+import RNRestart from "react-native-restart";
 
-import { ErrorBoundary } from "./shared/components/ErrorBoundary";
-import theme from "./shared/theme";
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    backgroundColor: "#fff",
-    flex: 1,
-    justifyContent: "center",
-  },
-  gestureFlex: {
-    flex: 1,
-  },
-});
+import { fallbackStyles as styles } from "./styles";
 
 /**
- * Root component of the application.
+ * Restarts the app on press
  */
-function App() {
+const handleRestart = () => {
+  RNRestart.Restart();
+};
+
+/**
+ * Fallback Screen for ErrorBoundary, this screen is displayed when the app crashes
+ * due to an error in our component tree.
+ */
+function FallBack() {
   return (
-    &lt;ErrorBoundary>
-      &lt;ThemeProvider theme={theme}>
-        &lt;GestureHandlerRootView style={styles.gestureFlex}>
-          &lt;SafeAreaProvider>
-            &lt;View style={styles.container}>
-              &lt;Animated.Text
-                entering={LightSpeedInLeft.springify()}
-                exiting={LightSpeedOutRight}
-                layout={Layout.springify()}
-              >
-                Open up App.js to start working on your app!
-              &lt;/Animated.Text>
-              &lt;StatusBar style="auto" />
-            &lt;/View>
-          &lt;/SafeAreaProvider>
-        &lt;/GestureHandlerRootView>
-      &lt;/ThemeProvider>
-    &lt;/ErrorBoundary>
+    &lt;View style={styles.container}>
+      &lt;Text style={styles.titleText}>Oops 😞!&lt;/Text>
+      &lt;Text style={styles.descriptionText}>We Encountered an error,&lt;/Text>
+      &lt;Pressable onPress={handleRestart}>
+        &lt;Text>Restart the app&lt;/Text>
+      &lt;/Pressable>
+    &lt;/View>
   );
 }
 
-export default App;
+export default FallBack;
 </code></pre>
         </article>
     </section>
