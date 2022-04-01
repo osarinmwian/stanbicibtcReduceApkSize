@@ -1,0 +1,20 @@
+{
+  "@ease": {
+    "welcome": "Welcome to the @ease 2.0"
+  },
+  "insurance": {
+    "welcome": "Welcome to the insurance 2.0"
+  },
+  "mutualfunds": {
+    "welcome": "Welcome to the mutualfunds 2.0"
+  },
+  "mybank": {
+    "welcome": "Welcome to the Mybank 2.0"
+  },
+  "pension": {
+    "welcome": "Welcome to the pension 2.0"
+  },
+  "stocks": {
+    "welcome": "Welcome to the stocks 2.0"
+  }
+}

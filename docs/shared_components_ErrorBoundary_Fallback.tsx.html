@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#Box">Box</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li><li><a href="global.html#Text">Text</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#a">a</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#Box">Box</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li><li><a href="global.html#Text">Text</a></li></ul></div>
                 
             </nav>
         </div>
@@ -90,10 +90,10 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable } from "react-native";
 import RNRestart from "react-native-restart";
 
-import { fallbackStyles as styles } from "./styles";
+import { Box, Text } from "@/shared/components/";
 
 /**
  * Restarts the app on press
@@ -108,13 +108,17 @@ const handleRestart = () => {
  */
 function FallBack() {
   return (
-    &lt;View style={styles.container}>
-      &lt;Text style={styles.titleText}>Oops 😞!&lt;/Text>
-      &lt;Text style={styles.descriptionText}>We Encountered an error,&lt;/Text>
+    &lt;Box alignItems="center" flex={1} justifyContent="center">
+      &lt;Text fontSize={24} marginBottom="Ml">
+        Oops 😞!
+      &lt;/Text>
+      &lt;Text fontSize={16} marginTop="l">
+        We Encountered an error,
+      &lt;/Text>
       &lt;Pressable onPress={handleRestart}>
         &lt;Text>Restart the app&lt;/Text>
       &lt;/Pressable>
-    &lt;/View>
+    &lt;/Box>
   );
 }
 

@@ -1,12 +1,18 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
 
-const theme = createTheme({
+import { palette } from "./palette";
+
+const lightTheme = createTheme({
   breakpoints: {
     bigscreen: 412,
     phone: 0,
     tablet: 768,
   },
-  colors: {},
+  colors: {
+    ...palette,
+    mainBackground: palette.whiteColor,
+    textColor: palette.darkGrey,
+  },
   spacing: {
     Ml: 60, // mega large
     l: 24, // large
@@ -22,8 +28,17 @@ const theme = createTheme({
   textVariants: {},
 });
 
-export type Theme = typeof theme;
+export type Theme = typeof lightTheme;
 
 export const useTheme = () => useRestyleTheme<Theme>();
 
-export default theme;
+export const darkTheme: Theme = {
+  ...lightTheme,
+  colors: {
+    ...lightTheme.colors,
+    mainBackground: palette.secondaryBlack,
+    textColor: palette.whiteColor,
+  },
+};
+
+export default { darkTheme, lightTheme };

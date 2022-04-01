@@ -1,6 +1,6 @@
 import { createText } from "@shopify/restyle";
 
-import { Theme } from "@/stanbic/theme";
+import { Theme } from "@/shared/theme";
 
 /**
  * Custom `Text` component with type checked layout stylings and props including typography.
