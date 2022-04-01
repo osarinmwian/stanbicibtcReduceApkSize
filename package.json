@@ -18,7 +18,8 @@
     "preassemble": "cd android && ./gradlew clean",
     "prebundle": "cd android && ./gradlew clean",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.3.1",
