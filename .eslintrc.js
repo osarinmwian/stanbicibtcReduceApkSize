@@ -128,6 +128,12 @@ module.exports = {
         varsIgnorePattern: "^_",
       },
     ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: ["storybook/**", "stories/**"],
+      },
+    ],
   },
   settings: {
     react: {
