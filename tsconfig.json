@@ -14,9 +14,10 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "paths": {
-      "@/stanbic/components": ["./src/shared/components/*"],
-      "@/stanbic": ["./src/shared/*"],
-      "@/ease": ["./src/@ease/*"],
+      "@/*": ["./src/*"],
+      "@/shared": ["./src/shared/*"],
+      "@/shared/components": ["./src/shared/components/*"],
+      "@/ease": ["./src/ease/*"],
       "@/insurance": ["./src/insurance/*"],
       "@/mutualfunds": ["./src/mutualfunds/*"],
       "@/mybank": ["./src/mybank/*"],

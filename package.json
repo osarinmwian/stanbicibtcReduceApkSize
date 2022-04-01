@@ -18,9 +18,13 @@
     "preassemble": "cd android && ./gradlew clean",
     "prebundle": "cd android && ./gradlew clean",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "cd ios && pod install && cd .."
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.3.1",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.0",
     "@shopify/restyle": "^2.0.0",
     "expo": "^44.0.0",
@@ -29,6 +33,7 @@
     "expo-updates": "^0.11.6",
     "i18next": "^21.6.14",
     "moti": "^0.16.1",
+    "numeral": "^2.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-i18next": "^11.16.2",
@@ -38,6 +43,7 @@
     "react-native-restart": "0.0.24",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-svg": "12.1.1",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
@@ -54,6 +60,7 @@
     "@storybook/react-native-server": "^5.3.23",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/react-native": "^9.0.0",
+    "@types/numeral": "^2.0.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
@@ -80,6 +87,7 @@
     "jsdoc": "^3.6.7",
     "lint-staged": "^12.3.7",
     "prettier": "^2.5.1",
+    "react-native-svg-transformer": "^1.0.0",
     "typescript": "~4.3.5"
   },
   "private": true,

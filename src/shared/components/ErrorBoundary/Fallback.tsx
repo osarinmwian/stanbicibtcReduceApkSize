@@ -1,8 +1,8 @@
 import React from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable } from "react-native";
 import RNRestart from "react-native-restart";
 
-import { fallbackStyles as styles } from "./styles";
+import { Box, Text } from "@/shared/components/";
 
 /**
  * Restarts the app on press
@@ -17,13 +17,17 @@ const handleRestart = () => {
  */
 function FallBack() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titleText}>Oops 😞!</Text>
-      <Text style={styles.descriptionText}>We Encountered an error,</Text>
+    <Box alignItems="center" flex={1} justifyContent="center">
+      <Text fontSize={24} marginBottom="Ml">
+        Oops 😞!
+      </Text>
+      <Text fontSize={16} marginTop="l">
+        We Encountered an error,
+      </Text>
       <Pressable onPress={handleRestart}>
         <Text>Restart the app</Text>
       </Pressable>
-    </View>
+    </Box>
   );
 }
 
