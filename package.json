@@ -16,7 +16,9 @@
     "assemble": "cd android && ./gradlew assembleRelease",
     "bundle": "cd android && ./gradlew bundleRelease",
     "preassemble": "cd android && ./gradlew clean",
-    "prebundle": "cd android && ./gradlew clean"
+    "prebundle": "cd android && ./gradlew clean",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
@@ -42,12 +44,21 @@
     "@babel/core": "^7.12.9",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/addon-storyshots": "^5.3.21",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/react-native": "^9.0.0",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
+    "babel-loader": "^8.2.4",
     "babel-plugin-module-resolver": "^4.1.0",
     "better-docs": "^2.3.2",
     "eslint": "8.2.0",
@@ -64,6 +75,7 @@
     "eslint-plugin-unicorn": "^39.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^7.0.0",
+    "jest": "^25.5.4",
     "jest-expo": "^44.0.0",
     "jsdoc": "^3.6.7",
     "lint-staged": "^12.3.7",
@@ -77,6 +89,15 @@
     ],
     "*.{json,md,yaml,yml,js,jsx}": [
       "prettier --write"
+    ]
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/__mocks__/globalMock.js"
     ]
   }
 }
