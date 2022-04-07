@@ -1,57 +1,51 @@
 import {
-  backgroundColor,
-  BackgroundColorProps,
-  border,
-  BorderProps,
-  composeRestyleFunctions,
+  createRestyleComponent,
   createVariant,
-  spacing,
-  SpacingProps,
-  useRestyle,
   VariantProps,
 } from "@shopify/restyle";
-import { FC } from "react";
+import { ComponentProps, FC } from "react";
 import { TouchableOpacity } from "react-native";
 
 import { Theme } from "@/shared/theme";
 
 import { Box } from "../Layout";
 
-type RestyleProps = SpacingProps<Theme> &
-  BorderProps<Theme> &
-  BackgroundColorProps<Theme> &
-  VariantProps<Theme, "buttonVariants">;
+type BoxComponentProps = ComponentProps<typeof Box>;
 
-const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
-  spacing,
-  border,
-  backgroundColor,
-  createVariant({ themeKey: "buttonVariants" }),
-]);
+type RestyleProps = BoxComponentProps & VariantProps<Theme, "buttonVariants">;
 
 export type BaseButtonProps = RestyleProps & {
-  activeOpacity?: number;
   disabled?: boolean;
   onPress: () => void;
+  touchableOpacityProps?: ComponentProps<typeof TouchableOpacity>;
 };
 
-const BaseButton: FC<BaseButtonProps> = (props) => {
-  const { onPress, activeOpacity = 0.75, disabled, children, ...rest } = props;
+const cardVariant = createVariant<Theme, "buttonVariants">({
+  themeKey: "buttonVariants",
+});
 
-  const containerProps = useRestyle(restyleFunctions, rest);
+const Card = createRestyleComponent<
+  VariantProps<Theme, "buttonVariants"> & BoxComponentProps,
+  Theme
+>([cardVariant], Box);
+
+const BaseButton: FC<BaseButtonProps> = (props) => {
+  const { onPress, disabled, touchableOpacityProps, children, ...rest } = props;
 
   const disabledOpacity = disabled ? 0.5 : 1;
 
   return (
     <TouchableOpacity
-      activeOpacity={activeOpacity}
+      activeOpacity={0.75}
       disabled={disabled}
       onPress={onPress}
+      /* eslint-disable-next-line react/jsx-props-no-spreading */
+      {...touchableOpacityProps}
     >
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Box {...containerProps} opacity={disabledOpacity}>
+      <Card {...rest} opacity={disabledOpacity}>
         {children}
-      </Box>
+      </Card>
     </TouchableOpacity>
   );
 };

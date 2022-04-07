@@ -1,3 +1,4 @@
+import { VariantProps } from "@shopify/restyle";
 import React, { FC } from "react";
 import { ActivityIndicator } from "react-native";
 
@@ -7,11 +8,11 @@ import { Theme, useTheme } from "@/shared/theme";
 import { Box } from "../Layout";
 import { BaseButton, BaseButtonProps } from "./BaseButton";
 
-type PrimaryButtonProps = BaseButtonProps & {
-  label: string;
-  isLoading?: boolean;
-  labelVariant?: keyof Theme["textVariants"];
-};
+type PrimaryButtonProps = BaseButtonProps &
+  VariantProps<Theme, "textVariants", "labelVariant"> & {
+    label: string;
+    isLoading?: boolean;
+  };
 
 const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
   const {
