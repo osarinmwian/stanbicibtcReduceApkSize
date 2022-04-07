@@ -3,9 +3,14 @@ import {
   createVariant,
   VariantProps,
 } from "@shopify/restyle";
-import { ComponentProps, FC } from "react";
-import { TouchableOpacity } from "react-native";
+import { ComponentProps, FC, ReactChild, VFC } from "react";
+import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 
+import {
+  ImageIcon,
+  ImageIconPackType,
+  ImageIconProps,
+} from "@/shared/assets/icons";
 import { Theme } from "@/shared/theme";
 
 import { Box } from "../Layout";
@@ -17,7 +22,11 @@ type RestyleProps = BoxComponentProps & VariantProps<Theme, "buttonVariants">;
 export type BaseButtonProps = RestyleProps & {
   disabled?: boolean;
   onPress: () => void;
-  touchableOpacityProps?: ComponentProps<typeof TouchableOpacity>;
+  touchableOpacityProps?: TouchableOpacityProps;
+  leftComponent?: ReactChild;
+  rightComponent?: ReactChild;
+  icon?: ImageIconPackType;
+  iconProps?: Omit<ImageIconProps, "name">;
 };
 
 const cardVariant = createVariant<Theme, "buttonVariants">({
@@ -29,8 +38,24 @@ const Card = createRestyleComponent<
   Theme
 >([cardVariant], Box);
 
+const Icon: VFC<ImageIconProps> = (props) => (
+  <Box marginRight="sm">
+    <ImageIcon color="whiteColor" size="md" {...props} />
+  </Box>
+);
+
 const BaseButton: FC<BaseButtonProps> = (props) => {
-  const { onPress, disabled, touchableOpacityProps, children, ...rest } = props;
+  const {
+    onPress,
+    disabled,
+    touchableOpacityProps,
+    children,
+    leftComponent,
+    rightComponent,
+    icon,
+    iconProps,
+    ...rest
+  } = props;
 
   const disabledOpacity = disabled ? 0.5 : 1;
 
@@ -39,12 +64,18 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
       activeOpacity={0.75}
       disabled={disabled}
       onPress={onPress}
-      /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...touchableOpacityProps}
     >
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Card {...rest} opacity={disabledOpacity}>
+      <Card
+        {...rest}
+        alignItems="center"
+        flexDirection="row"
+        opacity={disabledOpacity}
+      >
+        {leftComponent ?? null}
+        {icon ? <Icon name={icon} {...iconProps} /> : null}
         {children}
+        {rightComponent ?? null}
       </Card>
     </TouchableOpacity>
   );

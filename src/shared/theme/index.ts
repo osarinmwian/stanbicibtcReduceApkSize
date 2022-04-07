@@ -50,6 +50,25 @@ const lightTheme = createTheme({
     textColor: palette.darkGrey,
   },
 
+  iconSizes: {
+    md: {
+      height: RFValue(24),
+      width: RFValue(24),
+    },
+    sm: {
+      height: RFValue(16),
+      width: RFValue(16),
+    },
+    xl: {
+      height: RFValue(48),
+      width: RFValue(48),
+    },
+    xs: {
+      height: RFValue(8),
+      width: RFValue(8),
+    },
+  },
+
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
@@ -73,6 +92,10 @@ const lightTheme = createTheme({
       ...buttonLabelDefaults,
       color: "primaryColor",
     },
+  },
+  zIndices: {
+    modal: 100,
+    overlay: 10,
   },
 });
 

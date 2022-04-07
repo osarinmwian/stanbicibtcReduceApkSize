@@ -25,7 +25,6 @@ const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
   const theme = useTheme();
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <BaseButton {...rest}>
       <Box flexDirection="row">
         <Text variant={labelVariant}>{label}</Text>

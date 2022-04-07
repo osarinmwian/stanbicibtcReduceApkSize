@@ -28,8 +28,47 @@ storiesOf("Button", module)
       <Text variant="buttonLabelFilled">Base Button Disabled</Text>
     </BaseButton>
   ))
+  .add("Base Button Filled with Icon", () => (
+    <BaseButton icon="compass" onPress={() => {}} variant="filled">
+      <Text variant="buttonLabelFilled">Base Button Icon</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Outlined with Icon", () => (
+    <BaseButton
+      icon="compass"
+      iconProps={{
+        color: "primaryColor",
+      }}
+      onPress={() => {}}
+      variant="outlined"
+    >
+      <Text variant="buttonLabelOutlined">Base Button Icon</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Ghost with Icon", () => (
+    <BaseButton
+      icon="compass"
+      iconProps={{
+        color: "primaryColor",
+      }}
+      onPress={() => {}}
+      variant="ghost"
+    >
+      <Text variant="buttonLabelGhost">Base Button Icon</Text>
+    </BaseButton>
+  ))
   .add("Primary Button Loading", () => (
     <PrimaryButton
+      isLoading
+      label="Primary Button"
+      labelVariant="buttonLabelFilled"
+      onPress={() => {}}
+      variant="filled"
+    />
+  ))
+  .add("Primary Button Loading With Icon", () => (
+    <PrimaryButton
+      icon="compass"
       isLoading
       label="Primary Button"
       labelVariant="buttonLabelFilled"
