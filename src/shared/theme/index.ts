@@ -1,18 +1,47 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
+import { StyleProp, TextStyle } from "react-native";
 
 import { palette } from "./palette";
 
+const buttonLabelDefaults: StyleProp<TextStyle> = {
+  fontSize: 14,
+  fontWeight: "500",
+  textTransform: "capitalize",
+};
+
 const lightTheme = createTheme({
-  borderRadii: {},
+  borderRadii: {
+    lg: 32,
+    md: 16,
+    sm: 8,
+    xl: 64,
+    xs: 4,
+  },
+
   breakpoints: {
-    bigscreen: 412,
+    largeScreen: 412,
     phone: 0,
     tablet: 768,
   },
+
   buttonVariants: {
-    defaults: {},
-    filled: {},
+    defaults: {
+      borderRadius: "sm",
+      paddingHorizontal: "lg",
+      paddingVertical: "md",
+    },
+    filled: {
+      backgroundColor: "primaryColor",
+    },
+    ghost: {
+      backgroundColor: "primaryColor10",
+    },
+    outlined: {
+      borderColor: "primaryColor",
+      borderWidth: 1,
+    },
   },
+
   colors: {
     ...palette,
     mainBackground: palette.whiteColor,
@@ -20,23 +49,27 @@ const lightTheme = createTheme({
   },
 
   spacing: {
-    Ml: 60, // mega large
-    l: 24, // large
-    m: 16, // medium
-    s: 8, // small
-    sl: 20, // semi large
-    sm: 12, // semi medium
-    xl: 32, // extra large
-    xs: 4, // extra small
-    xxl: 40, // extra extra large
-    xxs: 2, // extra extra small
+    lg: 32,
+    md: 16,
+    sm: 8,
+    xl: 64,
+    xs: 4,
+    xxl: 128,
+    xxs: 2,
   },
 
   textVariants: {
-    buttonLabel: {
-      fontSize: 14,
-      fontWeight: "bold",
-      textTransform: "uppercase",
+    buttonLabelFilled: {
+      ...buttonLabelDefaults,
+      color: "whiteColor",
+    },
+    buttonLabelGhost: {
+      ...buttonLabelDefaults,
+      color: "primaryColor",
+    },
+    buttonLabelOutlined: {
+      ...buttonLabelDefaults,
+      color: "primaryColor",
     },
   },
 });

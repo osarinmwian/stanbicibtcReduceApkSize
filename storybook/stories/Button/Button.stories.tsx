@@ -1,12 +1,39 @@
 import { storiesOf } from "@storybook/react-native";
 import React from "react";
 
-import { BaseButton } from "@/shared/components/Buttons";
+import { BaseButton, PrimaryButton } from "@/shared/components/Buttons";
+import { Text } from "@/shared/components/Typography";
 
 import CenterView from "../CenterView";
 
 storiesOf("Button", module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add("Base Button", () => (
-    <BaseButton label="Some Button" onPress={() => {}} />
+  .add("Base Button Filled", () => (
+    <BaseButton onPress={() => {}} variant="filled">
+      <Text variant="buttonLabelFilled">Base Button Filled</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Outlined", () => (
+    <BaseButton onPress={() => {}} variant="outlined">
+      <Text variant="buttonLabelOutlined">Base Button Outlined</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Ghost", () => (
+    <BaseButton onPress={() => {}} variant="ghost">
+      <Text variant="buttonLabelGhost">Base Button Ghost</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Disabled", () => (
+    <BaseButton disabled onPress={() => {}} variant="filled">
+      <Text variant="buttonLabelFilled">Base Button Disabled</Text>
+    </BaseButton>
+  ))
+  .add("Primary Button Loading", () => (
+    <PrimaryButton
+      isLoading
+      label="Primary Button"
+      labelVariant="buttonLabelFilled"
+      onPress={() => {}}
+      variant="filled"
+    />
   ));

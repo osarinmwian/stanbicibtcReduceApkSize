@@ -24,8 +24,8 @@ export const palette = {
   secondaryBlack: "#141414",
   secondaryColor: "#0089FF",
   tertiaryAndBlack: "#292929",
+  tertiaryBlack: "#1F1F1F",
   tertiaryColor: "#0089FF",
-  tetiaryBlack: "#1F1F1F",
   wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };

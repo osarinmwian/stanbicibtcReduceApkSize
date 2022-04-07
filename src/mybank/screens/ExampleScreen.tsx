@@ -7,7 +7,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
-import { BaseButton } from "@/shared/components/Buttons";
+import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 
 const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
@@ -27,9 +27,10 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
       >
         {t("mybank.welcome")}
       </Animated.Text>
-      <BaseButton
+      <PrimaryButton
         label="Go to Storybook"
         onPress={() => props.navigation.replace("StoryBook")}
+        variant="filled"
       />
     </Box>
   );

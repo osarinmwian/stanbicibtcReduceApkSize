@@ -9,7 +9,10 @@ const Stack = createStackNavigator<RootStackParameterList>();
 
 function RootNavigation() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator
+      initialRouteName="StoryBook"
+      screenOptions={{ headerShown: false }}
+    >
       <Stack.Screen component={MyBankNavigation} name="MyBank" />
       <Stack.Screen component={StoryBookNavigation} name="StoryBook" />
     </Stack.Navigator>
