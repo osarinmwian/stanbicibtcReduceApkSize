@@ -1,21 +1,23 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
 import { StyleProp, TextStyle } from "react-native";
 
+import { RFValue } from "@/shared/utils/functions";
+
 import { palette } from "./palette";
 
 const buttonLabelDefaults: StyleProp<TextStyle> = {
-  fontSize: 14,
+  fontSize: RFValue(14),
   fontWeight: "500",
   textTransform: "capitalize",
 };
 
 const lightTheme = createTheme({
   borderRadii: {
-    lg: 32,
-    md: 16,
-    sm: 8,
-    xl: 64,
-    xs: 4,
+    lg: RFValue(32),
+    md: RFValue(16),
+    sm: RFValue(8),
+    xl: RFValue(64),
+    xs: RFValue(4),
   },
 
   breakpoints: {
@@ -38,7 +40,7 @@ const lightTheme = createTheme({
     },
     outlined: {
       borderColor: "primaryColor",
-      borderWidth: 1,
+      borderWidth: RFValue(1),
     },
   },
 
@@ -49,13 +51,13 @@ const lightTheme = createTheme({
   },
 
   spacing: {
-    lg: 32,
-    md: 16,
-    sm: 8,
-    xl: 64,
-    xs: 4,
-    xxl: 128,
-    xxs: 2,
+    lg: RFValue(32),
+    md: RFValue(16),
+    sm: RFValue(8),
+    xl: RFValue(64),
+    xs: RFValue(4),
+    xxl: RFValue(128),
+    xxs: RFValue(2),
   },
 
   textVariants: {

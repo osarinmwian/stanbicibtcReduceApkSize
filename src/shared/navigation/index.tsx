@@ -1,12 +1,12 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { withTranslation } from "react-i18next";
 
-import Root from "./Root";
+import RootNavigation from "./RootNavigation";
 
 function Navigation() {
   return (
     <NavigationContainer>
-      <Root />
+      <RootNavigation />
     </NavigationContainer>
   );
 }
