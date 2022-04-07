@@ -1,7 +1,11 @@
 import { storiesOf } from "@storybook/react-native";
 import React from "react";
 
-import { BaseButton, PrimaryButton } from "@/shared/components/Buttons";
+import {
+  BaseButton,
+  GradientButton,
+  PrimaryButton,
+} from "@/shared/components/Buttons";
 import { Text } from "@/shared/components/Typography";
 
 import CenterView from "../CenterView";
@@ -75,4 +79,9 @@ storiesOf("Button", module)
       onPress={() => {}}
       variant="filled"
     />
+  ))
+  .add("Gradient Button", () => (
+    <GradientButton borderRadius="lg" onPress={() => {}} variant="filled">
+      <Text variant="buttonLabelFilled">Gradient Button</Text>
+    </GradientButton>
   ));

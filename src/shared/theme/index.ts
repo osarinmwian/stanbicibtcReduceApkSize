@@ -26,6 +26,10 @@ const lightTheme = createTheme({
     tablet: 768,
   },
 
+  buttonGradients: {
+    primary: [palette.secondaryColor, palette.secondary6, palette.primaryColor],
+  },
+
   buttonVariants: {
     defaults: {
       borderRadius: "sm",
@@ -78,7 +82,6 @@ const lightTheme = createTheme({
     xxl: RFValue(128),
     xxs: RFValue(2),
   },
-
   textVariants: {
     buttonLabelFilled: {
       ...buttonLabelDefaults,
@@ -93,6 +96,7 @@ const lightTheme = createTheme({
       color: "primaryColor",
     },
   },
+
   zIndices: {
     modal: 100,
     overlay: 10,

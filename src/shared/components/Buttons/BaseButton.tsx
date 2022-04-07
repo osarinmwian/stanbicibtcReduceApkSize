@@ -33,10 +33,7 @@ const cardVariant = createVariant<Theme, "buttonVariants">({
   themeKey: "buttonVariants",
 });
 
-const Card = createRestyleComponent<
-  VariantProps<Theme, "buttonVariants"> & BoxComponentProps,
-  Theme
->([cardVariant], Box);
+const Card = createRestyleComponent<RestyleProps, Theme>([cardVariant], Box);
 
 const Icon: VFC<ImageIconProps> = (props) => (
   <Box marginRight="sm">
@@ -54,6 +51,7 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
     rightComponent,
     icon,
     iconProps,
+    variant,
     ...rest
   } = props;
 
@@ -67,10 +65,11 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
       {...touchableOpacityProps}
     >
       <Card
-        {...rest}
         alignItems="center"
         flexDirection="row"
         opacity={disabledOpacity}
+        variant={variant}
+        {...rest}
       >
         {leftComponent ?? null}
         {icon ? <Icon name={icon} {...iconProps} /> : null}
