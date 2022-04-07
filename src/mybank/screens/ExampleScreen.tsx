@@ -1,3 +1,4 @@
+import { VFC } from "react";
 import { useTranslation } from "react-i18next";
 import Animated, {
   Layout,
@@ -5,9 +6,11 @@ import Animated, {
   LightSpeedOutRight,
 } from "react-native-reanimated";
 
-import { Box } from "@/shared/components/";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
+import { BaseButton } from "@/shared/components/Buttons";
+import { Box } from "@/shared/components/Layout";
 
-function ExampleScreen() {
+const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
   const { t } = useTranslation();
 
   return (
@@ -24,8 +27,12 @@ function ExampleScreen() {
       >
         {t("mybank.welcome")}
       </Animated.Text>
+      <BaseButton
+        label="Go to Storybook"
+        onPress={() => props.navigation.replace("StoryBook")}
+      />
     </Box>
   );
-}
+};
 
 export default ExampleScreen;

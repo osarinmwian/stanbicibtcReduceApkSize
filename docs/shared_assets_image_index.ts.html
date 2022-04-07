@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> App.tsx</title>
+  <title> shared/assets/image/index.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>App.tsx</h1>
+                    <h1>shared/assets/image/index.ts</h1>
                 </header>
                 
 
@@ -89,40 +89,14 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { ThemeProvider } from "@shopify/restyle";
-import React from "react";
-import { StyleSheet } from "react-native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-
-import { ErrorBoundary } from "@/shared/components/ErrorBoundary";
-import Navigation from "@/shared/navigation";
-import theme from "@/shared/theme";
-
-const styles = StyleSheet.create({
-  gestureFlex: {
-    flex: 1,
-  },
-});
-
-/**
- * Root component of the application.
+            <pre class="prettyprint source linenums"><code>/**
+ * export all lottie files like so
+ * @example
+ * ```ts
+ * export { default as spinner } from "./spinner.json";
+ * ```
  */
-function App() {
-  return (
-    &lt;ErrorBoundary>
-      &lt;ThemeProvider theme={theme.lightTheme}>
-        &lt;GestureHandlerRootView style={styles.gestureFlex}>
-          &lt;SafeAreaProvider>
-            &lt;Navigation />
-          &lt;/SafeAreaProvider>
-        &lt;/GestureHandlerRootView>
-      &lt;/ThemeProvider>
-    &lt;/ErrorBoundary>
-  );
-}
-
-export default App;
+export const a = "remove me";
 </code></pre>
         </article>
     </section>

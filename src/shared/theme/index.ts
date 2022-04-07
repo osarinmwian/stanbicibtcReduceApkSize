@@ -3,16 +3,22 @@ import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
 import { palette } from "./palette";
 
 const lightTheme = createTheme({
+  borderRadii: {},
   breakpoints: {
     bigscreen: 412,
     phone: 0,
     tablet: 768,
+  },
+  buttonVariants: {
+    defaults: {},
+    filled: {},
   },
   colors: {
     ...palette,
     mainBackground: palette.whiteColor,
     textColor: palette.darkGrey,
   },
+
   spacing: {
     Ml: 60, // mega large
     l: 24, // large
@@ -25,7 +31,14 @@ const lightTheme = createTheme({
     xxl: 40, // extra extra large
     xxs: 2, // extra extra small
   },
-  textVariants: {},
+
+  textVariants: {
+    buttonLabel: {
+      fontSize: 14,
+      fontWeight: "bold",
+      textTransform: "uppercase",
+    },
+  },
 });
 
 export type Theme = typeof lightTheme;

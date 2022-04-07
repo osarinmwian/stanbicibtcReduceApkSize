@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> App.tsx</title>
+  <title> shared/components/Typography/Text.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>App.tsx</h1>
+                    <h1>shared/components/Typography/Text.tsx</h1>
                 </header>
                 
 
@@ -89,40 +89,23 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { ThemeProvider } from "@shopify/restyle";
-import React from "react";
-import { StyleSheet } from "react-native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+            <pre class="prettyprint source linenums"><code>import { createText } from "@shopify/restyle";
 
-import { ErrorBoundary } from "@/shared/components/ErrorBoundary";
-import Navigation from "@/shared/navigation";
-import theme from "@/shared/theme";
-
-const styles = StyleSheet.create({
-  gestureFlex: {
-    flex: 1,
-  },
-});
+import { Theme } from "@/shared/theme";
 
 /**
- * Root component of the application.
+ * Custom `Text` component with type checked layout stylings and props including typography.
+ * All styles can be passed as props rather than using the StyleSheet API, and we can select a variant with predefined styles.
+ *
+ * Includes all the props that are available in the native `Text` component.
+ * Fully themeable.
+ * @see https://github.com/Shopify/restyle#text
  */
-function App() {
-  return (
-    &lt;ErrorBoundary>
-      &lt;ThemeProvider theme={theme.lightTheme}>
-        &lt;GestureHandlerRootView style={styles.gestureFlex}>
-          &lt;SafeAreaProvider>
-            &lt;Navigation />
-          &lt;/SafeAreaProvider>
-        &lt;/GestureHandlerRootView>
-      &lt;/ThemeProvider>
-    &lt;/ErrorBoundary>
-  );
-}
+const Text = createText&lt;Theme>();
 
-export default App;
+export type TextProps = React.ComponentProps&lt;typeof Text>;
+
+export { Text };
 </code></pre>
         </article>
     </section>
