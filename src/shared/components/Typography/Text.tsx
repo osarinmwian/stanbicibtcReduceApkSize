@@ -1,6 +1,7 @@
 import { createText } from "@shopify/restyle";
+import { ComponentProps, FC } from "react";
 
-import { Theme } from "@/shared/theme";
+import { Theme, useTheme } from "@/shared/theme";
 
 /**
  * Custom `Text` component with type checked layout stylings and props including typography.
@@ -10,8 +11,27 @@ import { Theme } from "@/shared/theme";
  * Fully themeable.
  * @see https://github.com/Shopify/restyle#text
  */
-const Text = createText<Theme>();
+const RestyleText = createText<Theme>();
 
-export type TextProps = React.ComponentProps<typeof Text>;
+export type RestyleTextProps = ComponentProps<typeof RestyleText>;
 
+export type TextProps = RestyleTextProps & {
+  fontVariant?: keyof Theme["fontSizes"];
+};
+
+const Text: FC<TextProps> = (props) => {
+  const { children, fontVariant = "p", variant, ...rest } = props;
+
+  const theme = useTheme();
+
+  const fontSize = theme.fontSizes[fontVariant];
+
+  return (
+    // Restyle variant overrides the fontSize prop
+    // eslint-disable-next-line react/jsx-sort-props
+    <RestyleText variant={variant} fontSize={fontSize} {...rest}>
+      {children}
+    </RestyleText>
+  );
+};
 export { Text };

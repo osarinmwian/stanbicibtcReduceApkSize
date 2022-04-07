@@ -36,6 +36,7 @@ const Card = createRestyleComponent<RestyleProps, Theme>(
 export type GradientButtonProps = Omit<RestyleProps, "colors"> & {
   disabled?: boolean;
   onPress: () => void;
+  size?: keyof Theme["buttonSizes"];
   gradient?: keyof Theme["buttonGradients"];
   touchableOpacityProps?: TouchableOpacityProps;
 };
@@ -47,11 +48,14 @@ const GradientButton: FC<GradientButtonProps> = (props) => {
     touchableOpacityProps,
     gradient = "primary",
     variant,
+    size = "md",
     children,
     ...rest
   } = props;
 
   const theme = useTheme();
+
+  const buttonSizeValues: unknown = theme.buttonSizes[size];
 
   const gradientColors = theme.buttonGradients[gradient];
 
@@ -70,6 +74,7 @@ const GradientButton: FC<GradientButtonProps> = (props) => {
         opacity={disabledOpacity}
         start={[0, 0.5]}
         variant={variant}
+        {...buttonSizeValues}
         {...rest}
       >
         {children}

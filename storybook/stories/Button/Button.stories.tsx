@@ -14,27 +14,27 @@ storiesOf("Button", module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add("Base Button Filled", () => (
     <BaseButton onPress={() => {}} variant="filled">
-      <Text variant="buttonLabelFilled">Base Button Filled</Text>
+      <Text color="whiteColor">Base Button Filled</Text>
     </BaseButton>
   ))
   .add("Base Button Outlined", () => (
     <BaseButton onPress={() => {}} variant="outlined">
-      <Text variant="buttonLabelOutlined">Base Button Outlined</Text>
+      <Text color="primaryColor">Base Button Outlined</Text>
     </BaseButton>
   ))
   .add("Base Button Ghost", () => (
     <BaseButton onPress={() => {}} variant="ghost">
-      <Text variant="buttonLabelGhost">Base Button Ghost</Text>
+      <Text color="primaryColor">Base Button Ghost</Text>
     </BaseButton>
   ))
   .add("Base Button Disabled", () => (
     <BaseButton disabled onPress={() => {}} variant="filled">
-      <Text variant="buttonLabelFilled">Base Button Disabled</Text>
+      <Text color="whiteColor">Base Button Disabled</Text>
     </BaseButton>
   ))
   .add("Base Button Filled with Icon", () => (
     <BaseButton icon="compass" onPress={() => {}} variant="filled">
-      <Text variant="buttonLabelFilled">Base Button Icon</Text>
+      <Text color="whiteColor">Base Button Icon</Text>
     </BaseButton>
   ))
   .add("Base Button Outlined with Icon", () => (
@@ -46,7 +46,7 @@ storiesOf("Button", module)
       onPress={() => {}}
       variant="outlined"
     >
-      <Text variant="buttonLabelOutlined">Base Button Icon</Text>
+      <Text color="primaryColor">Base Button Icon</Text>
     </BaseButton>
   ))
   .add("Base Button Ghost with Icon", () => (
@@ -58,14 +58,16 @@ storiesOf("Button", module)
       onPress={() => {}}
       variant="ghost"
     >
-      <Text variant="buttonLabelGhost">Base Button Icon</Text>
+      <Text color="primaryColor">Base Button Icon</Text>
     </BaseButton>
   ))
   .add("Primary Button Loading", () => (
     <PrimaryButton
       isLoading
       label="Primary Button"
-      labelVariant="buttonLabelFilled"
+      labelProps={{
+        color: "whiteColor",
+      }}
       onPress={() => {}}
       variant="filled"
     />
@@ -75,13 +77,29 @@ storiesOf("Button", module)
       icon="compass"
       isLoading
       label="Primary Button"
-      labelVariant="buttonLabelFilled"
+      labelProps={{
+        color: "whiteColor",
+      }}
       onPress={() => {}}
       variant="filled"
     />
   ))
   .add("Gradient Button", () => (
     <GradientButton borderRadius="lg" onPress={() => {}} variant="filled">
-      <Text variant="buttonLabelFilled">Gradient Button</Text>
+      <Text color="whiteColor">Gradient Button</Text>
     </GradientButton>
+  ))
+  .add("Base Button Small", () => (
+    <BaseButton onPress={() => {}} size="sm" variant="filled">
+      <Text color="whiteColor" fontVariant="caption">
+        Base Button Small
+      </Text>
+    </BaseButton>
+  ))
+  .add("Base Button Large", () => (
+    <BaseButton onPress={() => {}} size="lg" variant="filled">
+      <Text color="whiteColor" fontVariant="h2">
+        Base Button Large
+      </Text>
+    </BaseButton>
   ));

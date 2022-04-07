@@ -1,15 +1,8 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
-import { StyleProp, TextStyle } from "react-native";
 
 import { RFValue } from "@/shared/utils/functions";
 
 import { palette } from "./palette";
-
-const buttonLabelDefaults: StyleProp<TextStyle> = {
-  fontSize: RFValue(14),
-  fontWeight: "500",
-  textTransform: "capitalize",
-};
 
 const lightTheme = createTheme({
   borderRadii: {
@@ -30,11 +23,28 @@ const lightTheme = createTheme({
     primary: [palette.secondaryColor, palette.secondary6, palette.primaryColor],
   },
 
+  buttonSizes: {
+    lg: {
+      paddingHorizontal: "xl",
+      paddingVertical: "lg",
+    },
+    md: {
+      paddingHorizontal: "lg",
+      paddingVertical: "md",
+    },
+    sm: {
+      paddingHorizontal: "md",
+      paddingVertical: "sm",
+    },
+    xs: {
+      paddingHorizontal: "sm",
+      paddingVertical: "xs",
+    },
+  },
+
   buttonVariants: {
     defaults: {
       borderRadius: "sm",
-      paddingHorizontal: "lg",
-      paddingVertical: "md",
     },
     filled: {
       backgroundColor: "primaryColor",
@@ -52,6 +62,17 @@ const lightTheme = createTheme({
     ...palette,
     mainBackground: palette.whiteColor,
     textColor: palette.darkGrey,
+  },
+
+  fontSizes: {
+    caption: RFValue(12),
+    h1: RFValue(32),
+    h2: RFValue(24),
+    h3: RFValue(20),
+    h4: RFValue(18),
+    h5: RFValue(16),
+    h6: RFValue(14),
+    p: RFValue(14),
   },
 
   iconSizes: {
@@ -82,18 +103,13 @@ const lightTheme = createTheme({
     xxl: RFValue(128),
     xxs: RFValue(2),
   },
+
   textVariants: {
-    buttonLabelFilled: {
-      ...buttonLabelDefaults,
-      color: "whiteColor",
+    defaults: {
+      fontSize: RFValue(14),
     },
-    buttonLabelGhost: {
-      ...buttonLabelDefaults,
-      color: "primaryColor",
-    },
-    buttonLabelOutlined: {
-      ...buttonLabelDefaults,
-      color: "primaryColor",
+    title: {
+      fontSize: RFValue(32),
     },
   },
 

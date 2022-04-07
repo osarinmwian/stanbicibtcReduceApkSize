@@ -11,7 +11,7 @@ import {
   ImageIconPackType,
   ImageIconProps,
 } from "@/shared/assets/icons";
-import { Theme } from "@/shared/theme";
+import { Theme, useTheme } from "@/shared/theme";
 
 import { Box } from "../Layout";
 
@@ -23,6 +23,7 @@ export type BaseButtonProps = RestyleProps & {
   disabled?: boolean;
   onPress: () => void;
   touchableOpacityProps?: TouchableOpacityProps;
+  size?: keyof Theme["buttonSizes"];
   leftComponent?: ReactChild;
   rightComponent?: ReactChild;
   icon?: ImageIconPackType;
@@ -52,8 +53,13 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
     icon,
     iconProps,
     variant,
+    size = "md",
     ...rest
   } = props;
+
+  const theme = useTheme();
+
+  const buttonSizeValues: unknown = theme.buttonSizes[size];
 
   const disabledOpacity = disabled ? 0.5 : 1;
 
@@ -69,6 +75,7 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
         flexDirection="row"
         opacity={disabledOpacity}
         variant={variant}
+        {...buttonSizeValues}
         {...rest}
       >
         {leftComponent ?? null}
