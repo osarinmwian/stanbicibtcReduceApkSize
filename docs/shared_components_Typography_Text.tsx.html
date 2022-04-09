@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> shared/components/ErrorBoundary/Fallback.tsx</title>
+  <title> shared/components/Typography/Text.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>shared/components/ErrorBoundary/Fallback.tsx</h1>
+                    <h1>shared/components/Typography/Text.tsx</h1>
                 </header>
                 
 
@@ -89,41 +89,43 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import React from "react";
-import { Pressable } from "react-native";
-import RNRestart from "react-native-restart";
+            <pre class="prettyprint source linenums"><code>import { createText } from "@shopify/restyle";
+import { ComponentProps, FC } from "react";
 
-import { Box } from "@/shared/components/Layout";
-import { Text } from "@/shared/components/Typography";
+import { Theme, useTheme } from "@/shared/theme";
 
 /**
- * Restarts the app on press
+ * Custom `Text` component with type checked layout stylings and props including typography.
+ * All styles can be passed as props rather than using the StyleSheet API, and we can select a variant with predefined styles.
+ *
+ * Includes all the props that are available in the native `Text` component.
+ * Fully themeable.
+ * @see https://github.com/Shopify/restyle#text
  */
-const handleRestart = () => {
-  RNRestart.Restart();
+const RestyleText = createText&lt;Theme>();
+
+export type RestyleTextProps = ComponentProps&lt;typeof RestyleText>;
+
+export type TextProps = RestyleTextProps &amp; {
+  fontVariant?: keyof Theme["fontSizes"];
 };
 
-/**
- * Fallback Screen for ErrorBoundary, this screen is displayed when the app crashes
- * due to an error in our component tree.
- */
-function FallBack() {
-  return (
-    &lt;Box alignItems="center" flex={1} justifyContent="center">
-      &lt;Text fontSize={24} marginBottom="Ml">
-        Oops 😞!
-      &lt;/Text>
-      &lt;Text fontSize={16} marginTop="l">
-        We Encountered an error,
-      &lt;/Text>
-      &lt;Pressable onPress={handleRestart}>
-        &lt;Text>Restart the app&lt;/Text>
-      &lt;/Pressable>
-    &lt;/Box>
-  );
-}
+const Text: FC&lt;TextProps> = (props) => {
+  const { children, fontVariant = "p", variant, ...rest } = props;
 
-export default FallBack;
+  const theme = useTheme();
+
+  const fontSize = theme.fontSizes[fontVariant];
+
+  return (
+    // Restyle variant overrides the fontSize prop
+    // eslint-disable-next-line react/jsx-sort-props
+    &lt;RestyleText variant={variant} fontSize={fontSize} {...rest}>
+      {children}
+    &lt;/RestyleText>
+  );
+};
+export { Text };
 </code></pre>
         </article>
     </section>

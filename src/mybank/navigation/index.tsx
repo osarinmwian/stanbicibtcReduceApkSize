@@ -1,26 +1,17 @@
-import {
-  createStackNavigator,
-  StackScreenProps,
-} from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import { ExampleScreen, SecondScreen } from "@/mybank/screens/";
+import { ExampleScreen } from "@/mybank/screens";
 
-import type { MybankRoutes } from "./types";
+import type { MyBankRootStackParameterList } from "./types";
 
-export type MyBankProps<Screen extends keyof MybankRoutes> = StackScreenProps<
-  MybankRoutes,
-  Screen
->;
+const Stack = createStackNavigator<MyBankRootStackParameterList>();
 
-const Stack = createStackNavigator<MybankRoutes>();
-
-function MyBank() {
+function MyBankNavigation() {
   return (
     <Stack.Navigator>
-      <Stack.Screen component={ExampleScreen} name="ExampleScreen" />
-      <Stack.Screen component={SecondScreen} name="SecondScreen" />
+      <Stack.Screen component={ExampleScreen} name="Home" />
     </Stack.Navigator>
   );
 }
 
-export default MyBank;
+export default MyBankNavigation;

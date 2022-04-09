@@ -32,6 +32,7 @@ module.exports = {
         "global-require": "off",
         "prefer-destructuring": "off",
         "unicorn/prefer-module": "off",
+        "react/jsx-props-no-spreading": "off",
       },
     },
     {
