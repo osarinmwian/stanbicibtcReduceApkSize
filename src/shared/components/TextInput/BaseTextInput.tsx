@@ -65,6 +65,7 @@ const BaseTextInput: VFC<BaseTextInputProps> = (props) => {
 
   return (
     <TextInputComponent
+      allowFontScaling={false}
       opacity={disabledOpacity}
       variant={variant}
       {...TextInputSizeValues}

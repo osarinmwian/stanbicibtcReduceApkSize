@@ -9,7 +9,7 @@ type SecureTextInputProps = TextInputProps & {
 };
 
 const SecureTextInput: VFC<SecureTextInputProps> = (props) => {
-  const { showToggleIcon, ...rest } = props;
+  const { showToggleIcon = true, ...rest } = props;
 
   const [showPassword, setShowPassword] = useState(false);
 

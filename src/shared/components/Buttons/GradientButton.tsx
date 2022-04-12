@@ -35,7 +35,7 @@ const Card = createRestyleComponent<RestyleProps, Theme>(
 
 export type GradientButtonProps = Omit<RestyleProps, "colors"> & {
   disabled?: boolean;
-  onPress: () => void;
+  onPress?: TouchableOpacityProps["onPress"];
   size?: keyof Theme["buttonSizes"];
   gradient?: keyof Theme["buttonGradients"];
   touchableOpacityProps?: TouchableOpacityProps;

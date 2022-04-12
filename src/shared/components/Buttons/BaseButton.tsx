@@ -14,7 +14,7 @@ type RestyleProps = BoxProps & VariantProps<Theme, "buttonVariants">;
 
 export type BaseButtonProps = RestyleProps & {
   disabled?: boolean;
-  onPress: () => void;
+  onPress?: TouchableOpacityProps["onPress"];
   touchableOpacityProps?: TouchableOpacityProps;
   size?: keyof Theme["buttonSizes"];
   leftComponent?: ReactChild;

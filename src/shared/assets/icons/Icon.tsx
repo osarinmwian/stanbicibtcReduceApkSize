@@ -4,7 +4,7 @@ import { Box, BoxProps } from "@/shared/components/Layout";
 
 import { ImageIcon, ImageIconProps } from "./ImageIcon";
 
-type IconProps = ImageIconProps & {
+export type IconProps = ImageIconProps & {
   containerProps?: BoxProps;
 };
 

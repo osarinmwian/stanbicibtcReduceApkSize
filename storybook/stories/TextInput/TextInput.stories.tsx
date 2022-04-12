@@ -3,6 +3,8 @@ import React from "react";
 
 import {
   BaseTextInput,
+  FilledTextInput,
+  OutlinedTextInput,
   SecureTextInput,
   TextInput,
 } from "@/shared/components/TextInput";
@@ -39,8 +41,20 @@ storiesOf("Text Input", module)
     />
   ))
   .add("Secure Text Input", () => (
-    <SecureTextInput placeholder="Enter Password..." />
+    <SecureTextInput placeholder="Enter Password..." showToggleIcon={false} />
   ))
   .add("Secure Text Input with toggle Icon", () => (
-    <SecureTextInput placeholder="Enter Password..." showToggleIcon />
+    <SecureTextInput placeholder="Enter Password..." />
+  ))
+  .add("Material Outline Text Input", () => (
+    <OutlinedTextInput label="Phone number" value="12345" />
+  ))
+  .add("Material Outline Secure Text Input", () => (
+    <OutlinedTextInput label="Phone number" secureTextEntry value="12345" />
+  ))
+  .add("Material Filled Text Input", () => (
+    <FilledTextInput label="Phone number" value="12345" />
+  ))
+  .add("Material Filled Secure Text Input", () => (
+    <FilledTextInput label="Phone number" secureTextEntry value="12345" />
   ));

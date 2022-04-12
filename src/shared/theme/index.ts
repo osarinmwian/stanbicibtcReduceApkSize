@@ -62,9 +62,13 @@ const lightTheme = createTheme({
     ghost: {
       backgroundColor: "paleGrey50",
     },
+    none: {},
     outlined: {
       borderColor: "paleGrey",
       borderWidth: RFValue(1),
+    },
+    transparent: {
+      backgroundColor: "transparent",
     },
   },
 
@@ -146,19 +150,20 @@ const lightTheme = createTheme({
     defaults: {
       borderRadius: "sm",
       color: "primaryBlack",
-      fontSize: RFValue(16),
+      fontSize: RFValue(14),
       fontWeight: "500",
     },
     filled: {
       backgroundColor: "paleGrey50",
       color: "primaryBlack",
     },
-    ghost: {
-      backgroundColor: undefined,
-    },
+    none: {},
     outlined: {
       borderColor: "paleGrey",
       borderWidth: RFValue(1),
+    },
+    transparent: {
+      backgroundColor: "transparent",
     },
   },
 
@@ -168,6 +173,7 @@ const lightTheme = createTheme({
       color: "primaryBlack",
       fontSize: RFValue(14),
     },
+    none: {},
     title: {
       fontSize: RFValue(32),
     },

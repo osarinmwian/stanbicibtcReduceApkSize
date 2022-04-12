@@ -65,16 +65,16 @@ const TextInput: VFC<TextInputProps> = (props) => {
       {leftIcon ? (
         <Icon
           color="primaryBlack"
-          containerProps={{ marginRight: "sm" }}
+          containerProps={{ marginHorizontal: "sm" }}
           name={leftIcon}
           {...leftIconProps}
         />
       ) : null}
-      <BaseTextInput flex={1} size="sm" variant="ghost" {...rest} />
+      <BaseTextInput flex={1} size="sm" variant="transparent" {...rest} />
       {rightIcon ? (
         <Icon
           color="primaryBlack"
-          containerProps={{ marginLeft: "sm" }}
+          containerProps={{ marginHorizontal: "sm" }}
           name={rightIcon}
           {...rightIconProps}
         />
