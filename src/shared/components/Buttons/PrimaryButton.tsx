@@ -2,10 +2,10 @@ import { VariantProps } from "@shopify/restyle";
 import React, { FC } from "react";
 import { ActivityIndicator } from "react-native";
 
+import { Box } from "@/shared/components/Layout";
 import { Text, TextProps } from "@/shared/components/Typography";
 import { Theme, useTheme } from "@/shared/theme";
 
-import { Box } from "../Layout";
 import { BaseButton, BaseButtonProps } from "./BaseButton";
 
 type PrimaryButtonProps = BaseButtonProps &

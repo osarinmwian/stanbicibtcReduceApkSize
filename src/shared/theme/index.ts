@@ -149,7 +149,7 @@ const lightTheme = createTheme({
       backgroundColor: undefined,
     },
     outlined: {
-      borderColor: "mediumGrey",
+      borderColor: "paleGrey",
       borderWidth: RFValue(1),
     },
   },

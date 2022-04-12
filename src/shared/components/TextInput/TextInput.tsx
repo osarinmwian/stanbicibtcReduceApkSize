@@ -3,11 +3,12 @@ import {
   createVariant,
   VariantProps,
 } from "@shopify/restyle";
-import { VFC } from "react";
+import { ReactChild, VFC } from "react";
 
+import { Icon, ImageIconPackType, ImageIconProps } from "@/shared/assets/icons";
+import { Box, BoxProps } from "@/shared/components/Layout";
 import { Theme, useTheme } from "@/shared/theme";
 
-import { Box, BoxProps } from "../Layout";
 import { BaseTextInput, BaseTextInputProps } from "./BaseTextInput";
 
 const cardVariant = createVariant<Theme, "textInputVariants">({
@@ -21,6 +22,12 @@ const Card = createRestyleComponent<
 
 export type TextInputProps = BaseTextInputProps & {
   ContainerProps?: BoxProps;
+  leftComponent?: ReactChild;
+  rightComponent?: ReactChild;
+  leftIcon?: ImageIconPackType;
+  rightIcon?: ImageIconPackType;
+  leftIconProps?: Omit<ImageIconProps, "name">;
+  rightIconProps?: Omit<ImageIconProps, "name">;
 };
 
 const TextInput: VFC<TextInputProps> = (props) => {
@@ -28,7 +35,13 @@ const TextInput: VFC<TextInputProps> = (props) => {
     disabled,
     ContainerProps,
     variant = "filled",
-    size = "md",
+    size = "sm",
+    leftComponent,
+    rightComponent,
+    leftIcon,
+    rightIcon,
+    leftIconProps,
+    rightIconProps,
     ...rest
   } = props;
 
@@ -40,18 +53,39 @@ const TextInput: VFC<TextInputProps> = (props) => {
 
   return (
     <Card
+      alignItems="center"
+      flexDirection="row"
       opacity={disabledOpacity}
       variant={variant}
       width="100%"
       {...TextInputSizeValues}
       {...ContainerProps}
     >
+      {leftComponent ?? null}
+      {leftIcon ? (
+        <Icon
+          color="primaryBlack"
+          containerProps={{ marginRight: "sm" }}
+          name={leftIcon}
+          {...leftIconProps}
+        />
+      ) : null}
       <BaseTextInput
+        flex={1}
         paddingHorizontal="none"
-        paddingVertical="none"
+        paddingVertical="sm"
         variant="ghost"
         {...rest}
       />
+      {rightIcon ? (
+        <Icon
+          color="primaryBlack"
+          containerProps={{ marginLeft: "sm" }}
+          name={rightIcon}
+          {...rightIconProps}
+        />
+      ) : null}
+      {rightComponent ?? null}
     </Card>
   );
 };

@@ -33,14 +33,19 @@ storiesOf("Button", module)
     </BaseButton>
   ))
   .add("Base Button Filled with Icon", () => (
-    <BaseButton icon="compass" onPress={() => {}}>
+    <BaseButton leftIcon="compass" onPress={() => {}}>
+      <Text color="whiteColor">Base Button Icon</Text>
+    </BaseButton>
+  ))
+  .add("Base Button Filled with both Icon", () => (
+    <BaseButton leftIcon="compass" onPress={() => {}} rightIcon="compass">
       <Text color="whiteColor">Base Button Icon</Text>
     </BaseButton>
   ))
   .add("Base Button Outlined with Icon", () => (
     <BaseButton
-      icon="compass"
-      iconProps={{
+      leftIcon="compass"
+      leftIconProps={{
         color: "primaryColor",
       }}
       onPress={() => {}}
@@ -51,8 +56,8 @@ storiesOf("Button", module)
   ))
   .add("Base Button Ghost with Icon", () => (
     <BaseButton
-      icon="compass"
-      iconProps={{
+      leftIcon="compass"
+      leftIconProps={{
         color: "primaryColor",
       }}
       onPress={() => {}}
@@ -73,12 +78,12 @@ storiesOf("Button", module)
   ))
   .add("Primary Button Loading With Icon", () => (
     <PrimaryButton
-      icon="compass"
       isLoading
       label="Primary Button"
       labelProps={{
         color: "whiteColor",
       }}
+      leftIcon="compass"
       onPress={() => {}}
     />
   ))
