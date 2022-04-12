@@ -105,8 +105,65 @@ const lightTheme = createTheme({
   },
 
   textVariants: {
+    bold10: {
+      color: "darkGrey",
+      fontFamily: "BentonSans",
+      fontSize: RFValue(10),
+      fontWeight: "700",
+      textAlign: "center",
+    },
+    bold14: {
+      fontFamily: "BentonSans Bold",
+      fontSize: RFValue(14),
+      fontWeight: "700",
+      textAlign: "center",
+    },
+    bold24: {
+      fontFamily: "BentonSans Bold",
+      fontSize: RFValue(24),
+      fontWeight: "700",
+      textAlign: "center",
+    },
     defaults: {
       fontSize: RFValue(14),
+    },
+    medium12: {
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(12),
+      fontWeight: "400",
+      textAlign: "center",
+    },
+    medium14: {
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(18),
+      fontWeight: "400",
+      textAlign: "center",
+    },
+    medium18: {
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(18),
+      fontWeight: "400",
+      lineHeight: 18.18,
+      textAlign: "center",
+    },
+    regular10: {
+      fontFamily: "BentonSans",
+      fontSize: RFValue(10),
+      fontWeight: "400",
+      textAlign: "center",
+    },
+    regular12: {
+      fontFamily: "BentonSans",
+      fontSize: RFValue(12),
+      fontWeight: "400",
+      lineHeight: 14.22,
+      textAlign: "center",
+    },
+    regular14: {
+      fontFamily: "BentonSans",
+      fontSize: RFValue(14),
+      fontWeight: "400",
+      textAlign: "center",
     },
     title: {
       fontSize: RFValue(32),

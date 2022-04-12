@@ -23,6 +23,8 @@ module.exports = function (api) {
             "@/insurance": "./src/insurance",
             "@/mutualfunds": "./src/mutualfunds",
             "@/mybank": "./src/mybank",
+            "@/mybank/screens": "./src/mybank/screens",
+            "@/mybank/navigation": "./src/mybank/navigation",
             "@/pension": "./src/pension",
             "@/stocks": "./src/stocks",
           },

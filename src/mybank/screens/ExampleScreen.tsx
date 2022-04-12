@@ -12,13 +12,14 @@ import { Box } from "@/shared/components/Layout";
 
 const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
   const { t } = useTranslation();
-
+  // const route = useMybankRoute<"ExampleScreen">();
   return (
     <Box
       alignItems="center"
-      backgroundColor="mainBackground"
+      backgroundColor="mediumGrey"
       flex={1}
       justifyContent="center"
+      padding="md"
     >
       <Animated.Text
         entering={LightSpeedInLeft.springify()}

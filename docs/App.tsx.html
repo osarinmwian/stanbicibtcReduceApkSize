@@ -72,7 +72,11 @@
             
             <nav>
                 
+<<<<<<< HEAD
                     <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#a">a</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#Box">Box</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li><li><a href="global.html#RestyleText">RestyleText</a></li></ul></div>
+=======
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#Box">Box</a></li><li><a href="global.html#FallBack">FallBack</a></li><li><a href="global.html#handleRestart">handleRestart</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Text">Text</a></li></ul></div>
+>>>>>>> 77dbc8e (feat: landingpage)
                 
             </nav>
         </div>
@@ -89,7 +93,8 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { ThemeProvider } from "@shopify/restyle";
+            <pre class="prettyprint source linenums"><code>import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { ThemeProvider } from "@shopify/restyle";
 import React from "react";
 import { StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -114,7 +119,9 @@ function App() {
       &lt;ThemeProvider theme={theme.lightTheme}>
         &lt;GestureHandlerRootView style={styles.gestureFlex}>
           &lt;SafeAreaProvider>
-            &lt;Navigation />
+            &lt;BottomSheetModalProvider>
+              &lt;Navigation />
+            &lt;/BottomSheetModalProvider>
           &lt;/SafeAreaProvider>
         &lt;/GestureHandlerRootView>
       &lt;/ThemeProvider>

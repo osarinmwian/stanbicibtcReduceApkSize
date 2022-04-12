@@ -1,15 +1,36 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ExampleScreen } from "@/mybank/screens";
+import LoginScreen from "@/mybank/screens/login/login";
 
-import type { MyBankRootStackParameterList } from "./types";
+import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
+import { MyBankRootStackParameterList } from "./types";
 
-const Stack = createStackNavigator<MyBankRootStackParameterList>();
+const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
 function MyBankNavigation() {
+  // const isLoggedIn = undefined;
+  const isLoggedIn = 65;
   return (
-    <Stack.Navigator>
-      <Stack.Screen component={ExampleScreen} name="Home" />
+    <Stack.Navigator
+      screenOptions={{
+        header: () => null,
+      }}
+    >
+      {isLoggedIn ? (
+        <Stack.Group>
+          <Stack.Screen component={Home} name="Home" />
+          <Stack.Screen component={Lifestyle} name="Lifestyle" />
+          <Stack.Screen component={More} name="More" />
+          <Stack.Screen component={Payments} name="Payments" />
+          <Stack.Screen component={Transfer} name="Transfer" />
+        </Stack.Group>
+      ) : (
+        <Stack.Group>
+          <Stack.Group screenOptions={{ headerShown: false }}>
+            <Stack.Screen component={LoginScreen} name="LoginScreen" />
+          </Stack.Group>
+        </Stack.Group>
+      )}
     </Stack.Navigator>
   );
 }

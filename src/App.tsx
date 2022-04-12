@@ -1,3 +1,4 @@
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { ThemeProvider } from "@shopify/restyle";
 import React from "react";
 import { StyleSheet } from "react-native";
@@ -23,7 +24,9 @@ function App() {
       <ThemeProvider theme={theme.lightTheme}>
         <GestureHandlerRootView style={styles.gestureFlex}>
           <SafeAreaProvider>
-            <Navigation />
+            <BottomSheetModalProvider>
+              <Navigation />
+            </BottomSheetModalProvider>
           </SafeAreaProvider>
         </GestureHandlerRootView>
       </ThemeProvider>
