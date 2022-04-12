@@ -111,7 +111,7 @@ export type TextProps = RestyleTextProps &amp; {
 };
 
 const Text: FC&lt;TextProps> = (props) => {
-  const { children, fontVariant = "p", variant, ...rest } = props;
+  const { children, fontVariant = "p", variant = "body", ...rest } = props;
 
   const theme = useTheme();
 

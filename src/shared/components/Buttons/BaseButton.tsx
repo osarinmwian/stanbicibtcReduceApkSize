@@ -52,7 +52,7 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
     rightComponent,
     icon,
     iconProps,
-    variant,
+    variant = "filled",
     size = "md",
     ...rest
   } = props;

@@ -3,12 +3,13 @@ import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
 import { RFValue } from "@/shared/utils/functions";
 
 import { palette } from "./palette";
-import type { ButtonSizesObjectType } from "./types";
+import type { PaddingSizesObjectType } from "./types";
 
 const lightTheme = createTheme({
   borderRadii: {
     lg: RFValue(32),
     md: RFValue(16),
+    none: 0,
     sm: RFValue(8),
     xl: RFValue(64),
     xs: RFValue(4),
@@ -45,7 +46,7 @@ const lightTheme = createTheme({
       paddingHorizontal: "sm",
       paddingVertical: "xs",
     },
-  } as ButtonSizesObjectType,
+  } as PaddingSizesObjectType,
 
   buttonVariants: {
     defaults: {
@@ -102,6 +103,7 @@ const lightTheme = createTheme({
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
+    none: 0,
     sm: RFValue(8),
     xl: RFValue(64),
     xs: RFValue(4),
@@ -109,8 +111,53 @@ const lightTheme = createTheme({
     xxs: RFValue(2),
   },
 
-  textVariants: {
+  textInputSizes: {
+    lg: {
+      paddingHorizontal: "lg",
+      paddingVertical: "lg",
+    },
+    md: {
+      paddingHorizontal: "md",
+      paddingVertical: "md",
+    },
+    sm: {
+      paddingHorizontal: "sm",
+      paddingVertical: "sm",
+    },
+    xl: {
+      paddingHorizontal: "xl",
+      paddingVertical: "xl",
+    },
+    xs: {
+      paddingHorizontal: "xs",
+      paddingVertical: "xs",
+    },
+  } as PaddingSizesObjectType,
+
+  textInputVariants: {
     defaults: {
+      borderRadius: "sm",
+      color: "primaryBlack",
+      fontSize: RFValue(16),
+      fontWeight: "500",
+    },
+    filled: {
+      backgroundColor: "paleGrey50",
+      color: "primaryBlack",
+    },
+    ghost: {
+      backgroundColor: undefined,
+    },
+    outlined: {
+      borderColor: "mediumGrey",
+      borderWidth: RFValue(1),
+    },
+  },
+
+  textVariants: {
+    body: {},
+    defaults: {
+      color: "primaryBlack",
       fontSize: RFValue(14),
     },
     title: {
