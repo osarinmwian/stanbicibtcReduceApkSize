@@ -3,6 +3,7 @@ import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
 import { RFValue } from "@/shared/utils/functions";
 
 import { palette } from "./palette";
+import type { ButtonSizesObjectType } from "./types";
 
 const lightTheme = createTheme({
   borderRadii: {
@@ -36,11 +37,15 @@ const lightTheme = createTheme({
       paddingHorizontal: "md",
       paddingVertical: "sm",
     },
+    xl: {
+      paddingHorizontal: "xxl",
+      paddingVertical: "xl",
+    },
     xs: {
       paddingHorizontal: "sm",
       paddingVertical: "xs",
     },
-  },
+  } as ButtonSizesObjectType,
 
   buttonVariants: {
     defaults: {

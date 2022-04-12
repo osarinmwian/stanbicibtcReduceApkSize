@@ -55,7 +55,7 @@ const GradientButton: FC<GradientButtonProps> = (props) => {
 
   const theme = useTheme();
 
-  const buttonSizeValues: unknown = theme.buttonSizes[size];
+  const buttonSizeValues = theme.buttonSizes[size];
 
   const gradientColors = theme.buttonGradients[gradient];
 

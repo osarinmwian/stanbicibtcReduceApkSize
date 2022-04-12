@@ -59,7 +59,7 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
 
   const theme = useTheme();
 
-  const buttonSizeValues: unknown = theme.buttonSizes[size];
+  const buttonSizeValues = theme.buttonSizes[size];
 
   const disabledOpacity = disabled ? 0.5 : 1;
 
