@@ -47,7 +47,7 @@ const GradientButton: FC<GradientButtonProps> = (props) => {
     disabled,
     touchableOpacityProps,
     gradient = "primary",
-    variant,
+    variant = "filled",
     size = "md",
     children,
     ...rest

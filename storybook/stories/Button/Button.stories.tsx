@@ -85,7 +85,12 @@ storiesOf("Button", module)
     />
   ))
   .add("Gradient Button", () => (
-    <GradientButton borderRadius="lg" onPress={() => {}} variant="filled">
+    <GradientButton borderRadius="lg" onPress={() => {}}>
+      <Text color="whiteColor">Gradient Button</Text>
+    </GradientButton>
+  ))
+  .add("Gradient Button small", () => (
+    <GradientButton borderRadius="lg" onPress={() => {}} size="sm">
       <Text color="whiteColor">Gradient Button</Text>
     </GradientButton>
   ))
