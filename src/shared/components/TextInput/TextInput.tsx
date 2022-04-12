@@ -70,13 +70,7 @@ const TextInput: VFC<TextInputProps> = (props) => {
           {...leftIconProps}
         />
       ) : null}
-      <BaseTextInput
-        flex={1}
-        paddingHorizontal="none"
-        paddingVertical="sm"
-        variant="ghost"
-        {...rest}
-      />
+      <BaseTextInput flex={1} size="sm" variant="ghost" {...rest} />
       {rightIcon ? (
         <Icon
           color="primaryBlack"

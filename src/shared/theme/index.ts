@@ -34,6 +34,10 @@ const lightTheme = createTheme({
       paddingHorizontal: "lg",
       paddingVertical: "md",
     },
+    none: {
+      paddingHorizontal: "none",
+      paddingVertical: "none",
+    },
     sm: {
       paddingHorizontal: "md",
       paddingVertical: "sm",
@@ -56,10 +60,10 @@ const lightTheme = createTheme({
       backgroundColor: "primaryColor",
     },
     ghost: {
-      backgroundColor: "primaryColor10",
+      backgroundColor: "paleGrey50",
     },
     outlined: {
-      borderColor: "primaryColor",
+      borderColor: "paleGrey",
       borderWidth: RFValue(1),
     },
   },
@@ -119,6 +123,10 @@ const lightTheme = createTheme({
     md: {
       paddingHorizontal: "md",
       paddingVertical: "md",
+    },
+    none: {
+      paddingHorizontal: "none",
+      paddingVertical: "none",
     },
     sm: {
       paddingHorizontal: "sm",

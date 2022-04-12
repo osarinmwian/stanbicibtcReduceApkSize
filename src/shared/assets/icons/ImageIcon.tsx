@@ -33,6 +33,7 @@ const ImageIcon: VFC<ImageIconProps> = (props) => {
   return (
     <Image
       fadeDuration={0}
+      resizeMode="contain"
       source={source || icon}
       style={[
         {

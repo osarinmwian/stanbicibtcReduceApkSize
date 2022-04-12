@@ -1,7 +1,11 @@
 import { storiesOf } from "@storybook/react-native";
 import React from "react";
 
-import { BaseTextInput, TextInput } from "@/shared/components/TextInput";
+import {
+  BaseTextInput,
+  SecureTextInput,
+  TextInput,
+} from "@/shared/components/TextInput";
 
 import CenterView from "../CenterView";
 
@@ -10,12 +14,19 @@ storiesOf("Text Input", module)
   .add("Base Text Input Filled", () => (
     <BaseTextInput placeholder="Enter something" />
   ))
-  .add("Text Input Filled", () => <TextInput />)
-  .add("Text Input Outlined", () => (
-    <TextInput placeholder="Enter..." variant="outlined" />
+  .add("Base Text Input Filled Medium", () => (
+    <BaseTextInput placeholder="Enter something" size="md" />
   ))
-  .add("Text Input with left Icon", () => <TextInput leftIcon="compass" />)
-  .add("Text Input with right Icon", () => <TextInput rightIcon="compass" />)
+  .add("Text Input Filled", () => <TextInput placeholder="Enter something" />)
+  .add("Text Input Outlined", () => (
+    <TextInput placeholder="Enter something" variant="outlined" />
+  ))
+  .add("Text Input with left Icon", () => (
+    <TextInput leftIcon="compass" placeholder="Enter..." />
+  ))
+  .add("Text Input with right Icon", () => (
+    <TextInput placeholder="Enter..." rightIcon="compass" />
+  ))
   .add("Text Input with both Icon", () => (
     <TextInput leftIcon="compass" placeholder="Enter..." rightIcon="compass" />
   ))
@@ -26,4 +37,10 @@ storiesOf("Text Input", module)
       rightIcon="compass"
       variant="outlined"
     />
+  ))
+  .add("Secure Text Input", () => (
+    <SecureTextInput placeholder="Enter Password..." />
+  ))
+  .add("Secure Text Input with toggle Icon", () => (
+    <SecureTextInput placeholder="Enter Password..." showToggleIcon />
   ));

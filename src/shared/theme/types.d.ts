@@ -1,4 +1,12 @@
-export type SizeType = "lg" | "md" | "sm" | "xl" | "xs" | "xxl" | "xxs";
+export type SizeType =
+  | "lg"
+  | "md"
+  | "sm"
+  | "xl"
+  | "xs"
+  | "xxl"
+  | "xxs"
+  | "none";
 
 type PaddingType = Record<"paddingHorizontal" | "paddingVertical", SizeType>;
 
