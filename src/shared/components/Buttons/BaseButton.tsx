@@ -1,7 +1,15 @@
 import {
+  backgroundColor,
+  border,
   createRestyleComponent,
   createVariant,
+  layout,
+  opacity,
+  position,
+  shadow,
+  spacing,
   VariantProps,
+  visible,
 } from "@shopify/restyle";
 import { FC, ReactChild } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
@@ -29,7 +37,20 @@ const cardVariant = createVariant<Theme, "buttonVariants">({
   themeKey: "buttonVariants",
 });
 
-const Card = createRestyleComponent<RestyleProps, Theme>([cardVariant], Box);
+const Card = createRestyleComponent<RestyleProps, Theme>(
+  [
+    backgroundColor,
+    opacity,
+    visible,
+    shadow,
+    position,
+    layout,
+    spacing,
+    border,
+    cardVariant,
+  ],
+  Box,
+);
 
 const BaseButton: FC<BaseButtonProps> = (props) => {
   const {

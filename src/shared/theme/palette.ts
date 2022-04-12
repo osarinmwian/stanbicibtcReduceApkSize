@@ -30,3 +30,5 @@ export const palette = {
   wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };
+
+export type PaletteType = keyof typeof palette;

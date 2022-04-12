@@ -5,6 +5,7 @@ import { ActivityIndicator } from "react-native";
 import { Box } from "@/shared/components/Layout";
 import { Text, TextProps } from "@/shared/components/Typography";
 import { Theme, useTheme } from "@/shared/theme";
+import { PaletteType } from "@/shared/theme/palette";
 
 import { BaseButton, BaseButtonProps } from "./BaseButton";
 
@@ -13,14 +14,22 @@ type PrimaryButtonProps = BaseButtonProps &
     label: string;
     labelProps?: Omit<TextProps, "children">;
     isLoading?: boolean;
+    loadingIconColor?: PaletteType;
   };
 
 const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
-  const { label, isLoading, labelVariant, labelProps, ...rest } = props;
+  const {
+    label,
+    isLoading,
+    labelVariant,
+    labelProps,
+    loadingIconColor,
+    ...rest
+  } = props;
 
   const theme = useTheme();
 
-  const activityIndicatorColor = theme.colors.whiteColor;
+  const activityIndicatorColor = theme.colors[loadingIconColor ?? "whiteColor"];
 
   return (
     <BaseButton {...rest}>

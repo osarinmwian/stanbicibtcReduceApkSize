@@ -1,26 +1,28 @@
 import {
+  backgroundColor,
   border,
-  BorderProps,
   createRestyleComponent,
   createVariant,
   layout,
-  LayoutProps,
   opacity,
-  OpacityProps,
+  shadow,
   spacing,
-  SpacingProps,
   VariantProps,
+  visible,
 } from "@shopify/restyle";
-import { LinearGradient, LinearGradientProps } from "expo-linear-gradient";
+import {
+  LinearGradient,
+  LinearGradientPoint,
+  LinearGradientProps,
+} from "expo-linear-gradient";
 import { FC } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 import { Theme, useTheme } from "@/shared/theme";
 
-type RestyleProps = LayoutProps<Theme> &
-  BorderProps<Theme> &
-  OpacityProps<Theme> &
-  SpacingProps<Theme> &
+import { BoxProps } from "../Layout";
+
+type RestyleProps = Omit<BoxProps, "end" | "start"> &
   VariantProps<Theme, "buttonVariants"> &
   LinearGradientProps;
 
@@ -29,7 +31,16 @@ const cardVariant = createVariant<Theme, "buttonVariants">({
 });
 
 const Card = createRestyleComponent<RestyleProps, Theme>(
-  [spacing, opacity, layout, border, cardVariant],
+  [
+    opacity,
+    backgroundColor,
+    visible,
+    shadow,
+    layout,
+    spacing,
+    border,
+    cardVariant,
+  ],
   LinearGradient,
 );
 
@@ -39,6 +50,9 @@ export type GradientButtonProps = Omit<RestyleProps, "colors"> & {
   size?: keyof Theme["buttonSizes"];
   gradient?: keyof Theme["buttonGradients"];
   touchableOpacityProps?: TouchableOpacityProps;
+  start?: LinearGradientPoint | null;
+  end?: LinearGradientPoint | null;
+  colors?: string[];
 };
 
 const GradientButton: FC<GradientButtonProps> = (props) => {

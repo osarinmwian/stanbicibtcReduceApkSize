@@ -149,7 +149,6 @@ const lightTheme = createTheme({
   textInputVariants: {
     defaults: {
       borderRadius: "sm",
-      color: "primaryBlack",
       fontSize: RFValue(14),
       fontWeight: "500",
     },
