@@ -20,7 +20,7 @@ export type TextProps = RestyleTextProps & {
 };
 
 const Text: FC<TextProps> = (props) => {
-  const { children, fontVariant = "p", variant, ...rest } = props;
+  const { children, fontVariant = "p", variant = "body", ...rest } = props;
 
   const theme = useTheme();
 

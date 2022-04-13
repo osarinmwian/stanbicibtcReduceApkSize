@@ -7,6 +7,7 @@ const style = StyleSheet.create({
     backgroundColor: "white",
     flex: 1,
     justifyContent: "center",
+    padding: 16,
   },
 });
 

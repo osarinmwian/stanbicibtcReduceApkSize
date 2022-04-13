@@ -1,45 +1,55 @@
 import {
+  backgroundColor,
+  border,
   createRestyleComponent,
   createVariant,
+  layout,
+  opacity,
+  position,
+  shadow,
+  spacing,
   VariantProps,
+  visible,
 } from "@shopify/restyle";
-import { ComponentProps, FC, ReactChild, VFC } from "react";
+import { FC, ReactChild } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 
-import {
-  ImageIcon,
-  ImageIconPackType,
-  ImageIconProps,
-} from "@/shared/assets/icons";
+import { Icon, ImageIconPackType, ImageIconProps } from "@/shared/assets/icons";
+import { Box, BoxProps } from "@/shared/components/Layout";
 import { Theme, useTheme } from "@/shared/theme";
 
-import { Box } from "../Layout";
-
-type BoxComponentProps = ComponentProps<typeof Box>;
-
-type RestyleProps = BoxComponentProps & VariantProps<Theme, "buttonVariants">;
+type RestyleProps = BoxProps & VariantProps<Theme, "buttonVariants">;
 
 export type BaseButtonProps = RestyleProps & {
   disabled?: boolean;
-  onPress: () => void;
+  onPress?: TouchableOpacityProps["onPress"];
   touchableOpacityProps?: TouchableOpacityProps;
   size?: keyof Theme["buttonSizes"];
   leftComponent?: ReactChild;
   rightComponent?: ReactChild;
-  icon?: ImageIconPackType;
-  iconProps?: Omit<ImageIconProps, "name">;
+  leftIcon?: ImageIconPackType;
+  rightIcon?: ImageIconPackType;
+  leftIconProps?: Omit<ImageIconProps, "name">;
+  rightIconProps?: Omit<ImageIconProps, "name">;
 };
 
 const cardVariant = createVariant<Theme, "buttonVariants">({
   themeKey: "buttonVariants",
 });
 
-const Card = createRestyleComponent<RestyleProps, Theme>([cardVariant], Box);
-
-const Icon: VFC<ImageIconProps> = (props) => (
-  <Box marginRight="sm">
-    <ImageIcon color="whiteColor" size="md" {...props} />
-  </Box>
+const Card = createRestyleComponent<RestyleProps, Theme>(
+  [
+    backgroundColor,
+    opacity,
+    visible,
+    shadow,
+    position,
+    layout,
+    spacing,
+    border,
+    cardVariant,
+  ],
+  Box,
 );
 
 const BaseButton: FC<BaseButtonProps> = (props) => {
@@ -50,16 +60,18 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
     children,
     leftComponent,
     rightComponent,
-    icon,
-    iconProps,
-    variant,
+    leftIcon,
+    rightIcon,
+    leftIconProps,
+    rightIconProps,
+    variant = "filled",
     size = "md",
     ...rest
   } = props;
 
   const theme = useTheme();
 
-  const buttonSizeValues: unknown = theme.buttonSizes[size];
+  const buttonSizeValues = theme.buttonSizes[size];
 
   const disabledOpacity = disabled ? 0.5 : 1;
 
@@ -79,8 +91,21 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
         {...rest}
       >
         {leftComponent ?? null}
-        {icon ? <Icon name={icon} {...iconProps} /> : null}
+        {leftIcon ? (
+          <Icon
+            containerProps={{ marginRight: "sm" }}
+            name={leftIcon}
+            {...leftIconProps}
+          />
+        ) : null}
         {children}
+        {rightIcon ? (
+          <Icon
+            containerProps={{ marginLeft: "sm" }}
+            name={rightIcon}
+            {...rightIconProps}
+          />
+        ) : null}
         {rightComponent ?? null}
       </Card>
     </TouchableOpacity>

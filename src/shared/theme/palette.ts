@@ -26,6 +26,9 @@ export const palette = {
   tertiaryAndBlack: "#292929",
   tertiaryBlack: "#1F1F1F",
   tertiaryColor: "#0089FF",
+  transparent: "transparent",
   wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };
+
+export type PaletteType = keyof typeof palette;
