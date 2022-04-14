@@ -32,7 +32,10 @@ export const palette = {
   tertiaryBlack: "#1F1F1F",
   tertiaryColor: "#0089FF",
   tetiaryBlack: "#1F1F1F",
+  transparent: "transparent",
   transparentBlack: "rgba(1,1,1, 0.12)",
   wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };
+
+export type PaletteType = keyof typeof palette;

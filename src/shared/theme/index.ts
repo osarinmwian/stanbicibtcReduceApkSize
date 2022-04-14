@@ -4,11 +4,13 @@ import { Platform } from "react-native";
 import { RFValue } from "@/shared/utils/functions";
 
 import { palette } from "./palette";
+import type { PaddingSizesObjectType } from "./types";
 
 const lightTheme = createTheme({
   borderRadii: {
     lg: RFValue(32),
     md: RFValue(16),
+    none: 0,
     sm: RFValue(8),
     xl: RFValue(64),
     xs: RFValue(4),
@@ -33,15 +35,23 @@ const lightTheme = createTheme({
       paddingHorizontal: "lg",
       paddingVertical: "md",
     },
+    none: {
+      paddingHorizontal: "none",
+      paddingVertical: "none",
+    },
     sm: {
       paddingHorizontal: "md",
       paddingVertical: "sm",
+    },
+    xl: {
+      paddingHorizontal: "xxl",
+      paddingVertical: "xl",
     },
     xs: {
       paddingHorizontal: "sm",
       paddingVertical: "xs",
     },
-  },
+  } as PaddingSizesObjectType,
 
   buttonVariants: {
     defaults: {
@@ -51,11 +61,15 @@ const lightTheme = createTheme({
       backgroundColor: "primaryColor",
     },
     ghost: {
-      backgroundColor: "primaryColor10",
+      backgroundColor: "paleGrey50",
     },
+    none: {},
     outlined: {
-      borderColor: "primaryColor",
+      borderColor: "paleGrey",
       borderWidth: RFValue(1),
+    },
+    transparent: {
+      backgroundColor: "transparent",
     },
   },
 
@@ -98,6 +112,7 @@ const lightTheme = createTheme({
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
+    none: 0,
     s: RFValue(8),
     sm: RFValue(8),
     ss: RFValue(6),
@@ -107,7 +122,55 @@ const lightTheme = createTheme({
     xxs: RFValue(2),
   },
 
+  textInputSizes: {
+    lg: {
+      paddingHorizontal: "lg",
+      paddingVertical: "lg",
+    },
+    md: {
+      paddingHorizontal: "md",
+      paddingVertical: "md",
+    },
+    none: {
+      paddingHorizontal: "none",
+      paddingVertical: "none",
+    },
+    sm: {
+      paddingHorizontal: "sm",
+      paddingVertical: "sm",
+    },
+    xl: {
+      paddingHorizontal: "xl",
+      paddingVertical: "xl",
+    },
+    xs: {
+      paddingHorizontal: "xs",
+      paddingVertical: "xs",
+    },
+  } as PaddingSizesObjectType,
+
+  textInputVariants: {
+    defaults: {
+      borderRadius: "sm",
+      fontSize: RFValue(14),
+      fontWeight: "500",
+    },
+    filled: {
+      backgroundColor: "paleGrey50",
+      color: "primaryBlack",
+    },
+    none: {},
+    outlined: {
+      borderColor: "paleGrey",
+      borderWidth: RFValue(1),
+    },
+    transparent: {
+      backgroundColor: "transparent",
+    },
+  },
+
   textVariants: {
+    body: {},
     bold10: {
       color: "darkGrey",
       fontFamily: "BentonSans-Bold",
@@ -128,6 +191,7 @@ const lightTheme = createTheme({
       textAlign: "center",
     },
     defaults: {
+      color: "primaryBlack",
       fontSize: RFValue(14),
     },
     medium10: {
@@ -155,6 +219,7 @@ const lightTheme = createTheme({
       lineHeight: 18.18,
       textAlign: "center",
     },
+    none: {},
     regular10: {
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",

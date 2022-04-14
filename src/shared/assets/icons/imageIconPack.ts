@@ -11,6 +11,8 @@ const imageIconPack = {
   compass: require("@/shared/assets/image/compass.png"),
   complain: require("@/shared/assets/image/complain.png"),
   customer: require("@/shared/assets/image/customer.png"),
+  eyeClosed: require("@/shared/assets/image/eye-closed.png"),
+  eyeOpen: require("@/shared/assets/image/eye-opened.png"),
   fingerprint: require("@/shared/assets/image/fingerprint.png"),
   flight: require("@/shared/assets/image/flight.png"),
   flights: require("@/shared/assets/image/flights.png"),
