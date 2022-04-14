@@ -104,6 +104,7 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
 
           <PrimaryButton
             alignItems="center"
+            backgroundColor="transparent"
             borderColor="whiteColor"
             borderRadius="sm"
             borderWidth={2}
