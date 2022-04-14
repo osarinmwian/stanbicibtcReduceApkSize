@@ -9,7 +9,8 @@
     "welcome": "Welcome to the mutualfunds 2.0"
   },
   "mybank": {
-    "welcome": "Welcome to the Mybank 2.0"
+    "welcome": "Welcome to the Mybank 2.0",
+    "landing": {}
   },
   "pension": {
     "welcome": "Welcome to the pension 2.0"

@@ -1,10 +1,10 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { HomeScreen } from "@/shared/modules/storybook/screens/Home";
 
 import type { StoryBookRootStackParameterList } from "./types";
 
-const Stack = createStackNavigator<StoryBookRootStackParameterList>();
+const Stack = createNativeStackNavigator<StoryBookRootStackParameterList>();
 
 function StoryBookNavigation() {
   return (
