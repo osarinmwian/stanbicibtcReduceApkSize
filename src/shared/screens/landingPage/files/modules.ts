@@ -1,4 +1,4 @@
-import { MyBankRoutes } from "@/mybank/navigation/types";
+import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import {
   ease,
   insurance,
@@ -10,7 +10,7 @@ import {
 
 type Module = {
   backgroundColor: string;
-  destination: keyof MyBankRoutes;
+  destination: keyof MyBankRootStackParameterList;
   id: string;
   image: number;
   title: string;
@@ -19,7 +19,7 @@ type Module = {
 const modules: Module[] = [
   {
     backgroundColor: "primaryColor",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "1",
     image: mybank,
     title: "My Bank",
@@ -27,7 +27,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "mutualFundsContainer",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "2",
     image: mutualfunds,
     title: "Mutual Funds",
@@ -35,7 +35,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "pensionContainer",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "3",
     image: pension,
     title: "Pension",
@@ -43,7 +43,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "easeContainer",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "4",
     image: ease,
     title: "@Ease",
@@ -51,7 +51,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "insuranceContainer",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "5",
     image: insurance,
     title: "Insurance",
@@ -59,7 +59,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "black",
-    destination: "LoginScreen",
+    destination: "MyBank",
     id: "6",
     image: stocks,
     title: "Stock",

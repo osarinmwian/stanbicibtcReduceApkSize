@@ -53,6 +53,7 @@ export default function LoginScreen({
               labelVariant="bold14"
               marginVertical="xs"
               onPress={() => console.log("Baby")}
+              paddingVertical="md"
             />
             <PrimaryButton
               alignItems="center"
@@ -64,6 +65,7 @@ export default function LoginScreen({
               labelVariant="bold14"
               marginVertical="xs"
               onPress={() => console.log("Baby")}
+              paddingVertical="md"
             />
 
             <PrimaryButton
@@ -74,6 +76,7 @@ export default function LoginScreen({
               labelVariant="regular14"
               marginTop="md"
               onPress={() => console.log("Baby")}
+              paddingVertical="md"
             />
           </Box>
 
