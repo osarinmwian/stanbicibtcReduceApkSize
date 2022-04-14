@@ -24,16 +24,16 @@ export default function ModuleComponent(props: ModuleProps) {
     <Pressable
       alignItems="center"
       backgroundColor={backgroundColor}
-      borderRadius={10}
-      height={RFValue(92)}
+      borderRadius="sm"
+      height={RFValue(90)}
       justifyContent="center"
-      marginHorizontal="xs"
-      marginVertical="ssm"
+      marginHorizontal="ss"
+      marginVertical="ss"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(95)}
+      width={RFValue(93.7)}
     >
       <Image source={image} />
-      <Text color="whiteColor" marginTop="sm">
+      <Text color="whiteColor" marginTop="md" variant="medium10">
         {title}
       </Text>
     </Pressable>

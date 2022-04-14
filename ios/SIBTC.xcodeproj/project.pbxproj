@@ -7,101 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06D73B7197B4442C8F23632E /* BentonSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACC9FD1E93994FA98BCC9F28 /* BentonSans-Regular.otf */; };
-		0BEB0B3C67C543BFA4024598 /* BentonSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9D24A1FF42942D081E4EF5B /* BentonSans-ExtraLight.ttf */; };
-		0FCD966377D349938C6C5F99 /* BentonSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 375D02660CB44B319D3A451B /* BentonSans-Thin.otf */; };
-		125BEDEA0F3C45A3A7CFB743 /* BentonSansCond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CF0B00D194751AE8B4A96 /* BentonSansCond-Medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		14309303028C477FA46121C8 /* BentonSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23F4A70FDA684D8FACE28E32 /* BentonSans-Thin.ttf */; };
-		201CE094E1274615BDF4F0C9 /* BentonSansExtraComp-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBCC5A1AFEF14B7E9060739F /* BentonSansExtraComp-Black.ttf */; };
-		2351C7DC294947A5BF80743B /* BentonSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1476897E0241C382648629 /* BentonSans-ExtraLight.otf */; };
-		2819B49FBBDE41009BAFB0C4 /* BentonSansCond-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5403C8CE58247638D934A68 /* BentonSansCond-Light.ttf */; };
-		2A12CA4C1A2048708C37857D /* BentonSansCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA0DF912705E414F83FCF3CA /* BentonSansCond-Regular.ttf */; };
-		332E89223F36414881D16EE2 /* BentonSansCond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6366F61096164B5099597DBE /* BentonSansCond-Bold.ttf */; };
-		39D3B25767B34FEEB6E3A237 /* BentonSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8C387712E0D4DE68D13A574 /* BentonSans-Light.otf */; };
-		39E8996006BD46E29EAC2309 /* BentonSansExtraComp-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A56E98AB1B4C440BAD6362B4 /* BentonSansExtraComp-Medium.ttf */; };
-		3DA56392A39A444AB534D102 /* BentonSansExtraComp-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3440EBC3B84FCB98AEDD78 /* BentonSansExtraComp-Regular.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		407508E3C6E54AF88F4A7E0F /* BentonSansExtraComp-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E0BE1B46E2412ABCFC55BA /* BentonSansExtraComp-Book.ttf */; };
-		485AD1AB18E24F4F87C22976 /* BentonSansCond-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFA7FEAC509B4FD087DCA1E0 /* BentonSansCond-Black.ttf */; };
-		4A4F1412D405429C94A67186 /* BentonSansComp-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2089BDE60145C88D8C17F5 /* BentonSansComp-Black.ttf */; };
-		6399CAE420C94E4AAE0C6421 /* BentonSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1422AEADCCAF4D1B870503EF /* BentonSans-Medium.otf */; };
 		70456E65D071412685E41A0D /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBCD13B578E44DE836DC296 /* Rubik-VariableFont_wght.ttf */; };
-		704FFFE1EFB34681B0AA6970 /* BentonSansComp-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D84FC1BF50D49B9AD8B3C4E /* BentonSansComp-Book.ttf */; };
-		776E7B457A8A47DAA28D3D54 /* BentonSansComp-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CE05A43A5047AAB6C53C4F /* BentonSansComp-Medium.ttf */; };
 		7C8A96C071644AABBCC2D00F /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8395CF5541D04C52B5589928 /* Rubik-Italic-VariableFont_wght.ttf */; };
-		7CC7DCC747E847BD893C6833 /* BentonSansCond-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B1DB4BED941A39E56D572 /* BentonSansCond-Book.ttf */; };
-		7CFE10C054E641919A558C36 /* BentonSans-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FF6DBCE29F1412683D1CFC8 /* BentonSans-Book.ttf */; };
-		8A54F1B4E2B745629AC7010B /* BentonSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE072B6BF39D4D3DB727140A /* BentonSans-Light.ttf */; };
-		92B3B615FFC640BB9B5B0E69 /* BentonSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A1DE251944785B7BA8F67 /* BentonSans-Black.ttf */; };
 		96905EF65AED1B983A6B3ABC /* libPods-SIBTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SIBTC.a */; };
-		9E1CE110B964429292CE3E9E /* BentonSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3952AF3B13E04BF899ECD416 /* BentonSans-Bold.otf */; };
-		AD54953EAC074538B45CF0E2 /* BentonSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B41254722C247AF812F4420 /* BentonSans-Regular.ttf */; };
-		AF7C4D073F3F4D15977691C4 /* BentonSansComp-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEC555266B614A65A93AB316 /* BentonSansComp-Light.ttf */; };
-		B12EFD4F54704008B91DC723 /* BentonSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E5DD046A444B61A3BEEAF9 /* BentonSans-Black.otf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
-		B6D9ECAC1C43464B8A98F9A6 /* BentonSansComp-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4E873630394F51B50B1711 /* BentonSansComp-Bold.ttf */; };
-		B89BBD6B9AF44E4D8FD8E295 /* BentonSansExtraComp-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66FB0C8DD9CB41D7A8981D8B /* BentonSansExtraComp-Bold.ttf */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		BDF8C6650F284D98A7605B14 /* BentonSans-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BE75DE2119F40A597168346 /* BentonSans-Book.otf */; };
-		CBD65653908C40F48BAACC50 /* BentonSansExtraComp-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FD9D7DF0794BE396E83877 /* BentonSansExtraComp-Light.ttf */; };
-		CF7FA9E1ECC3429E8B684767 /* BentonSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09BA404FEFC34738BF8FE7F1 /* BentonSans-Medium.ttf */; };
-		FACC45588B2A46D8B1555402 /* BentonSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F40EEBA76346F190E115EE /* BentonSans-Bold.ttf */; };
-		FC00BB8DA77D49EE9ED81DB0 /* BentonSansComp-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67CBB8C765A648FFBC7639E5 /* BentonSansComp-Regular.ttf */; };
+		D20E0F562806E17A003975B4 /* BentonSans Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F512806E17A003975B4 /* BentonSans Bold.otf */; };
+		D20E0F572806E17A003975B4 /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F522806E17A003975B4 /* BentonSans Medium.otf */; };
+		D20E0F582806E17A003975B4 /* BentonSans Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F532806E17A003975B4 /* BentonSans Regular.otf */; };
+		D20E0F592806E17A003975B4 /* BentonSans Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F542806E17A003975B4 /* BentonSans Book.otf */; };
+		D20E0F5A2806E17A003975B4 /* BentonSans Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D20E0F552806E17A003975B4 /* BentonSans Black.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		09BA404FEFC34738BF8FE7F1 /* BentonSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSans-Medium.ttf"; sourceTree = "<group>"; };
-		0BE75DE2119F40A597168346 /* BentonSans-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Book.otf"; path = "../src/shared/assets/fonts/BentonSans-Book.otf"; sourceTree = "<group>"; };
-		0D84FC1BF50D49B9AD8B3C4E /* BentonSansComp-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Book.ttf"; sourceTree = "<group>"; };
+		09BA404FEFC34738BF8FE7F1 /* BentonSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSans-Medium.ttf"; sourceTree = "<group>"; };
+		0BE75DE2119F40A597168346 /* BentonSans-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Book.otf"; path = "../src/shared/assets/fonts/BentonSans-Book.otf"; sourceTree = "<group>"; };
+		0D84FC1BF50D49B9AD8B3C4E /* BentonSansComp-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Book.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SIBTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIBTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SIBTC/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SIBTC/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SIBTC/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SIBTC/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SIBTC/main.m; sourceTree = "<group>"; };
-		1422AEADCCAF4D1B870503EF /* BentonSans-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Medium.otf"; path = "../src/shared/assets/fonts/BentonSans-Medium.otf"; sourceTree = "<group>"; };
-		1E4B1DB4BED941A39E56D572 /* BentonSansCond-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Book.ttf"; sourceTree = "<group>"; };
-		23F4A70FDA684D8FACE28E32 /* BentonSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Thin.ttf"; path = "../src/shared/assets/fonts/BentonSans-Thin.ttf"; sourceTree = "<group>"; };
-		375D02660CB44B319D3A451B /* BentonSans-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Thin.otf"; path = "../src/shared/assets/fonts/BentonSans-Thin.otf"; sourceTree = "<group>"; };
-		3952AF3B13E04BF899ECD416 /* BentonSans-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Bold.otf"; path = "../src/shared/assets/fonts/BentonSans-Bold.otf"; sourceTree = "<group>"; };
-		3D0A1DE251944785B7BA8F67 /* BentonSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Black.ttf"; path = "../src/shared/assets/fonts/BentonSans-Black.ttf"; sourceTree = "<group>"; };
-		40E0BE1B46E2412ABCFC55BA /* BentonSansExtraComp-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Book.ttf"; sourceTree = "<group>"; };
-		4D2089BDE60145C88D8C17F5 /* BentonSansComp-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Black.ttf"; sourceTree = "<group>"; };
-		4D9CF0B00D194751AE8B4A96 /* BentonSansCond-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Medium.ttf"; sourceTree = "<group>"; };
-		4F1476897E0241C382648629 /* BentonSans-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-ExtraLight.otf"; path = "../src/shared/assets/fonts/BentonSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		1422AEADCCAF4D1B870503EF /* BentonSans-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Medium.otf"; path = "../src/shared/assets/fonts/BentonSans-Medium.otf"; sourceTree = "<group>"; };
+		1E4B1DB4BED941A39E56D572 /* BentonSansCond-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Book.ttf"; sourceTree = "<group>"; };
+		1F17CE0F7F5E46789F40856A /* BentonSans Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Regular.otf"; path = "../src/shared/assets/fonts/BentonSans Regular.otf"; sourceTree = "<group>"; };
+		23F4A70FDA684D8FACE28E32 /* BentonSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Thin.ttf"; path = "../src/shared/assets/fonts/BentonSans-Thin.ttf"; sourceTree = "<group>"; };
+		375D02660CB44B319D3A451B /* BentonSans-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Thin.otf"; path = "../src/shared/assets/fonts/BentonSans-Thin.otf"; sourceTree = "<group>"; };
+		3952AF3B13E04BF899ECD416 /* BentonSans-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Bold.otf"; path = "../src/shared/assets/fonts/BentonSans-Bold.otf"; sourceTree = "<group>"; };
+		3D0A1DE251944785B7BA8F67 /* BentonSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Black.ttf"; path = "../src/shared/assets/fonts/BentonSans-Black.ttf"; sourceTree = "<group>"; };
+		40E0BE1B46E2412ABCFC55BA /* BentonSansExtraComp-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Book.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Book.ttf"; sourceTree = "<group>"; };
+		4D2089BDE60145C88D8C17F5 /* BentonSansComp-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Black.ttf"; sourceTree = "<group>"; };
+		4D9CF0B00D194751AE8B4A96 /* BentonSansCond-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Medium.ttf"; sourceTree = "<group>"; };
+		4F1476897E0241C382648629 /* BentonSans-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-ExtraLight.otf"; path = "../src/shared/assets/fonts/BentonSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		56D4A9705F2F45259C313DF2 /* BentonSans Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Medium.otf"; path = "../src/shared/assets/fonts/BentonSans Medium.otf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SIBTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SIBTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B41254722C247AF812F4420 /* BentonSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSans-Regular.ttf"; sourceTree = "<group>"; };
-		6366F61096164B5099597DBE /* BentonSansCond-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Bold.ttf"; sourceTree = "<group>"; };
-		66FB0C8DD9CB41D7A8981D8B /* BentonSansExtraComp-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Bold.ttf"; sourceTree = "<group>"; };
-		67CBB8C765A648FFBC7639E5 /* BentonSansComp-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Regular.ttf"; sourceTree = "<group>"; };
+		5B41254722C247AF812F4420 /* BentonSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSans-Regular.ttf"; sourceTree = "<group>"; };
+		6366F61096164B5099597DBE /* BentonSansCond-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Bold.ttf"; sourceTree = "<group>"; };
+		66FB0C8DD9CB41D7A8981D8B /* BentonSansExtraComp-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Bold.ttf"; sourceTree = "<group>"; };
+		67CBB8C765A648FFBC7639E5 /* BentonSansComp-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Regular.ttf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-SIBTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.debug.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-SIBTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.release.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.release.xcconfig"; sourceTree = "<group>"; };
-		8395CF5541D04C52B5589928 /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic-VariableFont_wght.ttf"; path = "../src/shared/assets/fonts/Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		8C3440EBC3B84FCB98AEDD78 /* BentonSansExtraComp-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Regular.ttf"; sourceTree = "<group>"; };
-		8FF6DBCE29F1412683D1CFC8 /* BentonSans-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Book.ttf"; path = "../src/shared/assets/fonts/BentonSans-Book.ttf"; sourceTree = "<group>"; };
-		A56E98AB1B4C440BAD6362B4 /* BentonSansExtraComp-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Medium.ttf"; sourceTree = "<group>"; };
-		A9D24A1FF42942D081E4EF5B /* BentonSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-ExtraLight.ttf"; path = "../src/shared/assets/fonts/BentonSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8395CF5541D04C52B5589928 /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic-VariableFont_wght.ttf"; path = "../src/shared/assets/fonts/Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		8C3440EBC3B84FCB98AEDD78 /* BentonSansExtraComp-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Regular.ttf"; sourceTree = "<group>"; };
+		8FF6DBCE29F1412683D1CFC8 /* BentonSans-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Book.ttf"; path = "../src/shared/assets/fonts/BentonSans-Book.ttf"; sourceTree = "<group>"; };
+		A56E98AB1B4C440BAD6362B4 /* BentonSansExtraComp-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Medium.ttf"; sourceTree = "<group>"; };
+		A9D24A1FF42942D081E4EF5B /* BentonSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-ExtraLight.ttf"; path = "../src/shared/assets/fonts/BentonSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SIBTC/SplashScreen.storyboard; sourceTree = "<group>"; };
-		ACC9FD1E93994FA98BCC9F28 /* BentonSans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Regular.otf"; path = "../src/shared/assets/fonts/BentonSans-Regular.otf"; sourceTree = "<group>"; };
-		B7CE05A43A5047AAB6C53C4F /* BentonSansComp-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Medium.ttf"; sourceTree = "<group>"; };
+		ACC9FD1E93994FA98BCC9F28 /* BentonSans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Regular.otf"; path = "../src/shared/assets/fonts/BentonSans-Regular.otf"; sourceTree = "<group>"; };
+		AE33B5EE09D142ABAFA34C16 /* BentonSans Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Book.otf"; path = "../src/shared/assets/fonts/BentonSans Book.otf"; sourceTree = "<group>"; };
+		B7CE05A43A5047AAB6C53C4F /* BentonSansComp-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Medium.ttf"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		BEC555266B614A65A93AB316 /* BentonSansComp-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Light.ttf"; sourceTree = "<group>"; };
-		BFA7FEAC509B4FD087DCA1E0 /* BentonSansCond-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Black.ttf"; sourceTree = "<group>"; };
-		C2E5DD046A444B61A3BEEAF9 /* BentonSans-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Black.otf"; path = "../src/shared/assets/fonts/BentonSans-Black.otf"; sourceTree = "<group>"; };
-		C8F40EEBA76346F190E115EE /* BentonSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSans-Bold.ttf"; sourceTree = "<group>"; };
-		CA0DF912705E414F83FCF3CA /* BentonSansCond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Regular.ttf"; sourceTree = "<group>"; };
-		CBCC5A1AFEF14B7E9060739F /* BentonSansExtraComp-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Black.ttf"; sourceTree = "<group>"; };
-		CFBCD13B578E44DE836DC296 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-VariableFont_wght.ttf"; path = "../src/shared/assets/fonts/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		D8C387712E0D4DE68D13A574 /* BentonSans-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Light.otf"; path = "../src/shared/assets/fonts/BentonSans-Light.otf"; sourceTree = "<group>"; };
-		DE4E873630394F51B50B1711 /* BentonSansComp-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Bold.ttf"; sourceTree = "<group>"; };
-		E5403C8CE58247638D934A68 /* BentonSansCond-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Light.ttf"; sourceTree = "<group>"; };
+		BEC555266B614A65A93AB316 /* BentonSansComp-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Light.ttf"; sourceTree = "<group>"; };
+		BFA7FEAC509B4FD087DCA1E0 /* BentonSansCond-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Black.ttf"; sourceTree = "<group>"; };
+		C2E5DD046A444B61A3BEEAF9 /* BentonSans-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Black.otf"; path = "../src/shared/assets/fonts/BentonSans-Black.otf"; sourceTree = "<group>"; };
+		C8F40EEBA76346F190E115EE /* BentonSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSans-Bold.ttf"; sourceTree = "<group>"; };
+		CA0DF912705E414F83FCF3CA /* BentonSansCond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Regular.ttf"; sourceTree = "<group>"; };
+		CBCC5A1AFEF14B7E9060739F /* BentonSansExtraComp-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Black.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Black.ttf"; sourceTree = "<group>"; };
+		CFBCD13B578E44DE836DC296 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-VariableFont_wght.ttf"; path = "../src/shared/assets/fonts/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		D20E0F512806E17A003975B4 /* BentonSans Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans Bold.otf"; path = "../src/shared/assets/fonts/BentonSans Bold.otf"; sourceTree = "<group>"; };
+		D20E0F522806E17A003975B4 /* BentonSans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans Medium.otf"; path = "../src/shared/assets/fonts/BentonSans Medium.otf"; sourceTree = "<group>"; };
+		D20E0F532806E17A003975B4 /* BentonSans Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans Regular.otf"; path = "../src/shared/assets/fonts/BentonSans Regular.otf"; sourceTree = "<group>"; };
+		D20E0F542806E17A003975B4 /* BentonSans Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans Book.otf"; path = "../src/shared/assets/fonts/BentonSans Book.otf"; sourceTree = "<group>"; };
+		D20E0F552806E17A003975B4 /* BentonSans Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans Black.otf"; path = "../src/shared/assets/fonts/BentonSans Black.otf"; sourceTree = "<group>"; };
+		D7E9EF29DFFE40F9916A9EC9 /* BentonSans Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Black.otf"; path = "../src/shared/assets/fonts/BentonSans Black.otf"; sourceTree = "<group>"; };
+		D8C387712E0D4DE68D13A574 /* BentonSans-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Light.otf"; path = "../src/shared/assets/fonts/BentonSans-Light.otf"; sourceTree = "<group>"; };
+		DE4E873630394F51B50B1711 /* BentonSansComp-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansComp-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSansComp-Bold.ttf"; sourceTree = "<group>"; };
+		E5403C8CE58247638D934A68 /* BentonSansCond-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansCond-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansCond-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EE072B6BF39D4D3DB727140A /* BentonSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Light.ttf"; path = "../src/shared/assets/fonts/BentonSans-Light.ttf"; sourceTree = "<group>"; };
-		F9FD9D7DF0794BE396E83877 /* BentonSansExtraComp-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Light.ttf"; sourceTree = "<group>"; };
+		EE072B6BF39D4D3DB727140A /* BentonSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Light.ttf"; path = "../src/shared/assets/fonts/BentonSans-Light.ttf"; sourceTree = "<group>"; };
+		F7FF11BF16F24F288A07FFB2 /* BentonSans Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans Bold.otf"; path = "../src/shared/assets/fonts/BentonSans Bold.otf"; sourceTree = "<group>"; };
+		F9FD9D7DF0794BE396E83877 /* BentonSansExtraComp-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSansExtraComp-Light.ttf"; path = "../src/shared/assets/fonts/BentonSansExtraComp-Light.ttf"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SIBTC/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,9 +161,13 @@
 				F9FD9D7DF0794BE396E83877 /* BentonSansExtraComp-Light.ttf */,
 				A56E98AB1B4C440BAD6362B4 /* BentonSansExtraComp-Medium.ttf */,
 				8C3440EBC3B84FCB98AEDD78 /* BentonSansExtraComp-Regular.ttf */,
+				D7E9EF29DFFE40F9916A9EC9 /* BentonSans Black.otf */,
+				F7FF11BF16F24F288A07FFB2 /* BentonSans Bold.otf */,
+				AE33B5EE09D142ABAFA34C16 /* BentonSans Book.otf */,
+				56D4A9705F2F45259C313DF2 /* BentonSans Medium.otf */,
+				1F17CE0F7F5E46789F40856A /* BentonSans Regular.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -195,6 +180,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D20E0F552806E17A003975B4 /* BentonSans Black.otf */,
+				D20E0F512806E17A003975B4 /* BentonSans Bold.otf */,
+				D20E0F542806E17A003975B4 /* BentonSans Book.otf */,
+				D20E0F522806E17A003975B4 /* BentonSans Medium.otf */,
+				D20E0F532806E17A003975B4 /* BentonSans Regular.otf */,
 				13B07FAE1A68108700A75B9A /* SIBTC */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -313,42 +303,13 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				B12EFD4F54704008B91DC723 /* BentonSans-Black.otf in Resources */,
-				9E1CE110B964429292CE3E9E /* BentonSans-Bold.otf in Resources */,
-				BDF8C6650F284D98A7605B14 /* BentonSans-Book.otf in Resources */,
-				2351C7DC294947A5BF80743B /* BentonSans-ExtraLight.otf in Resources */,
-				39D3B25767B34FEEB6E3A237 /* BentonSans-Light.otf in Resources */,
-				6399CAE420C94E4AAE0C6421 /* BentonSans-Medium.otf in Resources */,
-				06D73B7197B4442C8F23632E /* BentonSans-Regular.otf in Resources */,
-				0FCD966377D349938C6C5F99 /* BentonSans-Thin.otf in Resources */,
+				D20E0F562806E17A003975B4 /* BentonSans Bold.otf in Resources */,
+				D20E0F572806E17A003975B4 /* BentonSans Medium.otf in Resources */,
+				D20E0F582806E17A003975B4 /* BentonSans Regular.otf in Resources */,
+				D20E0F592806E17A003975B4 /* BentonSans Book.otf in Resources */,
+				D20E0F5A2806E17A003975B4 /* BentonSans Black.otf in Resources */,
 				7C8A96C071644AABBCC2D00F /* Rubik-Italic-VariableFont_wght.ttf in Resources */,
 				70456E65D071412685E41A0D /* Rubik-VariableFont_wght.ttf in Resources */,
-				92B3B615FFC640BB9B5B0E69 /* BentonSans-Black.ttf in Resources */,
-				FACC45588B2A46D8B1555402 /* BentonSans-Bold.ttf in Resources */,
-				7CFE10C054E641919A558C36 /* BentonSans-Book.ttf in Resources */,
-				0BEB0B3C67C543BFA4024598 /* BentonSans-ExtraLight.ttf in Resources */,
-				8A54F1B4E2B745629AC7010B /* BentonSans-Light.ttf in Resources */,
-				CF7FA9E1ECC3429E8B684767 /* BentonSans-Medium.ttf in Resources */,
-				AD54953EAC074538B45CF0E2 /* BentonSans-Regular.ttf in Resources */,
-				14309303028C477FA46121C8 /* BentonSans-Thin.ttf in Resources */,
-				4A4F1412D405429C94A67186 /* BentonSansComp-Black.ttf in Resources */,
-				B6D9ECAC1C43464B8A98F9A6 /* BentonSansComp-Bold.ttf in Resources */,
-				704FFFE1EFB34681B0AA6970 /* BentonSansComp-Book.ttf in Resources */,
-				AF7C4D073F3F4D15977691C4 /* BentonSansComp-Light.ttf in Resources */,
-				776E7B457A8A47DAA28D3D54 /* BentonSansComp-Medium.ttf in Resources */,
-				FC00BB8DA77D49EE9ED81DB0 /* BentonSansComp-Regular.ttf in Resources */,
-				485AD1AB18E24F4F87C22976 /* BentonSansCond-Black.ttf in Resources */,
-				332E89223F36414881D16EE2 /* BentonSansCond-Bold.ttf in Resources */,
-				7CC7DCC747E847BD893C6833 /* BentonSansCond-Book.ttf in Resources */,
-				2819B49FBBDE41009BAFB0C4 /* BentonSansCond-Light.ttf in Resources */,
-				125BEDEA0F3C45A3A7CFB743 /* BentonSansCond-Medium.ttf in Resources */,
-				2A12CA4C1A2048708C37857D /* BentonSansCond-Regular.ttf in Resources */,
-				201CE094E1274615BDF4F0C9 /* BentonSansExtraComp-Black.ttf in Resources */,
-				B89BBD6B9AF44E4D8FD8E295 /* BentonSansExtraComp-Bold.ttf in Resources */,
-				407508E3C6E54AF88F4A7E0F /* BentonSansExtraComp-Book.ttf in Resources */,
-				CBD65653908C40F48BAACC50 /* BentonSansExtraComp-Light.ttf in Resources */,
-				39E8996006BD46E29EAC2309 /* BentonSansExtraComp-Medium.ttf in Resources */,
-				3DA56392A39A444AB534D102 /* BentonSansExtraComp-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

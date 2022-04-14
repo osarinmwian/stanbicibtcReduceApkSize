@@ -8,8 +8,8 @@ import { MyBankRootStackParameterList } from "./types";
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
 function MyBankNavigation() {
-  // const isLoggedIn = undefined;
-  const isLoggedIn = 65;
+  const isLoggedIn = undefined;
+  // const isLoggedIn = 65;
   return (
     <Stack.Navigator
       screenOptions={{

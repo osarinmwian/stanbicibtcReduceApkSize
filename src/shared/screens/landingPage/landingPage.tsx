@@ -1,10 +1,15 @@
 import React from "react";
 import { FlatList, Image, ImageBackground } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { MyBankNavigationProps } from "@/mybank/navigation/types";
-import { compass, landingpagebackground } from "@/shared/assets/image";
+import {
+  MyBankNavigationProps,
+  MyBankRootStackParameterList,
+} from "@/mybank/navigation/types";
+import { landingpagebackground } from "@/shared/assets/image";
 import logo from "@/shared/assets/image/logo.png";
+import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import SelectChannelModal from "@/shared/components/selectChannelModal";
@@ -14,11 +19,10 @@ import ModuleComponent from "./components/ModuleComponent";
 import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE, ROOT } from "./landingPageStyles";
-
 // eslint-disable-next-line prettier/prettier
 export default function LandingPage({ navigation }: MyBankNavigationProps<"LandingPage"> ){
   return (
-    <Box flex={1}>
+    <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
         resizeMode="cover"
         source={landingpagebackground}
@@ -27,8 +31,8 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
         <Box alignItems="flex-end">
           <QuickOptionsModal />
         </Box>
-        <Box paddingHorizontal="sl">
-          <Box alignItems="center" justifyContent="center" marginTop="sl">
+        <Box paddingHorizontal="md">
+          <Box alignItems="center" justifyContent="center" marginTop="md">
             <Image source={logo} style={LOGOSTYLE} />
             <Text color="whiteColor" marginTop="xs" variant="bold24">
               Hello!
@@ -38,15 +42,15 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
           <Box
             alignItems="center"
             justifyContent="space-between"
-            marginBottom="sl"
-            marginTop="Ml"
+            marginBottom="md"
+            marginTop="md"
             width="100%"
           >
             <FlatList
               data={modules}
               keyExtractor={(item) => item.id}
               ListHeaderComponent={
-                <Text color="whiteColor" marginBottom="ssm">
+                <Text color="whiteColor" marginBottom="lg">
                   Slide to see more options
                 </Text>
               }
@@ -56,7 +60,9 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
                   backgroundColor={
                     item.backgroundColor as PressableProps["backgroundColor"]
                   }
-                  destination={item.destination}
+                  destination={
+                    item.destination as keyof MyBankRootStackParameterList
+                  }
                   image={item.image}
                   navigation={navigation}
                   title={item.title}
@@ -76,43 +82,42 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
             <Box
               flexDirection="row"
               justifyContent="space-between"
-              marginVertical="sl"
+              marginVertical="lg"
             >
-              <Box>
-                <SelectChannelModal />
-              </Box>
-              <Pressable
+              <SelectChannelModal />
+
+              <PrimaryButton
                 alignItems="center"
                 backgroundColor="whiteColor"
-                borderRadius={10}
                 height={RFValue(51)}
                 justifyContent="center"
+                label="ONE PASS"
+                labelProps={{
+                  color: "wealthColor",
+                }}
+                labelVariant="medium12"
+                onPress={() => console.log("bABY")}
                 width={RFValue(150)}
-              >
-                <Text variant="medium12">ONE PASS</Text>
-              </Pressable>
+              />
             </Box>
           </Box>
 
-          <Pressable
+          <PrimaryButton
             alignItems="center"
-            alignSelf="center"
             borderColor="whiteColor"
-            borderRadius={10}
-            borderWidth={1}
-            flexDirection="row"
-            height={RFValue(45)}
+            borderRadius="sm"
+            borderWidth={2}
+            height={RFValue(51)}
+            icon="compass"
             justifyContent="center"
-            marginTop="ssm"
-            width="100%"
-          >
-            <Image source={compass} />
-            <Text color="whiteColor" marginLeft="sl" variant="medium12">
-              Explore Quick Services
-            </Text>
-          </Pressable>
+            label="Explore Quick Services"
+            labelProps={{ color: "whiteColor" }}
+            labelVariant="regular14"
+            marginVertical="xs"
+            onPress={() => console.log("Baby")}
+          />
         </Box>
       </ImageBackground>
-    </Box>
+    </SafeAreaView>
   );
 }

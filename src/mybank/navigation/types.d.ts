@@ -15,13 +15,13 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
 
 // Tab routes
 type MyTabRoutes = {
-  ExampleScreen: {
+  HomeLandingPage: {
     name: string;
   };
-  SecondScreen: undefined;
-  ThirdScreen: undefined;
-  FourthScreen: undefined;
-  FifthScreen: undefined;
+  PaymentsLandingPage: undefined;
+  TransferLandingPage: undefined;
+  LifestyleLandingPage: undefined;
+  MoreLandingPage: undefined;
 };
 
 export type MyBankNavigationProps<

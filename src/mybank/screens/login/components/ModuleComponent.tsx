@@ -20,21 +20,19 @@ export default function ModuleComponent(props: ModuleProps) {
     <Pressable
       alignItems="center"
       backgroundColor={backgroundColor}
-      borderRadius={10}
-      height={RFValue(80)}
+      borderRadius="sm"
+      height={RFValue(90)}
       justifyContent="center"
-      marginHorizontal="xs"
-      marginVertical="ssm"
+      margin="xs"
       onPress={() => navigation.navigate(destination)}
-      // paddingHorizontal="xs"
-      width={RFValue(95)}
+      width={RFValue(105)}
     >
       <Image source={image} />
       <Text
         color="whiteColor"
-        marginTop="s"
+        marginTop="sm"
         textAlign="center"
-        variant="medium12"
+        variant="regular12"
       >
         {title}
       </Text>

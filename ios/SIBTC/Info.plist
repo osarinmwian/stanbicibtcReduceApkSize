@@ -14,10 +14,10 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -35,12 +35,22 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BentonSans Black.otf</string>
+		<string>BentonSans Bold.otf</string>
+		<string>BentonSans Book.otf</string>
+		<string>BentonSans Medium.otf</string>
+		<string>BentonSans Regular.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>SplashScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -49,46 +59,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>BentonSans-Black.otf</string>
-		<string>BentonSans-Bold.otf</string>
-		<string>BentonSans-Book.otf</string>
-		<string>BentonSans-ExtraLight.otf</string>
-		<string>BentonSans-Light.otf</string>
-		<string>BentonSans-Medium.otf</string>
-		<string>BentonSans-Regular.otf</string>
-		<string>BentonSans-Thin.otf</string>
-		<string>Rubik-Italic-VariableFont_wght.ttf</string>
-		<string>Rubik-VariableFont_wght.ttf</string>
-		<string>BentonSans-Black.ttf</string>
-		<string>BentonSans-Bold.ttf</string>
-		<string>BentonSans-Book.ttf</string>
-		<string>BentonSans-ExtraLight.ttf</string>
-		<string>BentonSans-Light.ttf</string>
-		<string>BentonSans-Medium.ttf</string>
-		<string>BentonSans-Regular.ttf</string>
-		<string>BentonSans-Thin.ttf</string>
-		<string>BentonSansComp-Black.ttf</string>
-		<string>BentonSansComp-Bold.ttf</string>
-		<string>BentonSansComp-Book.ttf</string>
-		<string>BentonSansComp-Light.ttf</string>
-		<string>BentonSansComp-Medium.ttf</string>
-		<string>BentonSansComp-Regular.ttf</string>
-		<string>BentonSansCond-Black.ttf</string>
-		<string>BentonSansCond-Bold.ttf</string>
-		<string>BentonSansCond-Book.ttf</string>
-		<string>BentonSansCond-Light.ttf</string>
-		<string>BentonSansCond-Medium.ttf</string>
-		<string>BentonSansCond-Regular.ttf</string>
-		<string>BentonSansExtraComp-Black.ttf</string>
-		<string>BentonSansExtraComp-Bold.ttf</string>
-		<string>BentonSansExtraComp-Book.ttf</string>
-		<string>BentonSansExtraComp-Light.ttf</string>
-		<string>BentonSansExtraComp-Medium.ttf</string>
-		<string>BentonSansExtraComp-Regular.ttf</string>
-	</array>
 </dict>
 </plist>

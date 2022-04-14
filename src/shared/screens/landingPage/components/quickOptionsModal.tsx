@@ -47,18 +47,18 @@ const QuickOptions = () => {
           alignItems="center"
           flexDirection="row"
           justifyContent="flex-end"
-          marginTop="Ml"
+          marginTop="lg"
           onPress={handleDismissModalPress}
         >
           <Image source={close} />
           <Box
             alignItems="center"
             backgroundColor="whiteColor"
-            borderBottomLeftRadius={30}
-            borderTopLeftRadius={30}
+            borderBottomLeftRadius="lg"
+            borderTopLeftRadius="lg"
             flexDirection="row"
-            marginLeft="m"
-            padding="m"
+            marginLeft="md"
+            padding="md"
           >
             <Image source={question} />
             <Text marginLeft="xs">Quick</Text>
@@ -75,11 +75,11 @@ const QuickOptions = () => {
       <Pressable
         alignItems="center"
         backgroundColor="primaryColor10"
-        borderBottomLeftRadius={30}
-        borderTopLeftRadius={30}
+        borderBottomLeftRadius="lg"
+        borderTopLeftRadius="lg"
         flexDirection="row"
         onTouchStart={handlePresentModalPress}
-        padding="ssm"
+        padding="md"
       >
         <Image source={question} />
         <Text marginLeft="xs">Quick</Text>
@@ -94,23 +94,30 @@ const QuickOptions = () => {
           <Box
             alignItems="center"
             backgroundColor="whiteColor"
-            borderTopEndRadius={20}
-            borderTopStartRadius={20}
+            borderTopEndRadius="md"
+            borderTopStartRadius="md"
             elevation={5}
             flex={1}
+            justifyContent="center"
             shadowColor="darkGrey"
             shadowOffset={{ height: 2, width: 0 }}
             shadowOpacity={0.25}
+            // width="100%"
             shadowRadius={4}
-            width="100%"
           >
             <FlatList
               data={quickOptions}
               keyExtractor={(item) => item.id}
               ListHeaderComponent={
-                <Text color="primaryColor" marginBottom="s" variant="medium14">
-                  QUICK OPTIONS
-                </Text>
+                <Box alignItems="flex-start">
+                  <Text
+                    color="primaryColor"
+                    marginBottom="md"
+                    variant="medium14"
+                  >
+                    QUICK OPTIONS
+                  </Text>
+                </Box>
               }
               numColumns={3}
               renderItem={({ item }) => (

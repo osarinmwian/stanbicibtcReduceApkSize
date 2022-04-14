@@ -1,4 +1,5 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
+import { Platform } from "react-native";
 
 import { RFValue } from "@/shared/utils/functions";
 
@@ -97,7 +98,9 @@ const lightTheme = createTheme({
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
+    s: RFValue(8),
     sm: RFValue(8),
+    ss: RFValue(6),
     xl: RFValue(64),
     xs: RFValue(4),
     xxl: RFValue(128),
@@ -107,7 +110,7 @@ const lightTheme = createTheme({
   textVariants: {
     bold10: {
       color: "darkGrey",
-      fontFamily: "BentonSans",
+      fontFamily: "BentonSans-Bold",
       fontSize: RFValue(10),
       fontWeight: "700",
       textAlign: "center",
@@ -127,6 +130,12 @@ const lightTheme = createTheme({
     defaults: {
       fontSize: RFValue(14),
     },
+    medium10: {
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(10),
+      fontWeight: "400",
+      textAlign: "center",
+    },
     medium12: {
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(12),
@@ -135,7 +144,7 @@ const lightTheme = createTheme({
     },
     medium14: {
       fontFamily: "BentonSans-Medium",
-      fontSize: RFValue(18),
+      fontSize: RFValue(14),
       fontWeight: "400",
       textAlign: "center",
     },
@@ -147,20 +156,24 @@ const lightTheme = createTheme({
       textAlign: "center",
     },
     regular10: {
-      fontFamily: "BentonSans",
+      fontFamily:
+        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(10),
       fontWeight: "400",
+      // lineHeight: 18,
       textAlign: "center",
     },
     regular12: {
-      fontFamily: "BentonSans",
+      fontFamily:
+        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(12),
       fontWeight: "400",
-      lineHeight: 14.22,
+      lineHeight: RFValue(16.22),
       textAlign: "center",
     },
     regular14: {
-      fontFamily: "BentonSans",
+      fontFamily:
+        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
       textAlign: "center",

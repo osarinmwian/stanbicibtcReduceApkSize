@@ -10,17 +10,10 @@ import {
   payments,
   transfer,
 } from "@/mybank/assets/image";
-import {
-  ExampleScreen,
-  FifthScreen,
-  FourthScreen,
-  SecondScreen,
-  ThirdScreen,
-} from "@/mybank/screens/";
+import { ExampleScreen } from "@/mybank/screens/";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-import Styles from "./styles";
 import { MyTabRoutes } from "./types";
 
 const Tab = createBottomTabNavigator<MyTabRoutes>();
@@ -28,25 +21,25 @@ const Tab = createBottomTabNavigator<MyTabRoutes>();
 export default function BottomTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="ExampleScreen"
+      initialRouteName="HomeLandingPage"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#0033AA",
         tabBarInactiveTintColor: "#001648",
         tabBarShowLabel: false,
-        tabBarStyle: Styles.tabBarStyle,
+        // tabBarStyle: Styles.tabBarStyle,
       }}
     >
       <Tab.Screen
         component={ExampleScreen}
-        name="ExampleScreen"
+        name="HomeLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center">
+            <Box alignItems="center" justifyContent="center" marginTop="sm">
               <Image source={homeIcon} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
-                marginTop="sm"
+                marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
                 Home
@@ -56,15 +49,15 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={SecondScreen}
-        name="SecondScreen"
+        component={ExampleScreen}
+        name="TransferLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center">
+            <Box alignItems="center" justifyContent="center" marginTop="sm">
               <Image source={transfer} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
-                marginTop="sm"
+                marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
                 Transfer
@@ -74,33 +67,33 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={ThirdScreen}
-        name="ThirdScreen"
+        component={ExampleScreen}
+        name="PaymentsLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center">
+            <Box alignItems="center" justifyContent="center" marginTop="sm">
               <Image source={payments} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
-                marginTop="sm"
+                marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
-                Lifestyle
+                Payments
               </Text>
             </Box>
           ),
         }}
       />
       <Tab.Screen
-        component={FourthScreen}
-        name="FourthScreen"
+        component={ExampleScreen}
+        name="LifestyleLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center">
+            <Box alignItems="center" justifyContent="center" marginTop="sm">
               <Image source={lifestyle} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
-                marginTop="sm"
+                marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
                 Lifestyle
@@ -110,15 +103,15 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={FifthScreen}
-        name="FifthScreen"
+        component={ExampleScreen}
+        name="MoreLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center">
+            <Box alignItems="center" justifyContent="center" marginTop="sm">
               <Image source={more} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
-                marginTop="sm"
+                marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
                 More

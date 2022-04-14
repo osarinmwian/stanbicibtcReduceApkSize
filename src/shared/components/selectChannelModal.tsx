@@ -7,8 +7,11 @@ import React, { useCallback, useMemo, useRef } from "react";
 import { FlatList } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
+
 import ModuleComponent from "../screens/landingPage/components/ModuleComponent";
 import modules from "../screens/landingPage/files/modules";
+import { PrimaryButton } from "./Buttons";
 import { Box } from "./Layout";
 import { PressableProps } from "./Pressable";
 import { Text } from "./Typography";
@@ -40,17 +43,21 @@ const SelectChannel = () => {
 
   return (
     <Box>
-      <Box
+      <PrimaryButton
         alignItems="center"
         backgroundColor="whiteColor"
-        borderRadius={10}
         height={RFValue(51)}
         justifyContent="center"
-        onTouchStart={handlePresentModalPress}
+        label="CREATE ACCOUNT"
+        labelProps={{
+          color: "wealthColor",
+          fontWeight: "bold",
+          textAlign: "left",
+          variant: "medium14",
+        }}
+        onPress={handlePresentModalPress}
         width={RFValue(150)}
-      >
-        <Text variant="medium12">CREATE ACCOUNT</Text>
-      </Box>
+      />
       <BottomSheetModal
         backdropComponent={renderBackdrop}
         enableDismissOnClose
@@ -61,8 +68,8 @@ const SelectChannel = () => {
           <Box
             alignItems="center"
             backgroundColor="whiteColor"
-            borderTopEndRadius={20}
-            borderTopStartRadius={20}
+            borderTopEndRadius="md"
+            borderTopStartRadius="md"
             elevation={5}
             flex={1}
             shadowColor="darkGrey"
@@ -75,7 +82,7 @@ const SelectChannel = () => {
               data={modules}
               keyExtractor={(item) => item.id}
               ListHeaderComponent={
-                <Box alignItems="flex-start" marginBottom="m">
+                <Box alignItems="flex-start" marginBottom="lg">
                   <Text marginBottom="xxs" variant="medium18">
                     Select Channel
                   </Text>
@@ -90,8 +97,11 @@ const SelectChannel = () => {
                   backgroundColor={
                     item.backgroundColor as PressableProps["backgroundColor"]
                   }
-                  destination={item.destination}
+                  destination={
+                    item.destination as keyof MyBankRootStackParameterList
+                  }
                   image={item.image}
+                  navigation={undefined}
                   title={item.title}
                 />
               )}

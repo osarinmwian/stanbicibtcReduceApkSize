@@ -3,7 +3,7 @@ import { bolt, phone, user } from "@/mybank/assets/image";
 export default [
   {
     backgroundColor: "transparentBlack",
-    destination: "LoginScreen",
+    destination: "LandingPage",
     id: "1",
     image: bolt,
     title: "Create Instant Account",
@@ -11,7 +11,7 @@ export default [
 
   {
     backgroundColor: "transparentBlack",
-    destination: "LoginScreen",
+    destination: "LandingPage",
     id: "2",
     image: phone,
     title: "Call Customer Care",
@@ -19,7 +19,7 @@ export default [
 
   {
     backgroundColor: "transparentBlack",
-    destination: "LoginScreen",
+    destination: "LandingPage",
     id: "3",
     image: user,
     title: "Goto Quick Services",

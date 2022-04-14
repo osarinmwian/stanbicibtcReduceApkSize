@@ -11,12 +11,12 @@ const Stack = createNativeStackNavigator<RootStackParameterList>();
 function RootNavigation() {
   return (
     <Stack.Navigator
-      initialRouteName="MyBank"
+      initialRouteName="LandingPage"
       screenOptions={{ headerShown: false }}
     >
+      <Stack.Screen component={LandingPage} name="LandingPage" />
       <Stack.Screen component={MyBankNavigation} name="MyBank" />
       <Stack.Screen component={StoryBookNavigation} name="StoryBook" />
-      <Stack.Screen component={LandingPage} name="LandingPage" />
     </Stack.Navigator>
   );
 }
