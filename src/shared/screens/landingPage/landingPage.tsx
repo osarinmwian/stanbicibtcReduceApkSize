@@ -20,9 +20,7 @@ import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE, ROOT } from "./landingPageStyles";
 // eslint-disable-next-line prettier/prettier
-export default function LandingPage({
-  navigation,
-}: MyBankNavigationProps<"LandingPage">) {
+export default function LandingPage({ navigation }: MyBankNavigationProps<"LandingPage"> ){
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
@@ -98,7 +96,7 @@ export default function LandingPage({
                   color: "wealthColor",
                 }}
                 labelVariant="medium12"
-                onPress={() => navigation.navigate("StoryBook")}
+                onPress={() => console.log("bABY")}
                 width={RFValue(150)}
               />
             </Box>
@@ -111,12 +109,13 @@ export default function LandingPage({
             borderRadius="sm"
             borderWidth={2}
             height={RFValue(51)}
+            icon="compass"
             justifyContent="center"
             label="Explore Quick Services"
             labelProps={{ color: "whiteColor" }}
             labelVariant="regular14"
-            leftIcon="compass"
             marginVertical="xs"
+            onPress={() => console.log("Baby")}
           />
         </Box>
       </ImageBackground>
