@@ -14,7 +14,7 @@ import {
 import { FC, ReactChild } from "react";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 
-import { Icon, ImageIconPackType, ImageIconProps } from "@/shared/assets/icons";
+import { Icon, SvgIconPackType, SvgIconProps } from "@/shared/assets/icons";
 import { Box, BoxProps } from "@/shared/components/Layout";
 import { Theme, useTheme } from "@/shared/theme";
 
@@ -27,10 +27,10 @@ export type BaseButtonProps = RestyleProps & {
   size?: keyof Theme["buttonSizes"];
   leftComponent?: ReactChild;
   rightComponent?: ReactChild;
-  leftIcon?: ImageIconPackType;
-  rightIcon?: ImageIconPackType;
-  leftIconProps?: Omit<ImageIconProps, "name">;
-  rightIconProps?: Omit<ImageIconProps, "name">;
+  leftIcon?: SvgIconPackType;
+  rightIcon?: SvgIconPackType;
+  leftIconProps?: Omit<SvgIconProps, "name">;
+  rightIconProps?: Omit<SvgIconProps, "name">;
 };
 
 const cardVariant = createVariant<Theme, "buttonVariants">({

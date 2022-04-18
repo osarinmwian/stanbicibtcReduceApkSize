@@ -5,7 +5,7 @@ import {
 } from "@shopify/restyle";
 import { ReactChild, VFC } from "react";
 
-import { Icon, ImageIconPackType, ImageIconProps } from "@/shared/assets/icons";
+import { Icon, SvgIconPackType, SvgIconProps } from "@/shared/assets/icons";
 import { Box, BoxProps } from "@/shared/components/Layout";
 import { Theme, useTheme } from "@/shared/theme";
 
@@ -21,19 +21,19 @@ const Card = createRestyleComponent<
 >([cardVariant], Box);
 
 export type TextInputProps = BaseTextInputProps & {
-  ContainerProps?: BoxProps;
+  containerProps?: BoxProps;
   leftComponent?: ReactChild;
   rightComponent?: ReactChild;
-  leftIcon?: ImageIconPackType;
-  rightIcon?: ImageIconPackType;
-  leftIconProps?: Omit<ImageIconProps, "name">;
-  rightIconProps?: Omit<ImageIconProps, "name">;
+  leftIcon?: SvgIconPackType;
+  rightIcon?: SvgIconPackType;
+  leftIconProps?: Omit<SvgIconProps, "name">;
+  rightIconProps?: Omit<SvgIconProps, "name">;
 };
 
 const TextInput: VFC<TextInputProps> = (props) => {
   const {
     disabled,
-    ContainerProps,
+    containerProps,
     variant = "filled",
     size = "sm",
     leftComponent,
@@ -59,7 +59,7 @@ const TextInput: VFC<TextInputProps> = (props) => {
       variant={variant}
       width="100%"
       {...TextInputSizeValues}
-      {...ContainerProps}
+      {...containerProps}
     >
       {leftComponent ?? null}
       {leftIcon ? (
