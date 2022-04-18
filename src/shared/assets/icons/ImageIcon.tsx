@@ -2,15 +2,16 @@ import { VFC } from "react";
 import { Image, ImageProps } from "react-native";
 
 import { Theme, useTheme } from "@/shared/theme";
-import type { Optional } from "@/shared/utils/functions/type";
 
 import { imageIconPack, ImageIconPackType } from "./imageIconPack";
 
-export type ImageIconProps = Optional<ImageProps, "source"> & {
+export type ImageIconProps = {
   name: ImageIconPackType;
   size?: keyof Theme["iconSizes"];
   source?: ImageProps["source"];
   color?: keyof Theme["colors"];
+  style?: ImageProps["style"];
+  imageProps?: Omit<ImageProps, "source" | "style">;
 };
 
 const ImageIcon: VFC<ImageIconProps> = (props) => {
@@ -18,9 +19,9 @@ const ImageIcon: VFC<ImageIconProps> = (props) => {
     name,
     source,
     style,
-    size = "md",
+    imageProps,
+    size = "sm",
     color = "whiteColor",
-    ...rest
   } = props;
 
   const theme = useTheme();
@@ -41,7 +42,7 @@ const ImageIcon: VFC<ImageIconProps> = (props) => {
         },
         style,
       ]}
-      {...rest}
+      {...imageProps}
     />
   );
 };

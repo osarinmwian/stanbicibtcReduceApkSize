@@ -2,15 +2,15 @@ import { VFC } from "react";
 
 import { Box, BoxProps } from "@/shared/components/Layout";
 
-import { SvgIcon, SvgIconProps } from "./SvgIcon";
+import { ImageIcon, ImageIconProps } from "./ImageIcon";
 
-export type IconProps = SvgIconProps & {
+export type IconProps = ImageIconProps & {
   containerProps?: BoxProps;
 };
 
 const Icon: VFC<IconProps> = ({ containerProps, ...rest }) => (
   <Box {...containerProps}>
-    <SvgIcon color="whiteColor" size="md" {...rest} />
+    <ImageIcon color="whiteColor" size="md" {...rest} />
   </Box>
 );
 
