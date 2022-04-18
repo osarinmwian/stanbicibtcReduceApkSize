@@ -1,7 +1,6 @@
 import { VFC } from "react";
 
-import { Icon } from "@/shared/assets/icons";
-import { IconProps } from "@/shared/assets/icons/Icon";
+import { IconProps, IconScalar } from "@/shared/assets/icons/IconScalar";
 import { Box, BoxProps } from "@/shared/components/Layout";
 
 import { BaseButton, BaseButtonProps } from "./BaseButton";
@@ -26,7 +25,7 @@ const TogglePasswordIconButton: VFC<TogglePasswordIconButtonProps> = (
       variant="transparent"
       {...props.buttonProps}
     >
-      <Icon
+      <IconScalar
         color="primaryBlack"
         name={props.isVisible ? "eyeOpen" : "eyeClosed"}
         {...props.iconProps}

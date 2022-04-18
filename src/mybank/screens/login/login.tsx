@@ -52,7 +52,6 @@ export default function LoginScreen({
               labelProps={{ color: "primaryColor" }}
               labelVariant="bold14"
               marginVertical="xs"
-              onPress={() => console.log("Baby")}
               paddingVertical="md"
             />
             <PrimaryButton
@@ -64,18 +63,16 @@ export default function LoginScreen({
               labelProps={{ color: "whiteColor" }}
               labelVariant="bold14"
               marginVertical="xs"
-              onPress={() => console.log("Baby")}
               paddingVertical="md"
             />
 
             <PrimaryButton
-              icon="fingerprint"
               justifyContent="center"
               label="LOGIN WITH FINGERPRINT"
               labelProps={{ color: "whiteColor" }}
               labelVariant="regular14"
+              leftIcon="fingerprint"
               marginTop="md"
-              onPress={() => console.log("Baby")}
               paddingVertical="md"
             />
           </Box>
