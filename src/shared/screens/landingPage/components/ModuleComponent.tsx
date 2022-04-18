@@ -18,7 +18,6 @@ interface ModuleProps {
 
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination, navigation } = props;
-  // const navigation = useNavigation();
 
   return (
     <Pressable
@@ -27,13 +26,13 @@ export default function ModuleComponent(props: ModuleProps) {
       borderRadius="sm"
       height={RFValue(90)}
       justifyContent="center"
-      marginHorizontal="ss"
-      marginVertical="ss"
+      marginRight="sm"
+      marginTop="sm"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(93.7)}
+      width={RFValue(98)}
     >
       <Image source={image} />
-      <Text color="whiteColor" marginTop="md" variant="medium10">
+      <Text color="whiteColor" marginTop="md" variant="medium8">
         {title}
       </Text>
     </Pressable>

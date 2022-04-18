@@ -66,31 +66,30 @@ const SelectChannel = () => {
       >
         <Box flex={1}>
           <Box
-            alignItems="center"
+            alignItems="flex-start"
             backgroundColor="whiteColor"
             borderTopEndRadius="md"
             borderTopStartRadius="md"
             elevation={5}
             flex={1}
+            padding="md"
             shadowColor="darkGrey"
             shadowOffset={{ height: 2, width: 0 }}
             shadowOpacity={0.25}
             shadowRadius={4}
             width="100%"
           >
+            <Box alignItems="flex-start" marginBottom="lg">
+              <Text marginBottom="xxs" variant="medium18">
+                Select Channel
+              </Text>
+              <Text variant="regular14">
+                Select Channel to sign up or sign in with
+              </Text>
+            </Box>
             <FlatList
               data={modules}
               keyExtractor={(item) => item.id}
-              ListHeaderComponent={
-                <Box alignItems="flex-start" marginBottom="lg">
-                  <Text marginBottom="xxs" variant="medium18">
-                    Select Channel
-                  </Text>
-                  <Text variant="regular14">
-                    Select Channel to sign up or sign in with
-                  </Text>
-                </Box>
-              }
               numColumns={Math.ceil(modules.length / 2)}
               renderItem={({ item }) => (
                 <ModuleComponent
