@@ -4,6 +4,7 @@ import {
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import React, { useCallback, useMemo, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { FlatList, Image, LogBox } from "react-native";
 
 import { close, question } from "@/shared/assets/image";
@@ -19,6 +20,7 @@ LogBox.ignoreLogs([
 ]);
 
 const QuickOptions = () => {
+  const { t } = useTranslation();
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
@@ -61,7 +63,7 @@ const QuickOptions = () => {
             padding="md"
           >
             <Image source={question} />
-            <Text marginLeft="xs">Quick</Text>
+            <Text marginLeft="xs">{t("mybank.landing.quick")}</Text>
           </Box>
         </Pressable>
       </BottomSheetBackdrop>
@@ -113,6 +115,7 @@ const QuickOptions = () => {
                   <Text
                     color="primaryColor"
                     marginBottom="md"
+                    marginTop="lg"
                     variant="medium14"
                   >
                     QUICK OPTIONS

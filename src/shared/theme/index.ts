@@ -113,7 +113,6 @@ const lightTheme = createTheme({
     lg: RFValue(32),
     md: RFValue(16),
     none: 0,
-    s: RFValue(8),
     sm: RFValue(8),
     ss: RFValue(6),
     xl: RFValue(64),
@@ -219,13 +218,19 @@ const lightTheme = createTheme({
       lineHeight: 18.18,
       textAlign: "center",
     },
+    medium8: {
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(8),
+      fontWeight: "400",
+      textAlign: "center",
+    },
     none: {},
     regular10: {
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(10),
       fontWeight: "400",
-      // lineHeight: 18,
+      lineHeight: RFValue(16),
       textAlign: "center",
     },
     regular12: {
@@ -240,6 +245,13 @@ const lightTheme = createTheme({
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(14),
+      fontWeight: "400",
+      textAlign: "center",
+    },
+    regular8: {
+      fontFamily:
+        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontSize: RFValue(8),
       fontWeight: "400",
       textAlign: "center",
     },

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FlatList, Image, ImageBackground } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -19,8 +20,11 @@ import ModuleComponent from "./components/ModuleComponent";
 import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE, ROOT } from "./landingPageStyles";
-// eslint-disable-next-line prettier/prettier
-export default function LandingPage({ navigation }: MyBankNavigationProps<"LandingPage"> ){
+
+export default function LandingPage({
+  navigation,
+}: MyBankNavigationProps<"LandingPage">) {
+  const { t } = useTranslation();
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
@@ -34,26 +38,23 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
         <Box paddingHorizontal="md">
           <Box alignItems="center" justifyContent="center" marginTop="md">
             <Image source={logo} style={LOGOSTYLE} />
-            <Text color="whiteColor" marginTop="xs" variant="bold24">
-              Hello!
+            <Text color="whiteColor" marginTop="sm" variant="bold24">
+              {t("mybank.landing.hello")}
             </Text>
           </Box>
 
-          <Box
-            alignItems="center"
-            justifyContent="space-between"
-            marginBottom="md"
-            marginTop="md"
-            width="100%"
-          >
+          <Box alignItems="flex-start" marginBottom="md" marginTop="xl">
+            <Text color="whiteColor" marginBottom="sm">
+              {t("mybank.landing.slideToSeeMoreOptions")}
+            </Text>
             <FlatList
+              contentContainerStyle={{
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
               data={modules}
               keyExtractor={(item) => item.id}
-              ListHeaderComponent={
-                <Text color="whiteColor" marginBottom="lg">
-                  Slide to see more options
-                </Text>
-              }
               numColumns={Math.ceil(modules.length / 2)}
               renderItem={({ item }) => (
                 <ModuleComponent
@@ -74,15 +75,16 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
           </Box>
 
           <Box>
-            <Pressable alignItems="flex-start">
-              <Text color="whiteColor" variant="regular14">
-                New to Stanbic IBTC?
+            <Pressable alignItems="flex-start" marginTop="md">
+              <Text color="whiteColor" marginBottom="xs" variant="regular14">
+                {t("mybank.landing.new")}
               </Text>
             </Pressable>
             <Box
               flexDirection="row"
               justifyContent="space-between"
-              marginVertical="lg"
+              marginBottom="md"
+              marginTop="sm"
             >
               <SelectChannelModal />
 
@@ -91,7 +93,7 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
                 backgroundColor="whiteColor"
                 height={RFValue(51)}
                 justifyContent="center"
-                label="ONE PASS"
+                label={t("mybank.landing.onePass")}
                 labelProps={{
                   color: "wealthColor",
                 }}
@@ -109,12 +111,12 @@ export default function LandingPage({ navigation }: MyBankNavigationProps<"Landi
             borderRadius="sm"
             borderWidth={2}
             height={RFValue(51)}
-            icon="compass"
             justifyContent="center"
-            label="Explore Quick Services"
+            label={t("mybank.landing.explore")}
             labelProps={{ color: "whiteColor" }}
             labelVariant="regular14"
-            marginVertical="xs"
+            leftIcon="compass"
+            // marginVertical="xs"
             onPress={() => console.log("Baby")}
           />
         </Box>

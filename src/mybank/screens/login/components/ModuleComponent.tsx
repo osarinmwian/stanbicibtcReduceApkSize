@@ -1,4 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
+import { useTranslation } from "react-i18next";
 import { Image, ImageSourcePropType } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -6,7 +7,7 @@ import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
 
 interface ModuleProps {
-  title: string;
+  title: unknown;
   backgroundColor: PressableProps["backgroundColor"];
   image: ImageSourcePropType;
   destination: string;
@@ -15,7 +16,7 @@ interface ModuleProps {
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination } = props;
   const navigation = useNavigation();
-
+  const { t } = useTranslation();
   return (
     <Pressable
       alignItems="center"
@@ -25,16 +26,17 @@ export default function ModuleComponent(props: ModuleProps) {
       justifyContent="center"
       margin="xs"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(105)}
+      padding="xs"
+      width={RFValue(103)}
     >
       <Image source={image} />
       <Text
         color="whiteColor"
         marginTop="sm"
         textAlign="center"
-        variant="regular12"
+        variant="regular8"
       >
-        {title}
+        {t(`mybank.login.${title}`)}
       </Text>
     </Pressable>
   );

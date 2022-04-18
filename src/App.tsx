@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider theme={theme.lightTheme}>
+      <ThemeProvider theme={theme.darkTheme}>
         <GestureHandlerRootView style={styles.gestureFlex}>
           <SafeAreaProvider>
             <BottomSheetModalProvider>

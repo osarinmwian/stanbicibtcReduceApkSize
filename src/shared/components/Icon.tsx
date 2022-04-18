@@ -3,12 +3,12 @@ import React from "react";
 import { StyleProp, ViewStyle } from "react-native";
 import { SvgProps } from "react-native-svg";
 
-import apple from "@/assets/svg/apple.svg";
+import bankLogo from "@/shared/assets/svg/bankLogo.svg";
 
 type IconFunction = React.FC<SvgProps>;
 
 export const ICONS = {
-  "apple-icon": apple,
+  "bank-logo": bankLogo,
 };
 
 export type IconName = keyof typeof ICONS;
