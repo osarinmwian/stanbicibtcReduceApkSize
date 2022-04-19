@@ -1,12 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
 import { Dimensions, Image, ImageSourcePropType } from "react-native";
 
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
 
 interface ModuleProps {
-  title: unknown;
+  title: string;
   backgroundColor: PressableProps["backgroundColor"];
   image: ImageSourcePropType;
   destination: string;
@@ -17,7 +16,6 @@ const { width } = Dimensions.get("screen");
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination } = props;
   const navigation = useNavigation();
-  const { t } = useTranslation();
   return (
     <Pressable
       alignItems="center"
@@ -37,7 +35,7 @@ export default function ModuleComponent(props: ModuleProps) {
         textAlign="center"
         variant="regular8"
       >
-        {t(`mybank.login.${title}`)}
+        {title}
       </Text>
     </Pressable>
   );

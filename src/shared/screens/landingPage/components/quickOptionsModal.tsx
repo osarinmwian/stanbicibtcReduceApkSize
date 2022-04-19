@@ -114,6 +114,7 @@ const QuickOptions = () => {
                   <Text
                     color="primaryColor"
                     marginBottom="md"
+                    marginTop="lg"
                     variant="medium14"
                   >
                     QUICK OPTIONS

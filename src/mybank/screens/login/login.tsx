@@ -180,7 +180,6 @@ export default function LoginScreen({
                     labelVariant="medium10"
                     marginBottom="xs"
                     marginVertical="xs"
-                    onPress={() => console.log("Baby")}
                     paddingVertical="md"
                   />
 
@@ -191,7 +190,6 @@ export default function LoginScreen({
                     labelVariant="medium10"
                     leftIcon="fingerprint"
                     marginTop="md"
-                    onPress={() => console.log("Baby")}
                     paddingVertical="md"
                   />
                 </Box>
@@ -212,7 +210,7 @@ export default function LoginScreen({
                         }
                         destination={item.destination}
                         image={item.image}
-                        title={item.title as unknown}
+                        title={item.title}
                       />
                     )}
                     showsHorizontalScrollIndicator={false}

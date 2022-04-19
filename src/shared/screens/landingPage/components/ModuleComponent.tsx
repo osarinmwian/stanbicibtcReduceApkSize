@@ -17,7 +17,7 @@ interface ModuleProps {
 
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination, navigation } = props;
-  const { width, height } = Dimensions.get("screen");
+  const { width } = Dimensions.get("screen");
   return (
     <Pressable
       alignItems="center"

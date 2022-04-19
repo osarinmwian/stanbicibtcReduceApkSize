@@ -54,7 +54,7 @@ export default function LandingPage({
                 width: "100%",
               }}
               data={modules}
-              keyExtractor={(item) => item.id}
+              keyExtractor={(item: { id: string }) => item.id}
               numColumns={Math.ceil(modules.length / 2)}
               renderItem={({ item }) => (
                 <ModuleComponent
@@ -98,7 +98,6 @@ export default function LandingPage({
                   color: "wealthColor",
                 }}
                 labelVariant="medium10"
-                onPress={() => console.log("bABY")}
                 width={RFValue(150)}
               />
             </Box>
@@ -116,8 +115,6 @@ export default function LandingPage({
             labelProps={{ color: "whiteColor" }}
             labelVariant="regular14"
             leftIcon="compass"
-            // marginVertical="xs"
-            onPress={() => console.log("Baby")}
           />
         </Box>
       </ImageBackground>

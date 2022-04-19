@@ -8,8 +8,8 @@ import { FlatList } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
+import ModuleComponent from "@/shared/screens/landingPage/components/ModuleComponent";
 
-import ModuleComponent from "../screens/landingPage/components/ModuleComponent";
 import modules from "../screens/landingPage/files/modules";
 import { PrimaryButton } from "./Buttons";
 import { Box } from "./Layout";
