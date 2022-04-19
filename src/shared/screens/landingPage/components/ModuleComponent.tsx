@@ -12,7 +12,7 @@ interface ModuleProps {
   backgroundColor: PressableProps["backgroundColor"];
   image: ImageSourcePropType;
   destination: keyof MyBankRootStackParameterList;
-  navigation: MyBankNavigationProps<"LandingPage">["navigation"];
+  navigation?: MyBankNavigationProps<"LandingPage">["navigation"];
 }
 
 export default function ModuleComponent(props: ModuleProps) {

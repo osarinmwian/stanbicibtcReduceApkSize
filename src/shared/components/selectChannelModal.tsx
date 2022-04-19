@@ -11,7 +11,7 @@ import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import ModuleComponent from "@/shared/screens/landingPage/components/ModuleComponent";
 
 import modules from "../screens/landingPage/files/modules";
-import { PrimaryButton } from "./Buttons";
+import { GradientButton, PrimaryButton } from "./Buttons";
 import { Box } from "./Layout";
 import { PressableProps } from "./Pressable";
 import { Text } from "./Typography";
@@ -51,7 +51,6 @@ const SelectChannel = () => {
         label="CREATE ACCOUNT"
         labelProps={{
           color: "wealthColor",
-          fontWeight: "bold",
           textAlign: "left",
           variant: "medium10",
         }}
@@ -66,18 +65,10 @@ const SelectChannel = () => {
       >
         <Box flex={1}>
           <Box
-            alignItems="flex-start"
-            backgroundColor="whiteColor"
             borderTopEndRadius="md"
             borderTopStartRadius="md"
-            elevation={5}
             flex={1}
             padding="md"
-            shadowColor="darkGrey"
-            shadowOffset={{ height: 2, width: 0 }}
-            shadowOpacity={0.25}
-            shadowRadius={4}
-            width="100%"
           >
             <Box alignItems="flex-start" marginBottom="md">
               <Text marginBottom="xxs" variant="medium18">
@@ -100,13 +91,18 @@ const SelectChannel = () => {
                     item.destination as keyof MyBankRootStackParameterList
                   }
                   image={item.image}
-                  navigation={undefined}
                   title={item.title}
                 />
               )}
               showsHorizontalScrollIndicator={false}
               showsVerticalScrollIndicator={false}
             />
+
+            <GradientButton size="md" style={{ alignItems: "center" }}>
+              <Text color="whiteColor" variant="medium18">
+                SIGN UP WITH ONE PASS
+              </Text>
+            </GradientButton>
           </Box>
         </Box>
       </BottomSheetModal>

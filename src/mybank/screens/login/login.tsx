@@ -103,7 +103,7 @@ export default function LoginScreen({
                     touched,
                   }) => (
                     <Box>
-                      <Box marginTop="lg">
+                      <Box marginVertical="lg">
                         <OutlinedTextInput
                           baseColor="#fff"
                           label="Internet Banking ID"
@@ -114,16 +114,9 @@ export default function LoginScreen({
                           tintColor="#fff"
                           value={values.bankingId}
                         />
-                        <Box marginTop="lg">
-                          {touched.bankingId && errors.bankingId && (
-                            <Text color="negativeColor" marginTop="md">
-                              {errors.bankingId}
-                            </Text>
-                          )}
-                        </Box>
                       </Box>
 
-                      <Box marginTop="lg">
+                      <Box marginVertical="lg">
                         <OutlinedTextInput
                           baseColor="#fff"
                           label="Password"
@@ -135,13 +128,6 @@ export default function LoginScreen({
                           tintColor="#fff"
                           value={values.password}
                         />
-                        <Box marginTop="lg">
-                          {touched.password && errors.password && (
-                            <Text color="negativeColor" marginTop="md">
-                              {errors.password}
-                            </Text>
-                          )}
-                        </Box>
                       </Box>
 
                       <Pressable marginVertical="sm">
@@ -162,6 +148,7 @@ export default function LoginScreen({
                         labelProps={{ color: "primaryColor" }}
                         labelVariant="medium10"
                         marginBottom="xs"
+                        marginTop="md"
                         onPress={() => handleSubmit()}
                         paddingVertical="md"
                       />
@@ -184,17 +171,18 @@ export default function LoginScreen({
                   />
 
                   <PrimaryButton
+                    backgroundColor="transparent"
                     justifyContent="center"
                     label={t("mybank.login.loginWithFingerPrint")}
                     labelProps={{ color: "whiteColor" }}
                     labelVariant="medium10"
                     leftIcon="fingerprint"
-                    marginTop="md"
+                    marginVertical="lg"
                     paddingVertical="md"
                   />
                 </Box>
 
-                <Box alignItems="center" marginTop="md" width="100%">
+                <Box alignItems="center" marginTop="lg" width="100%">
                   <FlatList
                     contentContainerStyle={{
                       alignItems: "center",

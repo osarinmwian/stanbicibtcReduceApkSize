@@ -6,7 +6,7 @@ export default [
     destination: "LandingPage",
     id: "1",
     image: bolt,
-    title: "createInstantAccount",
+    title: "Create Instant Account",
   },
 
   {
@@ -14,7 +14,7 @@ export default [
     destination: "LandingPage",
     id: "2",
     image: phone,
-    title: "callCustomerCare",
+    title: "Call Customer Care",
   },
 
   {
@@ -22,6 +22,6 @@ export default [
     destination: "LandingPage",
     id: "3",
     image: user,
-    title: "gotoQuickServices",
+    title: "Goto QuickServices",
   },
 ];

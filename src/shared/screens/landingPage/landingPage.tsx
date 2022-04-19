@@ -36,9 +36,14 @@ export default function LandingPage({
           <QuickOptionsModal />
         </Box>
         <Box paddingHorizontal="md">
-          <Box alignItems="center" justifyContent="center" marginTop="md">
+          <Box
+            alignItems="center"
+            justifyContent="center"
+            marginBottom="lg"
+            marginTop="md"
+          >
             <Image source={logo} style={LOGOSTYLE} />
-            <Text color="whiteColor" marginTop="sm" variant="bold24">
+            <Text color="whiteColor" marginTop="sm" variant="medium18">
               {t("mybank.landing.hello")}
             </Text>
           </Box>

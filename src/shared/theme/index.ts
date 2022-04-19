@@ -182,8 +182,9 @@ const lightTheme = createTheme({
       fontWeight: "700",
     },
     bold24: {
-      fontFamily: "BentonSans Bold",
-      fontSize: 24,
+      fontFamily:
+        Platform.OS === "android" ? "BentonSans-Bold" : "BentonSans Bold",
+      fontSize: RFValue(24),
       fontWeight: "700",
     },
     defaults: {
