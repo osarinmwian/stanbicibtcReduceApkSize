@@ -1,6 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { Image, ImageSourcePropType } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import { Dimensions, Image, ImageSourcePropType } from "react-native";
 
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
@@ -12,27 +11,29 @@ interface ModuleProps {
   destination: string;
 }
 
+const { width } = Dimensions.get("screen");
+
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination } = props;
   const navigation = useNavigation();
-
   return (
     <Pressable
       alignItems="center"
       backgroundColor={backgroundColor}
       borderRadius="sm"
-      height={RFValue(90)}
+      height={width / 3.9}
       justifyContent="center"
       margin="xs"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(105)}
+      padding="xs"
+      width={width / 3.6}
     >
       <Image source={image} />
       <Text
         color="whiteColor"
         marginTop="sm"
         textAlign="center"
-        variant="regular12"
+        variant="regular8"
       >
         {title}
       </Text>

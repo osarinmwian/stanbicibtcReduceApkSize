@@ -1,5 +1,4 @@
-import { Image, ImageSourcePropType } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import { Dimensions, Image, ImageSourcePropType } from "react-native";
 
 import {
   MyBankNavigationProps,
@@ -13,27 +12,26 @@ interface ModuleProps {
   backgroundColor: PressableProps["backgroundColor"];
   image: ImageSourcePropType;
   destination: keyof MyBankRootStackParameterList;
-  navigation: MyBankNavigationProps<"LandingPage">["navigation"];
+  navigation?: MyBankNavigationProps<"LandingPage">["navigation"];
 }
 
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination, navigation } = props;
-  // const navigation = useNavigation();
-
+  const { width } = Dimensions.get("screen");
   return (
     <Pressable
       alignItems="center"
       backgroundColor={backgroundColor}
       borderRadius="sm"
-      height={RFValue(90)}
+      height={width / 3.9}
       justifyContent="center"
-      marginHorizontal="ss"
-      marginVertical="ss"
+      marginHorizontal="xs"
+      marginTop="sm"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(93.7)}
+      width={width / 3.58}
     >
       <Image source={image} />
-      <Text color="whiteColor" marginTop="md" variant="medium10">
+      <Text color="whiteColor" marginTop="md" variant="medium8">
         {title}
       </Text>
     </Pressable>

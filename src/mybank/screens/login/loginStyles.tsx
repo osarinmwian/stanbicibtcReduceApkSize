@@ -7,8 +7,8 @@ export const ROOT: ImageStyle = {
 };
 
 export const BACK: ImageStyle = {
-  height: RFValue(18),
-  width: RFValue(14.7),
+  height: RFValue(15),
+  width: RFValue(12),
 };
 
 export const FINGERPRINT: ImageStyle = {

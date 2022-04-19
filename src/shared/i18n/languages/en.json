@@ -10,7 +10,25 @@
   },
   "mybank": {
     "welcome": "Welcome to the Mybank 2.0",
-    "landing": {}
+    "landing": {
+      "createAccount": "Create Account",
+      "explore": "Explore Quick Services",
+      "hello": "Hello!",
+      "new": "New to Stanbic IBTC?",
+      "onePass": "ONE PASS",
+      "quick": "Quick",
+      "slideToSeeMoreOptions": "Slide to see more options"
+    },
+    "login": {
+      "createInstantAccount": "Create Instant Account",
+      "callCustomerCare": "Call Customer Care",
+      "forgotPassword": "Forgot Password?",
+      "gotoQuickServices": "Goto Quick Services",
+      "login": "LOGIN",
+      "loginWithOnePass": "LOGIN WITH ONE PASS",
+      "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
+      "newHere": "New here? Register for One Pass"
+    }
   },
   "pension": {
     "welcome": "Welcome to the pension 2.0"
