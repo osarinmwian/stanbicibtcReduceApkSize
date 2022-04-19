@@ -53,7 +53,7 @@ const SelectChannel = () => {
           color: "wealthColor",
           fontWeight: "bold",
           textAlign: "left",
-          variant: "medium14",
+          variant: "medium10",
         }}
         onPress={handlePresentModalPress}
         width={RFValue(150)}
@@ -79,7 +79,7 @@ const SelectChannel = () => {
             shadowRadius={4}
             width="100%"
           >
-            <Box alignItems="flex-start" marginBottom="lg">
+            <Box alignItems="flex-start" marginBottom="md">
               <Text marginBottom="xxs" variant="medium18">
                 Select Channel
               </Text>

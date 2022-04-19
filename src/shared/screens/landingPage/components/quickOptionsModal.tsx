@@ -68,7 +68,7 @@ const QuickOptions = () => {
         </Pressable>
       </BottomSheetBackdrop>
     ),
-    [handleDismissModalPress],
+    [handleDismissModalPress, t],
   );
 
   // renders
@@ -104,7 +104,6 @@ const QuickOptions = () => {
             shadowColor="darkGrey"
             shadowOffset={{ height: 2, width: 0 }}
             shadowOpacity={0.25}
-            // width="100%"
             shadowRadius={4}
           >
             <FlatList
@@ -115,7 +114,6 @@ const QuickOptions = () => {
                   <Text
                     color="primaryColor"
                     marginBottom="md"
-                    marginTop="lg"
                     variant="medium14"
                   >
                     QUICK OPTIONS

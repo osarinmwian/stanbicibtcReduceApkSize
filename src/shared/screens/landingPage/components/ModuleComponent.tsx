@@ -1,5 +1,4 @@
-import { Image, ImageSourcePropType } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import { Dimensions, Image, ImageSourcePropType } from "react-native";
 
 import {
   MyBankNavigationProps,
@@ -18,18 +17,18 @@ interface ModuleProps {
 
 export default function ModuleComponent(props: ModuleProps) {
   const { title, backgroundColor, image, destination, navigation } = props;
-
+  const { width, height } = Dimensions.get("screen");
   return (
     <Pressable
       alignItems="center"
       backgroundColor={backgroundColor}
       borderRadius="sm"
-      height={RFValue(90)}
+      height={width / 3.9}
       justifyContent="center"
-      marginRight="sm"
+      marginHorizontal="xs"
       marginTop="sm"
       onPress={() => navigation.navigate(destination)}
-      width={RFValue(98)}
+      width={width / 3.58}
     >
       <Image source={image} />
       <Text color="whiteColor" marginTop="md" variant="medium8">

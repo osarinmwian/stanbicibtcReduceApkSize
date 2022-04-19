@@ -175,19 +175,16 @@ const lightTheme = createTheme({
       fontFamily: "BentonSans-Bold",
       fontSize: RFValue(10),
       fontWeight: "700",
-      textAlign: "center",
     },
     bold14: {
       fontFamily: "BentonSans Bold",
       fontSize: RFValue(14),
       fontWeight: "700",
-      textAlign: "center",
     },
     bold24: {
       fontFamily: "BentonSans Bold",
-      fontSize: RFValue(24),
+      fontSize: 24,
       fontWeight: "700",
-      textAlign: "center",
     },
     defaults: {
       color: "primaryBlack",
@@ -197,32 +194,26 @@ const lightTheme = createTheme({
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(10),
       fontWeight: "400",
-      textAlign: "center",
     },
     medium12: {
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(12),
       fontWeight: "400",
-      textAlign: "center",
     },
     medium14: {
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(14),
       fontWeight: "400",
-      textAlign: "center",
     },
     medium18: {
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(18),
       fontWeight: "400",
-      lineHeight: 18.18,
-      textAlign: "center",
     },
     medium8: {
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(8),
       fontWeight: "400",
-      textAlign: "center",
     },
     none: {},
     regular10: {
@@ -231,29 +222,24 @@ const lightTheme = createTheme({
       fontSize: RFValue(10),
       fontWeight: "400",
       lineHeight: RFValue(16),
-      textAlign: "center",
     },
     regular12: {
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(12),
       fontWeight: "400",
-      lineHeight: RFValue(16.22),
-      textAlign: "center",
     },
     regular14: {
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
-      textAlign: "center",
     },
     regular8: {
       fontFamily:
         Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
       fontSize: RFValue(8),
       fontWeight: "400",
-      textAlign: "center",
     },
     title: {
       fontSize: RFValue(32),

@@ -26,7 +26,7 @@ export default function LandingPage({
 }: MyBankNavigationProps<"LandingPage">) {
   const { t } = useTranslation();
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: "#000", flex: 1 }}>
       <ImageBackground
         resizeMode="cover"
         source={landingpagebackground}
@@ -43,13 +43,13 @@ export default function LandingPage({
             </Text>
           </Box>
 
-          <Box alignItems="flex-start" marginBottom="md" marginTop="xl">
+          <Box alignItems="flex-start" marginVertical="lg">
             <Text color="whiteColor" marginBottom="sm">
               {t("mybank.landing.slideToSeeMoreOptions")}
             </Text>
+
             <FlatList
               contentContainerStyle={{
-                alignItems: "flex-start",
                 justifyContent: "space-between",
                 width: "100%",
               }}
@@ -97,7 +97,7 @@ export default function LandingPage({
                 labelProps={{
                   color: "wealthColor",
                 }}
-                labelVariant="medium12"
+                labelVariant="medium10"
                 onPress={() => console.log("bABY")}
                 width={RFValue(150)}
               />

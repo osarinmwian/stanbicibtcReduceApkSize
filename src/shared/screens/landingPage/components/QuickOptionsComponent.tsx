@@ -27,7 +27,7 @@ export default function QuickOptionsComponent(props: ModuleProps) {
         color="darkGrey"
         marginTop="sm"
         textAlign="center"
-        variant="regular10"
+        variant="regular8"
       >
         {title}
       </Text>
