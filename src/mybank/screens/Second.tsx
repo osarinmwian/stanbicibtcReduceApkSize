@@ -1,14 +1,11 @@
-import { useTranslation } from "react-i18next";
-import Animated, {
-  Layout,
-  LightSpeedInLeft,
-  LightSpeedOutRight,
-} from "react-native-reanimated";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Box } from "@/shared/components/";
+import { Box } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
 
 function SecondScreen() {
-  const { t } = useTranslation();
+  const navigation = useNavigation();
   return (
     <Box
       alignItems="center"
@@ -16,13 +13,13 @@ function SecondScreen() {
       flex={1}
       justifyContent="center"
     >
-      <Animated.Text
-        entering={LightSpeedInLeft.springify()}
-        exiting={LightSpeedOutRight}
-        layout={Layout.springify()}
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Payments", { screen: "EightScreen" })
+        }
       >
-        {t("mybank.welcome")}
-      </Animated.Text>
+        <Text>Second Screen</Text>
+      </TouchableOpacity>
     </Box>
   );
 }

@@ -4,9 +4,10 @@ import { StyleSheet, View } from "react-native";
 const style = StyleSheet.create({
   main: {
     alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "white",
     flex: 1,
     justifyContent: "center",
+    padding: 16,
   },
 });
 

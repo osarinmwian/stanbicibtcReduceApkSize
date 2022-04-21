@@ -1,26 +1,38 @@
-import {
-  createStackNavigator,
-  StackScreenProps,
-} from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ExampleScreen, SecondScreen } from "@/mybank/screens/";
+import LoginScreen from "@/mybank/screens/login/login";
 
-import type { MybankRoutes } from "./types";
+import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
+import { MyBankRootStackParameterList } from "./types";
 
-export type MyBankProps<Screen extends keyof MybankRoutes> = StackScreenProps<
-  MybankRoutes,
-  Screen
->;
+const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
-const Stack = createStackNavigator<MybankRoutes>();
-
-function MyBank() {
+function MyBankNavigation() {
+  const isLoggedIn = undefined;
+  // const isLoggedIn = 65;
   return (
-    <Stack.Navigator>
-      <Stack.Screen component={ExampleScreen} name="ExampleScreen" />
-      <Stack.Screen component={SecondScreen} name="SecondScreen" />
+    <Stack.Navigator
+      screenOptions={{
+        header: () => null,
+      }}
+    >
+      {isLoggedIn ? (
+        <Stack.Group>
+          <Stack.Screen component={Home} name="Home" />
+          <Stack.Screen component={Lifestyle} name="Lifestyle" />
+          <Stack.Screen component={More} name="More" />
+          <Stack.Screen component={Payments} name="Payments" />
+          <Stack.Screen component={Transfer} name="Transfer" />
+        </Stack.Group>
+      ) : (
+        <Stack.Group>
+          <Stack.Group screenOptions={{ headerShown: false }}>
+            <Stack.Screen component={LoginScreen} name="LoginScreen" />
+          </Stack.Group>
+        </Stack.Group>
+      )}
     </Stack.Navigator>
   );
 }
 
-export default MyBank;
+export default MyBankNavigation;

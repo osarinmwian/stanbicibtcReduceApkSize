@@ -1,21 +1,23 @@
 {
   "images": [
     {
+      "filename": "New user.jpg",
       "idiom": "universal",
-      "filename": "background.png",
       "scale": "1x"
     },
     {
+      "filename": "New user@2x.png",
       "idiom": "universal",
       "scale": "2x"
     },
     {
+      "filename": "New user@3x.png",
       "idiom": "universal",
       "scale": "3x"
     }
   ],
   "info": {
-    "version": 1,
-    "author": "expo"
+    "author": "xcode",
+    "version": 1
   }
 }
