@@ -1,3 +1,4 @@
+import { VFC } from "react";
 import { useTranslation } from "react-i18next";
 import Animated, {
   Layout,
@@ -5,17 +6,20 @@ import Animated, {
   LightSpeedOutRight,
 } from "react-native-reanimated";
 
-import { Box } from "@/shared/components/";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
+import { PrimaryButton } from "@/shared/components/Buttons";
+import { Box } from "@/shared/components/Layout";
 
-function ExampleScreen() {
+const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
   const { t } = useTranslation();
-
+  // const route = useMybankRoute<"ExampleScreen">();
   return (
     <Box
       alignItems="center"
-      backgroundColor="mainBackground"
+      backgroundColor="mediumGrey"
       flex={1}
       justifyContent="center"
+      padding="md"
     >
       <Animated.Text
         entering={LightSpeedInLeft.springify()}
@@ -24,8 +28,13 @@ function ExampleScreen() {
       >
         {t("mybank.welcome")}
       </Animated.Text>
+      <PrimaryButton
+        label="Go to Storybook"
+        onPress={() => props.navigation.replace("StoryBook")}
+        variant="filled"
+      />
     </Box>
   );
-}
+};
 
 export default ExampleScreen;

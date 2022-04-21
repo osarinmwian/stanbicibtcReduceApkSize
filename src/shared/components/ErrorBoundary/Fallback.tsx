@@ -2,7 +2,8 @@ import React from "react";
 import { Pressable } from "react-native";
 import RNRestart from "react-native-restart";
 
-import { Box, Text } from "@/shared/components/";
+import { Box } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
 
 /**
  * Restarts the app on press
