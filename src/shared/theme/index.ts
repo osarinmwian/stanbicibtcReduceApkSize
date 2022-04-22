@@ -1,5 +1,4 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
-import { Platform } from "react-native";
 
 import { RFValue } from "@/shared/utils/functions";
 
@@ -177,13 +176,12 @@ const lightTheme = createTheme({
       fontWeight: "700",
     },
     bold14: {
-      fontFamily: "BentonSans Bold",
+      fontFamily: "BentonSans-Bold",
       fontSize: RFValue(14),
       fontWeight: "700",
     },
     bold24: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Bold" : "BentonSans Bold",
+      fontFamily: "BentonSans-Bold",
       fontSize: RFValue(24),
       fontWeight: "700",
     },
@@ -218,27 +216,23 @@ const lightTheme = createTheme({
     },
     none: {},
     regular10: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(10),
       fontWeight: "400",
       lineHeight: RFValue(16),
     },
     regular12: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(12),
       fontWeight: "400",
     },
     regular14: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
     },
     regular8: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(8),
       fontWeight: "400",
     },
