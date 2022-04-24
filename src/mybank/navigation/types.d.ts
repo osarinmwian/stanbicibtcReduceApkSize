@@ -31,6 +31,9 @@ export type MyBankNavigationProps<
   BottomTabScreenProps<MyTabRoutes>
 >;
 
-// export type MyBankNavigationProps<
-//   T extends keyof MyBankRootStackParameterList,
-// > = StackScreenProps<MyBankRootStackParameterList, T>;
+export type LoansStackParameterList = MyBankRootStackParameterList & {
+  Loans: undefined;
+};
+
+export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
+  StackScreenProps<LoansStackParameterList, T>;
