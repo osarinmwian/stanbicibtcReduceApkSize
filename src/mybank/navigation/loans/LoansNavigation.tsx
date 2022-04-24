@@ -3,6 +3,7 @@ import React, { VFC } from "react";
 
 import { LoansStackParameterList } from "@/mybank/navigation/types";
 import EzCashLoansScreen from "@/mybank/screens/loans/EzCashLoansScreen";
+import LoanDetails from "@/mybank/screens/loans/LoanDetails";
 import LoansScreen from "@/mybank/screens/loans/LoansScreen";
 import { IconVector } from "@/shared/assets/icons/IconVector";
 import { BaseButton } from "@/shared/components/Buttons";
@@ -56,6 +57,15 @@ const LoansNavigation: VFC = () => (
         headerBackVisible: false,
         headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
         headerTitle: () => renderTitle("EZ Cash Loans"),
+      })}
+    />
+    <Stack.Screen
+      component={LoanDetails}
+      name="LoanDetails"
+      options={({ navigation }) => ({
+        headerBackVisible: false,
+        headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+        headerTitle: () => null,
       })}
     />
   </Stack.Navigator>

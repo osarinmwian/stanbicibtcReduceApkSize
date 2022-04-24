@@ -12,18 +12,18 @@ const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
   navigation,
 }) => (
   <SafeAreaView flex={1}>
-    <ScrollView style={{ backgroundColor: "white" }}>
-      <ImageBackground flex={1} source={loginBackground}>
-        <Box flex={1}>
-          <Box height={RFValue(150)} />
-          <Box backgroundColor="whiteColor" flex={1} px="md">
-            <Box
-              minHeight={RFValue(150)}
-              style={{ marginTop: RFValue(-75) }}
-              width="100%"
-            >
-              <EligibilityCard />
-            </Box>
+    <ImageBackground flex={1} source={loginBackground}>
+      <Box flex={1}>
+        <Box height={RFValue(150)} />
+        <Box backgroundColor="whiteColor" flex={1} px="md">
+          <Box
+            minHeight={RFValue(150)}
+            style={{ marginTop: RFValue(-75) }}
+            width="100%"
+          >
+            <EligibilityCard />
+          </Box>
+          <ScrollView style={{ backgroundColor: "white" }}>
             <Box my="md">
               <Box mb="md">
                 <EligibilityButton
@@ -55,10 +55,10 @@ const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
                 />
               </Box>
             </Box>
-          </Box>
+          </ScrollView>
         </Box>
-      </ImageBackground>
-    </ScrollView>
+      </Box>
+    </ImageBackground>
   </SafeAreaView>
 );
 

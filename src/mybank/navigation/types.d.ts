@@ -35,6 +35,7 @@ export type MyBankNavigationProps<
 export type LoansStackParameterList = MyBankRootStackParameterList & {
   LoansScreen: undefined;
   EzCashLoansScreen: undefined;
+  LoanDetails: undefined;
 };
 
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
