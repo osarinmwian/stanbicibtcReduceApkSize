@@ -1,4 +1,3 @@
-import { useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React, { VFC } from "react";
 
@@ -33,38 +32,33 @@ const renderTitle = (title: string) => (
   </Text>
 );
 
-const LoansNavigation: VFC = () => {
-  const navigation = useNavigation();
-
-  const onGoBack = () => navigation.goBack();
-
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerLeft: () => renderBackButton({ onPress: onGoBack }),
+const LoansNavigation: VFC = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTitleAlign: "center",
+      headerTransparent: true,
+    }}
+  >
+    <Stack.Screen
+      component={LoansScreen}
+      name="LoansScreen"
+      options={({ navigation }) => ({
+        headerBackVisible: false,
+        headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
         headerRight: renderLogo,
-        headerTitleAlign: "center",
-        headerTransparent: true,
-      }}
-    >
-      <Stack.Screen
-        component={LoansScreen}
-        name="LoansScreen"
-        options={{
-          headerBackVisible: false,
-          headerTitle: () => renderTitle("Loans"),
-        }}
-      />
-      <Stack.Screen
-        component={EzCashLoansScreen}
-        name="EzCashLoansScreen"
-        options={{
-          headerBackVisible: false,
-          headerTitle: () => renderTitle("EZ Cash Loans"),
-        }}
-      />
-    </Stack.Navigator>
-  );
-};
+        headerTitle: () => renderTitle("Loans"),
+      })}
+    />
+    <Stack.Screen
+      component={EzCashLoansScreen}
+      name="EzCashLoansScreen"
+      options={({ navigation }) => ({
+        headerBackVisible: false,
+        headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+        headerTitle: () => renderTitle("EZ Cash Loans"),
+      })}
+    />
+  </Stack.Navigator>
+);
 
 export default LoansNavigation;

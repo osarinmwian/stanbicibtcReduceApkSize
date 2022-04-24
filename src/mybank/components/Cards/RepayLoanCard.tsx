@@ -5,48 +5,48 @@ import { Box, Card } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 const RepayLoanCard: VFC = () => (
-  <Card backgroundColor="loanCard" padding="md">
+  <Card backgroundColor="whiteColor" padding="md">
     <Box>
-      <Box alignItems="flex-start" mb="md">
-        <Box
-          borderColor="mutualFundsContainer"
-          borderRadius="xs"
-          borderWidth={1}
-          paddingHorizontal="sm"
-          paddingVertical="xs"
-        >
-          <Text color="mutualFundsContainer" fontVariant="caption">
-            Eligibility
+      <Box mb="md">
+        <Text>Loan amount</Text>
+        <Text fontVariant="h4" fontWeight="bold">
+          N4,000,000
+        </Text>
+      </Box>
+      <Box flexDirection="row" mb="md">
+        <Box flex={1}>
+          <Text fontVariant="caption">Current loan balance</Text>
+          <Text fontVariant="h6" fontWeight="bold">
+            N2,500,000
+          </Text>
+        </Box>
+        <Box flex={1}>
+          <Text fontVariant="caption">Max. monthly repayment</Text>
+          <Text fontVariant="h6" fontWeight="bold">
+            N45,000
+          </Text>
+        </Box>
+      </Box>
+      <Box flexDirection="row" mb="md">
+        <Box flex={1}>
+          <Text fontVariant="caption">Interest rate</Text>
+          <Text fontVariant="h6" fontWeight="bold">
+            13%
+          </Text>
+        </Box>
+        <Box flex={1}>
+          <Text fontVariant="caption">Max. tenure</Text>
+          <Text fontVariant="h6" fontWeight="bold">
+            48 months
           </Text>
         </Box>
       </Box>
       <Box>
-        <Text>EZ Cash Loan</Text>
-        <Text fontVariant="h4" fontWeight="bold">
-          N4,000,000
-        </Text>
-        <Text color="textColor2" my="md">
-          Click on the button below to proceed
-        </Text>
-      </Box>
-      <Box>
         <PrimaryButton
           containerProps={{ flex: 1 }}
-          label="PROCEED"
+          label="REPAY LOAN"
           labelProps={{ color: "whiteColor", fontVariant: "caption" }}
           paddingVertical="sm"
-        />
-      </Box>
-      <Box mt="sm">
-        <PrimaryButton
-          containerProps={{ flex: 1 }}
-          label="SEE ALL LOAN OFFERS"
-          labelProps={{
-            color: "primaryColor",
-            fontVariant: "caption",
-            fontWeight: "bold",
-          }}
-          variant="transparent"
         />
       </Box>
     </Box>

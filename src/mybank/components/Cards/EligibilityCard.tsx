@@ -25,10 +25,10 @@ const EligibilityCard: VFC = () => (
         <Text fontVariant="h4" fontWeight="bold">
           N4,000,000
         </Text>
-        <Text color="textColor2" my="md">
-          Click on the button below to proceed
-        </Text>
       </Box>
+      <Text color="textColor2" my="md">
+        Click on the button below to proceed
+      </Text>
       <Box>
         <PrimaryButton
           containerProps={{ flex: 1 }}
