@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React, { VFC } from "react";
 
 import { LoansStackParameterList } from "@/mybank/navigation/types";
+import EzCashLoansScreen from "@/mybank/screens/loans/EzCashLoansScreen";
 import LoansScreen from "@/mybank/screens/loans/LoansScreen";
 import { IconVector } from "@/shared/assets/icons/IconVector";
 import { BaseButton } from "@/shared/components/Buttons";
@@ -16,14 +17,19 @@ type RenderBackButtonProps = {
 };
 
 const renderBackButton = ({ onPress }: RenderBackButtonProps) => (
-  <BaseButton onPress={onPress} paddingHorizontal="none" paddingRight="md">
+  <BaseButton
+    onPress={onPress}
+    paddingHorizontal="none"
+    paddingRight="md"
+    variant="transparent"
+  >
     <IconVector name="chevron-back" size="sm" />
   </BaseButton>
 );
 const renderLogo = () => <Logo />;
-const renderTitle = () => (
-  <Text color="whiteColor" fontVariant="h4" textTransform="uppercase">
-    Loans
+const renderTitle = (title: string) => (
+  <Text color="whiteColor" fontVariant="h6" textTransform="uppercase">
+    {title}
   </Text>
 );
 
@@ -46,7 +52,15 @@ const LoansNavigation: VFC = () => {
         name="LoansScreen"
         options={{
           headerBackVisible: false,
-          headerTitle: renderTitle,
+          headerTitle: () => renderTitle("Loans"),
+        }}
+      />
+      <Stack.Screen
+        component={EzCashLoansScreen}
+        name="EzCashLoansScreen"
+        options={{
+          headerBackVisible: false,
+          headerTitle: () => renderTitle("EZ Cash Loans"),
         }}
       />
     </Stack.Navigator>

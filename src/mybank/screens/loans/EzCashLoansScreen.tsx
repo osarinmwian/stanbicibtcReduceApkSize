@@ -3,11 +3,11 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 import { loginBackground } from "@/mybank/assets/image/";
 import { EligibilityButton } from "@/mybank/components/Buttons";
-import { EligibilityCard } from "@/mybank/components/Cards";
+import { RepayLoanCard } from "@/mybank/components/Cards";
 import { LoansNavigationProps } from "@/mybank/navigation/types";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 
-const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
+const EZCashLoansScreen: VFC<LoansNavigationProps<"Loans">> = ({
   navigation,
 }) => (
   <SafeAreaView flex={1}>
@@ -20,14 +20,13 @@ const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
             style={{ marginTop: RFValue(-75) }}
             width="100%"
           >
-            <EligibilityCard />
+            <RepayLoanCard />
           </Box>
           <Box mt="md">
             <Box mb="md">
               <EligibilityButton
                 eligibilityAmount="N2,000,000"
                 leftIcon="cash"
-                onPress={() => navigation.navigate("EzCashLoansScreen")}
                 title="EZ Cash"
               />
             </Box>
@@ -59,4 +58,4 @@ const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
   </SafeAreaView>
 );
 
-export default LoansScreen;
+export default EZCashLoansScreen;

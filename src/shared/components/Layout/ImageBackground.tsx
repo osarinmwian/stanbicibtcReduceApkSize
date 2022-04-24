@@ -15,7 +15,7 @@ import {
   visible,
   VisibleProps,
 } from "@shopify/restyle";
-import React, { VFC } from "react";
+import React, { FC } from "react";
 import {
   ImageBackground as ReactImageBackground,
   ImageBackgroundProps as ReactImageBackgroundProps,
@@ -39,7 +39,7 @@ const Card = createRestyleComponent<RestyleProps, Theme>(
   ReactImageBackground,
 );
 
-const ImageBackground: VFC<ImageBackgroundProps> = (props) => (
+const ImageBackground: FC<ImageBackgroundProps> = (props) => (
   <Card resizeMode="cover" {...props} />
 );
 
