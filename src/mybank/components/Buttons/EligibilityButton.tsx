@@ -7,12 +7,12 @@ import { Text } from "@/shared/components/Typography";
 
 type EligibilityButtonProps = BaseButtonProps & {
   title: string;
-  eligibilityAmount: string;
+  subtitle: string;
   containerProps?: BoxProps;
 };
 
 const EligibilityButton: VFC<EligibilityButtonProps> = (props) => {
-  const { title, eligibilityAmount, containerProps, ...rest } = props;
+  const { title, subtitle, containerProps, ...rest } = props;
 
   return (
     <BaseButton
@@ -31,9 +31,7 @@ const EligibilityButton: VFC<EligibilityButtonProps> = (props) => {
     >
       <Box flex={1} {...containerProps}>
         <Text fontWeight="bold">{title}</Text>
-        <Text fontVariant="caption">
-          Eligibility Amount: {eligibilityAmount}
-        </Text>
+        <Text fontVariant="caption">{subtitle}</Text>
       </Box>
     </BaseButton>
   );

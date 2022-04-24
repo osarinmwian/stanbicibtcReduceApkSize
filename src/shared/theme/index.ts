@@ -191,6 +191,7 @@ const lightTheme = createTheme({
       fontSize: RFValue(24),
       fontWeight: "700",
     },
+
     defaults: {
       color: "primaryBlack",
       fontSize: RFValue(14),

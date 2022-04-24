@@ -1,5 +1,6 @@
 export const palette = {
   black: "#000000",
+  confirmCard: "#E0E7F5",
   darkGrey: "#222222",
   easeContainer: "#4D85FE",
   insuranceContainer: "#B150C4",

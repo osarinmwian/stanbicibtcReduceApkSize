@@ -5,6 +5,7 @@ import car from "@/shared/assets/svg/car.svg";
 import cash from "@/shared/assets/svg/cash.svg";
 import chevronBack from "@/shared/assets/svg/chevron-back.svg";
 import chevronForward from "@/shared/assets/svg/chevron-forward.svg";
+import close from "@/shared/assets/svg/close.svg";
 import coins from "@/shared/assets/svg/coins.svg";
 import coinsMany from "@/shared/assets/svg/coins-many.svg";
 import compass from "@/shared/assets/svg/compass.svg";
@@ -21,6 +22,7 @@ const svgIconPack = {
   cash,
   "chevron-back": chevronBack,
   "chevron-forward": chevronForward,
+  close,
   coins,
   "coins-many": coinsMany,
   "company-logo": companyLogo,
