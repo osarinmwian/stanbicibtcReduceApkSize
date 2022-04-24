@@ -12,4 +12,4 @@ const LoansScreen: VFC<LoansNavigationProps<"Loans">> = ({ navigation }) => (
   </SafeAreaView>
 );
 
-export { LoansScreen };
+export default LoansScreen;
