@@ -120,7 +120,7 @@ const Text: FC&lt;TextProps> = (props) => {
   return (
     // Restyle variant overrides the fontSize prop
     // eslint-disable-next-line react/jsx-sort-props
-    &lt;RestyleText variant={variant} fontSize={fontSize} {...rest}>
+    &lt;RestyleText fontSize={fontSize} variant={variant} {...rest}>
       {children}
     &lt;/RestyleText>
   );

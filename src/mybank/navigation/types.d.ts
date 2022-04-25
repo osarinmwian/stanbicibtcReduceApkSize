@@ -1,4 +1,11 @@
+import { NavigatorScreenParams } from "@react-navigation/native";
+
 import type { RootStackParameterList } from "@/shared/navigation/types";
+
+// 3SBanking
+export type ThreeSBankingList = {
+  Activate: undefined;
+};
 
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
@@ -12,6 +19,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   SeventhScreen: undefined;
   EightScreen: undefined;
   LoansNavigation: undefined;
+  ThreeSBanking: NavigatorScreenParams<ThreeSBankingList> | undefined;
 };
 
 // Tab routes

@@ -43,7 +43,7 @@ export default function LandingPage({
             marginTop="md"
           >
             <Image source={logo} style={LOGOSTYLE} />
-            <Text color="whiteColor" marginTop="sm" variant="medium18">
+            <Text color="whiteColor" marginTop="sm" variant="bold24">
               {t("mybank.landing.hello")}
             </Text>
           </Box>
