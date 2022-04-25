@@ -74,8 +74,10 @@ const lightTheme = createTheme({
 
   colors: {
     ...palette,
+    imageBackgroundTint: palette.primaryColor,
     mainBackground: palette.whiteColor,
     textColor: palette.darkGrey,
+    textColorInverted: palette.whiteColor,
   },
 
   fontSizes: {
@@ -180,10 +182,16 @@ const lightTheme = createTheme({
       fontSize: RFValue(14),
       fontWeight: "700",
     },
+    bold18: {
+      color: "textColor",
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(18),
+      fontWeight: "700",
+    },
     bold24: {
       fontFamily: "BentonSans-Bold",
       fontSize: RFValue(24),
-      fontWeight: "700",
+      fontWeight: "100",
     },
     defaults: {
       color: "primaryBlack",
@@ -195,6 +203,7 @@ const lightTheme = createTheme({
       fontWeight: "400",
     },
     medium12: {
+      color: "textColor",
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(12),
       fontWeight: "400",
@@ -203,6 +212,13 @@ const lightTheme = createTheme({
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(14),
       fontWeight: "400",
+    },
+    medium16: {
+      color: "textColor",
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(16),
+      fontWeight: "400",
+      lineHeight: RFValue(16),
     },
     medium18: {
       fontFamily: "BentonSans-Medium",
@@ -227,9 +243,11 @@ const lightTheme = createTheme({
       fontWeight: "400",
     },
     regular14: {
+      color: "textColor",
       fontFamily: "BentonSans-Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
+      lineHeight: RFValue(20),
     },
     regular8: {
       fontFamily: "BentonSans-Regular",
@@ -255,8 +273,10 @@ export const darkTheme: Theme = {
   ...lightTheme,
   colors: {
     ...lightTheme.colors,
+    imageBackgroundTint: palette.secondaryBlack,
     mainBackground: palette.secondaryBlack,
     textColor: palette.whiteColor,
+    textColorInverted: palette.darkGrey,
   },
 };
 

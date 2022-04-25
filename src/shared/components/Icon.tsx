@@ -23,10 +23,10 @@ export type IconProps = SvgProps & {
 /**
  * Custom Icon component based on design systems used in the figma
  */
-function Icon({ name, size = 24, style, ...props }: IconProps) {
+function Icon({ name, size = 24, style, ...rest }: IconProps) {
   const IconImpl: IconFunction = ICONS[name as IconName];
   return IconImpl ? (
-    <IconImpl height={size} width={size} {...{ style }} {...props} />
+    <IconImpl height={size} style={style} width={size} {...rest} />
   ) : null;
 }
 
