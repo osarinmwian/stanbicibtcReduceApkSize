@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, Image, ImageBackground } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
@@ -12,8 +11,9 @@ import { Box } from "@/shared/components/Layout";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import SelectChannelModal from "@/shared/components/selectChannelModal";
 import { Text } from "@/shared/components/Typography";
+import { RFValue } from "@/shared/utils/functions";
 
-import ModuleComponent from "./components/ModuleComponent";
+import ModuleComponent from "../../components/Card/SelectChannelCard";
 import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE, ROOT } from "./landingPageStyles";
@@ -23,7 +23,7 @@ export default function LandingPage({
 }: MyBankNavigationProps<"LandingPage">) {
   const { t } = useTranslation();
   return (
-    <SafeAreaView style={{ backgroundColor: "#000", flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: "#000", height: "100%" }}>
       <ImageBackground
         resizeMode="cover"
         source={landingpagebackground}
@@ -45,6 +45,7 @@ export default function LandingPage({
             </Text>
           </Box>
 
+<<<<<<< HEAD
           <Box alignItems="flex-start" marginVertical="md">
             <Text color="whiteColor" marginBottom="sm">
               {t("mybank.landing.slideToSeeMoreOptions")}
@@ -72,6 +73,33 @@ export default function LandingPage({
               showsHorizontalScrollIndicator={false}
               showsVerticalScrollIndicator={false}
             />
+=======
+          <Box marginVertical="md">
+            <Box>
+              <Text color="whiteColor">
+                {t("mybank.landing.slideToSeeMoreOptions")}
+              </Text>
+            </Box>
+            <Box alignItems="center">
+              <FlatList
+                data={modules}
+                keyExtractor={(item: { id: string }) => item.id}
+                numColumns={3}
+                renderItem={({ item }) => (
+                  <ModuleComponent
+                    backgroundColor={
+                      item.backgroundColor as PressableProps["backgroundColor"]
+                    }
+                    image={item.image}
+                    onPress={() => navigation.navigate(item.destination)}
+                    title={item.title}
+                  />
+                )}
+                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
+              />
+            </Box>
+>>>>>>> 0231ebb (fix: landingPage)
           </Box>
 
           <Box>

@@ -15,19 +15,19 @@ export default function QuickOptionsComponent(props: ModuleProps) {
   return (
     <Pressable
       alignItems="center"
-      // backgroundColor="black"
       borderRadius="md"
       height={RFValue(92)}
-      justifyContent="flex-start"
-      margin="xs"
-      width={RFValue(110)}
+      // justifyContent="center"
+      marginHorizontal="sm"
+      marginVertical="md"
+      width={RFValue(95)}
     >
       <Image source={image} />
       <Text
         color="darkGrey"
         marginTop="sm"
         textAlign="center"
-        variant="regular8"
+        variant="medium8"
       >
         {title}
       </Text>

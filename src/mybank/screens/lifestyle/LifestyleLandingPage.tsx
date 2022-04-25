@@ -11,14 +11,14 @@ import { Box } from "@/shared/components/Layout";
 
 // import { useMybankRoute } from "../utils/hooks";
 
-function SeventhScreen() {
+const LifestyleLandingPage = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
   // const route = useMybankRoute<"ExampleScreen">();
   return (
     <Box
       alignItems="center"
-      backgroundColor="mainBackground"
+      backgroundColor="whiteColor"
       flex={1}
       justifyContent="center"
     >
@@ -33,6 +33,6 @@ function SeventhScreen() {
       </TouchableOpacity>
     </Box>
   );
-}
+};
 
-export default SeventhScreen;
+export default LifestyleLandingPage;

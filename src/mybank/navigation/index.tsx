@@ -25,10 +25,8 @@ function MyBankNavigation() {
           <Stack.Screen component={Transfer} name="Transfer" />
         </Stack.Group>
       ) : (
-        <Stack.Group>
-          <Stack.Group screenOptions={{ headerShown: false }}>
-            <Stack.Screen component={LoginScreen} name="LoginScreen" />
-          </Stack.Group>
+        <Stack.Group screenOptions={{ headerShown: false }}>
+          <Stack.Screen component={LoginScreen} name="LoginScreen" />
         </Stack.Group>
       )}
     </Stack.Navigator>

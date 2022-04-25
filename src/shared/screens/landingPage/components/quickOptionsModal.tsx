@@ -1,11 +1,12 @@
 import {
   BottomSheetBackdrop,
   BottomSheetBackdropProps,
+  BottomSheetFlatList,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import React, { useCallback, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, Image, LogBox } from "react-native";
+import { Dimensions, Image, LogBox } from "react-native";
 
 import { close, question } from "@/shared/assets/image";
 import { Box } from "@/shared/components/Layout";
@@ -18,14 +19,14 @@ import QuickOptionsComponent from "./QuickOptionsComponent";
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
-
+const { height } = Dimensions.get("window");
 const QuickOptions = () => {
   const { t } = useTranslation();
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["60%", "60%"], []);
+  const snapPoints = useMemo(() => ["65%", "65%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {
@@ -49,21 +50,24 @@ const QuickOptions = () => {
           alignItems="center"
           flexDirection="row"
           justifyContent="flex-end"
-          marginTop="lg"
+          marginRight="sm"
+          marginTop="sm"
           onPress={handleDismissModalPress}
         >
           <Image source={close} />
           <Box
             alignItems="center"
             backgroundColor="whiteColor"
-            borderBottomLeftRadius="lg"
-            borderTopLeftRadius="lg"
+            borderRadius="lg"
             flexDirection="row"
             marginLeft="md"
-            padding="md"
+            paddingHorizontal="md"
+            paddingVertical="md"
           >
             <Image source={question} />
-            <Text marginLeft="xs">{t("mybank.landing.quick")}</Text>
+            <Text marginLeft="xs" variant="medium14">
+              {t("mybank.quickOptions.quick")}
+            </Text>
           </Box>
         </Pressable>
       </BottomSheetBackdrop>
@@ -92,41 +96,25 @@ const QuickOptions = () => {
         ref={bottomSheetModalRef}
         snapPoints={snapPoints}
       >
-        <Box flex={1}>
-          <Box
-            alignItems="center"
-            backgroundColor="whiteColor"
-            borderTopEndRadius="md"
-            borderTopStartRadius="md"
-            elevation={5}
-            flex={1}
-            justifyContent="center"
-            shadowColor="darkGrey"
-            shadowOffset={{ height: 2, width: 0 }}
-            shadowOpacity={0.25}
-            shadowRadius={4}
-          >
-            <FlatList
+        <Box flex={1} justifyContent="center" paddingHorizontal="md">
+          <Box alignItems="flex-start" justifyContent="center" paddingLeft="md">
+            <Text
+              color="primaryColor"
+              marginBottom="md"
+              marginTop="md"
+              variant="medium14"
+            >
+              QUICK OPTIONS
+            </Text>
+          </Box>
+          <Box alignItems="center" flex={1} justifyContent="center">
+            <BottomSheetFlatList
               data={quickOptions}
               keyExtractor={(item) => item.id}
-              ListHeaderComponent={
-                <Box alignItems="flex-start">
-                  <Text
-                    color="primaryColor"
-                    marginBottom="md"
-                    marginTop="lg"
-                    variant="medium14"
-                  >
-                    QUICK OPTIONS
-                  </Text>
-                </Box>
-              }
               numColumns={3}
               renderItem={({ item }) => (
                 <QuickOptionsComponent image={item.image} title={item.title} />
               )}
-              showsHorizontalScrollIndicator={false}
-              showsVerticalScrollIndicator={false}
             />
           </Box>
         </Box>

@@ -3,7 +3,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const ROOT: ImageStyle = {
   flex: 1,
-  paddingVertical: RFValue(20),
+  paddingVertical: RFValue(10),
 };
 
 export const BACK: ImageStyle = {

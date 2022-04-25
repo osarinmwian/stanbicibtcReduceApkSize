@@ -28,6 +28,14 @@
       "loginWithOnePass": "LOGIN WITH ONE PASS",
       "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
       "newHere": "New here? Register for One Pass"
+    },
+    "selectChannel": {
+      "signUpWithOnePass": "SIGN UP WITH ONE PASS",
+      "selectChannelHeading": "Select channel",
+      "selectChannelSub": "Select Channel to sign up or sign in with"
+    },
+    "quickOptions": {
+      "quick": "Quick Options"
     }
   },
   "pension": {

@@ -182,7 +182,11 @@ export default function LoginScreen({
                   />
                 </Box>
 
+<<<<<<< HEAD
                 <Box alignItems="center" width="100%">
+=======
+                <Box alignItems="center" marginBottom="md" width="100%">
+>>>>>>> 0231ebb (fix: landingPage)
                   <FlatList
                     contentContainerStyle={{
                       alignItems: "center",
