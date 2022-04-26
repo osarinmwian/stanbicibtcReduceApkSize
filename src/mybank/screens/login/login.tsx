@@ -37,6 +37,7 @@ export default function LoginScreen({
   const { t } = useTranslation();
 
   const onSubmit = (values: MyFormValues) => {
+    navigation.navigate("Home");
     console.log("values", values);
   };
 
@@ -92,7 +93,7 @@ export default function LoginScreen({
                 <Formik
                   initialValues={InitialValues}
                   onSubmit={(values) => onSubmit(values)}
-                  validationSchema={validationSchema}
+                  // validationSchema={validationSchema}
                 >
                   {({
                     handleChange,
@@ -178,11 +179,10 @@ export default function LoginScreen({
                     labelVariant="medium10"
                     leftIcon="fingerprint"
                     marginVertical="lg"
-                    paddingVertical="md"
                   />
                 </Box>
 
-                <Box alignItems="center" marginTop="lg" width="100%">
+                <Box alignItems="center" width="100%">
                   <FlatList
                     contentContainerStyle={{
                       alignItems: "center",

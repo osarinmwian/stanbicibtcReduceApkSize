@@ -3,11 +3,12 @@ import {
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
+import { useNavigation } from "@react-navigation/native";
 import React, { useCallback, useMemo, useRef } from "react";
 import { FlatList } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
+// import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import ModuleComponent from "@/shared/screens/landingPage/components/ModuleComponent";
 
 import modules from "../screens/landingPage/files/modules";
@@ -17,11 +18,12 @@ import { PressableProps } from "./Pressable";
 import { Text } from "./Typography";
 
 const SelectChannel = () => {
+  const navigation = useNavigation();
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["50%", "50%"], []);
+  const snapPoints = useMemo(() => ["60%", "60%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {
@@ -87,9 +89,7 @@ const SelectChannel = () => {
                   backgroundColor={
                     item.backgroundColor as PressableProps["backgroundColor"]
                   }
-                  destination={
-                    item.destination as keyof MyBankRootStackParameterList
-                  }
+                  destination={() => navigation.navigate(item.destination)}
                   image={item.image}
                   title={item.title}
                 />

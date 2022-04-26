@@ -19,8 +19,8 @@ export default function QuickOptionsComponent(props: ModuleProps) {
       borderRadius="md"
       height={RFValue(92)}
       justifyContent="flex-start"
-      marginHorizontal="xs"
-      width={RFValue(95)}
+      margin="xs"
+      width={RFValue(110)}
     >
       <Image source={image} />
       <Text

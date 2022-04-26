@@ -88,6 +88,7 @@ const lightTheme = createTheme({
     h5: RFValue(16),
     h6: RFValue(14),
     p: RFValue(14),
+    s: RFValue(6),
   },
 
   iconSizes: {
@@ -113,7 +114,8 @@ const lightTheme = createTheme({
     lg: RFValue(32),
     md: RFValue(16),
     none: 0,
-    sm: RFValue(8),
+    rmd: RFValue(-16),
+    sm: RFValue(10),
     ss: RFValue(6),
     xl: RFValue(64),
     xs: RFValue(4),

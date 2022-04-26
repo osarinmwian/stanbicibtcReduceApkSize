@@ -10,7 +10,7 @@ export const palette = {
   negativeColor: "#E70011",
   paleGrey: "#DBDBDB",
   paleGrey25: "#F6F6F6",
-  paleGrey50: "#EDEDED",
+  paleGrey50: "#EFEFED",
   pensionContainer: "#0052FF",
   positiveColor: "#0E8A00",
   primaryBlack: "#050505",
