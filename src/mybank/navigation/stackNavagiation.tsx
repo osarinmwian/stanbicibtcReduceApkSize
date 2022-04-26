@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SeventhScreen, SixthScreen } from "@/mybank/screens/";
 
+import { FlightIndex } from "../screens/lifestyle";
 import BottomTabs from "./bottomNavigation";
 import { MyBankRootStackParameterList } from "./types";
 
@@ -51,7 +52,7 @@ function Lifestyle() {
         header: () => null,
       }}
     >
-      {/* <Stack.Screen component={ExampleScreen} name="ExampleScreen" /> */}
+      <Stack.Screen component={FlightIndex} name="FlightIndex" />
     </Stack.Navigator>
   );
 }

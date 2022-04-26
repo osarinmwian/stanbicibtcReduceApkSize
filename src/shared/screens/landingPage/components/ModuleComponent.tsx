@@ -1,9 +1,6 @@
 import { Dimensions, Image, ImageSourcePropType } from "react-native";
 
-import {
-  MyBankNavigationProps,
-  MyBankRootStackParameterList,
-} from "@/mybank/navigation/types";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
 
@@ -11,7 +8,7 @@ interface ModuleProps {
   title: string;
   backgroundColor: PressableProps["backgroundColor"];
   image: ImageSourcePropType;
-  destination: keyof MyBankRootStackParameterList;
+  destination?: PressableProps["onPress"];
   navigation?: MyBankNavigationProps<"LandingPage">["navigation"];
 }
 
@@ -27,7 +24,7 @@ export default function ModuleComponent(props: ModuleProps) {
       justifyContent="center"
       marginHorizontal="xs"
       marginTop="sm"
-      onPress={() => navigation.navigate(destination)}
+      onPress={destination}
       width={width / 3.58}
     >
       <Image source={image} />
