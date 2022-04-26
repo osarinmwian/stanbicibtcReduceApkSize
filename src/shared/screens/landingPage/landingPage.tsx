@@ -103,6 +103,7 @@ export default function LandingPage({
                   color: "wealthColor",
                 }}
                 labelVariant="medium10"
+                onPress={() => navigation.navigate("StoryBook")}
                 width={RFValue(150)}
               />
             </Box>

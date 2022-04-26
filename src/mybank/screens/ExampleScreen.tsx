@@ -29,8 +29,8 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
         {t("mybank.welcome")}
       </Animated.Text>
       <PrimaryButton
-        label="Go to Storybook"
-        onPress={() => props.navigation.replace("StoryBook")}
+        label="Go to Loans"
+        onPress={() => props.navigation.navigate("LoansNavigation")}
         variant="filled"
       />
     </Box>

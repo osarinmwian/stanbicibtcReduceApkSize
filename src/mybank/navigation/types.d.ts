@@ -11,6 +11,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   SixthScreen: undefined;
   SeventhScreen: undefined;
   EightScreen: undefined;
+  LoansNavigation: undefined;
 };
 
 // Tab routes
@@ -31,6 +32,11 @@ export type MyBankNavigationProps<
   BottomTabScreenProps<MyTabRoutes>
 >;
 
-// export type MyBankNavigationProps<
-//   T extends keyof MyBankRootStackParameterList,
-// > = StackScreenProps<MyBankRootStackParameterList, T>;
+export type LoansStackParameterList = MyBankRootStackParameterList & {
+  LoansScreen: undefined;
+  EzCashLoansScreen: undefined;
+  LoanDetails: undefined;
+};
+
+export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
+  StackScreenProps<LoansStackParameterList, T>;
