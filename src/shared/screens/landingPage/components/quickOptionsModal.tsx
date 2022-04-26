@@ -25,7 +25,7 @@ const QuickOptions = () => {
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["50%", "50%"], []);
+  const snapPoints = useMemo(() => ["60%", "60%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {

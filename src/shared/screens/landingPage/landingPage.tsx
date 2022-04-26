@@ -4,10 +4,7 @@ import { FlatList, Image, ImageBackground } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import {
-  MyBankNavigationProps,
-  MyBankRootStackParameterList,
-} from "@/mybank/navigation/types";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { landingpagebackground } from "@/shared/assets/image";
 import logo from "@/shared/assets/image/logo.png";
 import { PrimaryButton } from "@/shared/components/Buttons";
@@ -48,7 +45,7 @@ export default function LandingPage({
             </Text>
           </Box>
 
-          <Box alignItems="flex-start" marginVertical="lg">
+          <Box alignItems="flex-start" marginVertical="md">
             <Text color="whiteColor" marginBottom="sm">
               {t("mybank.landing.slideToSeeMoreOptions")}
             </Text>
@@ -66,9 +63,7 @@ export default function LandingPage({
                   backgroundColor={
                     item.backgroundColor as PressableProps["backgroundColor"]
                   }
-                  destination={
-                    item.destination as keyof MyBankRootStackParameterList
-                  }
+                  destination={() => navigation.navigate(item.destination)}
                   image={item.image}
                   navigation={navigation}
                   title={item.title}
