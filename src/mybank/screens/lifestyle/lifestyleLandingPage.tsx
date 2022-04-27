@@ -1,37 +1,67 @@
-import { useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import Animated, {
-  Layout,
-  LightSpeedInLeft,
-  LightSpeedOutRight,
-} from "react-native-reanimated";
+import React from "react";
 
+import { loginBackground } from "@/mybank/assets/image";
+import BottomTabLandingPageTopBar from "@/mybank/components/TopBar";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
+import { ImageIconPackType } from "@/shared/assets/icons";
 import { Box } from "@/shared/components/Layout";
 
-// import { useMybankRoute } from "../utils/hooks";
+import LifestylePicker from "./components/lifestylePicker";
 
-const LifestyleLandingPage = () => {
-  const { t } = useTranslation();
-  const navigation = useNavigation();
-  // const route = useMybankRoute<"ExampleScreen">();
+const LifestyleLandingPage = ({
+  navigation,
+}: MyBankNavigationProps<"LifestyleLandinPage">) => {
+  const lifestyleData = [
+    {
+      destination: "FlightIndex",
+      heading: "Flights",
+      iconName: "plane",
+      id: "1",
+      subHeading: "Book flights easily",
+    },
+    {
+      destination: "FlightIndex",
+      heading: "Find and make hotel reservations",
+      iconName: "bed",
+      id: "2",
+      subHeading: "Book flights easily",
+    },
+    {
+      destination: "FlightIndex",
+      heading: "Centili fusion",
+      iconName: "centili",
+      id: "3",
+      subHeading: "Digital lifestyle experience",
+    },
+  ];
   return (
-    <Box
-      alignItems="center"
-      backgroundColor="whiteColor"
-      flex={1}
-      justifyContent="center"
-    >
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Animated.Text
-          entering={LightSpeedInLeft.springify()}
-          exiting={LightSpeedOutRight}
-          layout={Layout.springify()}
-        >
-          {t("mybank.welcome")}
-        </Animated.Text>
-      </TouchableOpacity>
-    </Box>
+    <>
+      <BottomTabLandingPageTopBar
+        heading="LIFESTYLE"
+        imageName={loginBackground}
+        landingPage
+      />
+      <Box
+        backgroundColor="whiteColor"
+        borderTopEndRadius="md"
+        borderTopStartRadius="md"
+        flex={1}
+        marginTop="rmd"
+        padding="md"
+      >
+        {lifestyleData.map((item) => (
+          <LifestylePicker
+            destination={() =>
+              navigation.navigate("Lifestyle", { screen: item.destination })
+            }
+            heading={item.heading}
+            key={item.id}
+            name={item.iconName as ImageIconPackType}
+            subHeading={item.subHeading}
+          />
+        ))}
+      </Box>
+    </>
   );
 };
 

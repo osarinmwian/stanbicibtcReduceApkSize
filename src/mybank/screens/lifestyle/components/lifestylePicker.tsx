@@ -7,14 +7,12 @@ import { Text } from "@/shared/components/Typography";
 
 interface LifestylePickerTypes {
   destination: PressableProps["onPress"];
-  key: string;
   name: ImageIconPackType;
   heading: string;
   subHeading: string;
 }
 
 const LifestylePicker = ({
-  key,
   destination,
   name,
   heading,
@@ -26,7 +24,6 @@ const LifestylePicker = ({
     borderRadius="sm"
     flexDirection="row"
     justifyContent="space-between"
-    key={key}
     marginVertical="sm"
     onPress={destination}
     padding="md"

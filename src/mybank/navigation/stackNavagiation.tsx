@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { EightScreen, SeventhScreen, SixthScreen } from "@/mybank/screens/";
+import { EightScreen, SixthScreen } from "@/mybank/screens/";
 
 import { FlightIndex } from "../screens/lifestyle";
 import BottomTabs from "./bottomNavigation";
@@ -28,7 +28,7 @@ function Transfer() {
         header: () => null,
       }}
     >
-      <Stack.Screen component={SeventhScreen} name="SeventhScreen" />
+      <Stack.Screen component={EightScreen} name="EightScreen" />
     </Stack.Navigator>
   );
 }

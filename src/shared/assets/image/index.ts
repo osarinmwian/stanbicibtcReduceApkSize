@@ -24,6 +24,7 @@ export { default as flights } from "./flights.png";
 export { default as forgotPassword } from "./forgotPassword.png";
 export { default as insurance } from "./insurance.png";
 export { default as landingpagebackground } from "./LandingPageBackground.png";
+export { default as lifestyleBg } from "./lifestyleBg.png";
 export { default as logo } from "./logo.png";
 export { default as mutualfunds } from "./mutualFunds.png";
 export { default as mybank } from "./myBank.png";

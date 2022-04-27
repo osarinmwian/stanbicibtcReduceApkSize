@@ -26,7 +26,7 @@ const QuickOptions = () => {
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["65%", "65%"], []);
+  const snapPoints = useMemo(() => ["60%", "60%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {
@@ -51,8 +51,9 @@ const QuickOptions = () => {
           flexDirection="row"
           justifyContent="flex-end"
           marginRight="sm"
-          marginTop="sm"
+          marginTop="lg"
           onPress={handleDismissModalPress}
+          paddingTop="lg"
         >
           <Image source={close} />
           <Box
