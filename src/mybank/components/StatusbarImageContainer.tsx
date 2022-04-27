@@ -2,9 +2,11 @@ import React, { ReactNode } from "react";
 import {
   ImageBackground,
   ImageBackgroundProps,
+  Platform,
   SafeAreaView,
   StatusBar,
 } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { ImageIconPackType } from "@/shared/assets/icons";
@@ -25,7 +27,12 @@ const StatusbarImageContainer = ({ children, imageName }: Style) => {
         style={{ flex: 1 }}
       >
         <SafeAreaView>
-          <Box backgroundColor="transparent" height={insets.top}>
+          <Box
+            backgroundColor="transparent"
+            height={
+              Platform.OS === "android" ? insets.top + RFValue(12) : RFValue(5)
+            }
+          >
             <StatusBar
               animated
               backgroundColor="transparent"

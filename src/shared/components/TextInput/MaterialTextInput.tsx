@@ -26,15 +26,15 @@ const OutlinedTextInput: VFC<MaterialTextInputProps> = (props) => {
   );
 
   return (
-    <Box position="relative" width="100%">
-      <Box flex={1}>
+    <Box>
+      <Box>
         <OutlinedTextField
           allowFontScaling={false}
           baseColor={theme.colors.lightGrey}
           fontSize={theme.fontSizes.p}
           inputContainerStyle={{
             borderRadius: theme.borderRadii.sm,
-            height: RFValue(48),
+            height: RFValue(61),
             paddingRight: secureTextEntry ? RFValue(40) : 0,
           }}
           secureTextEntry={secureTextEntry && !showPassword}
@@ -43,7 +43,7 @@ const OutlinedTextInput: VFC<MaterialTextInputProps> = (props) => {
         />
       </Box>
       {secureTextEntry ? (
-        <Box position="absolute" right={RFValue(4)} top={RFValue(4)}>
+        <Box position="absolute" right={RFValue(4)} top={RFValue(10)}>
           <TogglePasswordIconButton
             isVisible={showPassword}
             onPress={toggleShowPassword}
@@ -76,7 +76,7 @@ const FilledTextInput: VFC<MaterialTextInputProps> = (props) => {
           inputContainerStyle={{
             backgroundColor: theme.colors.paleGrey50,
             borderRadius: 5,
-            height: RFValue(48),
+            height: RFValue(61),
             paddingRight: secureTextEntry ? RFValue(40) : 0,
           }}
           secureTextEntry={secureTextEntry && !showPassword}

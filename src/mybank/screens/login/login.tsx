@@ -70,7 +70,7 @@ export default function LoginScreen({
         </Box>
 
         <Pressable>
-          <Text color="whiteColor" marginTop="lg">
+          <Text color="whiteColor" marginTop="md">
             {t("mybank.login.newHere")}
           </Text>
         </Pressable>
@@ -89,7 +89,7 @@ export default function LoginScreen({
             touched,
           }) => (
             <Box>
-              <Box marginVertical="lg">
+              <Box marginTop="md">
                 <OutlinedTextInput
                   baseColor="#fff"
                   label="Internet Banking ID"
@@ -102,7 +102,7 @@ export default function LoginScreen({
                 />
               </Box>
 
-              <Box marginVertical="lg">
+              <Box marginVertical="sm">
                 <OutlinedTextInput
                   baseColor="#fff"
                   label="Password"
@@ -110,14 +110,14 @@ export default function LoginScreen({
                   onBlur={handleBlur("password")}
                   onChangeText={handleChange("password")}
                   secureTextEntry
-                  style={{ color: "#fff" }}
+                  style={{ color: "#fff", marginVertical: 16 }}
                   tintColor="#fff"
                   value={values.password}
                 />
               </Box>
 
               <Pressable marginVertical="sm">
-                <Text color="whiteColor" marginVertical="md" variant="medium10">
+                <Text color="whiteColor" variant="medium10">
                   {t("mybank.login.forgotPassword")}
                 </Text>
               </Pressable>
@@ -132,7 +132,7 @@ export default function LoginScreen({
                 marginBottom="xs"
                 marginTop="md"
                 onPress={() => handleSubmit()}
-                paddingVertical="md"
+                paddingVertical="mmd"
               />
             </Box>
           )}
@@ -149,7 +149,7 @@ export default function LoginScreen({
             labelVariant="medium10"
             marginBottom="xs"
             marginVertical="xs"
-            paddingVertical="md"
+            paddingVertical="mmd"
           />
 
           <PrimaryButton

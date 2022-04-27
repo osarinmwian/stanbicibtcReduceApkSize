@@ -113,6 +113,7 @@ const lightTheme = createTheme({
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
+    mmd: RFValue(20),
     none: 0,
     rmd: RFValue(-16),
     sm: RFValue(10),

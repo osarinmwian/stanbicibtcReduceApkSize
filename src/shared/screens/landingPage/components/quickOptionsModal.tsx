@@ -51,7 +51,7 @@ const QuickOptions = () => {
           flexDirection="row"
           justifyContent="flex-end"
           marginRight="sm"
-          marginTop="lg"
+          // marginTop="lg"
           onPress={handleDismissModalPress}
           paddingTop="lg"
         >
@@ -97,8 +97,8 @@ const QuickOptions = () => {
         ref={bottomSheetModalRef}
         snapPoints={snapPoints}
       >
-        <Box flex={1} justifyContent="center" paddingHorizontal="md">
-          <Box alignItems="flex-start" justifyContent="center" paddingLeft="md">
+        <Box flex={1}>
+          <Box alignItems="flex-start" justifyContent="center" paddingLeft="sm">
             <Text
               color="primaryColor"
               marginBottom="md"
@@ -108,8 +108,12 @@ const QuickOptions = () => {
               QUICK OPTIONS
             </Text>
           </Box>
-          <Box alignItems="center" flex={1} justifyContent="center">
+          <Box alignItems="center" flex={1} justifyContent="space-between">
             <BottomSheetFlatList
+              contentContainerStyle={{
+                alignItems: "center",
+                justifyContent: "center",
+              }}
               data={quickOptions}
               keyExtractor={(item) => item.id}
               numColumns={3}

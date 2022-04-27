@@ -4,6 +4,7 @@ import {
   Image,
   ImageBackground,
   ImageBackgroundProps,
+  Platform,
   Pressable,
   SafeAreaView,
   StatusBar,
@@ -36,7 +37,13 @@ const BottomTabLandingPageTopBar = ({
         style={{ flex: 0.3 }}
       >
         <SafeAreaView style={{ opacity: 0 }} />
-        <Box backgroundColor="transparent" height={insets.top}>
+        <Box
+          backgroundColor="transparent"
+          height={
+            Platform.OS === "android" ? insets.top + RFValue(12) : RFValue(5)
+          }
+          marginTop="md"
+        >
           <StatusBar
             animated
             backgroundColor="transparent"

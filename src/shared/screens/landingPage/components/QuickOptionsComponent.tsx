@@ -17,17 +17,18 @@ export default function QuickOptionsComponent(props: ModuleProps) {
       alignItems="center"
       borderRadius="md"
       height={RFValue(92)}
-      // justifyContent="center"
       marginHorizontal="sm"
-      marginVertical="md"
-      width={RFValue(95)}
+      marginVertical="sm"
+      width={RFValue(90)}
     >
       <Image source={image} />
       <Text
         color="darkGrey"
+        fontSize={RFValue(14)}
+        fontWeight="300"
         marginTop="sm"
         textAlign="center"
-        variant="medium8"
+        // variant="medium8"
       >
         {title}
       </Text>

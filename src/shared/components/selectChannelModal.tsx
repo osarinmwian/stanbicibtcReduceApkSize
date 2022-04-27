@@ -26,7 +26,7 @@ const SelectChannel = () => {
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["60%", "60%"], []);
+  const snapPoints = useMemo(() => ["55%", "55%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {
