@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import {
   ImageBackground,
   ImageBackgroundProps,
-  Platform,
   SafeAreaView,
   StatusBar,
 } from "react-native";
@@ -26,10 +25,7 @@ const StatusbarImageContainer = ({ children, imageName }: Style) => {
         style={{ flex: 1 }}
       >
         <SafeAreaView>
-          <Box
-            backgroundColor="transparent"
-            height={Platform.OS === "android" ? insets.top : 0}
-          >
+          <Box backgroundColor="transparent" height={insets.top}>
             <StatusBar
               animated
               backgroundColor="transparent"
