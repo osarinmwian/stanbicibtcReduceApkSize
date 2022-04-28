@@ -41,7 +41,7 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "500"}
+                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
               >
                 Home
@@ -65,7 +65,7 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "500"}
+                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
               >
                 Transfer
@@ -89,7 +89,7 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "500"}
+                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
               >
                 Payments
@@ -113,7 +113,7 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "500"}
+                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
               >
                 Lifestyle
@@ -137,7 +137,7 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "500"}
+                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
               >
                 More

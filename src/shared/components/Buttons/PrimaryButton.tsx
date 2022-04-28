@@ -2,7 +2,7 @@ import { VariantProps } from "@shopify/restyle";
 import React, { FC } from "react";
 import { ActivityIndicator } from "react-native";
 
-import { Box } from "@/shared/components/Layout";
+import { Box, BoxProps } from "@/shared/components/Layout";
 import { Text, TextProps } from "@/shared/components/Typography";
 import { Theme, useTheme } from "@/shared/theme";
 import { PaletteType } from "@/shared/theme/palette";
@@ -15,6 +15,7 @@ type PrimaryButtonProps = BaseButtonProps &
     labelProps?: Omit<TextProps, "children">;
     isLoading?: boolean;
     loadingIconColor?: PaletteType;
+    containerProps?: BoxProps;
   };
 
 const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
@@ -24,6 +25,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
     labelVariant,
     labelProps,
     loadingIconColor,
+    containerProps,
     ...rest
   } = props;
 
@@ -33,7 +35,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = (props) => {
 
   return (
     <BaseButton {...rest}>
-      <Box flexDirection="row">
+      <Box flexDirection="row" justifyContent="center" {...containerProps}>
         <Text variant={labelVariant} {...labelProps}>
           {label}
         </Text>

@@ -188,20 +188,5 @@ export default function LoginScreen({
         </Box>
       </Box>
     </StatusbarImageContainer>
-    // <SafeAreaView style={{ flex: 1 }}>
-    //   <KeyboardAvoidingView style={{ flex: 1 }}>
-    //     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    //       <Box flex={1}>
-    //         <ImageBackground
-    //           resizeMode="cover"
-    //           source={loginBackground}
-    //           style={ROOT}
-    //         >
-
-    //         </ImageBackground>
-    //       </Box>
-    //     </TouchableWithoutFeedback>
-    //   </KeyboardAvoidingView>
-    // </SafeAreaView>
   );
 }
