@@ -2,14 +2,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "@/mybank/screens/login/login";
 
+import LoansNavigation from "./loans/LoansNavigation";
 import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
 import { MyBankRootStackParameterList } from "./types";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
 function MyBankNavigation() {
-  const isLoggedIn = undefined;
-  // const isLoggedIn = 65;
+  // const isLoggedIn = undefined;
+  const isLoggedIn = 65;
   return (
     <Stack.Navigator
       screenOptions={{
@@ -23,6 +24,7 @@ function MyBankNavigation() {
           <Stack.Screen component={More} name="More" />
           <Stack.Screen component={Payments} name="Payments" />
           <Stack.Screen component={Transfer} name="Transfer" />
+          <Stack.Screen component={LoansNavigation} name="LoansNavigation" />
         </Stack.Group>
       ) : (
         <Stack.Group>

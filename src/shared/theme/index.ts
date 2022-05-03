@@ -91,6 +91,10 @@ const lightTheme = createTheme({
   },
 
   iconSizes: {
+    lg: {
+      height: RFValue(32),
+      width: RFValue(32),
+    },
     md: {
       height: RFValue(24),
       width: RFValue(24),
@@ -187,6 +191,7 @@ const lightTheme = createTheme({
       fontSize: RFValue(24),
       fontWeight: "700",
     },
+
     defaults: {
       color: "primaryBlack",
       fontSize: RFValue(14),
