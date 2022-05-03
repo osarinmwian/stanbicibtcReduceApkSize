@@ -107,6 +107,7 @@ module.exports = {
         },
       },
     ],
+    "no-console": "error",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": [
       "error",
