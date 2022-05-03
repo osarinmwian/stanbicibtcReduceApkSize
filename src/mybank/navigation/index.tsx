@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "@/mybank/screens/login/login";
 
+import LoansNavigation from "./loans/LoansNavigation";
 import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
 import { ThreeSBanking } from "./ThreeSBanking";
 import { MyBankRootStackParameterList } from "./types";
@@ -25,6 +26,7 @@ function MyBankNavigation() {
           <Stack.Screen component={More} name="More" />
           <Stack.Screen component={Payments} name="Payments" />
           <Stack.Screen component={Transfer} name="Transfer" />
+          <Stack.Screen component={LoansNavigation} name="LoansNavigation" />
         </Stack.Group>
       ) : (
         <Stack.Group>
