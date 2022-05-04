@@ -10,7 +10,7 @@ export type IconProps = SvgIconProps & {
 
 const IconVector: VFC<IconProps> = ({ containerProps, ...rest }) => (
   <Box {...containerProps}>
-    <SvgIcon color="whiteColor" size="md" {...rest} />
+    <SvgIcon color="whiteColor" size="sm" {...rest} />
   </Box>
 );
 

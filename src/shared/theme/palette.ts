@@ -13,7 +13,7 @@ export const palette = {
   mediumGrey: "#444444",
   mutualFundsContainer: "#00A2B1",
   negativeColor: "#E70011",
-  paleGrey: "#DBDBDB",
+  paleGrey: "#EFEFEF",
   paleGrey25: "#F6F6F6",
   paleGrey50: "#EFEFED",
   pensionContainer: "#0052FF",

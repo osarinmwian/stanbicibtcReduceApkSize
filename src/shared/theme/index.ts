@@ -100,6 +100,10 @@ const lightTheme = createTheme({
       height: RFValue(24),
       width: RFValue(24),
     },
+    s: {
+      height: RFValue(4),
+      width: RFValue(4),
+    },
     sm: {
       height: RFValue(16),
       width: RFValue(16),
@@ -122,6 +126,7 @@ const lightTheme = createTheme({
     rmd: RFValue(-16),
     sm: RFValue(10),
     ss: RFValue(6),
+    ssm: RFValue(8),
     xl: RFValue(64),
     xs: RFValue(4),
     xxl: RFValue(128),

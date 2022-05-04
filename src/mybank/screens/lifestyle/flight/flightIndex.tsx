@@ -1,37 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { ScrollView } from "react-native-gesture-handler";
+import { RFValue } from "react-native-responsive-fontsize";
 
 import BottomTabLandingPageTopBar from "@/mybank/components/TopBar";
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { lifestyleBg } from "@/shared/assets/image";
+import { PrimaryButton } from "@/shared/components/Buttons";
+import { Box } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
 
 import FlightMenuPicker from "../components/flightMenuPicker";
+import DepartureModal from "./departureModal";
 
 const FlightIndex = ({
   navigation,
 }: MyBankNavigationProps<"LifestyleLandinPage">) => {
-  const lifestyleData = [
-    {
-      destination: "FlightIndex",
-      heading: "Flights",
-      iconName: "plane",
-      id: "1",
-      subHeading: "Book flights easily",
-    },
-    {
-      destination: "FlightIndex",
-      heading: "Find and make hotel reservations",
-      iconName: "bed",
-      id: "2",
-      subHeading: "Book flights easily",
-    },
-    {
-      destination: "FlightIndex",
-      heading: "Centili fusion",
-      iconName: "centili",
-      id: "3",
-      subHeading: "Digital lifestyle experience",
-    },
-  ];
+  const { t } = useTranslation();
   return (
     <>
       <BottomTabLandingPageTopBar
@@ -39,15 +24,60 @@ const FlightIndex = ({
         imageName={lifestyleBg}
         landingPage={false}
       />
-      <FlightMenuPicker
-      // destination={() =>
-      //   navigation.navigate("Lifestyle", { screen: item.destination })
-      // }
-      // heading={item.heading}
-      // key={item.id}
-      // name={item.iconName as ImageIconPackType}
-      // subHeading={item.subHeading}
-      />
+      <ScrollView
+        style={{ backgroundColor: "#fff", flex: 1, padding: RFValue(16) }}
+      >
+        <Box>
+          <Text marginVertical="sm">Search and book flights</Text>
+        </Box>
+        <DepartureModal />
+        <FlightMenuPicker
+          heading="To where"
+          iconName="chevron-down"
+          key="2"
+          onPress={undefined}
+          subHeading="Enugu Airport (ENU)" // destination={() =>
+        />
+        <FlightMenuPicker
+          heading="Ticket type"
+          iconName="chevron-down"
+          key="3"
+          onPress={undefined}
+          subHeading="One way" // destination={() =>
+        />
+        <FlightMenuPicker
+          heading="Arrival and departure date"
+          iconName="chevron-down"
+          key="4"
+          onPress={undefined}
+          subHeading="Date" // destination={() =>
+        />
+        <FlightMenuPicker
+          heading="Number of passengers"
+          iconName="calendar"
+          key="5"
+          onPress={undefined}
+          subHeading="1 passenger (1 Adult)" // destination={() =>
+        />
+        <FlightMenuPicker
+          heading="Flight type"
+          iconName="chevron-down"
+          key="6"
+          onPress={undefined}
+          subHeading="Economy" // destination={() =>
+        />
+        <PrimaryButton
+          alignItems="center"
+          backgroundColor="primaryColor"
+          justifyContent="center"
+          label="SEARCH FLIGHTS"
+          labelProps={{ color: "whiteColor" }}
+          labelVariant="medium10"
+          marginBottom="xs"
+          marginTop="md"
+          paddingVertical="mmd"
+        />
+      </ScrollView>
     </>
   );
 };

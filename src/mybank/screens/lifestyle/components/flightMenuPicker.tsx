@@ -1,48 +1,43 @@
 import React from "react";
 
-import { ImageIcon, ImageIconPackType } from "@/shared/assets/icons";
+import { SvgIconPackType } from "@/shared/assets/icons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import { Box } from "@/shared/components/Layout";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
 
 interface LifestylePickerTypes {
-  destination: PressableProps["onPress"];
-  key: string;
-  name: ImageIconPackType;
+  onPress: PressableProps["onPress"];
   heading: string;
+  iconName: SvgIconPackType;
   subHeading: string;
 }
 
 const FlightMenuPicker = ({
-  key,
-  destination,
-  name,
+  onPress,
   heading,
+  iconName,
   subHeading,
 }: LifestylePickerTypes) => (
   <Pressable
     alignItems="center"
-    backgroundColor="paleGrey50"
+    backgroundColor="paleGrey"
     borderRadius="sm"
     flexDirection="row"
     justifyContent="space-between"
-    marginVertical="sm"
-    onPress={destination}
-    padding="md"
+    marginVertical="ss"
+    onPress={onPress}
+    padding="sm"
   >
     <Box alignItems="center" flexDirection="row" justifyContent="space-between">
-      <ImageIcon
-        color="black"
-        name={name}
-        size="md"
-        style={{ marginRight: 16 }}
-      />
       <Box>
-        <Text>{heading}</Text>
-        <Text>{subHeading}</Text>
+        <Text fontSize={12}>{heading}</Text>
+        <Text fontSize={14} fontWeight="500" marginTop="xs">
+          {subHeading}
+        </Text>
       </Box>
     </Box>
-    <ImageIcon color="black" name="arrowRight" size="sm" />
+    <IconVector color="primaryColor" name={iconName} />
   </Pressable>
 );
 

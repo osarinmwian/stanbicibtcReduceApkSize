@@ -51,7 +51,7 @@ const QuickOptions = () => {
           flexDirection="row"
           justifyContent="flex-end"
           marginRight="sm"
-          // marginTop="lg"
+          marginTop="md"
           onPress={handleDismissModalPress}
           paddingTop="lg"
         >

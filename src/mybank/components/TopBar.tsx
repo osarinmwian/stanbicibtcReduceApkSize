@@ -3,7 +3,6 @@ import React from "react";
 import {
   Image,
   ImageBackground,
-  ImageBackgroundProps,
   Platform,
   Pressable,
   SafeAreaView,
@@ -11,7 +10,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { ImageIcon, ImageIconPackType } from "@/shared/assets/icons";
+import { ImageIcon } from "@/shared/assets/icons";
 import { logo } from "@/shared/assets/image";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
@@ -19,7 +18,7 @@ import { RFValue } from "@/shared/utils/functions";
 
 interface Style {
   landingPage: boolean;
-  imageName: ImageBackgroundProps & ImageIconPackType;
+  imageName: number;
   heading: string;
 }
 const BottomTabLandingPageTopBar = ({

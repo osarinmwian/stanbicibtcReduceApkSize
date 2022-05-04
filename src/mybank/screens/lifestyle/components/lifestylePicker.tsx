@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ImageIcon, ImageIconPackType } from "@/shared/assets/icons";
+import { ImageIcon, ImageIconPackType, SvgIcon } from "@/shared/assets/icons";
 import { Box } from "@/shared/components/Layout";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
@@ -32,15 +32,17 @@ const LifestylePicker = ({
       <ImageIcon
         color="black"
         name={name}
-        size="md"
+        size="sm"
         style={{ marginRight: 16 }}
       />
       <Box>
-        <Text>{heading}</Text>
-        <Text>{subHeading}</Text>
+        <Text fontWeight="500">{heading}</Text>
+        <Text fontWeight="200" marginTop="xs">
+          {subHeading}
+        </Text>
       </Box>
     </Box>
-    <ImageIcon color="black" name="arrowRight" size="sm" />
+    <SvgIcon name="chevron-forward" size="sm" />
   </Pressable>
 );
 

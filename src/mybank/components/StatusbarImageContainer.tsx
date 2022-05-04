@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import {
   ImageBackground,
-  ImageBackgroundProps,
   Platform,
   SafeAreaView,
   StatusBar,
@@ -9,11 +8,10 @@ import {
 import { RFValue } from "react-native-responsive-fontsize";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { ImageIconPackType } from "@/shared/assets/icons";
 import { Box } from "@/shared/components/Layout";
 
 interface Style {
-  imageName: ImageBackgroundProps & ImageIconPackType;
+  imageName: number;
   children: ReactNode;
 }
 const StatusbarImageContainer = ({ children, imageName }: Style) => {

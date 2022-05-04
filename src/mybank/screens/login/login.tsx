@@ -158,7 +158,7 @@ export default function LoginScreen({
             label={t("mybank.login.loginWithFingerPrint")}
             labelProps={{ color: "whiteColor" }}
             labelVariant="medium10"
-            leftIcon="fingerprint"
+            // leftIcon="fingerprint"
             marginVertical="lg"
           />
         </Box>

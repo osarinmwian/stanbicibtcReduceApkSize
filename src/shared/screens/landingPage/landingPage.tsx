@@ -24,11 +24,7 @@ export default function LandingPage({
   const { t } = useTranslation();
   return (
     <>
-      <StatusTopBar
-        heading="FLIGHTS"
-        imageName={landingpagebackground}
-        landingPage={false}
-      >
+      <StatusTopBar imageName={landingpagebackground}>
         <Box>
           <Box alignItems="flex-end">
             <QuickOptionsModal />
@@ -114,6 +110,7 @@ export default function LandingPage({
               labelProps={{ color: "whiteColor" }}
               labelVariant="regular14"
               leftIcon="compass"
+              // size="md"
             />
           </Box>
         </Box>

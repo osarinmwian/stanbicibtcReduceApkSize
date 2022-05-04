@@ -21,16 +21,23 @@ const LifestyleLandingPage = ({
     },
     {
       destination: "FlightIndex",
-      heading: "Find and make hotel reservations",
+      heading: "Hotels",
       iconName: "bed",
       id: "2",
-      subHeading: "Book flights easily",
+      subHeading: "Find and reserve your hotel bookings",
+    },
+    {
+      destination: "FlightIndex",
+      heading: "Booking history",
+      iconName: "history",
+      id: "3",
+      subHeading: "Booking history",
     },
     {
       destination: "FlightIndex",
       heading: "Centili fusion",
       iconName: "centili",
-      id: "3",
+      id: "4",
       subHeading: "Digital lifestyle experience",
     },
   ];
