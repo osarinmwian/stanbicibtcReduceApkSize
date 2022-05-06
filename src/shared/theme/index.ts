@@ -1,5 +1,4 @@
 import { createTheme, useTheme as useRestyleTheme } from "@shopify/restyle";
-import { Platform } from "react-native";
 
 import { RFValue } from "@/shared/utils/functions";
 
@@ -75,8 +74,10 @@ const lightTheme = createTheme({
 
   colors: {
     ...palette,
+    imageBackgroundTint: palette.primaryColor,
     mainBackground: palette.whiteColor,
     textColor: palette.darkGrey,
+    textColorInverted: palette.whiteColor,
   },
 
   fontSizes: {
@@ -189,17 +190,21 @@ const lightTheme = createTheme({
       fontWeight: "700",
     },
     bold14: {
-      fontFamily: "BentonSans Bold",
+      fontFamily: "BentonSans-Bold",
       fontSize: RFValue(14),
       fontWeight: "700",
     },
-    bold24: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Bold" : "BentonSans Bold",
-      fontSize: RFValue(24),
+    bold18: {
+      color: "textColor",
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(18),
       fontWeight: "700",
     },
-
+    bold24: {
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(24),
+      fontWeight: "100",
+    },
     defaults: {
       color: "primaryBlack",
       fontSize: RFValue(14),
@@ -210,6 +215,7 @@ const lightTheme = createTheme({
       fontWeight: "400",
     },
     medium12: {
+      color: "textColor",
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(12),
       fontWeight: "400",
@@ -218,6 +224,13 @@ const lightTheme = createTheme({
       fontFamily: "BentonSans-Medium",
       fontSize: RFValue(14),
       fontWeight: "400",
+    },
+    medium16: {
+      color: "textColor",
+      fontFamily: "BentonSans-Medium",
+      fontSize: RFValue(16),
+      fontWeight: "400",
+      lineHeight: RFValue(16),
     },
     medium18: {
       fontFamily: "BentonSans-Medium",
@@ -231,27 +244,25 @@ const lightTheme = createTheme({
     },
     none: {},
     regular10: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(10),
       fontWeight: "400",
       lineHeight: RFValue(16),
     },
     regular12: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(12),
       fontWeight: "400",
     },
     regular14: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      color: "textColor",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
+      lineHeight: RFValue(20),
     },
     regular8: {
-      fontFamily:
-        Platform.OS === "android" ? "BentonSans-Regular" : "BentonSans Regular",
+      fontFamily: "BentonSans-Regular",
       fontSize: RFValue(8),
       fontWeight: "400",
     },
@@ -274,8 +285,10 @@ export const darkTheme: Theme = {
   ...lightTheme,
   colors: {
     ...lightTheme.colors,
+    imageBackgroundTint: palette.secondaryBlack,
     mainBackground: palette.secondaryBlack,
     textColor: palette.whiteColor,
+    textColorInverted: palette.darkGrey,
   },
 };
 

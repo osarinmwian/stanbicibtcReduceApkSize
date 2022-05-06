@@ -27,5 +27,6 @@ export { default as pension } from "./pension.png";
 export { default as phone } from "./phone.png";
 export { default as question } from "./question.png";
 export { default as stocks } from "./stocks.png";
+export { default as threeSActivate } from "./threeSActivate.png";
 export { default as transfer } from "./transfer.png";
 export { default as user } from "./user-cog.png";

@@ -4,13 +4,14 @@ import LoginScreen from "@/mybank/screens/login/login";
 
 import LoansNavigation from "./loans/LoansNavigation";
 import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
+import { ThreeSBanking } from "./ThreeSBanking";
 import { MyBankRootStackParameterList } from "./types";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
 function MyBankNavigation() {
-  // const isLoggedIn = undefined;
-  const isLoggedIn = 65;
+  const isLoggedIn = true;
+  // const isLoggedIn = 65;
   return (
     <Stack.Navigator
       screenOptions={{
@@ -19,6 +20,7 @@ function MyBankNavigation() {
     >
       {isLoggedIn ? (
         <Stack.Group>
+          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={Home} name="Home" />
           <Stack.Screen component={Lifestyle} name="Lifestyle" />
           <Stack.Screen component={More} name="More" />

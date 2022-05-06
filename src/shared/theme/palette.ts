@@ -1,5 +1,6 @@
 export const palette = {
   black: "#000000",
+  cardSecondary: "#EFEFEF",
   confirmCard: "#E0E7F5",
   darkGrey: "#222222",
   easeContainer: "#4D85FE",
@@ -19,7 +20,7 @@ export const palette = {
   pensionContainer: "#0052FF",
   positiveColor: "#0E8A00",
   primaryBlack: "#050505",
-  primaryColor: "#0033A1",
+  primaryColor: "#0033AA",
   primaryColor10: "#E5EAF6",
   primaryColor20: "#CCD6EE",
   secondary1: "#00AF43",
@@ -38,6 +39,7 @@ export const palette = {
   tertiaryColor: "#0089FF",
   tetiaryBlack: "#1F1F1F",
   textColor2: "#637A87",
+  textTint: "#616E88",
   transparent: "transparent",
   transparentBlack: "rgba(1,1,1, 0.12)",
   wealthColor: "#001648",
