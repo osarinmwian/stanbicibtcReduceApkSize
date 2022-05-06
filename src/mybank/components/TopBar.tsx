@@ -3,7 +3,6 @@ import React from "react";
 import {
   Image,
   ImageBackground,
-  Platform,
   Pressable,
   SafeAreaView,
   StatusBar,
@@ -38,10 +37,11 @@ const BottomTabLandingPageTopBar = ({
         <SafeAreaView style={{ opacity: 0 }} />
         <Box
           backgroundColor="transparent"
-          height={
-            Platform.OS === "android" ? insets.top + RFValue(12) : RFValue(5)
-          }
-          marginTop="md"
+          // height={
+          //   Platform.OS === "android" ? insets.top + RFValue(12) : RFValue(5)
+          // }
+          // marginTop="md"
+          height={insets.top}
         >
           <StatusBar
             animated

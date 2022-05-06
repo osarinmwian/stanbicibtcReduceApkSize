@@ -6,14 +6,27 @@ import {
 import { BlurView } from "expo-blur";
 import React, { useCallback, useMemo, useRef } from "react";
 import { StyleSheet } from "react-native";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import SearchableDropdown from "react-native-searchable-dropdown";
 
+import { SvgIconPackType } from "@/shared/assets/icons";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-import FlightMenuPicker from "../components/flightMenuPicker";
+import FlightMenuPicker from "../../components/flightMenuPicker";
 
+interface Props {
+  pickerHeading: string;
+  iconName: SvgIconPackType;
+  pickerSubheading: string;
+  mainHeading: string;
+  items: Array<object>;
+  onItemSelect: () => string;
+  onTextChange: () => string;
+  placeholder: string;
+}
 const DepartureModal = () => {
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -114,8 +127,8 @@ const DepartureModal = () => {
                   color: "#222",
                 }}
                 onItemSelect={(item: string) => alert(JSON.stringify(item))}
-                onTextChange={(text: string) => console.log(text)}
-                placeholder="Enter your departure location"
+                onTextChange={(text: string) => alert(JSON.stringify(text))}
+                placeholder="Enter you departure location"
                 // mapping of item array
                 // defaultIndex={2}
                 // default selected item index

@@ -11,7 +11,8 @@ import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 import FlightMenuPicker from "../components/flightMenuPicker";
-import DepartureModal from "./departureModal";
+import DepartureModal from "./components/departureModal";
+import DestinationModal from "./components/destinationModal";
 
 const FlightIndex = ({
   navigation,
@@ -31,6 +32,7 @@ const FlightIndex = ({
           <Text marginVertical="sm">Search and book flights</Text>
         </Box>
         <DepartureModal />
+        <DestinationModal />
         <FlightMenuPicker
           heading="To where"
           iconName="chevron-down"

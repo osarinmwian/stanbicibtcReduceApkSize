@@ -5,6 +5,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/splashscreen_background"/>
     <item>
-      <bitmap android:src="@drawable/splashscreen_image"/>
+        <bitmap android:gravity="" android:src="@drawable/splashscreen_bg"/>
     </item>
 </layer-list>
