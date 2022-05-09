@@ -2,8 +2,8 @@ import { Formik } from "formik";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, Image } from "react-native";
-import * as Yup from "yup";
 
+// import * as Yup from "yup";
 import { loginBackground } from "@/mybank/assets/image";
 import StatusbarImageContainer from "@/mybank/components/StatusbarImageContainer";
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
@@ -31,29 +31,29 @@ export default function LoginScreen({
 
   const onSubmit = (values: MyFormValues) => {
     navigation.navigate("Home");
-    console.log("values", values);
+    // console.log("values", values);
   };
 
   const InitialValues: MyFormValues = {
     bankingId: "",
     password: "",
   };
-  const validationSchema = Yup.object().shape({
-    bankingId: Yup.string()
-      .required("Internet Banking is required")
-      .label("Internet Banking Id"),
-    password: Yup.string()
-      .matches(/\w*[a-z]\w*/, "Password must have a small letter")
-      .matches(/\w*[A-Z]\w*/, "Password must have a capital letter")
-      .matches(/\d/, "Password must have a number")
-      .matches(
-        /[ !"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/,
-        "Must contain a special character",
-      )
-      .min(8, ({ min }) => `Password must be at least ${min} characters`)
-      .required("Password is required")
-      .label("Password"),
-  });
+  // const validationSchema = Yup.object().shape({
+  //   bankingId: Yup.string()
+  //     .required("Internet Banking is required")
+  //     .label("Internet Banking Id"),
+  //   password: Yup.string()
+  //     .matches(/\w*[a-z]\w*/, "Password must have a small letter")
+  //     .matches(/\w*[A-Z]\w*/, "Password must have a capital letter")
+  //     .matches(/\d/, "Password must have a number")
+  //     .matches(
+  //       /[ !"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/,
+  //       "Must contain a special character",
+  //     )
+  //     .min(8, ({ min }) => `Password must be at least ${min} characters`)
+  //     .required("Password is required")
+  //     .label("Password"),
+  // });
 
   return (
     <StatusbarImageContainer imageName={loginBackground}>
@@ -85,8 +85,8 @@ export default function LoginScreen({
             handleBlur,
             handleSubmit,
             values,
-            errors,
-            touched,
+            // errors,
+            // touched,
           }) => (
             <Box>
               <Box marginTop="md">
