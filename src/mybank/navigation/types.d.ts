@@ -20,6 +20,15 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   EightScreen: undefined;
   ThreeSBanking: NavigatorScreenParams<ThreeSBankingList> | undefined;
   LoansNavigation: undefined;
+  TransferLandingPage: undefined;
+  BankTransfer: undefined;
+  BankTransferEnterPin: undefined;
+  BankTransferTransactionHistory: undefined;
+  FXTransfer: undefined;
+  FXTransferNewRequestFirstScreen: undefined;
+  FXTransferNewRequestSecondScreen: undefined;
+  FXTransferEnterPin: undefined;
+  FXTransferTransactionHistory: undefined;
 };
 
 // Tab routes
