@@ -1,6 +1,6 @@
 import { VFC } from "react";
 
-import { Box, BoxProps } from "@/shared/components/Layout";
+import { Box, BoxProps } from "@/shared/components/Layout/Box";
 
 import { ImageIcon, ImageIconProps } from "./ImageIcon";
 

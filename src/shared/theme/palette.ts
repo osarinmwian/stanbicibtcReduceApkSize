@@ -6,6 +6,10 @@ export const palette = {
   easeContainer: "#4D85FE",
   insuranceContainer: "#B150C4",
   lightGrey: "#767676",
+  lightgreen: "#00AA8B",
+  lightgreen2: "rgba(1, 105, 193, 0.12)",
+  lightpurple: "#EFF2FB",
+  lightred: "#EB703F",
   loanCalculator: "#EFE1FF",
   loanCard: "#D7EAEA",
   loanRepayment: "#DEEDFF",
@@ -40,9 +44,7 @@ export const palette = {
   tetiaryBlack: "#1F1F1F",
   textColor2: "#637A87",
   textTint: "#616E88",
-  transparent: "transparent",
   transparentBlack: "rgba(1,1,1, 0.12)",
-  wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };
 
