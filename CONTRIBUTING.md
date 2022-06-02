@@ -121,7 +121,7 @@ Your commit message should follow the conventional commits standard, that is you
 For example let's say I add a new feature for instant money transfer, I would use the keyword `feat` and add my commit message like so:
 
 ```shell
-feat: added instant money transfer
+feat: added instant money Transfer
 ```
 
 another example would be for a fix, let's say I fixed a bug for the keyboard avoiding view on android, my commit message would be:
