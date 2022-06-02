@@ -1,5 +1,6 @@
 import arrowBack from "@/shared/assets/svg/arrow-back.svg";
 import arrowForward from "@/shared/assets/svg/arrow-forward.svg";
+import companyLogo from "@/shared/assets/svg/bank-logo.svg";
 import calculator from "@/shared/assets/svg/calculator.svg";
 import car from "@/shared/assets/svg/car.svg";
 import cash from "@/shared/assets/svg/cash.svg";
@@ -12,7 +13,6 @@ import compass from "@/shared/assets/svg/compass.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
 import history from "@/shared/assets/svg/history.svg";
 import leaf from "@/shared/assets/svg/leaf.svg";
-import companyLogo from "@/shared/assets/svg/standard_bank_logo.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
