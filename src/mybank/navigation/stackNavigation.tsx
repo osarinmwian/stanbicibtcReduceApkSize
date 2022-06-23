@@ -1,6 +1,17 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
+import {
+  BankTransfer,
+  BankTransferEnterPin,
+  BankTransferTransactionHistory,
+  FXTransfer,
+  FXTransferEnterPin,
+  FXTransferNewRequestFirstScreen,
+  FXTransferNewRequestSecondScreen,
+  FXTransferTransactionHistory,
+  TransferLandingPage,
+} from "@/mybank/screens/Transfer";
 
 import {
   AvailableFlightsPage,
@@ -20,6 +31,30 @@ function Home() {
       }}
     >
       <Stack.Screen component={BottomTabs} name="BottomTabs" />
+      <Stack.Screen component={BankTransfer} name="BankTransfer" />
+      <Stack.Screen
+        component={BankTransferEnterPin}
+        name="BankTransferEnterPin"
+      />
+      <Stack.Screen
+        component={BankTransferTransactionHistory}
+        name="BankTransferTransactionHistory"
+      />
+      <Stack.Screen component={FXTransfer} name="FXTransfer" />
+      <Stack.Screen
+        component={FXTransferNewRequestFirstScreen}
+        name="FXTransferNewRequestFirstScreen"
+      />
+      <Stack.Screen
+        component={FXTransferNewRequestSecondScreen}
+        name="FXTransferNewRequestSecondScreen"
+      />
+      <Stack.Screen component={FXTransferEnterPin} name="FXTransferEnterPin" />
+      <Stack.Screen
+        component={FXTransferTransactionHistory}
+        name="FXTransferTransactionHistory"
+      />
+      <Stack.Screen component={SixthScreen} name="SixthScreen" />
     </Stack.Navigator>
   );
 }
@@ -31,7 +66,7 @@ function Transfer() {
         header: () => null,
       }}
     >
-      <Stack.Screen component={SixthScreen} name="SixthScreen" />
+      <Stack.Screen component={TransferLandingPage} name="Transfer" />
     </Stack.Navigator>
   );
 }

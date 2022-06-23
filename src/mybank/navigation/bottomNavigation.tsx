@@ -3,7 +3,8 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import React from "react";
 import { Image } from "react-native";
 
-import { ExampleScreen, SixthScreen } from "@/mybank/screens/";
+import { ExampleScreen } from "@/mybank/screens/";
+import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
@@ -51,7 +52,7 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={SixthScreen}
+        component={TransferLandingPage}
         name="TransferLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (

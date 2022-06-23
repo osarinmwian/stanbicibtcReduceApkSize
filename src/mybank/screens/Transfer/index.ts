@@ -1,0 +1,9 @@
+export { default as BankTransfer } from "./BankTransfer";
+export { default as BankTransferEnterPin } from "./BankTransferEnterPin";
+export { default as BankTransferTransactionHistory } from "./BankTransferTransactionHistory";
+export { default as FXTransfer } from "./FxTransfer";
+export { default as FXTransferEnterPin } from "./FxTransferEnterPin";
+export { default as FXTransferNewRequestFirstScreen } from "./FxTransferNewRequestFirstScreen";
+export { default as FXTransferNewRequestSecondScreen } from "./FxTransferNewRequestSecondScreen";
+export { default as FXTransferTransactionHistory } from "./FxTransferTransactionHistory";
+export { default as TransferLandingPage } from "./TransferLandingPage";

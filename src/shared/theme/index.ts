@@ -193,6 +193,12 @@ const lightTheme = createTheme({
       fontSize: RFValue(10),
       fontWeight: "700",
     },
+    bold12: {
+      color: "darkGrey",
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(10),
+      fontWeight: "700",
+    },
     bold14: {
       fontFamily: "BentonSans-Bold",
       fontSize: RFValue(14),
