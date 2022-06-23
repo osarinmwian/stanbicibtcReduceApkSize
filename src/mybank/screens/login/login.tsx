@@ -31,7 +31,6 @@ export default function LoginScreen({
 
   const onSubmit = (values: MyFormValues) => {
     navigation.navigate("Home");
-    // console.log("values", values);
   };
 
   const InitialValues: MyFormValues = {

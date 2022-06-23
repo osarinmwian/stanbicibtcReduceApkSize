@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, Image } from "react-native";
+import { Dimensions, FlatList, Image } from "react-native";
 
 import StatusTopBar from "@/mybank/components/StatusbarImageContainer";
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
@@ -22,6 +22,7 @@ export default function LandingPage({
   navigation,
 }: MyBankNavigationProps<"LandingPage">) {
   const { t } = useTranslation();
+  const { height } = Dimensions.get("window");
   return (
     <>
       <StatusTopBar imageName={landingpagebackground}>
@@ -31,10 +32,12 @@ export default function LandingPage({
           </Box>
           <Box paddingHorizontal="md">
             <Box
-              alignItems="center"
-              justifyContent="center"
-              marginBottom="lg"
-              marginTop="md"
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: height / 20,
+                marginTop: height / 30,
+              }}
             >
               <Image source={logo} style={LOGOSTYLE} />
               <Text color="whiteColor" marginTop="sm" variant="medium18">
@@ -92,7 +95,7 @@ export default function LandingPage({
                   labelProps={{
                     color: "wealthColor",
                   }}
-                  labelVariant="medium10"
+                  labelVariant="medium12"
                   width={RFValue(150)}
                 />
               </Box>

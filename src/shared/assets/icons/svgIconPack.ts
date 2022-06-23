@@ -1,5 +1,6 @@
 import arrowBack from "@/shared/assets/svg/arrow-back.svg";
 import arrowForward from "@/shared/assets/svg/arrow-forward.svg";
+import ashPlane from "@/shared/assets/svg/ashPlane.svg";
 import bed from "@/shared/assets/svg/bed.svg";
 import calculator from "@/shared/assets/svg/calculator.svg";
 import calendar from "@/shared/assets/svg/calendar.svg";
@@ -16,12 +17,15 @@ import compass from "@/shared/assets/svg/compass.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
 import history from "@/shared/assets/svg/history.svg";
 import leaf from "@/shared/assets/svg/leaf.svg";
+import minusSquare from "@/shared/assets/svg/minus-square.svg";
 import plane from "@/shared/assets/svg/plane.svg";
+import plusSquare from "@/shared/assets/svg/plus-square.svg";
 import companyLogo from "@/shared/assets/svg/standard_bank_logo.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
   "arrow-forward": arrowForward,
+  ashPlane,
   calculator,
   calendar,
   car,
@@ -39,7 +43,9 @@ const svgIconPack = {
   history,
   hotel: bed,
   leaf,
+  minusSquare,
   plane,
+  plusSquare,
 };
 
 export { svgIconPack };

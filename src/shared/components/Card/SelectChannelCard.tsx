@@ -18,7 +18,7 @@ export default function ModuleComponent(props: ModuleProps) {
       alignItems="center"
       backgroundColor={backgroundColor}
       borderRadius="sm"
-      height={width / 3.95}
+      height={width / 3.85}
       justifyContent="center"
       marginHorizontal="xs"
       marginTop="sm"
@@ -26,7 +26,7 @@ export default function ModuleComponent(props: ModuleProps) {
       width={width / 3.58}
     >
       <Image source={image} />
-      <Text color="whiteColor" marginTop="md" variant="medium8">
+      <Text color="whiteColor" marginTop="md" variant="regular12">
         {title}
       </Text>
     </Pressable>

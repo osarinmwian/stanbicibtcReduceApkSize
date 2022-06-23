@@ -3,7 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import React from "react";
 import { Image } from "react-native";
 
-import { ExampleScreen } from "@/mybank/screens/";
+import { ExampleScreen, SixthScreen } from "@/mybank/screens/";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
@@ -21,7 +21,7 @@ export default function BottomTabs() {
       activeColor="#0033AA"
       barStyle={Styles.tabBarStyle}
       inactiveColor="#001648"
-      initialRouteName="LifestyleLandingPage"
+      initialRouteName="HomeLandingPage"
       labeled={false}
       sceneAnimationEnabled={false}
       shifting={false}
@@ -41,8 +41,8 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
+                variant={focused ? "bold10" : "regular10"}
               >
                 Home
               </Text>
@@ -51,7 +51,7 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={ExampleScreen}
+        component={SixthScreen}
         name="TransferLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
@@ -65,8 +65,8 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
+                variant={focused ? "bold10" : "regular10"}
               >
                 Transfer
               </Text>
@@ -89,8 +89,8 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
+                variant={focused ? "bold10" : "regular10"}
               >
                 Payments
               </Text>
@@ -113,8 +113,8 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
+                variant={focused ? "bold10" : "regular10"}
               >
                 Lifestyle
               </Text>
@@ -137,8 +137,8 @@ export default function BottomTabs() {
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
                 fontSize={RFValue(10)}
-                fontWeight={focused ? "bold" : "900"}
                 marginTop="xs"
+                variant={focused ? "bold10" : "regular10"}
               >
                 More
               </Text>

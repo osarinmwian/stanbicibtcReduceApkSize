@@ -1,9 +1,7 @@
 import {
-  BottomSheetBackdrop,
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
-import { BlurView } from "expo-blur";
 import React, { useCallback, useMemo, useRef } from "react";
 import { StyleSheet } from "react-native";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -12,6 +10,7 @@ import SearchableDropdown from "react-native-searchable-dropdown";
 
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
+import { Backdrop } from "@/shared/components/Modal/Backdrop";
 import { Text } from "@/shared/components/Typography";
 
 import FlightMenuPicker from "../../components/flightMenuPicker";
@@ -28,23 +27,21 @@ const DestinationModal = () => {
     bottomSheetModalRef.current?.present();
   }, []);
 
+  const handleDismissModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+  }, []);
+
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
-      <BottomSheetBackdrop
-        // eslint-disable-next-line react/jsx-props-no-spreading
+      <Backdrop
+        onPress={() => {
+          handleDismissModalPress();
+        }}
         {...props}
-        opacity={0.8}
-        pressBehavior="close"
-      >
-        <BlurView
-          intensity={20}
-          style={{ flex: 1, justifyContent: "center", padding: 20 }}
-          tint="dark"
-        />
-      </BottomSheetBackdrop>
+      />
     ),
-    [],
+    [handleDismissModalPress],
   );
 
   const items = [
@@ -115,8 +112,8 @@ const DestinationModal = () => {
                   // text style of a single dropdown item
                   color: "#222",
                 }}
-                onItemSelect={(item: string) => console.log(item)}
-                onTextChange={(text: string) => console.log(text)}
+                // onItemSelect={(item: string) => console.log(item)}
+                // onTextChange={(text: string) => console.log(text)}
                 placeholder="Enter destination"
                 // mapping of item array
                 // defaultIndex={2}

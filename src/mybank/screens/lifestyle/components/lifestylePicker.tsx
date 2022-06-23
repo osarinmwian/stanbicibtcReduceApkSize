@@ -32,7 +32,7 @@ const LifestylePicker = ({
       <ImageIcon
         color="black"
         name={name}
-        size="sm"
+        size="m"
         style={{ marginRight: 16 }}
       />
       <Box>
@@ -42,7 +42,7 @@ const LifestylePicker = ({
         </Text>
       </Box>
     </Box>
-    <SvgIcon name="chevron-forward" size="sm" />
+    <SvgIcon name="chevron-forward" size="m" />
   </Pressable>
 );
 

@@ -1,5 +1,4 @@
 import { useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import Animated, {
   Layout,
@@ -12,7 +11,6 @@ import { Box } from "@/shared/components/Layout";
 // import { useMybankRoute } from "../utils/hooks";
 
 function SixthScreen() {
-  const { t } = useTranslation();
   const navigation = useNavigation();
   // const route = useMybankRoute<"ExampleScreen">();
   return (
@@ -22,13 +20,13 @@ function SixthScreen() {
       flex={1}
       justifyContent="center"
     >
-      <TouchableOpacity onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={() => navigation.navigate("ThreeSBanking")}>
         <Animated.Text
           entering={LightSpeedInLeft.springify()}
           exiting={LightSpeedOutRight}
           layout={Layout.springify()}
         >
-          {t("mybank.welcome")}
+          Go to 3S Banking
         </Animated.Text>
       </TouchableOpacity>
     </Box>

@@ -2,7 +2,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
 
-import { FlightIndex } from "../screens/lifestyle";
+import {
+  AvailableFlightsPage,
+  FlightIndex,
+  NoFlightFound,
+} from "../screens/lifestyle";
 import BottomTabs from "./bottomNavigation";
 import { MyBankRootStackParameterList } from "./types";
 
@@ -16,7 +20,6 @@ function Home() {
       }}
     >
       <Stack.Screen component={BottomTabs} name="BottomTabs" />
-      <Stack.Screen component={SixthScreen} name="SixthScreen" />
     </Stack.Navigator>
   );
 }
@@ -28,7 +31,7 @@ function Transfer() {
         header: () => null,
       }}
     >
-      <Stack.Screen component={EightScreen} name="EightScreen" />
+      <Stack.Screen component={SixthScreen} name="SixthScreen" />
     </Stack.Navigator>
   );
 }
@@ -53,6 +56,11 @@ function Lifestyle() {
       }}
     >
       <Stack.Screen component={FlightIndex} name="FlightIndex" />
+      <Stack.Screen component={NoFlightFound} name="NoFlightFound" />
+      <Stack.Screen
+        component={AvailableFlightsPage}
+        name="AvailableFlightsPage"
+      />
     </Stack.Navigator>
   );
 }

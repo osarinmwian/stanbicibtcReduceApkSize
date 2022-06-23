@@ -1,15 +1,15 @@
 import {
-  BottomSheetBackdrop,
   BottomSheetBackdropProps,
   BottomSheetFlatList,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import React, { useCallback, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Dimensions, Image, LogBox } from "react-native";
+import { Image, LogBox } from "react-native";
 
 import { close, question } from "@/shared/assets/image";
 import { Box } from "@/shared/components/Layout";
+import { Backdrop } from "@/shared/components/Modal/Backdrop";
 import Pressable from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
 
@@ -19,7 +19,7 @@ import QuickOptionsComponent from "./QuickOptionsComponent";
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
-const { height } = Dimensions.get("window");
+
 const QuickOptions = () => {
   const { t } = useTranslation();
   // ref
@@ -40,38 +40,37 @@ const QuickOptions = () => {
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
-      <BottomSheetBackdrop
-        // eslint-disable-next-line react/jsx-props-no-spreading
+      <Backdrop
+        onPress={handleDismissModalPress}
         {...props}
-        opacity={0.92}
-        pressBehavior="close"
-      >
-        <Pressable
-          alignItems="center"
-          flexDirection="row"
-          justifyContent="flex-end"
-          marginRight="sm"
-          marginTop="md"
-          onPress={handleDismissModalPress}
-          paddingTop="lg"
-        >
-          <Image source={close} />
-          <Box
+        backdropChildren={
+          <Pressable
             alignItems="center"
-            backgroundColor="whiteColor"
-            borderRadius="lg"
             flexDirection="row"
-            marginLeft="md"
-            paddingHorizontal="md"
-            paddingVertical="md"
+            justifyContent="flex-end"
+            marginRight="sm"
+            marginTop="md"
+            onPress={handleDismissModalPress}
+            paddingTop="lg"
           >
-            <Image source={question} />
-            <Text marginLeft="xs" variant="medium14">
-              {t("mybank.quickOptions.quick")}
-            </Text>
-          </Box>
-        </Pressable>
-      </BottomSheetBackdrop>
+            <Image source={close} />
+            <Box
+              alignItems="center"
+              backgroundColor="whiteColor"
+              borderRadius="lg"
+              flexDirection="row"
+              marginLeft="md"
+              paddingHorizontal="md"
+              paddingVertical="md"
+            >
+              <Image source={question} />
+              <Text marginLeft="xs" variant="medium14">
+                {t("mybank.quickOptions.quick")}
+              </Text>
+            </Box>
+          </Pressable>
+        }
+      />
     ),
     [handleDismissModalPress, t],
   );

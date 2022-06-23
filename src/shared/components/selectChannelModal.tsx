@@ -1,12 +1,11 @@
 import {
-  BottomSheetBackdrop,
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import { useNavigation } from "@react-navigation/native";
 import { t } from "i18next";
 import React, { useCallback, useMemo, useRef } from "react";
-import { Dimensions, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
@@ -16,10 +15,10 @@ import { GradientButton, PrimaryButton } from "./Buttons";
 // import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import ModuleComponent from "./Card/SelectChannelCard";
 import { Box } from "./Layout";
+import { Backdrop } from "./Modal/Backdrop";
 import { PressableProps } from "./Pressable";
 import { Text } from "./Typography";
 
-const { height } = Dimensions.get("window");
 const SelectChannel = () => {
   const navigation = useNavigation();
   // ref
@@ -40,14 +39,9 @@ const SelectChannel = () => {
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
-      <BottomSheetBackdrop
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...props}
-        opacity={0.7}
-        pressBehavior="close"
-      />
+      <Backdrop onPress={handleDismissModalPress} {...props} />
     ),
-    [],
+    [handleDismissModalPress],
   );
 
   const handlePress = (destination: keyof MyBankRootStackParameterList) => {
@@ -66,7 +60,7 @@ const SelectChannel = () => {
         labelProps={{
           color: "wealthColor",
           textAlign: "center",
-          variant: "medium8",
+          variant: "medium12",
         }}
         onPress={handlePresentModalPress}
         width={RFValue(150)}

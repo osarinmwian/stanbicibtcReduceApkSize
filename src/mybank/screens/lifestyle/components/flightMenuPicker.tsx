@@ -9,8 +9,8 @@ import { Text } from "@/shared/components/Typography";
 interface LifestylePickerTypes {
   onPress: PressableProps["onPress"];
   heading: string;
-  iconName: SvgIconPackType;
-  subHeading: string;
+  iconName?: SvgIconPackType;
+  subHeading?: string;
 }
 
 const FlightMenuPicker = ({
@@ -29,15 +29,22 @@ const FlightMenuPicker = ({
     onPress={onPress}
     padding="sm"
   >
-    <Box alignItems="center" flexDirection="row" justifyContent="space-between">
+    <Box
+      alignItems="center"
+      flexDirection="row"
+      justifyContent="space-between"
+      paddingVertical={subHeading ? "xxs" : "ssm"}
+    >
       <Box>
-        <Text fontSize={12}>{heading}</Text>
-        <Text fontSize={14} fontWeight="500" marginTop="xs">
-          {subHeading}
-        </Text>
+        <Text variant="regular12">{heading}</Text>
+        {subHeading && (
+          <Text marginTop="ssm" variant="medium12">
+            {subHeading}
+          </Text>
+        )}
       </Box>
     </Box>
-    <IconVector color="primaryColor" name={iconName} />
+    {iconName && <IconVector color="primaryColor" name={iconName} size="m" />}
   </Pressable>
 );
 

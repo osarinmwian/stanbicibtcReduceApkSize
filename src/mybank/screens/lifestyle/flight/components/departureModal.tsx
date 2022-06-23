@@ -1,32 +1,30 @@
 import {
-  BottomSheetBackdrop,
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
-import { BlurView } from "expo-blur";
 import React, { useCallback, useMemo, useRef } from "react";
 import { StyleSheet } from "react-native";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import SearchableDropdown from "react-native-searchable-dropdown";
 
-import { SvgIconPackType } from "@/shared/assets/icons";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
+import { Backdrop } from "@/shared/components/Modal/Backdrop";
 import { Text } from "@/shared/components/Typography";
 
 import FlightMenuPicker from "../../components/flightMenuPicker";
 
-interface Props {
-  pickerHeading: string;
-  iconName: SvgIconPackType;
-  pickerSubheading: string;
-  mainHeading: string;
-  items: Array<object>;
-  onItemSelect: () => string;
-  onTextChange: () => string;
-  placeholder: string;
-}
+// interface Props {
+//   pickerHeading: string;
+//   iconName: SvgIconPackType;
+//   pickerSubheading: string;
+//   mainHeading: string;
+//   items: Array<object>;
+//   onItemSelect: () => string;
+//   onTextChange: () => string;
+//   placeholder: string;
+// }
 const DepartureModal = () => {
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -39,23 +37,21 @@ const DepartureModal = () => {
     bottomSheetModalRef.current?.present();
   }, []);
 
+  const handleDismissModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+  }, []);
+
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
-      <BottomSheetBackdrop
-        // eslint-disable-next-line react/jsx-props-no-spreading
+      <Backdrop
+        onPress={() => {
+          handleDismissModalPress();
+        }}
         {...props}
-        opacity={0.8}
-        pressBehavior="close"
-      >
-        <BlurView
-          intensity={20}
-          style={{ flex: 1, justifyContent: "center", padding: 20 }}
-          tint="dark"
-        />
-      </BottomSheetBackdrop>
+      />
     ),
-    [],
+    [handleDismissModalPress],
   );
 
   const items = [
@@ -126,8 +122,8 @@ const DepartureModal = () => {
                   // text style of a single dropdown item
                   color: "#222",
                 }}
-                onItemSelect={(item: string) => alert(JSON.stringify(item))}
-                onTextChange={(text: string) => alert(JSON.stringify(text))}
+                // onItemSelect={(item: string) => alert(JSON.stringify(item))}
+                // onTextChange={(text: string) => alert(JSON.stringify(text))}
                 placeholder="Enter you departure location"
                 // mapping of item array
                 // defaultIndex={2}

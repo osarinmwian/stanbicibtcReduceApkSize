@@ -15,6 +15,8 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   Payments: undefined;
   Transfer: undefined;
   FlightIndex: undefined;
+  NoFlightFound: undefined;
+  AvailableFlightsPage: undefined;
   LoginScreen: undefined;
   SixthScreen: undefined;
   SeventhScreen: undefined;

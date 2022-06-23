@@ -32,17 +32,10 @@ const BottomTabLandingPageTopBar = ({
       <ImageBackground
         resizeMode="cover"
         source={imageName}
-        style={{ flex: 0.3 }}
+        style={{ flex: 0.28 }}
       >
         <SafeAreaView style={{ opacity: 0 }} />
-        <Box
-          backgroundColor="transparent"
-          // height={
-          //   Platform.OS === "android" ? insets.top + RFValue(12) : RFValue(5)
-          // }
-          // marginTop="md"
-          height={insets.top}
-        >
+        <Box backgroundColor="transparent" height={insets.top}>
           <StatusBar
             animated
             backgroundColor="transparent"
