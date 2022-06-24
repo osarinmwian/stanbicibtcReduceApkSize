@@ -20,8 +20,8 @@ function MyBankNavigation() {
     >
       {isLoggedIn ? (
         <Stack.Group>
-          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={Home} name="Home" />
+          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={Lifestyle} name="Lifestyle" />
           <Stack.Screen component={More} name="More" />
           <Stack.Screen component={Payments} name="Payments" />

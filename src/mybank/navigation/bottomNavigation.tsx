@@ -11,6 +11,7 @@ import {
   transfer,
 } from "@/mybank/assets/image";
 import { ExampleScreen } from "@/mybank/screens/";
+import { PaymentLandingPage } from "@/mybank/screens/Payment";
 import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
@@ -68,7 +69,7 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={ExampleScreen}
+        component={PaymentLandingPage}
         name="PaymentsLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (

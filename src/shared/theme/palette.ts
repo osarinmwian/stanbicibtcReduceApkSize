@@ -44,7 +44,10 @@ export const palette = {
   tetiaryBlack: "#1F1F1F",
   textColor2: "#637A87",
   textTint: "#616E88",
+  transactColor: "#E7ECF2",
+  transparent: "transparent",
   transparentBlack: "rgba(1,1,1, 0.12)",
+  wealthColor: "#001648",
   whiteColor: "#FFFFFF",
 };
 
