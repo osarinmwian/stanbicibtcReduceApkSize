@@ -119,6 +119,7 @@ const lightTheme = createTheme({
     md: RFValue(16),
     none: 0,
     sm: RFValue(8),
+    sml: RFValue(24),
     ss: RFValue(6),
     xl: RFValue(64),
     xs: RFValue(4),

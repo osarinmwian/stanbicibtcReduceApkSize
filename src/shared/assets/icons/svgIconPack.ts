@@ -5,6 +5,7 @@ import calculator from "@/shared/assets/svg/calculator.svg";
 import car from "@/shared/assets/svg/car.svg";
 import cash from "@/shared/assets/svg/cash.svg";
 import chevronBack from "@/shared/assets/svg/chevron-back.svg";
+import chevronDown from "@/shared/assets/svg/chevron-down.svg";
 import chevronForward from "@/shared/assets/svg/chevron-forward.svg";
 import close from "@/shared/assets/svg/close.svg";
 import coins from "@/shared/assets/svg/coins.svg";
@@ -13,6 +14,8 @@ import compass from "@/shared/assets/svg/compass.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
 import history from "@/shared/assets/svg/history.svg";
 import leaf from "@/shared/assets/svg/leaf.svg";
+import notification from "@/shared/assets/svg/notification.svg";
+import profile from "@/shared/assets/svg/profile.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
@@ -21,6 +24,7 @@ const svgIconPack = {
   car,
   cash,
   "chevron-back": chevronBack,
+  "chevron-down": chevronDown,
   "chevron-forward": chevronForward,
   close,
   coins,
@@ -30,6 +34,8 @@ const svgIconPack = {
   "eye-opened": eyeOpened,
   history,
   leaf,
+  notification,
+  profile,
 };
 
 export { svgIconPack };

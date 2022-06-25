@@ -10,7 +10,7 @@ import {
   payments,
   transfer,
 } from "@/mybank/assets/image";
-import { ExampleScreen } from "@/mybank/screens/";
+import { ExampleScreen, HomeLanding } from "@/mybank/screens/";
 import { PaymentLandingPage } from "@/mybank/screens/Payment";
 import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
@@ -33,7 +33,7 @@ export default function BottomTabs() {
       }}
     >
       <Tab.Screen
-        component={ExampleScreen}
+        component={HomeLanding}
         name="HomeLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
