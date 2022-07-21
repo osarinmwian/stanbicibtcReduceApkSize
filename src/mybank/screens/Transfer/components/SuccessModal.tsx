@@ -12,7 +12,7 @@ import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
 
-import Image from "../../../../shared/components/Image";
+import { Image } from "../../../../shared/components/Image";
 
 type SuccessModalProps = {
   bottomSheetModalRef: RefObject<BottomSheetModal>;

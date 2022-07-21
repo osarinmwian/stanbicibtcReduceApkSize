@@ -12,7 +12,7 @@ export type SvgIconProps = Omit<SvgProps, "color"> & {
 };
 
 const SvgIcon: VFC<SvgIconProps> = (props) => {
-  const { name, size = "md", color = "whiteColor", ...rest } = props;
+  const { name, size = "xs", color = "whiteColor", ...rest } = props;
 
   const theme = useTheme();
 

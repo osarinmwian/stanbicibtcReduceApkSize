@@ -89,6 +89,7 @@ const lightTheme = createTheme({
     h5: RFValue(16),
     h6: RFValue(14),
     p: RFValue(14),
+    s: RFValue(6),
   },
 
   iconSizes: {
@@ -96,9 +97,17 @@ const lightTheme = createTheme({
       height: RFValue(32),
       width: RFValue(32),
     },
+    m: {
+      height: RFValue(12),
+      width: RFValue(12),
+    },
     md: {
       height: RFValue(24),
       width: RFValue(24),
+    },
+    s: {
+      height: RFValue(4),
+      width: RFValue(4),
     },
     sm: {
       height: RFValue(16),
@@ -117,9 +126,12 @@ const lightTheme = createTheme({
   spacing: {
     lg: RFValue(32),
     md: RFValue(16),
+    mmd: RFValue(20),
     none: 0,
-    sm: RFValue(8),
+    rmd: RFValue(-16),
+    sm: RFValue(10),
     ss: RFValue(6),
+    ssm: RFValue(8),
     xl: RFValue(64),
     xs: RFValue(4),
     xxl: RFValue(128),

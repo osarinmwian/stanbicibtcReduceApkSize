@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "@/mybank/screens/login/login";
 
 import LoansNavigation from "./loans/LoansNavigation";
-import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavagiation";
+import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavigation";
 import { ThreeSBanking } from "./ThreeSBanking";
 import { MyBankRootStackParameterList } from "./types";
 
@@ -20,19 +20,17 @@ function MyBankNavigation() {
     >
       {isLoggedIn ? (
         <Stack.Group>
-          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={Home} name="Home" />
           <Stack.Screen component={Lifestyle} name="Lifestyle" />
           <Stack.Screen component={More} name="More" />
           <Stack.Screen component={Payments} name="Payments" />
           <Stack.Screen component={Transfer} name="Transfer" />
           <Stack.Screen component={LoansNavigation} name="LoansNavigation" />
+          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
         </Stack.Group>
       ) : (
-        <Stack.Group>
-          <Stack.Group screenOptions={{ headerShown: false }}>
-            <Stack.Screen component={LoginScreen} name="LoginScreen" />
-          </Stack.Group>
+        <Stack.Group screenOptions={{ headerShown: false }}>
+          <Stack.Screen component={LoginScreen} name="LoginScreen" />
         </Stack.Group>
       )}
     </Stack.Navigator>

@@ -25,8 +25,8 @@ export default function ModuleComponent(props: ModuleProps) {
       justifyContent="center"
       margin="xs"
       onPress={() => navigation.navigate(destination)}
-      padding="xs"
-      width={width / 3.6}
+      padding="sm"
+      width={width / 3.5}
     >
       <Image source={image} />
       <Text

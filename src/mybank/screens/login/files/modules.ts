@@ -22,6 +22,6 @@ export default [
     destination: "LandingPage",
     id: "3",
     image: user,
-    title: "Goto QuickServices",
+    title: "Goto Quick Services",
   },
 ];

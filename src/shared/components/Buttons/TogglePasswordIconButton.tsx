@@ -27,7 +27,7 @@ const TogglePasswordIconButton: VFC<TogglePasswordIconButtonProps> = (
       {...props.buttonProps}
     >
       <Icon
-        color="primaryBlack"
+        color="whiteColor"
         name={props.isVisible ? "eyeOpen" : "eyeClosed"}
         {...props.iconProps}
       />

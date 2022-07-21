@@ -17,9 +17,11 @@ export const Backdrop = ({
   onPress,
   showIndex = 0,
   style,
+  backdropChildren,
 }: BottomSheetBackdropProps & {
   onPress?: () => void;
   showIndex?: number;
+  backdropChildren?: React.ReactNode | React.ReactNode[];
 }) => {
   const containerAnimatedStyle = useAnimatedStyle(() => ({
     opacity: interpolate(
@@ -49,7 +51,9 @@ export const Backdrop = ({
           blurType="light"
           overlayColor="rgba(0, 0, 0, 0.4)"
           style={blurStyle}
-        />
+        >
+          {backdropChildren}
+        </AnimatedBlur>
       </Pressable>
     </Box>
   );

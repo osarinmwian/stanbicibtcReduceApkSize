@@ -25,6 +25,7 @@ export { default as flights } from "./flights.png";
 export { default as forgotPassword } from "./forgotPassword.png";
 export { default as insurance } from "./insurance.png";
 export { default as landingpagebackground } from "./LandingPageBackground.png";
+export { default as lifestyleBg } from "./lifestyleBg.png";
 export { default as logo } from "./logo.png";
 export { default as modalBackdrop2 } from "./modal2.png";
 export { default as modalBackdrop } from "./modalBackdrop.png";
