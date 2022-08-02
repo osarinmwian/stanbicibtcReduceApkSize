@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/shared": ["./src/shared/*"],
+      "@/shared/components": ["./src/shared/components/*"],
+      "@/ease": ["./src/ease/*"],
+      "@/insurance": ["./src/insurance/*"],
+      "@/mutualfunds": ["./src/mutualfunds/*"],
+      "@/mybank": ["./src/mybank/*"],
+      "@/mybank/screens": ["./src/mybank/screens/*"],
+      "@/mybank/navigation": ["./src/mybank/navigation/*"],
+      "@/pension": ["./src/pension/*"],
+      "@/stocks": ["./src/stocks/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ES2020"
+  },
+  "extends": "expo/tsconfig.base",
+  "include": ["src", "./src/**/*.ts", "./src/**/*.tsx"]
+}

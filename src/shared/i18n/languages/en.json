@@ -1,0 +1,47 @@
+{
+  "@ease": {
+    "welcome": "Welcome to the @ease 2.0"
+  },
+  "insurance": {
+    "welcome": "Welcome to the insurance 2.0"
+  },
+  "mutualfunds": {
+    "welcome": "Welcome to the mutualfunds 2.0"
+  },
+  "mybank": {
+    "welcome": "Welcome to the Mybank 2.0",
+    "landing": {
+      "createAccount": "Create Account",
+      "explore": "Explore Quick Services",
+      "hello": "Hello!",
+      "new": "New to Stanbic IBTC?",
+      "onePass": "ONE PASS",
+      "quick": "Quick",
+      "slideToSeeMoreOptions": "Slide to see more options"
+    },
+    "login": {
+      "createInstantAccount": "Create Instant Account",
+      "callCustomerCare": "Call Customer Care",
+      "forgotPassword": "Forgot Password?",
+      "gotoQuickServices": "Goto Quick Services",
+      "login": "LOGIN",
+      "loginWithOnePass": "LOGIN WITH ONE PASS",
+      "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
+      "newHere": "New here? Register for One Pass"
+    },
+    "selectChannel": {
+      "signUpWithOnePass": "SIGN UP WITH ONE PASS",
+      "selectChannelHeading": "Select channel",
+      "selectChannelSub": "Select Channel to sign up or sign in with"
+    },
+    "quickOptions": {
+      "quick": "Quick Options"
+    }
+  },
+  "pension": {
+    "welcome": "Welcome to the pension 2.0"
+  },
+  "stocks": {
+    "welcome": "Welcome to the stocks 2.0"
+  }
+}

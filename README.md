@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Introduction 
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
@@ -18,3 +19,24 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+=======
+# Stanbic IBTC Mobile App
+
+## Welcome
+
+Welcome to the repository for Stanbic IBTC Mobile App, to clone the project run:
+
+```shell
+git clone https://stanbicibtcdev.visualstudio.com/MobileBanking.FrontEnd.Contributors/_git/NewMobileBanking.Frontend.Project
+```
+
+Then install the dependencies using npm:
+
+```shell
+npm install
+```
+
+# Contributing
+
+Please refer to the [Contributor's guide](./CONTRIBUTING.md "standards") for proper guide on how to contribute/ coding standards.
+>>>>>>> 433b893bf7b669a31c2d4da9b384303cf50e6d9f
