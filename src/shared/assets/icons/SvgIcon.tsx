@@ -18,7 +18,7 @@ const SvgIcon: VFC<SvgIconProps> = (props) => {
 
   const Icon = svgIconPack[name];
   const iconSize = theme.iconSizes[size];
-  const iconColor = theme.colors[color];
+  const iconColor = "#FFFFFD";
 
   return <Icon color={iconColor} {...iconSize} {...rest} />;
 };

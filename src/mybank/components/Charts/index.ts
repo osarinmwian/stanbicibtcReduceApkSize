@@ -1,0 +1,1 @@
+export { BarChartUI } from './BarChart'

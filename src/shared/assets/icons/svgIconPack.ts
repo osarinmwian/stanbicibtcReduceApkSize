@@ -21,6 +21,26 @@ import minusSquare from "@/shared/assets/svg/minus-square.svg";
 import plane from "@/shared/assets/svg/plane.svg";
 import plusSquare from "@/shared/assets/svg/plus-square.svg";
 import companyLogo from "@/shared/assets/svg/standard_bank_logo.svg";
+import graduationCap from '@/shared/assets/svg/graduation-cap.svg';
+import tshirt from '@/shared/assets/svg/tshirt.svg';
+import gift from '@/shared/assets/svg/gift.svg';
+import utensils from '@/shared/assets/svg/utensils.svg';
+import copy from '@/shared/assets/svg/copy.svg';
+import briefcase from '@/shared/assets/svg/briefcase-medical.svg';
+import building from '@/shared/assets/svg/building.svg';
+import university from '@/shared/assets/svg/university.svg';
+import piggyBank from '@/shared/assets/svg/piggy-bank.svg';
+import exchangeAlt from '@/shared/assets/svg/exchange-alt.svg';
+import home from '@/shared/assets/svg/home.svg';
+import carCrash from '@/shared/assets/svg/car-crash.svg';
+import carWhite from '@/shared/assets/svg/pfm-cars.svg';
+import moneyBill from '@/shared/assets/svg/money-bill.svg';
+import horizontalPlane from '@/shared/assets/svg/plane (1).svg';
+import chevronRightSlim from '@/shared/assets/svg/chevron-right-slim.svg';
+import arrowBackward from '@/shared/assets/svg/arrow-backward.svg'
+import circle from '@/shared/assets/svg/circle.svg';
+import checkCircle from '@/shared/assets/svg/check-circle.svg';
+import eyeClosed from '@/shared/assets/svg/eye-closed.svg'
 
 const svgIconPack = {
   "arrow-back": arrowBack,
@@ -34,6 +54,7 @@ const svgIconPack = {
   "chevron-back": chevronBack,
   "chevron-down": chevronDown,
   "chevron-forward": chevronForward,
+  "chevron-right-slim": chevronRightSlim,
   close,
   coins,
   "coins-many": coinsMany,
@@ -46,6 +67,25 @@ const svgIconPack = {
   minusSquare,
   plane,
   plusSquare,
+  graduationCap,
+  tshirt,
+  gift,
+  utensils,
+  copy,
+  briefcase,
+  building,
+  university,
+  "piggy-bank": piggyBank,
+  "exchange-alt": exchangeAlt,
+  home,
+  "car-crash": carCrash,
+  "car-white": carWhite,
+  "money-bill": moneyBill,
+  "plane-horizontal": horizontalPlane,
+  "arrow-backward": arrowBackward,
+  "check-circle-unchecked": circle,
+  "check-circle-checked": checkCircle,
+  "eye-closed": eyeClosed,
 };
 
 export { svgIconPack };

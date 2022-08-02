@@ -32,6 +32,11 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
         onPress={() => props.navigation.navigate("LoansNavigation")}
         variant="filled"
       />
+      <PrimaryButton
+        label="Go to PFM"
+        onPress={() => props.navigation.navigate("PfmNavigation")}
+        variant="filled"
+      />
     </Box>
   );
 };

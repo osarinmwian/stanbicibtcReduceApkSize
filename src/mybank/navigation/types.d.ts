@@ -1,6 +1,7 @@
 import { NavigatorScreenParams } from "@react-navigation/native";
 
 import type { RootStackParameterList } from "@/shared/navigation/types";
+import { StackScreenProps } from "@react-navigation/stack";
 
 // 3SBanking
 export type ThreeSBankingList = {
@@ -32,6 +33,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferNewRequestSecondScreen: undefined;
   FXTransferEnterPin: undefined;
   FXTransferTransactionHistory: undefined;
+  PfmNavigation: undefined;
 };
 
 // Tab routes
@@ -47,10 +49,10 @@ type MyTabRoutes = {
 
 export type MyBankNavigationProps<
   Screen extends keyof MyBankRootStackParameterList,
-> = CompositeScreenProps<
-  NativeStackScreenProps<MyBankRootStackParameterList, Screen>,
-  BottomTabScreenProps<MyTabRoutes>
->;
+  > = CompositeScreenProps<
+    NativeStackScreenProps<MyBankRootStackParameterList, Screen>,
+    BottomTabScreenProps<MyTabRoutes>
+  >;
 
 export type LoansStackParameterList = MyBankRootStackParameterList & {
   LoansScreen: undefined;
@@ -58,5 +60,15 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
   LoanDetails: undefined;
 };
 
+
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
   StackScreenProps<LoansStackParameterList, T>;
+
+export type PfmStackParameterList = MyBankRootStackParameterList & {
+  PfmMainScreen: undefined;
+  financialManagementScreen: undefined;
+  TransactionHistoryScreen: undefined;
+  EditCategoryNameScreen: undefined;
+};
+
+export type PfmNavigationProps<T extends keyof PfmStackParameterList> = StackScreenProps<PfmStackParameterList, T>;
