@@ -8,8 +8,9 @@ import car from "@/shared/assets/svg/car.svg";
 import cash from "@/shared/assets/svg/cash.svg";
 import centili from "@/shared/assets/svg/centili.svg";
 import chevronBack from "@/shared/assets/svg/chevron-back.svg";
+import chevronDown from "@/shared/assets/svg/chevron-down.svg";
 import chevronForward from "@/shared/assets/svg/chevron-forward.svg";
-import chevronDown from "@/shared/assets/svg/chevronDown.svg";
+import chevronDownward from "@/shared/assets/svg/chevronDown.svg";
 import close from "@/shared/assets/svg/close.svg";
 import coins from "@/shared/assets/svg/coins.svg";
 import coinsMany from "@/shared/assets/svg/coins-many.svg";
@@ -41,6 +42,8 @@ import arrowBackward from '@/shared/assets/svg/arrow-backward.svg'
 import circle from '@/shared/assets/svg/circle.svg';
 import checkCircle from '@/shared/assets/svg/check-circle.svg';
 import eyeClosed from '@/shared/assets/svg/eye-closed.svg'
+import notification from "@/shared/assets/svg/notification.svg";
+import profile from "@/shared/assets/svg/profile.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
@@ -53,6 +56,7 @@ const svgIconPack = {
   centili,
   "chevron-back": chevronBack,
   "chevron-down": chevronDown,
+  "chevron-downward": chevronDownward,
   "chevron-forward": chevronForward,
   "chevron-right-slim": chevronRightSlim,
   close,
@@ -86,6 +90,8 @@ const svgIconPack = {
   "check-circle-unchecked": circle,
   "check-circle-checked": checkCircle,
   "eye-closed": eyeClosed,
+  notification,
+  profile,
 };
 
 export { svgIconPack };

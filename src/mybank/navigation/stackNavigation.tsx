@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
+import { BillersForm, CorporateBillers } from "@/mybank/screens/Payment";
 import {
   BankTransfer,
   BankTransferEnterPin,
@@ -32,6 +33,8 @@ function Home() {
     >
       <Stack.Screen component={BottomTabs} name="BottomTabs" />
       <Stack.Screen component={BankTransfer} name="BankTransfer" />
+      <Stack.Screen component={CorporateBillers} name="CorporateBillers" />
+      <Stack.Screen component={BillersForm} name="BillersForm" />
       <Stack.Screen
         component={BankTransferEnterPin}
         name="BankTransferEnterPin"

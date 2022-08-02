@@ -10,6 +10,8 @@ export type ThreeSBankingList = {
 
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
+  BillersForm: undefined;
+  CorporateBillers: undefined;
   Home: undefined;
   Lifestyle: undefined;
   More: undefined;
