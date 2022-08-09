@@ -4,11 +4,10 @@ import { ScrollView, TouchableOpacity } from "react-native";
 
 import { loginBackground } from "@/mybank/assets/image";
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
-import { IconVector } from "@/shared/assets/icons/IconVector";
-import { GradientButton } from "@/shared/components/Buttons";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
+import BuyOrSellEnairaButton from "../components/BuyOrSellEnairaButton";
 import CopyButton from "../components/CopyButton";
 
 const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
@@ -109,76 +108,18 @@ const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
                 justifyContent="space-around"
                 marginTop="sm"
               >
-                <GradientButton
+                <BuyOrSellEnairaButton
                   gradient="secondary"
-                  marginRight="xs"
+                  iconBackground="primaryColor"
+                  iconName
                   onPress={handleBuyEnaira}
-                  paddingVertical="md"
-                  size="xs"
-                >
-                  <Box>
-                    <Box alignItems="flex-start">
-                      <Box
-                        alignItems="center"
-                        backgroundColor="easeContainer"
-                        borderRadius="lg"
-                        justifyContent="center"
-                        marginVertical="sm"
-                        padding="sm"
-                      >
-                        <IconVector name="buyEnaira" />
-                      </Box>
-                    </Box>
-                    <Text
-                      color="whiteColor"
-                      marginVertical="sm"
-                      variant="bold14"
-                    >
-                      {t("mybank.transfer.enaira.home.buy")}
-                    </Text>
-                    <Text color="whiteColor" variant="regular14">
-                      xjhvhvj
-                    </Text>
-                    <Text color="whiteColor" variant="regular14">
-                      xjhvhvjxvxvgxvgvxjvx
-                    </Text>
-                  </Box>
-                </GradientButton>
-                <GradientButton
+                />
+                <BuyOrSellEnairaButton
                   gradient="tatiary"
-                  marginLeft="xs"
+                  iconBackground="secondary1"
+                  iconName={false}
                   onPress={handleSellEnaira}
-                  paddingVertical="md"
-                  size="xs"
-                >
-                  <Box>
-                    <Box alignItems="flex-start">
-                      <Box
-                        alignItems="center"
-                        backgroundColor="secondary1"
-                        borderRadius="lg"
-                        justifyContent="center"
-                        marginVertical="sm"
-                        padding="sm"
-                      >
-                        <IconVector name="sellEnaira" />
-                      </Box>
-                    </Box>
-                    <Text
-                      color="whiteColor"
-                      marginVertical="sm"
-                      variant="bold14"
-                    >
-                      {t("mybank.transfer.enaira.home.sell")}
-                    </Text>
-                    <Text color="whiteColor" variant="regular14">
-                      xjhvhvj
-                    </Text>
-                    <Text color="whiteColor" variant="regular14">
-                      xjhvhvjxvxvgxvgvxjvx
-                    </Text>
-                  </Box>
-                </GradientButton>
+                />
               </Box>
             </Box>
             <Box
