@@ -65,6 +65,8 @@
           "titleparagraph": "Provide details below to have access to your eNaira wallet",
           "buttonlabel": "LOGIN",
           "emaillabel": "EMAIL",
+          "emailplaceholder": "Enter enaira account email",
+          "passwordplaceholder": "Enter enaira account password",
           "walletlabel": "WALLETTYPE",
           "walletplaceholder": "Select wallet type",
           "passwordlabel": "PASSWORD"
