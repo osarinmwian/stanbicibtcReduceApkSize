@@ -21,7 +21,7 @@ import leaf from "@/shared/assets/svg/leaf.svg";
 import minusSquare from "@/shared/assets/svg/minus-square.svg";
 import plane from "@/shared/assets/svg/plane.svg";
 import plusSquare from "@/shared/assets/svg/plus-square.svg";
-import companyLogo from "@/shared/assets/svg/standard_bank_logo.svg";
+import companyLogo from "@/shared/assets/svg/bank-logo.svg";
 import graduationCap from '@/shared/assets/svg/graduation-cap.svg';
 import tshirt from '@/shared/assets/svg/tshirt.svg';
 import gift from '@/shared/assets/svg/gift.svg';

@@ -13,6 +13,7 @@ import { Text } from "@/shared/components/Typography";
 import { data } from "@/mybank/screens/pfm/PfmMainScreen";
 import { CategoryButton } from "../Buttons/CategoryButton";
 import { IconVector } from "@/shared/assets/icons/IconVector";
+import { useTranslation } from "react-i18next";
 
 type TransactionCategoryModalProps = {
     bottomSheetModalRef: RefObject<BottomSheetModal>;
@@ -23,7 +24,8 @@ const renderBackdrop = (props: BottomSheetBackdropProps) => (
 
 export const TransactionCategoryModal: VFC<TransactionCategoryModalProps> = (props) => {
     const snapPoints = useMemo(() => ["85%", "85%"], []);
-    const [activeTransactionCategoryId, setActiveTransactionCategoryId] = useState(1);
+    const [activeTransactionCategoryId, setActiveTransactionCategoryId] = useState<number | undefined>(1);
+    const { t } = useTranslation()
     return (
         <Box>
             <BottomSheetModal
@@ -36,10 +38,10 @@ export const TransactionCategoryModal: VFC<TransactionCategoryModalProps> = (pro
                     <Box p="md">
                         <Box mb="md">
                             <Text fontVariant="h6" fontWeight="bold">
-                                Change Transaction Category
+                                {t("pfm.changeTrasactionCategory")}
                             </Text>
                             <Text color="lightGrey" fontVariant="caption" fontWeight="bold">
-                                Select category From the list
+                                {t("pfm.selectCategoryFromList")}
                             </Text>
                         </Box>
 

@@ -36,6 +36,7 @@ const renderTitle = (title: string) => (
 
 const PfmNavigation: VFC = () => (
     <Stack.Navigator
+
         screenOptions={{
             headerTitleAlign: "center",
             headerTransparent: true,

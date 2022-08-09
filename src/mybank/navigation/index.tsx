@@ -28,7 +28,6 @@ function MyBankNavigation() {
           <Stack.Screen component={Payments} name="Payments" />
           <Stack.Screen component={Transfer} name="Transfer" />
           <Stack.Screen component={LoansNavigation} name="LoansNavigation" />
-          <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={PfmNavigation} name="PfmNavigation" />
         </Stack.Group>
       ) : (

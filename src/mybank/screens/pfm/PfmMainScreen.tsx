@@ -12,6 +12,7 @@ import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
 import { BarChartUI } from "@/mybank/components/Charts";
 import { PaletteType } from "@/shared/theme/palette";
 import { SvgIconPackType } from "@/shared/assets/icons";
+import { useTranslation } from "react-i18next";
 
 type CategoryProps = {
     title: string;
@@ -163,67 +164,70 @@ export const data: CategoryProps[] = [
 
 const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
     navigation,
-}) => (
-    <SafeAreaView flex={1}>
-        <ImageBackground flex={1} source={loginBackground}>
-            <Box flex={1}>
-                <Box height={RFValue(150)} />
-                <Box backgroundColor="whiteColor" flex={1} px="md">
-                    <Box
-                        style={{ marginTop: RFValue(-75) }}
-                        width="100%"
-                    >
-                        <HangingCard />
-                    </Box>
-                    <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "white" }}>
-                        <Box my="md">
-                            <Box my="lg">
-                                <Text fontVariant="h1" fontSize={18} fontWeight="400">TRANSACTION SUMMARY</Text>
-                                <Text fontVariant="p" fontWeight="normal">Showing summary for the past one month</Text>
-                            </Box>
-
-                            <Box flexDirection="row" justifyContent="space-evenly">
-                                <Box flex={0.9} padding="md" borderRadius="sm" backgroundColor="cardSecondary">
-                                    <Box alignItems="center">
-                                        <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
-                                    </Box>
-                                    <Box flexDirection="row" alignItems="center" mt="xs" justifyContent="center">
-                                        <Box height={RFValue(5)} width={RFValue(12)} marginRight="sm" backgroundColor="pfmorange" borderRadius="md" />
-                                        <Text color="pfmorange">Withdrawal</Text>
-                                    </Box>
-                                </Box>
-                                <Box flex={0.2}></Box>
-                                <Box flex={0.9} padding="md" borderRadius="sm" backgroundColor="cardSecondary">
-                                    <Box alignItems="center">
-                                        <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
-                                    </Box>
-                                    <Box flexDirection="row" alignItems="center" mt="xs" justifyContent="center">
-                                        <Box height={RFValue(5)} width={RFValue(12)} marginRight="sm" backgroundColor="pfmgreen" borderRadius="md" />
-                                        <Text color="pfmgreen">Deposit</Text>
-                                    </Box>
-                                </Box>
-                            </Box>
-                            <Box mt="md">
-                                <BarChartUI />
-                            </Box>
-
-                            <Box my="lg">
-                                <Text fontVariant="h1" fontSize={18} fontWeight="400">CATEGORY</Text>
-                                <Text fontVariant="p" fontWeight="normal">Click category to see transactions</Text>
-                            </Box>
-                            {data.map((dataItem, index) => (<Box mb="md" key={index}>
-                                <CategoryButton
-                                    {...dataItem}
-                                    onPress={() => navigation.navigate("financialManagementScreen")}
-                                />
-                            </Box>)
-                            )}
+}) => {
+    const { t } = useTranslation();
+    return (
+        <SafeAreaView flex={1}>
+            <ImageBackground flex={1} source={loginBackground}>
+                <Box flex={1}>
+                    <Box height={RFValue(150)} />
+                    <Box backgroundColor="whiteColor" flex={1} px="md">
+                        <Box
+                            style={{ marginTop: RFValue(-75) }}
+                            width="100%"
+                        >
+                            <HangingCard />
                         </Box>
-                    </ScrollView>
+                        <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "white" }}>
+                            <Box my="md">
+                                <Box my="lg">
+                                    <Text fontVariant="h1" fontSize={18} fontWeight="400">{t("pfm.transactionSummary")}</Text>
+                                    <Text fontVariant="p" fontWeight="normal">{t("pfm.showingSummary")}</Text>
+                                </Box>
+
+                                <Box flexDirection="row" justifyContent="space-evenly">
+                                    <Box flex={0.9} padding="md" borderRadius="sm" backgroundColor="cardSecondary">
+                                        <Box alignItems="center">
+                                            <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
+                                        </Box>
+                                        <Box flexDirection="row" alignItems="center" mt="xs" justifyContent="center">
+                                            <Box height={RFValue(5)} width={RFValue(12)} marginRight="sm" backgroundColor="pfmorange" borderRadius="md" />
+                                            <Text color="pfmorange">{t("pfm.withdrawal")}</Text>
+                                        </Box>
+                                    </Box>
+                                    <Box flex={0.2}></Box>
+                                    <Box flex={0.9} padding="md" borderRadius="sm" backgroundColor="cardSecondary">
+                                        <Box alignItems="center">
+                                            <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
+                                        </Box>
+                                        <Box flexDirection="row" alignItems="center" mt="xs" justifyContent="center">
+                                            <Box height={RFValue(5)} width={RFValue(12)} marginRight="sm" backgroundColor="pfmgreen" borderRadius="md" />
+                                            <Text color="pfmgreen">{t("pfm.deposit")}</Text>
+                                        </Box>
+                                    </Box>
+                                </Box>
+                                <Box mt="md">
+                                    <BarChartUI />
+                                </Box>
+
+                                <Box my="lg">
+                                    <Text fontVariant="h1" fontSize={18} fontWeight="400">CATEGORY</Text>
+                                    <Text fontVariant="p" fontWeight="normal">{t("pfm.clickCategory")}</Text>
+                                </Box>
+                                {data.map((dataItem, index) => (<Box mb="md" key={index}>
+                                    <CategoryButton
+                                        {...dataItem}
+                                        onPress={() => navigation.navigate("financialManagementScreen")}
+                                    />
+                                </Box>)
+                                )}
+                            </Box>
+                        </ScrollView>
+                    </Box>
                 </Box>
-            </Box>
-        </ImageBackground >
-    </SafeAreaView >
-);
+            </ImageBackground >
+        </SafeAreaView >
+    )
+}
 
 export default PfmMainScreen;
