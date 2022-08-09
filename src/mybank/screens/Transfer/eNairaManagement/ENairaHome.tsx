@@ -105,7 +105,7 @@ const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
               </Box>
               <Box
                 flexDirection="row"
-                justifyContent="space-around"
+                justifyContent="space-between"
                 marginTop="sm"
               >
                 <BuyOrSellEnairaButton
