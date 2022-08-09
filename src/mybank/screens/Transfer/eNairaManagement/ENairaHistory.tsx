@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
 
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
 import { Icon } from "@/shared/assets/icons";
-import { Box, LayoutComponent } from "@/shared/components/Layout";
+import { Box, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
 
@@ -89,27 +89,29 @@ const HeaderComponent = () => (
 );
 
 const ENairaHistory = () => (
-  <LayoutComponent label="FX PAYMENT">
-    <FlatList
-      data={[1, 2, 3, 4, 5, 6, 7, 1, 1, 1, 1, 1, 1, 1, 1]}
-      keyExtractor={(item, index) => index.toString()}
-      ListHeaderComponent={<HeaderComponent />}
-      renderItem={({ item, index }) => (
-        <Box>
-          <TransactionHistoryListComponent
-            accountName="SCHOOL FEES"
-            amount="$10,000"
-            date="07/01/2021. 2:13:05AM"
-            index={index}
-            item={item}
-            onPress={() => {}}
-            transactionType="PENDING"
-          />
-        </Box>
-      )}
-      showsVerticalScrollIndicator={false}
-    />
-  </LayoutComponent>
+  <SafeAreaView flex={1}>
+    <Box marginTop="md">
+      <FlatList
+        data={[1, 2, 3, 4, 5, 6, 7, 1, 1, 1, 1, 1, 1, 1, 1]}
+        keyExtractor={(item, index) => index.toString()}
+        ListHeaderComponent={<HeaderComponent />}
+        renderItem={({ item, index }) => (
+          <Box>
+            <TransactionHistoryListComponent
+              accountName="SCHOOL FEES"
+              amount="$10,000"
+              date="07/01/2021. 2:13:05AM"
+              index={index}
+              item={item}
+              onPress={() => {}}
+              transactionType="PENDING"
+            />
+          </Box>
+        )}
+        showsVerticalScrollIndicator={false}
+      />
+    </Box>
+  </SafeAreaView>
 );
 
 export default ENairaHistory;

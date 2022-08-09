@@ -36,37 +36,48 @@ const TransactionConfirmation = () => {
             paddingHorizontal="md"
           >
             <Box marginTop="lg">
-              <Text variant="medium12">Confirm PIN</Text>
-              <Text color="textTint" mb="md" mt="xs" variant="regular10">
-                Enter your 4 digit pin to continue
+              <Text variant="bold14">
+                {t("mybank.transfer.enaira.transactionconfirmation.title")}
+              </Text>
+              <Text color="textTint" mb="md" mt="xs" variant="regular12">
+                {t(
+                  "mybank.transfer.enaira.transactionconfirmation.titleparagraph",
+                )}
               </Text>
             </Box>
             <ScrollBox bounces={false} contentContainerStyle={{ flex: 1 }}>
-              <Box
-                backgroundColor="confirmCard"
-                borderRadius="md"
-                paddingHorizontal="md"
-                paddingVertical="lg"
-              >
+              <Box backgroundColor="confirmCard" borderRadius="md" padding="md">
                 <Box flexDirection="row" justifyContent="space-between">
-                  <Text>Account</Text>
-                  <Text>Account</Text>
+                  <Text>
+                    {t(
+                      "mybank.transfer.enaira.transactionconfirmation.account",
+                    )}
+                  </Text>
+                  <Text variant="regular14">Account Name</Text>
                 </Box>
                 <Box
                   flexDirection="row"
                   justifyContent="space-between"
-                  paddingVertical="xs"
+                  marginVertical="sm"
                 >
-                  <Text>Account</Text>
-                  <Text>Account</Text>
+                  <Text variant="regular14">
+                    {t(
+                      "mybank.transfer.enaira.transactionconfirmation.balance",
+                    )}
+                  </Text>
+                  <Text variant="regular14">Account balance</Text>
                 </Box>
                 <Box flexDirection="row" justifyContent="space-between">
-                  <Text>Account</Text>
-                  <Text>Account</Text>
+                  <Text variant="regular14">
+                    {t("mybank.transfer.enaira.transactionconfirmation.amount")}
+                  </Text>
+                  <Text color="black" variant="bold14">
+                    N2000
+                  </Text>
                 </Box>
               </Box>
 
-              <Box flex={1} marginTop="sm" paddingHorizontal="md">
+              <Box flex={1} paddingHorizontal="md">
                 <PinComponent
                   onChangeText={(value) => {
                     setPin(value);
@@ -79,10 +90,12 @@ const TransactionConfirmation = () => {
                 backgroundColor="primaryColor"
                 height={RFValue(50)}
                 justifyContent="center"
-                label={t("mybank.transfer.enaira.sellbuttonlabel")}
+                label={t(
+                  "mybank.transfer.enaira.transactionconfirmation.buttonlable",
+                )}
                 labelProps={{ color: "whiteColor" }}
                 labelVariant="medium10"
-                marginBottom="md"
+                marginBottom="lg"
                 onPress={() => {}}
               />
             </ScrollBox>

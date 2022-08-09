@@ -58,7 +58,10 @@
         "transactionconfirmation": {
           "title": "Confirm Pin",
           "titleparagraph": "Enter your 4 digit pin to confirm transaction",
-          "buttonlable": "CONTINUE"
+          "buttonlable": "CONTINUE",
+          "account": "Account",
+          "balance": "eNaira balance",
+          "amount": "Buying"
         },
         "auth": {
           "title": "Account Verification",
