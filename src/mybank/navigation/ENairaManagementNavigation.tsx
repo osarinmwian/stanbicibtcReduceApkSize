@@ -41,7 +41,7 @@ const headerBackground = () => (
 );
 const ENairaManagementNavigation: () => JSX.Element = () => (
   <Stack.Navigator
-    initialRouteName="ENairaHistory"
+    initialRouteName="ENairaHome"
     screenOptions={{
       headerTitleAlign: "center",
       headerTransparent: true,

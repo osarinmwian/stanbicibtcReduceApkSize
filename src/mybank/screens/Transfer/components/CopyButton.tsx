@@ -1,0 +1,26 @@
+import React from "react";
+import { TouchableOpacity } from "react-native";
+
+import { Box } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
+
+const CopyButton: ({ onPress }: { onPress: any }) => JSX.Element = ({
+  onPress,
+}) => (
+  <TouchableOpacity onPress={onPress}>
+    <Box
+      alignItems="center"
+      backgroundColor="confirmCard"
+      borderRadius="sm"
+      justifyContent="center"
+      paddingHorizontal="md"
+      paddingVertical="md"
+    >
+      <Text color="primaryColor" variant="medium12">
+        COPY
+      </Text>
+    </Box>
+  </TouchableOpacity>
+);
+
+export default CopyButton;

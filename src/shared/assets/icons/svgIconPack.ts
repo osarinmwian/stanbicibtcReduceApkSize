@@ -1,6 +1,7 @@
 import arrowBack from "@/shared/assets/svg/arrow-back.svg";
 import arrowForward from "@/shared/assets/svg/arrow-forward.svg";
 import companyLogo from "@/shared/assets/svg/bank-logo.svg";
+import buyEnaira from "@/shared/assets/svg/buyEnaira.svg";
 import calculator from "@/shared/assets/svg/calculator.svg";
 import car from "@/shared/assets/svg/car.svg";
 import cash from "@/shared/assets/svg/cash.svg";
@@ -16,10 +17,12 @@ import history from "@/shared/assets/svg/history.svg";
 import leaf from "@/shared/assets/svg/leaf.svg";
 import notification from "@/shared/assets/svg/notification.svg";
 import profile from "@/shared/assets/svg/profile.svg";
+import sellEnaira from "@/shared/assets/svg/sellEnaira.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
   "arrow-forward": arrowForward,
+  buyEnaira,
   calculator,
   car,
   cash,
@@ -36,6 +39,7 @@ const svgIconPack = {
   leaf,
   notification,
   profile,
+  sellEnaira,
 };
 
 export { svgIconPack };
