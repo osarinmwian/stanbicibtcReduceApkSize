@@ -16,6 +16,7 @@ import { FilledTextInput } from "@/shared/components/TextInput";
 import { Text } from "@/shared/components/Typography";
 
 import ListComponent from "../components/ListComponent";
+import { styles } from "./styles/ENairaStyles";
 
 interface MyFormValues {
   bankingId: string;
@@ -73,7 +74,7 @@ const ENairaAccountVerification: ({
             marginTop="lg"
             paddingHorizontal="md"
           >
-            <KeyboardAvoidingView style={{ flex: 1 }}>
+            <KeyboardAvoidingView style={styles.keyboardAvoidingView}>
               <Formik
                 initialValues={InitialValues}
                 onSubmit={(values) => onSubmit(values)}
@@ -104,19 +105,16 @@ const ENairaAccountVerification: ({
                     >
                       <FilledTextInput
                         baseColor="#EFEFEF"
-                        inputContainerStyle={{
-                          backgroundColor: "#F6F6F6",
-                          borderRadius: 10,
-                        }}
+                        inputContainerStyle={styles.filledTextInputContainer}
                         label={t("mybank.transfer.enaira.auth.emaillabel")}
-                        labelTextStyle={{ color: "#767676", marginTop: 5 }}
+                        labelTextStyle={styles.filledTextInputLabel}
                         onBlur={handleBlur("password")}
                         onChangeText={handleChange("password")}
                         placeholder={t(
                           "mybank.transfer.enaira.auth.emailplaceholder",
                         )}
                         placeholderTextColor="#767676"
-                        style={{ borderRadius: 10, color: "#EFEFEF" }}
+                        style={styles.filledTextInput}
                         tintColor="#000"
                         value={values.password}
                       />
@@ -131,19 +129,16 @@ const ENairaAccountVerification: ({
                     >
                       <FilledTextInput
                         baseColor="#EFEFEF"
-                        inputContainerStyle={{
-                          backgroundColor: "#F6F6F6",
-                          borderRadius: 10,
-                        }}
+                        inputContainerStyle={styles.filledTextInputContainer}
                         label={t("mybank.transfer.enaira.auth.passwordlabel")}
-                        labelTextStyle={{ color: "#767676", marginTop: 5 }}
+                        labelTextStyle={styles.filledTextInputLabel}
                         onBlur={handleBlur("password")}
                         onChangeText={handleChange("password")}
                         placeholder={t(
                           "mybank.transfer.enaira.auth.passwordplaceholder",
                         )}
                         placeholderTextColor="#767676"
-                        style={{ borderRadius: 10, color: "#EFEFEF" }}
+                        style={styles.filledTextInput}
                         tintColor="#000"
                         value={values.password}
                       />

@@ -1,39 +1,12 @@
 import React from "react";
-import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
 import { Icon } from "@/shared/assets/icons";
 import { Box, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { RFValue } from "@/shared/utils/functions";
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-
-    backgroundColor: "rgba(0, 137, 255, 0.1)",
-
-    flexDirection: "row",
-
-    // borderRadius: RFValue(50),
-    height: RFValue(40),
-
-    justifyContent: "space-between",
-
-    // paddingVertical: RFValue(8),
-    padding: RFValue(10),
-  },
-  iconContainer: {
-    alignItems: "center",
-    borderRadius: RFValue(24),
-    height: RFValue(48),
-    justifyContent: "center",
-    width: RFValue(48),
-  },
-  rotate: {
-    transform: [{ rotate: "90deg" }],
-  },
-});
+import { styles } from "./styles/ENairaStyles";
 
 const HeaderComponent = () => (
   <Box flex={1} flexDirection="row" padding="md">
