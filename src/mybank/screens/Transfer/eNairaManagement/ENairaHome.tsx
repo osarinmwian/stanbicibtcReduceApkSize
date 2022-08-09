@@ -42,7 +42,10 @@ const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
           marginTop="lg"
           paddingHorizontal="md"
         >
-          <ScrollView showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+          >
             <Box marginTop="lg">
               <Text variant="bold14">
                 {t("mybank.transfer.enaira.home.hometitle")}
