@@ -6,6 +6,14 @@ import type { RootStackParameterList } from "@/shared/navigation/types";
 export type ThreeSBankingList = {
   Activate: undefined;
 };
+export type ENairaManagement = {
+  BuyENaira: undefined;
+  SellENaira: undefined;
+  ENairaHistory: undefined;
+  TransactionConfirmation: undefined;
+  ENairaHome: undefined;
+  ENairaAccountVerification: undefined;
+};
 
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
@@ -31,6 +39,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferNewRequestSecondScreen: undefined;
   FXTransferEnterPin: undefined;
   FXTransferTransactionHistory: undefined;
+  ENaira: undefined;
 };
 
 // Tab routes

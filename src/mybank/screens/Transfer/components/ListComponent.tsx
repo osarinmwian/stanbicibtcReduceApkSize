@@ -17,7 +17,7 @@ interface ListComponentProps {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: palette.cardSecondary,
+    backgroundColor: palette.paleGrey25,
     borderRadius: RFValue(8),
     flexDirection: "row",
     paddingHorizontal: RFValue(15),
@@ -39,17 +39,16 @@ export default function ListComponent({
       <TouchableOpacity
         activeOpacity={0.75}
         onPress={onPress}
-        style={[styles.container, { minHeight: RFValue(52) }]}
+        style={{
+          ...styles.container,
+          minHeight: RFValue(52),
+        }}
       >
         <Box flex={1}>
-          <Text color="secondaryBlack" variant="medium10">
+          <Text color="lightGrey" variant="medium10">
             {label}
           </Text>
-          <Text
-            color="secondaryBlack"
-            paddingVertical="xxs"
-            variant="regular10"
-          >
+          <Text color="lightGrey" paddingVertical="xxs" variant="regular10">
             {placeholder}
           </Text>
         </Box>

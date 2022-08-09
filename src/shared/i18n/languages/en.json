@@ -28,6 +28,48 @@
       "loginWithOnePass": "LOGIN WITH ONE PASS",
       "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
       "newHere": "New here? Register for One Pass"
+    },
+    "transfer": {
+      "enaira": {
+        "buyenairatitle": "Buy eNaira",
+        "sellenairatitle": "Sell eNaira",
+        "enairaparagraph": "Provide details below to buy eNaira",
+        "sellenairaparagraph": "Provide details below to sell eNaira",
+        "amounttobuy": "AMOUNT TO BUY",
+        "amounttosell": "AMOUNT TO SELL",
+        "accounttodebit": "ACCOUNT TO BE DEBITED",
+        "accounttocredit": "ACCOUNT TO BE CREDITED",
+        "buttonlabel": "BUY ENAIRA",
+        "sellbuttonlabel": "SELL ENAIRA",
+        "rate": "1 eNaira = ",
+        "selectAccount": "Select account",
+        "home": {
+          "hometitle": "eNaira account",
+          "homeparagraph": "your enaira account details",
+          "username": "e-Naira Wallet username",
+          "walletbalance": "E-Naira Wallet Balance",
+          "walletid": "e-Naira Wallet ID",
+          "buyorsend": "BUY OR SEND ENAIRA",
+          "buy": "BUY ENAIRA",
+          "sell": "SELL ENAIRA",
+          "recenthistory": "RECENT HISTORY",
+          "seeall": "SEE ALL"
+        },
+        "transactionconfirmation": {
+          "title": "Confirm Pin",
+          "titleparagraph": "Enter your 4 digit pin to confirm transaction",
+          "buttonlable": "CONTINUE"
+        },
+        "auth": {
+          "title": "Account Verification",
+          "titleparagraph": "Provide details below to have access to your eNaira wallet",
+          "buttonlabel": "LOGIN",
+          "emaillabel": "EMAIL",
+          "walletlabel": "WALLETTYPE",
+          "walletplaceholder": "Select wallet type",
+          "passwordlabel": "PASSWORD"
+        }
+      }
     }
   },
   "pension": {
