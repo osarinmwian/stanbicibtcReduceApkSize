@@ -90,7 +90,7 @@ const HeaderComponent = () => (
 
 const ENairaHistory = () => (
   <SafeAreaView flex={1}>
-    <Box marginTop="md">
+    <Box marginTop="lg">
       <FlatList
         data={[1, 2, 3, 4, 5, 6, 7, 1, 1, 1, 1, 1, 1, 1, 1]}
         keyExtractor={(item, index) => index.toString()}

@@ -21,11 +21,16 @@ interface MyFormValues {
   bankingId: string;
   password: string;
 }
-const BuyENaira = () => {
+const BuyENaira: ({ navigation }: { navigation: any }) => JSX.Element = ({
+  navigation,
+}) => {
   const { t } = useTranslation();
 
   const onSubmit = (values: MyFormValues) => {
     // console.log("values", values);
+  };
+  const handleFinish = () => {
+    navigation.navigate("TransactionConfirmation");
   };
 
   const InitialValues: MyFormValues = {
@@ -143,7 +148,10 @@ const BuyENaira = () => {
                       labelVariant="medium10"
                       marginBottom="xs"
                       marginTop="md"
-                      onPress={() => handleSubmit()}
+                      onPress={() => {
+                        handleSubmit();
+                        handleFinish();
+                      }}
                       paddingVertical="md"
                     />
                   </Box>

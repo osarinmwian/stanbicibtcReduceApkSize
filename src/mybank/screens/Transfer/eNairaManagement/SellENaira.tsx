@@ -21,17 +21,23 @@ interface MyFormValues {
   bankingId: string;
   password: string;
 }
-const SellENaira = () => {
+const InitialValues: MyFormValues = {
+  bankingId: "",
+  password: "",
+};
+const SellENaira: ({ navigation }: { navigation: any }) => JSX.Element = ({
+  navigation,
+}) => {
   const { t } = useTranslation();
 
+  // eslint-disable-next-line unicorn/consistent-function-scoping
   const onSubmit = (values: MyFormValues) => {
     // console.log("values", values);
   };
-
-  const InitialValues: MyFormValues = {
-    bankingId: "",
-    password: "",
+  const handleFinish = () => {
+    navigation.navigate("TransactionConfirmation");
   };
+
   const validationSchema = Yup.object().shape({
     bankingId: Yup.string()
       .required("Internet Banking is required")
@@ -143,7 +149,10 @@ const SellENaira = () => {
                       labelVariant="medium10"
                       marginBottom="xs"
                       marginTop="md"
-                      onPress={() => handleSubmit()}
+                      onPress={() => {
+                        handleSubmit();
+                        handleFinish();
+                      }}
                       paddingVertical="md"
                     />
                   </Box>

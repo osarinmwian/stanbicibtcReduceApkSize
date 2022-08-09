@@ -11,9 +11,21 @@ import { Text } from "@/shared/components/Typography";
 
 import CopyButton from "../components/CopyButton";
 
-const ENairaHome = () => {
+const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
+  navigation,
+}) => {
   const { t } = useTranslation();
   const data = [1, 2, 3, 4, 5, 6];
+
+  const handleBuyEnaira = () => {
+    navigation.navigate("BuyENaira");
+  };
+  const handleSellEnaira = () => {
+    navigation.navigate("SellENaira");
+  };
+  const handleSeeHistory = () => {
+    navigation.navigate("ENairaHistory");
+  };
   return (
     <SafeAreaView flex={1}>
       <ImageBackground
@@ -30,7 +42,7 @@ const ENairaHome = () => {
           marginTop="lg"
           paddingHorizontal="md"
         >
-          <ScrollView>
+          <ScrollView showsHorizontalScrollIndicator={false}>
             <Box marginTop="lg">
               <Text variant="bold14">
                 {t("mybank.transfer.enaira.home.hometitle")}
@@ -97,7 +109,7 @@ const ENairaHome = () => {
                 <GradientButton
                   gradient="secondary"
                   marginRight="xs"
-                  onPress={() => {}}
+                  onPress={handleBuyEnaira}
                   paddingVertical="md"
                   size="xs"
                 >
@@ -132,7 +144,7 @@ const ENairaHome = () => {
                 <GradientButton
                   gradient="tatiary"
                   marginLeft="xs"
-                  onPress={() => {}}
+                  onPress={handleSellEnaira}
                   paddingVertical="md"
                   size="xs"
                 >
@@ -174,7 +186,7 @@ const ENairaHome = () => {
               <Text color="textTint">
                 {t("mybank.transfer.enaira.home.recenthistory")}
               </Text>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity onPress={handleSeeHistory}>
                 <Text color="primaryColor">
                   {t("mybank.transfer.enaira.home.seeall")}
                 </Text>

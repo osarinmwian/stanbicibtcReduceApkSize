@@ -22,13 +22,19 @@ interface MyFormValues {
   password: string;
 }
 
-const ENairaAccountVerification = () => {
+const ENairaAccountVerification: ({
+  navigation,
+}: {
+  navigation: any;
+}) => JSX.Element = ({ navigation }) => {
   const { t } = useTranslation();
 
   const onSubmit = (values: MyFormValues) => {
     // console.log("values", values);
   };
-
+  const handleLogin = () => {
+    navigation.navigate("ENairaHome");
+  };
   const InitialValues: MyFormValues = {
     bankingId: "",
     password: "",
@@ -167,7 +173,10 @@ const ENairaAccountVerification = () => {
                       labelVariant="medium10"
                       marginBottom="xs"
                       marginTop="md"
-                      onPress={() => handleSubmit()}
+                      onPress={() => {
+                        handleSubmit();
+                        handleLogin();
+                      }}
                       paddingVertical="md"
                     />
                   </Box>
