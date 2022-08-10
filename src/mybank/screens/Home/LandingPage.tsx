@@ -1,5 +1,5 @@
 // react
-import React, { useState } from "react";
+import React, { useState, VFC } from "react";
 // react-native
 import {
   FlatList,
@@ -67,7 +67,7 @@ const accounts = [
   },
 ];
 
-const SMEHomepage: MyBankNavigationProps<"Home"> = ({ navigation }: any) => {
+const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
   const [showBalance, setShowBalance] = useState(true);
   const [currentAccountNumber, setCurrentAccountNumber] = useState("");
 

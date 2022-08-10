@@ -214,7 +214,7 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                                     <Text fontVariant="h1" fontSize={18} fontWeight="400">CATEGORY</Text>
                                     <Text fontVariant="p" fontWeight="normal">{t("pfm.clickCategory")}</Text>
                                 </Box>
-                                {data.map((dataItem, index) => (<Box mb="md" key={index}>
+                                {data.map((dataItem, index) => (<Box mb="md" key={`transacton-category-main-${index}`}>
                                     <CategoryButton
                                         {...dataItem}
                                         onPress={() => navigation.navigate("financialManagementScreen")}

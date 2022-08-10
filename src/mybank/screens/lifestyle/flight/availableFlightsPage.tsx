@@ -6,9 +6,7 @@ import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const AvailableFlightsPage = ({
-  navigation,
-}: MyBankNavigationProps<"LifestyleLandinPage">) => (
+const AvailableFlightsPage = () => (
   <>
     <BottomTabLandingPageTopBar
       heading="FLIGHTS"
@@ -20,7 +18,7 @@ const AvailableFlightsPage = ({
       borderTopEndRadius="md"
       borderTopStartRadius="md"
       flex={1}
-      marginTop="rmd"
+      marginTop="md"
       padding="md"
     >
       <Box>

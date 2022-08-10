@@ -7,6 +7,7 @@ import { SafeAreaView, ImageBackground, Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { PaletteType } from "@/shared/theme/palette";
 import { VFC } from "react";
+import { useTranslation } from "react-i18next";
 import { ScrollView } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
@@ -26,10 +27,9 @@ const transactions: TransactionType[] = [
     { title: 'EHIZOJIE IHAYERE SOLOMON/MOBILE ...', leftIcon: 'arrow-backward', subtitle: 'DEBIT . 07/01/2021, 1:25:05 AM', iconBackgroundColor: "pfmmoneyoutbackgroundcolor", amount: "750" }
 ]
 
-export const EditCategoryNameScreen: VFC<PfmNavigationProps<"financialManagementScreen">> = ({
-    navigation,
-}) => (
-    <SafeAreaView flex={1}>
+export const EditCategoryNameScreen: VFC<PfmNavigationProps<"financialManagementScreen">> = () => {
+    const { t } = useTranslation();
+    return (<SafeAreaView flex={1}>
         <ImageBackground flex={1} source={loginBackground}>
             <Box height={RFValue(50)} />
             <Box
@@ -57,15 +57,15 @@ export const EditCategoryNameScreen: VFC<PfmNavigationProps<"financialManagement
                                 }}
                             />
                             <Box my="lg" alignItems="center" flexDirection="row">
-                                <Text fontWeight="500" fontSize={16}>Modify transfer limit</Text>
+                                <Text fontWeight="500" fontSize={16}>{t("pfm.modifyTransferLimit")}</Text>
                             </Box>
 
                             <Box padding="md" mt="none" mb="sm" borderRadius="sm" backgroundColor="cardSecondary">
-                                <Text color="darkGrey" fontWeight="400">New category name</Text>
+                                <Text color="darkGrey" fontWeight="400">{t("pfm.newCategoryName")}</Text>
                                 <TextInput placeholder="Enter name" />
                             </Box>
                             <Box justifyContent="center">
-                                <Text fontSize={RFValue(12)} fontWeight="400">Only category name can be changed, category icon will remain constant</Text>
+                                <Text fontSize={RFValue(12)} fontWeight="400">{t("pfm.onlyCategoryNameInfo")}</Text>
                             </Box>
                         </Box>
 
@@ -74,4 +74,5 @@ export const EditCategoryNameScreen: VFC<PfmNavigationProps<"financialManagement
             </Box>
         </ImageBackground>
     </SafeAreaView >
-);
+    )
+};

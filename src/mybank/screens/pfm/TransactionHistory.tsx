@@ -11,9 +11,7 @@ import { TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const TransactionHistoryScreen: VFC<PfmNavigationProps<"TransactionHistoryScreen">> = ({
-    navigation,
-}) => {
+export const TransactionHistoryScreen: VFC<PfmNavigationProps<"TransactionHistoryScreen">> = () => {
     const { t } = useTranslation();
     const TransactionCategoryModalRef = useRef<BottomSheetModal>(null);
     const onOpenTransactionCategoryModal = () => TransactionCategoryModalRef.current?.present();

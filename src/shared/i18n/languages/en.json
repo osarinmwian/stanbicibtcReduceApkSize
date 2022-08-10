@@ -29,8 +29,6 @@
       "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
       "newHere": "New here? Register for One Pass"
     },
-<<<<<<< HEAD
-=======
     "transfer": {
       "enaira": {
         "buyenairatitle": "Buy eNaira",
@@ -78,7 +76,6 @@
         }
       }
     },
->>>>>>> 16d363d796de606fe989dfbc7bc8c80e97cdbf05
     "selectChannel": {
       "signUpWithOnePass": "SIGN UP WITH ONE PASS",
       "selectChannelHeading": "Select channel",

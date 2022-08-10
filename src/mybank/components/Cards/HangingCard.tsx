@@ -7,13 +7,11 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { LinearGradient } from "expo-linear-gradient";
 import { palette } from "@/shared/theme/palette";
 import { IconVector } from "@/shared/assets/icons/IconVector";
-//@ts-ignore
-import Ionicon from 'react-native-vector-icons/Ionicons';
 import { useTranslation } from "react-i18next";
 
 export const SideIcon = () => (
     <Box backgroundColor="transparentWhite" height={RFValue(25)} width={RFValue(25)} borderRadius="lg" justifyContent="center" alignItems="center">
-        <Ionicon name="chevron-down-sharp" color="white" size={RFValue(20)} />
+        <IconVector name="chevron-down-sharp-white" size="sm" />
     </Box>
 )
 
@@ -21,7 +19,7 @@ export const HangingCard: VFC = () => {
     const { t } = useTranslation();
 
     return (
-        <Card backgroundColor="pfmCard" padding="md">
+        <Card backgroundColor="pfmcard" padding="md">
             <Box>
                 <Box>
                     <Text fontVariant="h1" fontSize={RFValue(16)} fontWeight="400">Finance Management</Text>
@@ -31,7 +29,7 @@ export const HangingCard: VFC = () => {
                     {t("pfm.selectAccount")}
                 </Text>
                 <Box borderWidth={0} borderRadius="sm">
-                    <LinearGradient style={{ borderRadius: 8 }} start={{ x: 0.05, y: 0.0 }} colors={[palette.pfmInnerCardLinearGradientColorStart, palette.pfmInnerCardLinearGradientColorEnd]}>
+                    <LinearGradient style={{ borderRadius: 8 }} start={{ x: 0.05, y: 0.0 }} colors={[palette.pfminnercardlineargradientcolorstart, palette.pfminnercardlineargradientcolorend]}>
                         <Box padding="sm" flexDirection="row" justifyContent="space-between">
                             <Box>
                                 <Text color="whiteColor" fontSize={RFValue(11)}>

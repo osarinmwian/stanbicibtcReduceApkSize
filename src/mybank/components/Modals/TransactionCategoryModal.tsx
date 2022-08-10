@@ -45,7 +45,7 @@ export const TransactionCategoryModal: VFC<TransactionCategoryModalProps> = (pro
                             </Text>
                         </Box>
 
-                        {data.map((dataItem, index) => (<Box mb="md" key={index}>
+                        {data.map((dataItem, index) => (<Box mb="md" key={`item-${index}`}>
                             <CategoryButton
                                 {...dataItem}
                                 rightComponent={<Box px="sm">

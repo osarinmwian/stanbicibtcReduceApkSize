@@ -162,5 +162,3 @@ const DepartureModal = () => {
 };
 
 export default DepartureModal;
-
-const styles = StyleSheet.create({});

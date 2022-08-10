@@ -152,5 +152,3 @@ const DestinationModal = () => {
 };
 
 export default DestinationModal;
-
-const styles = StyleSheet.create({});
