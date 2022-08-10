@@ -81,5 +81,4 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
   EditCategoryNameScreen: undefined;
 };
 
-export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
-  StackScreenProps<PfmStackParameterList, T>;
+export type PfmNavigationProps<T extends keyof PfmStackParameterList> = StackScreenProps<PfmStackParameterList, T>;

@@ -29,6 +29,56 @@
       "loginWithFingerPrint": "LOGIN WITH FINGERPRINT",
       "newHere": "New here? Register for One Pass"
     },
+<<<<<<< HEAD
+=======
+    "transfer": {
+      "enaira": {
+        "buyenairatitle": "Buy eNaira",
+        "sellenairatitle": "Sell eNaira",
+        "enairaparagraph": "Provide details below to buy eNaira",
+        "sellenairaparagraph": "Provide details below to sell eNaira",
+        "amounttobuy": "AMOUNT TO BUY",
+        "amounttosell": "AMOUNT TO SELL",
+        "accounttodebit": "ACCOUNT TO BE DEBITED",
+        "accounttocredit": "ACCOUNT TO BE CREDITED",
+        "buttonlabel": "BUY ENAIRA",
+        "sellbuttonlabel": "SELL ENAIRA",
+        "rate": "1 eNaira = ",
+        "selectAccount": "Select account",
+        "home": {
+          "hometitle": "eNaira account",
+          "homeparagraph": "your enaira account details",
+          "username": "e-Naira Wallet username",
+          "walletbalance": "E-Naira Wallet Balance",
+          "walletid": "e-Naira Wallet ID",
+          "buyorsend": "BUY OR SEND ENAIRA",
+          "buy": "BUY ENAIRA",
+          "sell": "SELL ENAIRA",
+          "recenthistory": "RECENT HISTORY",
+          "seeall": "SEE ALL"
+        },
+        "transactionconfirmation": {
+          "title": "Confirm Pin",
+          "titleparagraph": "Enter your 4 digit pin to confirm transaction",
+          "buttonlable": "CONTINUE",
+          "account": "Account",
+          "balance": "eNaira balance",
+          "amount": "Buying"
+        },
+        "auth": {
+          "title": "Account Verification",
+          "titleparagraph": "Provide details below to have access to your eNaira wallet",
+          "buttonlabel": "LOGIN",
+          "emaillabel": "EMAIL",
+          "emailplaceholder": "Enter enaira account email",
+          "passwordplaceholder": "Enter enaira account password",
+          "walletlabel": "WALLETTYPE",
+          "walletplaceholder": "Select wallet type",
+          "passwordlabel": "PASSWORD"
+        }
+      }
+    },
+>>>>>>> 16d363d796de606fe989dfbc7bc8c80e97cdbf05
     "selectChannel": {
       "signUpWithOnePass": "SIGN UP WITH ONE PASS",
       "selectChannelHeading": "Select channel",

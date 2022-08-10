@@ -1,12 +1,12 @@
 import arrowBack from "@/shared/assets/svg/arrow-back.svg";
 import arrowBackward from "@/shared/assets/svg/arrow-backward.svg";
 import arrowForward from "@/shared/assets/svg/arrow-forward.svg";
-import ashPlane from "@/shared/assets/svg/ashPlane.svg";
 import companyLogo from "@/shared/assets/svg/bank-logo.svg";
 import bed from "@/shared/assets/svg/bed.svg";
 import briefcase from "@/shared/assets/svg/briefcase-medical.svg";
 import building from "@/shared/assets/svg/building.svg";
 import buyEnaira from "@/shared/assets/svg/buyEnaira.svg";
+import ashPlane from "@/shared/assets/svg/ashPlane.svg";
 import calculator from "@/shared/assets/svg/calculator.svg";
 import calendar from "@/shared/assets/svg/calendar.svg";
 import car from "@/shared/assets/svg/car.svg";
@@ -50,8 +50,8 @@ import utensils from "@/shared/assets/svg/utensils.svg";
 const svgIconPack = {
   "arrow-back": arrowBack,
   "arrow-forward": arrowForward,
-  ashPlane,
   buyEnaira,
+  ashPlane,
   calculator,
   calendar,
   car,
