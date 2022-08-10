@@ -75,6 +75,14 @@
           "passwordlabel": "PASSWORD"
         }
       }
+    },
+    "selectChannel": {
+      "signUpWithOnePass": "SIGN UP WITH ONE PASS",
+      "selectChannelHeading": "Select channel",
+      "selectChannelSub": "Select Channel to sign up or sign in with"
+    },
+    "quickOptions": {
+      "quick": "Quick Options"
     }
   },
   "pension": {
@@ -82,5 +90,34 @@
   },
   "stocks": {
     "welcome": "Welcome to the stocks 2.0"
+  },
+  "pfm": {
+    "current": "current",
+    "selectAccount": "Select Account",
+    "learnMore": "Learn more about your finance",
+    "transactionSummary": "Trnasaction Summary",
+    "showingSummary": "Showing summary for the past one month",
+    "clickCategory": "Click category to see transactions",
+    "withdrawal": "Withdrawal",
+    "deposit": "Deposit",
+    "category": "category",
+    "transactions": "transactions",
+    "editCategoryName": "Edit Category Name",
+    "debit": "debit",
+    "credit": "credit",
+    "modifyTransferLimit": "Modify Transfer Limit",
+    "newCategoryName": "New category name",
+    "onlyCategoryNameInfo": "Only Category name can be changed, category Icon will remain constant",
+    "transactionAmount": "Transaction Amount",
+    "to": "To",
+    "status": "Status",
+    "narration": "Naration",
+    "transactionDate": "Transaction Date",
+    "transactionType": "Transaction Type",
+    "transactionCategory": "Transaction Category",
+    "change": "Change",
+    "downloadReciept": "Download Reciept",
+    "changeTrasactionCategory": "Change Transaction Category",
+    "selectCategoryFromList": "Select category from the list"
   }
 }

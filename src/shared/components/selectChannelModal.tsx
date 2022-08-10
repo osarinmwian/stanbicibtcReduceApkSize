@@ -1,45 +1,53 @@
 import {
-  BottomSheetBackdrop,
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
+import { useNavigation } from "@react-navigation/native";
+import { t } from "i18next";
 import React, { useCallback, useMemo, useRef } from "react";
 import { FlatList } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
-import ModuleComponent from "@/shared/screens/landingPage/components/ModuleComponent";
 
 import modules from "../screens/landingPage/files/modules";
 import { GradientButton, PrimaryButton } from "./Buttons";
+// import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
+import ModuleComponent from "./Card/SelectChannelCard";
 import { Box } from "./Layout";
+import { Backdrop } from "./Modal/Backdrop";
 import { PressableProps } from "./Pressable";
 import { Text } from "./Typography";
 
 const SelectChannel = () => {
+  const navigation = useNavigation();
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   // variables
-  const snapPoints = useMemo(() => ["50%", "50%"], []);
+  const snapPoints = useMemo(() => ["55%", "55%"], []);
 
   // callbacks
   const handlePresentModalPress = useCallback(() => {
     bottomSheetModalRef.current?.present();
   }, []);
 
+  const handleDismissModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+  }, []);
+
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
-      <BottomSheetBackdrop
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...props}
-        opacity={0.7}
-        pressBehavior="close"
-      />
+      <Backdrop onPress={handleDismissModalPress} {...props} />
     ),
-    [],
+    [handleDismissModalPress],
   );
+
+  const handlePress = (destination: keyof MyBankRootStackParameterList) => {
+    handleDismissModalPress();
+    navigation.navigate(destination);
+  };
 
   return (
     <Box>
@@ -51,8 +59,8 @@ const SelectChannel = () => {
         label="CREATE ACCOUNT"
         labelProps={{
           color: "wealthColor",
-          textAlign: "left",
-          variant: "medium10",
+          textAlign: "center",
+          variant: "medium12",
         }}
         onPress={handlePresentModalPress}
         width={RFValue(150)}
@@ -64,43 +72,43 @@ const SelectChannel = () => {
         snapPoints={snapPoints}
       >
         <Box flex={1}>
-          <Box
-            borderTopEndRadius="md"
-            borderTopStartRadius="md"
-            flex={1}
-            padding="md"
-          >
+          <Box paddingHorizontal="md">
             <Box alignItems="flex-start" marginBottom="md">
               <Text marginBottom="xxs" variant="medium18">
-                Select Channel
+                {t("mybank.selectChannel.selectChannelHeading")}
               </Text>
               <Text variant="regular14">
-                Select Channel to sign up or sign in with
+                {t("mybank.selectChannel.selectChannelSub")}
               </Text>
             </Box>
-            <FlatList
-              data={modules}
-              keyExtractor={(item) => item.id}
-              numColumns={Math.ceil(modules.length / 2)}
-              renderItem={({ item }) => (
-                <ModuleComponent
-                  backgroundColor={
-                    item.backgroundColor as PressableProps["backgroundColor"]
-                  }
-                  destination={
-                    item.destination as keyof MyBankRootStackParameterList
-                  }
-                  image={item.image}
-                  title={item.title}
-                />
-              )}
-              showsHorizontalScrollIndicator={false}
-              showsVerticalScrollIndicator={false}
-            />
+            <Box>
+              <FlatList
+                contentContainerStyle={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginVertical: 10,
+                }}
+                data={modules}
+                keyExtractor={(item) => item.id}
+                numColumns={Math.ceil(modules.length / 2)}
+                renderItem={({ item }) => (
+                  <ModuleComponent
+                    backgroundColor={
+                      item.backgroundColor as PressableProps["backgroundColor"]
+                    }
+                    image={item.image}
+                    onPress={() => handlePress(item.destination)}
+                    title={item.title}
+                  />
+                )}
+                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
+              />
+            </Box>
 
-            <GradientButton size="md" style={{ alignItems: "center" }}>
+            <GradientButton alignItems="center" borderRadius="md" size="md">
               <Text color="whiteColor" variant="medium18">
-                SIGN UP WITH ONE PASS
+                {t("mybank.selectChannel.signUpWithOnePass")}
               </Text>
             </GradientButton>
           </Box>

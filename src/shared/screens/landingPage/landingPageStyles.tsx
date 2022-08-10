@@ -15,5 +15,5 @@ export const LOGOTEXTSTYLE: TextStyle = {
 
 export const ROOT: ImageStyle = {
   flex: 1,
-  paddingVertical: RFValue(20),
+  paddingVertical: RFValue(10),
 };

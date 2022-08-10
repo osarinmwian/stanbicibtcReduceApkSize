@@ -14,6 +14,11 @@ import {
   TransferLandingPage,
 } from "@/mybank/screens/Transfer";
 
+import {
+  AvailableFlightsPage,
+  FlightIndex,
+  NoFlightFound,
+} from "../screens/lifestyle";
 import BottomTabs from "./bottomNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
 import { MyBankRootStackParameterList } from "./types";
@@ -90,7 +95,12 @@ function Lifestyle() {
         header: () => null,
       }}
     >
-      {/* <Stack.Screen component={ExampleScreen} name="ExampleScreen" /> */}
+      <Stack.Screen component={FlightIndex} name="FlightIndex" />
+      <Stack.Screen component={NoFlightFound} name="NoFlightFound" />
+      <Stack.Screen
+        component={AvailableFlightsPage}
+        name="AvailableFlightsPage"
+      />
     </Stack.Navigator>
   );
 }

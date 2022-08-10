@@ -26,6 +26,7 @@ import { SvgIcon } from "@/shared/assets/icons";
 import { backgroundIcons, standardBankLogo } from "@/shared/assets/image";
 import { Box, BoxProps, SafeAreaBox } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 
 const RF = (x: number) => x;
 const Currency = (x: number) => x;
@@ -66,7 +67,7 @@ const accounts = [
   },
 ];
 
-const SMEHomepage = () => {
+const SMEHomepage: MyBankNavigationProps<"Home"> = ({ navigation }: any) => {
   const [showBalance, setShowBalance] = useState(true);
   const [currentAccountNumber, setCurrentAccountNumber] = useState("");
 
@@ -76,56 +77,56 @@ const SMEHomepage = () => {
       id: 0,
       image: quick_links1,
       name: "Buy Airtime",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Generate",
       id: 1,
       image: quick_links2,
       name: "Get Loan",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Enquiries &",
       id: 2,
       image: quick_links3,
       name: "Book Hotel",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Account",
       id: 3,
       image: quick_links4,
       name: "PFM",
-      onPress: () => {},
+      onPress: () => navigation.navigate('PfmNavigation'),
     },
     {
       body: "Pending",
       id: 0,
       image: quick_links5,
       name: "Buy Airtime",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Generate",
       id: 1,
       image: quick_links6,
       name: "Get Loan",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Enquiries &",
       id: 2,
       image: quick_links7,
       name: "Book Hotel",
-      onPress: () => {},
+      onPress: () => { },
     },
     {
       body: "Account",
       id: 3,
       image: quick_links8,
       name: "PFM",
-      onPress: () => {},
+      onPress: () => { },
     },
   ];
 

@@ -10,4 +10,4 @@ const Image = createBox<
 
 export type ImageProps = React.ComponentProps<typeof Image>;
 
-export default Image;
+export { Image };

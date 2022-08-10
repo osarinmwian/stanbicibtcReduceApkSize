@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import React from "react";
 import { Image } from "react-native";
 
@@ -15,32 +15,41 @@ import { PaymentLandingPage } from "@/mybank/screens/Payment";
 import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
+import { RFValue } from "@/shared/utils/functions";
 
+// import { homeIcon, lifestyle, more, payments, transfer } from "../assets/image";
+import { LifestyleLandingPage } from "../screens/lifestyle";
+import Styles from "./styles";
 import { MyTabRoutes } from "./types";
 
-const Tab = createBottomTabNavigator<MyTabRoutes>();
+const Tab = createMaterialBottomTabNavigator<MyTabRoutes>();
 
 export default function BottomTabs() {
   return (
     <Tab.Navigator
+      activeColor="#0033AA"
+      barStyle={Styles.tabBarStyle}
+      inactiveColor="#001648"
       initialRouteName="HomeLandingPage"
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: "#0033AA",
-        tabBarInactiveTintColor: "#001648",
-        tabBarShowLabel: false,
-        // tabBarStyle: Styles.tabBarStyle,
-      }}
+      labeled={false}
+      sceneAnimationEnabled={false}
+      shifting={false}
     >
       <Tab.Screen
         component={HomeLanding}
         name="HomeLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center" marginTop="sm">
+            <Box
+              alignItems="center"
+              flex={1}
+              justifyContent="center"
+              width={RFValue(50)}
+            >
               <Image source={homeIcon} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
+                fontSize={RFValue(10)}
                 marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
@@ -55,10 +64,16 @@ export default function BottomTabs() {
         name="TransferLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center" marginTop="sm">
+            <Box
+              alignItems="center"
+              flex={1}
+              justifyContent="center"
+              width={RFValue(50)}
+            >
               <Image source={transfer} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
+                fontSize={RFValue(10)}
                 marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
@@ -73,10 +88,16 @@ export default function BottomTabs() {
         name="PaymentsLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center" marginTop="sm">
+            <Box
+              alignItems="center"
+              flex={1}
+              justifyContent="center"
+              width={RFValue(50)}
+            >
               <Image source={payments} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
+                fontSize={RFValue(10)}
                 marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
@@ -87,14 +108,20 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={ExampleScreen}
+        component={LifestyleLandingPage}
         name="LifestyleLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center" marginTop="sm">
+            <Box
+              alignItems="center"
+              flex={1}
+              justifyContent="center"
+              width={RFValue(50)}
+            >
               <Image source={lifestyle} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
+                fontSize={RFValue(10)}
                 marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >
@@ -109,10 +136,16 @@ export default function BottomTabs() {
         name="MoreLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <Box alignItems="center" justifyContent="center" marginTop="sm">
+            <Box
+              alignItems="center"
+              flex={1}
+              justifyContent="center"
+              width={RFValue(50)}
+            >
               <Image source={more} style={{ tintColor: color }} />
               <Text
                 color={focused ? "primaryColor" : "wealthColor"}
+                fontSize={RFValue(10)}
                 marginTop="xs"
                 variant={focused ? "bold10" : "regular10"}
               >

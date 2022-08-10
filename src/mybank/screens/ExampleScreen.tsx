@@ -12,7 +12,6 @@ import { Box } from "@/shared/components/Layout";
 
 const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
   const { t } = useTranslation();
-  // const route = useMybankRoute<"ExampleScreen">();
   return (
     <Box
       alignItems="center"
@@ -31,6 +30,11 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
       <PrimaryButton
         label="Go to Loans"
         onPress={() => props.navigation.navigate("LoansNavigation")}
+        variant="filled"
+      />
+      <PrimaryButton
+        label="Go to PFM"
+        onPress={() => props.navigation.navigate("PfmNavigation")}
         variant="filled"
       />
     </Box>
