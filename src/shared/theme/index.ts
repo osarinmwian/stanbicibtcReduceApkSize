@@ -23,8 +23,13 @@ const lightTheme = createTheme({
 
   buttonGradients: {
     primary: [palette.secondaryColor, palette.secondary6, palette.primaryColor],
+    secondary: [
+      palette.pensionContainer,
+      palette.easeContainer,
+      palette.easeContainer,
+    ],
+    tatiary: [palette.secondary1, palette.positiveColor, palette.positiveColor],
   },
-
   buttonSizes: {
     lg: {
       paddingHorizontal: "xl",
