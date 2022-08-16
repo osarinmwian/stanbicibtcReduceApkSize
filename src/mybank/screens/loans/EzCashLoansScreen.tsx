@@ -19,7 +19,7 @@ import { LoansNavigationProps } from "@/mybank/navigation/types";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const EZCashLoansScreen: VFC<LoansNavigationProps<"Loans">> = ({
+const EZCashLoansScreen: VFC<LoansNavigationProps<"LoansNavigation">> = ({
   navigation,
 }) => {
   const loanTenureBottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -40,6 +40,8 @@ const EZCashLoansScreen: VFC<LoansNavigationProps<"Loans">> = ({
     termsAndConditionsBottomSheetModalRef.current?.present();
 
   const onOpenLoanDetailsScreen = () => navigation.navigate("LoanDetails");
+
+  const goToPinConfirmation = () => navigation.navigate("LoanRequestScreen");
 
   return (
     <SafeAreaView flex={1}>
@@ -88,7 +90,8 @@ const EZCashLoansScreen: VFC<LoansNavigationProps<"Loans">> = ({
                         backgroundColor="loanRequest"
                         eligibilityAmount="N2,000,000"
                         leftIcon="history"
-                        onPress={onOpenConfirmLoanModal}
+                        // onPress={onOpenConfirmLoanModal}
+                        onPress={goToPinConfirmation}
                         title="Request New Loan"
                       />
                     </Box>
@@ -131,7 +134,6 @@ const EZCashLoansScreen: VFC<LoansNavigationProps<"Loans">> = ({
           </Box>
         </Box>
       </ImageBackground>
-      <LoanTenureModal bottomSheetModalRef={loanTenureBottomSheetModalRef} />
       <LoanRepaymentModal
         bottomSheetModalRef={loanRepaymentBottomSheetModalRef}
       />

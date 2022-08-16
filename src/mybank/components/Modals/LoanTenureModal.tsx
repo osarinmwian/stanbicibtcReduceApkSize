@@ -13,6 +13,7 @@ import { Text } from "@/shared/components/Typography";
 
 type LoanTenureModalProps = {
   bottomSheetModalRef: RefObject<BottomSheetModal>;
+  repaymentFn: Function;
 };
 const renderBackdrop = (props: BottomSheetBackdropProps) => (
   <BottomSheetBackdrop {...props} opacity={0.9} pressBehavior="close" />
@@ -39,6 +40,7 @@ const LoanTenureModal: VFC<LoanTenureModalProps> = (props) => {
             </Box>
             <Box mb="md">
               <EligibilityButton
+                onPress={() => props.repaymentFn()}
                 subtitle="Select Option"
                 title="Repayment Schedule"
               />

@@ -69,6 +69,8 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
   LoansScreen: undefined;
   EzCashLoansScreen: undefined;
   LoanDetails: undefined;
+  LoanRequestScreen: undefined;
+  LoanOffersScreen: undefined;
 };
 
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
@@ -81,4 +83,5 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
   EditCategoryNameScreen: undefined;
 };
 
-export type PfmNavigationProps<T extends keyof PfmStackParameterList> = StackScreenProps<PfmStackParameterList, T>;
+export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
+  StackScreenProps<PfmStackParameterList, T>;

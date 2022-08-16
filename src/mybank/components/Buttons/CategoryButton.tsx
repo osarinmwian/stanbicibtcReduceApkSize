@@ -16,11 +16,32 @@ type CategoryButtonProps = BaseButtonProps & {
   backgroundColor?: PaletteType;
   iconBackgroundColor?: PaletteType;
   hideSubtitle?: boolean;
-  subtitleFontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700";
+  subtitleFontWeight?:
+    | "normal"
+    | "bold"
+    | "100"
+    | "200"
+    | "300"
+    | "400"
+    | "500"
+    | "600"
+    | "700";
 };
 
 export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
-  const { title, leftIconProps, subtitleFontWeight = 'normal', hideSubtitle = false, iconBackgroundColor, subtitle, backgroundColor = "paleGrey", containerProps, rightColor = "lightred", amount = "30,000,000", ...rest } = props;
+  const {
+    title,
+    leftIconProps,
+    subtitleFontWeight = "normal",
+    hideSubtitle = false,
+    iconBackgroundColor,
+    subtitle,
+    backgroundColor = "paleGrey",
+    containerProps,
+    rightColor = "lightred",
+    amount = "30,000,000",
+    ...rest
+  } = props;
 
   return (
     <BaseButton
@@ -34,19 +55,31 @@ export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
           margin: "none",
           marginRight: "md",
           backgroundColor: iconBackgroundColor ?? rightColor,
-          padding: 'sm',
-          borderRadius: 'lg'
+          padding: "sm",
+          borderRadius: "lg",
         },
-        ...leftIconProps
+        ...leftIconProps,
       }}
-      rightComponent={<Box px="sm">
-        <Text color={rightColor} fontWeight="700">₦{amount}</Text>
-      </Box>}
+      rightComponent={
+        <Box px="sm">
+          <Text color={rightColor} fontWeight="700">
+            ₦{amount}
+          </Text>
+        </Box>
+      }
       {...rest}
     >
-      <Box flex={1} {...containerProps} >
-        <Text fontWeight="bold">{title}</Text>
-        {!hideSubtitle && <Text fontVariant="caption" fontSize={RFValue(12)} fontWeight={subtitleFontWeight}>{subtitle}</Text>}
+      <Box flex={1} {...containerProps}>
+        <Text fontWeight="500">{title}</Text>
+        {!hideSubtitle && (
+          <Text
+            fontVariant="caption"
+            fontSize={RFValue(12)}
+            fontWeight={subtitleFontWeight}
+          >
+            {subtitle}
+          </Text>
+        )}
       </Box>
     </BaseButton>
   );

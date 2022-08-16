@@ -5,6 +5,10 @@
   "insurance": {
     "welcome": "Welcome to the insurance 2.0"
   },
+  "intro": {
+    "createAccount": "Create Account",
+    "signIn": "Sign in"
+  },
   "mutualfunds": {
     "welcome": "Welcome to the mutualfunds 2.0"
   },
@@ -79,17 +83,26 @@
     "selectChannel": {
       "signUpWithOnePass": "SIGN UP WITH ONE PASS",
       "selectChannelHeading": "Select channel",
-      "selectChannelSub": "Select Channel to sign up or sign in with"
+      "selectChannelSub": "Select Channel to sign up or sign in with",
+      "selectChannelSignInTitle": "Select channel",
+      "selectChannelSignInSubTitle": "Select channel to sign in with",
+      "selectChannelSignUpSubTitle": "Select channel to sign up with"
     },
     "quickOptions": {
       "quick": "Quick Options"
     }
   },
+  "loans":{
+    "loanReqeust": "loanReqeust",
+    "howMuchDoYouNeed": "How much do you need?",
+    "currentLoanPayable": "Current loan payable"
+  },
+  "buttons": {
+    "delete": "delete",
+    "continue": "continue"
+  },
   "pension": {
     "welcome": "Welcome to the pension 2.0"
-  },
-  "stocks": {
-    "welcome": "Welcome to the stocks 2.0"
   },
   "pfm": {
     "current": "current",
@@ -119,5 +132,8 @@
     "downloadReciept": "Download Reciept",
     "changeTrasactionCategory": "Change Transaction Category",
     "selectCategoryFromList": "Select category from the list"
+  },
+  "stocks": {
+    "welcome": "Welcome to the stocks 2.0"
   }
 }

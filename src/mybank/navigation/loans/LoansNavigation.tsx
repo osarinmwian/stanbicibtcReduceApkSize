@@ -9,6 +9,7 @@ import { IconVector } from "@/shared/assets/icons/IconVector";
 import { BaseButton } from "@/shared/components/Buttons";
 import { Logo } from "@/shared/components/Logo";
 import { Text } from "@/shared/components/Typography";
+import LoansRequestScreen from "@/mybank/screens/loans/LoansRequestScreen";
 
 const Stack = createNativeStackNavigator<LoansStackParameterList>();
 
@@ -66,6 +67,16 @@ const LoansNavigation: VFC = () => (
         headerBackVisible: false,
         headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
         headerTitle: () => null,
+      })}
+    />
+
+    <Stack.Screen
+      component={LoansRequestScreen}
+      name="LoanRequestScreen"
+      options={({ navigation }) => ({
+        headerBackVisible: false,
+        headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+        headerTitle: () => renderTitle("EZ Cash Loan"),
       })}
     />
   </Stack.Navigator>
