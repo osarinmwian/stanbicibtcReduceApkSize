@@ -60,7 +60,7 @@ function Modal(
       handleComponent={type === "centered" ? null : undefined}
       ref={ref}
       snapPoints={snapPoints}
-      style={{ flex: 1, marginHorizontal: 20 }}
+      style={{ flex: 1, }}
       {...rest}
     >
       {children}

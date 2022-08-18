@@ -46,6 +46,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="ewallet"
             label="Load Prepaid Card"
+            onPress={() => navigation.navigate("PrepaidCards")}
             placeholder="Send money to e-Naira wallets"
           />
           <SelectComponent

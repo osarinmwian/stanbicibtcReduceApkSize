@@ -17,6 +17,7 @@ function RootNavigation() {
       <Stack.Screen component={LandingPage} name="LandingPage" />
       <Stack.Screen component={MyBankNavigation} name="MyBank" />
       <Stack.Screen component={StoryBookNavigation} name="StoryBook" />
+
     </Stack.Navigator>
   );
 }

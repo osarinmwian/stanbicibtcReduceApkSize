@@ -59,6 +59,7 @@ export default function TransferLandingPage({
             iconName="users"
             label="Beneficiaries"
             placeholder="Manage or add beneficiaries"
+            onPress={() => navigation.navigate("Beneficiary")}
           />
           <BaseButton
             alignItems="center"

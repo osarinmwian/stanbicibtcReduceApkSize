@@ -16,6 +16,12 @@ export type ENairaManagement = {
   ENairaAccountVerification: undefined;
 };
 
+export type ExtrasNavigation = {
+  ChatBot: undefined;
+  ExtraSearchBar: undefined;
+  LoansAndOffers: undefined;
+}
+
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
   BillersForm: undefined;
@@ -45,6 +51,13 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferTransactionHistory: undefined;
   ENaira: undefined;
   PfmNavigation: undefined;
+  Beneficiary: undefined;
+  AddNewBeneficiary: undefined;
+  Notifications: undefined;
+  PrepaidCards: undefined;
+  PrepaidPinInput: undefined;
+  BeneficiaryPinInput: undefined;
+  LoansAndOffers: undefined;
 };
 
 // Tab routes

@@ -290,7 +290,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
         >
           <Box flexDirection="row">
             <Box {...iconProps}>
-              <SvgIcon name="notification" />
+              <SvgIcon name="notification" size="md" onPress={() => navigation.navigate("Notifications")}/>
             </Box>
             <Box {...iconProps}>
               <SvgIcon name="profile" />

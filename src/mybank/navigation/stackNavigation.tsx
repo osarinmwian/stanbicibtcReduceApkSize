@@ -22,6 +22,13 @@ import {
 import BottomTabs from "./bottomNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
 import { MyBankRootStackParameterList } from "./types";
+import Notifications from "../screens/notifications/Notifications";
+import { AddNewBeneficiary, Beneficiary } from "../screens/beneficiaries";
+import PrepaidCards from "../screens/PrepaidCards/PrepaidCards";
+import PrepaidPinInput from "../screens/PrepaidCards/PrepaidPinInput";
+import BeneficiaryPinInput from "../screens/beneficiaries/BeneficiaryPinInput";
+import LoansAndOffers from "../screens/Extras/LoansAndOffers";
+
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
@@ -60,6 +67,13 @@ function Home() {
       />
       <Stack.Screen component={SixthScreen} name="SixthScreen" />
       <Stack.Screen component={ENairaManagementNavigation} name="ENaira" />
+      <Stack.Screen component={Beneficiary} name="Beneficiary" />
+      <Stack.Screen component={AddNewBeneficiary} name="AddNewBeneficiary" />
+      <Stack.Screen component={BeneficiaryPinInput} name="BeneficiaryPinInput"/>
+      <Stack.Screen component={Notifications} name="Notifications"/>
+      <Stack.Screen component={PrepaidCards} name={"PrepaidCards"} />
+      <Stack.Screen component={PrepaidPinInput} name="PrepaidPinInput"/>
+      <Stack.Screen component={LoansAndOffers} name="LoansAndOffers"/>
     </Stack.Navigator>
   );
 }
