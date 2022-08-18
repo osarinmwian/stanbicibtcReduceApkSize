@@ -23,8 +23,13 @@ const lightTheme = createTheme({
 
   buttonGradients: {
     primary: [palette.secondaryColor, palette.secondary6, palette.primaryColor],
+    secondary: [
+      palette.pensionContainer,
+      palette.easeContainer,
+      palette.easeContainer,
+    ],
+    tatiary: [palette.secondary1, palette.positiveColor, palette.positiveColor],
   },
-
   buttonSizes: {
     lg: {
       paddingHorizontal: "xl",
@@ -128,8 +133,8 @@ const lightTheme = createTheme({
     md: RFValue(16),
     mmd: RFValue(20),
     none: 0,
-    rmd: RFValue(-16),
-    sm: RFValue(10),
+    sm: RFValue(8),
+    sml: RFValue(24),
     ss: RFValue(6),
     ssm: RFValue(8),
     xl: RFValue(64),
@@ -202,6 +207,11 @@ const lightTheme = createTheme({
     bold14: {
       fontFamily: "BentonSans-Bold",
       fontSize: RFValue(14),
+      fontWeight: "700",
+    },
+    bold16: {
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(16),
       fontWeight: "700",
     },
     bold18: {

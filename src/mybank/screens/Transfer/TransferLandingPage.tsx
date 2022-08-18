@@ -52,11 +52,13 @@ export default function TransferLandingPage({
           <SelectComponent
             iconName="ewallet"
             label="e-Naira Wallet"
+            onPress={() => navigation.navigate("ENaira")}
             placeholder="Send money to e-Naira wallets"
           />
           <SelectComponent
             iconName="users"
             label="Beneficiaries"
+            onPress={() => navigation.navigate("Beneficiary")}
             placeholder="Manage or add beneficiaries"
           />
           <BaseButton

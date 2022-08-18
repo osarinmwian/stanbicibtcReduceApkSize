@@ -1,16 +1,20 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 
 import { Icon, ImageIconPackType } from "@/shared/assets/icons";
+import {
+  BaseButton,
+  BaseButtonProps,
+} from "@/shared/components/Buttons/BaseButton";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { palette } from "@/shared/theme/palette";
 import { RFValue } from "@/shared/utils/functions";
 
-interface SelectComponentProps {
-  iconName: ImageIconPackType;
+interface SelectComponentProps extends BaseButtonProps {
+  iconName?: ImageIconPackType;
   label: string;
-  placeholder: string;
+  placeholder?: string;
   onPress?: () => void;
 }
 
@@ -21,8 +25,9 @@ const styles = StyleSheet.create({
     borderRadius: RFValue(10),
     flex: 1,
     flexDirection: "row",
-    paddingHorizontal: RFValue(15),
-    paddingVertical: RFValue(8),
+    paddingLeft: RFValue(20),
+    paddingRight: RFValue(24),
+    paddingVertical: RFValue(16),
   },
 });
 
@@ -31,25 +36,29 @@ export default function SelectComponent({
   label,
   placeholder,
   onPress,
+  ...rest
 }: SelectComponentProps) {
   return (
-    <Box flex={1} marginVertical="sm">
-      <TouchableOpacity
-        activeOpacity={0.75}
-        onPress={onPress}
-        style={[styles.container, { minHeight: RFValue(52) }]}
-      >
+    <BaseButton
+      marginVertical="sm"
+      onPress={onPress}
+      style={[styles.container, { minHeight: RFValue(52) }]}
+      {...rest}
+    >
+      {iconName ? (
         <Icon color="secondaryBlack" name={iconName} size="sm" />
-        <Box flex={1} justifyContent="center" paddingHorizontal="md">
-          <Text color="secondaryBlack" variant="medium12">
-            {label}
-          </Text>
+      ) : null}
+      <Box flex={1} justifyContent="center" paddingHorizontal="md">
+        <Text color="secondaryBlack" variant="medium12">
+          {label}
+        </Text>
+        {placeholder ? (
           <Text color="secondaryBlack" marginTop="xs" variant="regular10">
             {placeholder}
           </Text>
-        </Box>
-        <Icon color="secondaryBlack" name="forward" size="xs" />
-      </TouchableOpacity>
-    </Box>
+        ) : null}
+      </Box>
+      <Icon color="secondaryBlack" name="forward" size="xs" />
+    </BaseButton>
   );
 }

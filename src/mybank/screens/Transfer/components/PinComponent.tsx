@@ -195,8 +195,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity onPress={() => handleDelete()}>
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              Delete
+            <Text color="textTint" style={{ fontSize: 20 }} variant="title">
+              DELETE
             </Text>
           </TouchableOpacity>
         </Box>

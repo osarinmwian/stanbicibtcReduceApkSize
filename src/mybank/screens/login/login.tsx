@@ -29,7 +29,7 @@ export default function LoginScreen({
 }: MyBankNavigationProps<"LoginScreen">) {
   const { t } = useTranslation();
 
-  const onSubmit = (values: MyFormValues) => {
+  const onSubmit = () => {
     navigation.navigate("Home");
   };
 
@@ -76,7 +76,7 @@ export default function LoginScreen({
 
         <Formik
           initialValues={InitialValues}
-          onSubmit={(values) => onSubmit(values)}
+          onSubmit={() => onSubmit()}
           // validationSchema={validationSchema}
         >
           {({

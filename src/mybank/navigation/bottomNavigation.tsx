@@ -3,13 +3,21 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import React from "react";
 import { Image } from "react-native";
 
-import { ExampleScreen } from "@/mybank/screens/";
+import {
+  homeIcon,
+  lifestyle,
+  more,
+  payments,
+  transfer,
+} from "@/mybank/assets/image";
+import { ExampleScreen, HomeLanding } from "@/mybank/screens/";
+import { PaymentLandingPage } from "@/mybank/screens/payment";
 import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
 
-import { homeIcon, lifestyle, more, payments, transfer } from "../assets/image";
+// import { homeIcon, lifestyle, more, payments, transfer } from "../assets/image";
 import { LifestyleLandingPage } from "../screens/lifestyle";
 import Styles from "./styles";
 import { MyTabRoutes } from "./types";
@@ -28,7 +36,7 @@ export default function BottomTabs() {
       shifting={false}
     >
       <Tab.Screen
-        component={ExampleScreen}
+        component={HomeLanding}
         name="HomeLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (
@@ -76,7 +84,7 @@ export default function BottomTabs() {
         }}
       />
       <Tab.Screen
-        component={ExampleScreen}
+        component={PaymentLandingPage}
         name="PaymentsLandingPage"
         options={{
           tabBarIcon: ({ color, focused }) => (

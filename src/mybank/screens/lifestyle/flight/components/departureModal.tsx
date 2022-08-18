@@ -3,7 +3,6 @@ import {
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import React, { useCallback, useMemo, useRef } from "react";
-import { StyleSheet } from "react-native";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import SearchableDropdown from "react-native-searchable-dropdown";
@@ -162,5 +161,3 @@ const DepartureModal = () => {
 };
 
 export default DepartureModal;
-
-const styles = StyleSheet.create({});
