@@ -201,7 +201,7 @@ const lightTheme = createTheme({
     bold12: {
       color: "darkGrey",
       fontFamily: "BentonSans-Bold",
-      fontSize: RFValue(10),
+      fontSize: RFValue(12),
       fontWeight: "700",
     },
     bold14: {
@@ -218,6 +218,11 @@ const lightTheme = createTheme({
       color: "textColor",
       fontFamily: "BentonSans-Bold",
       fontSize: RFValue(18),
+      fontWeight: "700",
+    },
+    bold22: {
+      fontFamily: "BentonSans-Bold",
+      fontSize: RFValue(22),
       fontWeight: "700",
     },
     bold24: {
@@ -282,7 +287,29 @@ const lightTheme = createTheme({
       lineHeight: RFValue(20),
     },
     regular8: {
-      fontFamily: "BentonSans-Regular",
+      fontFamily: "BentonSans",
+      fontSize: RFValue(8),
+      fontWeight: "400",
+    },
+    font10: {
+      fontFamily: "BentonSans",
+      fontSize: RFValue(10),
+      fontWeight: "400",
+      lineHeight: RFValue(16),
+    },
+    font12: {
+      fontFamily: "BentonSans",
+      fontSize: RFValue(12),
+      fontWeight: "400",
+    },
+    font14: {
+      color: "textColor",
+      fontFamily: "BentonSans",
+      fontSize: RFValue(14),
+      fontWeight: "400",
+    },
+    font8: {
+      fontFamily: "BentonSans",
       fontSize: RFValue(8),
       fontWeight: "400",
     },

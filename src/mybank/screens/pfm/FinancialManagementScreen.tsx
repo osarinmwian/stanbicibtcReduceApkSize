@@ -62,8 +62,8 @@ export const FinancialManagementScreen: VFC<
         <Box
           flex={1}
           backgroundColor="whiteColor"
-          borderTopStartRadius="sm"
-          borderTopEndRadius="sm"
+          borderTopStartRadius="md"
+          borderTopEndRadius="md"
         >
           <ScrollView>
             <Box flex={1}>

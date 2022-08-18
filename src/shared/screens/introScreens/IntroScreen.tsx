@@ -22,6 +22,7 @@ import { useFocusEffect } from "@react-navigation/native";
 import { SelectChannelModal } from "./components";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import { useTranslation } from "react-i18next";
+import { TouchableOpacity } from "react-native";
 
 const allSlides = [
   { text: "Bank as quick as you think with this Super App" },
@@ -43,15 +44,13 @@ const allSlidesBackgrounds = [
   introBackground7,
 ];
 
-const DURATION = 10000;
+const DURATION = 5000;
 
 export default function IntroScreen() {
   const { t } = useTranslation();
 
   const [activeSlide, setActiveSlide] = useState(0);
-  const slide = allSlides.map(
-    () => useRef(new Animated.Value(0)).current,
-  );
+  const slide = allSlides.map(() => useRef(new Animated.Value(0)).current);
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
@@ -71,19 +70,36 @@ export default function IntroScreen() {
     }).start();
   }, [fadeAnim]);
 
-  const startAnim = () => {
-    setTimeout(() => {
-      setActiveSlide(activeSlide + 1);
-    }, DURATION);
+  const resetFadeFn = () => {
+    slide.map((s, index) => {
+      if (index > activeSlide - 1) {
+        Animated.timing(slide[index], {
+          toValue: 0,
+          duration: 0,
+          useNativeDriver: false,
+        }).start();
+      }
+      if (index < activeSlide) {
+        Animated.timing(slide[index], {
+          toValue: 34,
+          duration: 0,
+          useNativeDriver: false,
+        }).start();
+      }
+    });
   };
 
   useFocusEffect(
     useCallback(() => {
+      resetFadeFn();
       fadeFn();
-      if (activeSlide < allSlides.length - 1) {
-        startAnim();
-      }
-      slideFn(activeSlide).start();
+      slideFn(activeSlide).start(({ finished }) => {
+        if (finished) {
+          setActiveSlide(
+            activeSlide < allSlides.length - 1 ? activeSlide + 1 : 0,
+          );
+        }
+      });
     }, [activeSlide]),
   );
 
@@ -132,7 +148,7 @@ export default function IntroScreen() {
                 <Box p="lg" py="lg">
                   <Text
                     color="whiteColor"
-                    fontWeight="700"
+                    variant="bold22"
                     fontSize={RFValue(22)}
                     lineHeight={RFValue(22)}
                   >
@@ -151,6 +167,7 @@ export default function IntroScreen() {
                       flexDirection="row"
                       justifyContent="space-around"
                       mb="md"
+                      mx="sm"
                     >
                       <Box>
                         <BaseButton
@@ -165,11 +182,7 @@ export default function IntroScreen() {
                             justifyContent="center"
                             width="100%"
                           >
-                            <Text
-                              fontSize={RFValue(12)}
-                              fontWeight="400"
-                              numberOfLines={1}
-                            >
+                            <Text fontSize={RFValue(12)} variant="medium12">
                               {t("intro.createAccount").toUpperCase()}
                             </Text>
                           </Box>
@@ -185,7 +198,7 @@ export default function IntroScreen() {
                           <Box width="100%">
                             <Text
                               textAlign="center"
-                              fontSize={RFValue(12)}
+                              variant="medium12"
                               fontWeight="400"
                             >
                               {t("intro.signIn").toUpperCase()}
@@ -206,6 +219,32 @@ export default function IntroScreen() {
           bottomRef={bottomSheetModalRef}
           handleDismissModalPress={handleDismissModalPress}
         />
+        <Box position="absolute" top={0} left={0} right={0} bottom="10%">
+          <Box flex={1} flexDirection="row">
+            <Box flex={1}>
+              <TouchableOpacity
+                activeOpacity={0.1}
+                onPressIn={() => {
+                  if (activeSlide > 0) setActiveSlide(activeSlide - 1);
+                }}
+                style={{ flex: 1 }}
+              >
+                <Box flex={1}></Box>
+              </TouchableOpacity>
+            </Box>
+            <Box flex={3}></Box>
+            <TouchableOpacity
+              onPress={() => {
+                setActiveSlide(
+                  activeSlide < allSlides.length - 1 ? activeSlide + 1 : 0,
+                );
+              }}
+              style={{ flex: 1 }}
+            >
+              <Box flex={1}></Box>
+            </TouchableOpacity>
+          </Box>
+        </Box>
       </ImageBackground>
     </>
   );

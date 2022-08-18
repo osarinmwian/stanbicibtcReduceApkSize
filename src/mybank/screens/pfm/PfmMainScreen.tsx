@@ -179,12 +179,12 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
               showsVerticalScrollIndicator={false}
               style={{ backgroundColor: "white" }}
             >
-              <Box my="md">
-                <Box my="lg">
-                  <Text fontVariant="h1" fontSize={18} fontWeight="400">
-                    {t("pfm.transactionSummary")}
+              <Box my="sm">
+                <Box my="md">
+                  <Text variant="medium12" fontWeight="400">
+                    {t("pfm.transactionSummary").toUpperCase()}
                   </Text>
-                  <Text fontVariant="p" fontWeight="normal">
+                  <Text fontVariant="p" variant="regular12" color="textColor3">
                     {t("pfm.showingSummary")}
                   </Text>
                 </Box>
@@ -197,7 +197,9 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                     backgroundColor="cardSecondary"
                   >
                     <Box alignItems="center">
-                      <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
+                      <Text variant="font14" color="textColor3">
+                        N10,125,540.00
+                      </Text>
                     </Box>
                     <Box
                       flexDirection="row"
@@ -215,7 +217,7 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                       <Text color="pfmorange">{t("pfm.withdrawal")}</Text>
                     </Box>
                   </Box>
-                  <Box flex={0.2}></Box>
+                  <Box flex={0.1}></Box>
                   <Box
                     flex={0.9}
                     padding="md"
@@ -223,7 +225,9 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                     backgroundColor="cardSecondary"
                   >
                     <Box alignItems="center">
-                      <Text fontSize={RFValue(16)}>N10,125,540.00</Text>
+                      <Text variant="font14" color="textColor3">
+                        N10,125,540.00
+                      </Text>
                     </Box>
                     <Box
                       flexDirection="row"
@@ -247,10 +251,10 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                 </Box>
 
                 <Box my="lg">
-                  <Text fontVariant="h1" fontSize={18} fontWeight="400">
-                    CATEGORY
+                  <Text variant="medium12" fontWeight="400">
+                    {t("pfm.category").toUpperCase()}
                   </Text>
-                  <Text fontVariant="p" fontWeight="normal">
+                  <Text fontVariant="p" variant="regular12" color="textColor3">
                     {t("pfm.clickCategory")}
                   </Text>
                 </Box>

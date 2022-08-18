@@ -43,13 +43,8 @@ const AnimatedBox = () => {
     }, []),
   );
   return (
-    <Box
-      position="absolute"
-      top={0}
-      right={0}
-      left={0}
-    >
-      <Animated.View style={{}}>
+    <Box position="absolute" top={0} right={0} left={0}>
+      <Animated.View>
         <Animated.Image
           source={logo}
           style={{

@@ -107,6 +107,7 @@
   "pfm": {
     "current": "current",
     "selectAccount": "Select Account",
+    "financeManagement": "Finance Management",
     "learnMore": "Learn more about your finance",
     "transactionSummary": "Trnasaction Summary",
     "showingSummary": "Showing summary for the past one month",

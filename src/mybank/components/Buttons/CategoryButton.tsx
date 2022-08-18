@@ -62,24 +62,34 @@ export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
       }}
       rightComponent={
         <Box px="sm">
-          <Text color={rightColor} fontWeight="700">
+          <Text
+            color={rightColor}
+            variant="regular14"
+            fontSize={16}
+            fontFamily="Roboto"
+            fontWeight="700"
+          >
             ₦{amount}
           </Text>
         </Box>
       }
       {...rest}
     >
-      <Box flex={1} {...containerProps}>
-        <Text fontWeight="500">{title}</Text>
-        {!hideSubtitle && (
-          <Text
-            fontVariant="caption"
-            fontSize={RFValue(12)}
-            fontWeight={subtitleFontWeight}
-          >
-            {subtitle}
+      <Box flex={1} {...containerProps} justifyContent="center" padding="ss">
+        <Box>
+          <Text variant="font14" fontWeight="500" color="black">
+            {title}
           </Text>
-        )}
+          {!hideSubtitle && (
+            <Text
+              fontVariant="caption"
+              variant="regular12"
+              fontWeight={subtitleFontWeight}
+            >
+              {subtitle}
+            </Text>
+          )}
+        </Box>
       </Box>
     </BaseButton>
   );

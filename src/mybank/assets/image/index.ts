@@ -43,3 +43,7 @@ export { default as stocks } from "./stocks.png";
 export { default as threeSActivate } from "./threeSActivate.png";
 export { default as transfer } from "./transfer.png";
 export { default as user } from "./user-cog.png";
+export { default as loanOfferBackgroundBlue } from "./loanOfferBackgroundBlue.png";
+export { default as loanOfferBackgroundOrange } from "./loanOfferBackgroundOrange.png";
+export { default as loanOfferBackgroundGreen } from "./loanOfferBackgroundGreen.png";
+export { default as loanOfferBackgroundPurple } from "./loanOfferBackgroundPurple.png";

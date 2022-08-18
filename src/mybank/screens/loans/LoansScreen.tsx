@@ -21,7 +21,7 @@ const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
             style={{ marginTop: RFValue(-75) }}
             width="100%"
           >
-            <EligibilityCard />
+            <EligibilityCard onPress={() => {}} />
           </Box>
           <ScrollView style={{ backgroundColor: "white" }}>
             <Box my="md">
