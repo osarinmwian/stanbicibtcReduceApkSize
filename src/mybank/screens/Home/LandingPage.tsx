@@ -84,7 +84,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
       id: 1,
       image: quick_links2,
       name: "Get Loan",
-      onPress: () => {},
+      onPress: () => navigation.navigate("LoansNavigation"),
     },
     {
       body: "Enquiries &",

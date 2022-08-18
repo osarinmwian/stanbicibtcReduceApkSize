@@ -51,7 +51,6 @@ export default function OnePassOTPScreen({
                   goToLoginVerified();
                 }
               }}
-              onepassPin
               value={pin}
             />
 
