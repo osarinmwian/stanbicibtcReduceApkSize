@@ -1,7 +1,4 @@
-import {
-  BottomSheetBackdropProps,
-  BottomSheetModal,
-} from "@gorhom/bottom-sheet";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import { useNavigation } from "@react-navigation/native";
 import { t } from "i18next";
 import React, { useCallback, useMemo, useRef } from "react";
@@ -12,7 +9,6 @@ import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 
 import modules from "../screens/landingPage/files/modules";
 import { GradientButton, PrimaryButton } from "./Buttons";
-// import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import ModuleComponent from "./Card/SelectChannelCard";
 import { Box } from "./Layout";
 import { Backdrop } from "./Modal/Backdrop";
@@ -38,9 +34,7 @@ const SelectChannel = () => {
 
   // renders
   const renderBackdrop = useCallback(
-    (props: BottomSheetBackdropProps) => (
-      <Backdrop onPress={handleDismissModalPress} {...props} />
-    ),
+    (property) => <Backdrop onPress={handleDismissModalPress} {...property} />,
     [handleDismissModalPress],
   );
 
@@ -106,7 +100,16 @@ const SelectChannel = () => {
               />
             </Box>
 
-            <GradientButton alignItems="center" borderRadius="md" size="md">
+            <GradientButton
+              alignItems="center"
+              borderRadius="md"
+              onPress={() => {
+                navigation.navigate("OnePass", { screen: "OnePassHome" });
+                bottomSheetModalRef.current?.close();
+              }}
+              // style={{ alignItems: "center" }}
+              size="md"
+            >
               <Text color="whiteColor" variant="medium18">
                 {t("mybank.selectChannel.signUpWithOnePass")}
               </Text>

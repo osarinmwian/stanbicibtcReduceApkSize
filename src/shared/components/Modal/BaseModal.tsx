@@ -15,6 +15,7 @@ export type ModalProps = Omit<BottomSheetModalProps, "snapPoints"> & {
   onBackdropPress?: () => void;
   points?: (number | string)[];
   type?: "bottom" | "centered";
+  full?: boolean;
 };
 
 function Modal(
@@ -24,6 +25,7 @@ function Modal(
     onBackdropPress,
     type = "bottom",
     points = type === "centered" ? ["1%"] : ["50%"],
+    full,
     ...rest
   }: ModalProps,
   ref: ForwardedRef<BottomSheetModalMethods>,
@@ -60,7 +62,7 @@ function Modal(
       handleComponent={type === "centered" ? null : undefined}
       ref={ref}
       snapPoints={snapPoints}
-      style={{ flex: 1, marginHorizontal: 20 }}
+      style={{ flex: 1, marginHorizontal: full ? 0 : 20 }}
       {...rest}
     >
       {children}

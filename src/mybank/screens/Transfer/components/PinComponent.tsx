@@ -26,18 +26,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: RFValue(50),
   },
+  customonepassPad: {
+    alignItems: "center",
+    // backgroundColor: palette.cardSecondary,
+    borderRadius: RFValue(25),
+    height: RFValue(50),
+    justifyContent: "center",
+    width: RFValue(50),
+  },
 });
 
 export type CustomKeyboardProps = {
   value: string;
   onChangeText: (argument: string) => void;
+  onepassPin?: boolean;
 };
 
 export default function PinComponent({
   value,
   onChangeText,
+  onepassPin,
 }: CustomKeyboardProps) {
-  const handleClick = (item: any) => {
+  const handleClick = (item: string) => {
     if (value.length === 4) {
       return;
     }
@@ -74,8 +84,8 @@ export default function PinComponent({
       <Box style={styles.container}>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(1)}
-            style={styles.customPad}
+            onPress={() => handleClick("1")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               1
@@ -84,8 +94,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(2)}
-            style={styles.customPad}
+            onPress={() => handleClick("2")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               2
@@ -94,8 +104,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(3)}
-            style={styles.customPad}
+            onPress={() => handleClick("3")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               3
@@ -107,8 +117,8 @@ export default function PinComponent({
       <Box style={styles.container}>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(4)}
-            style={styles.customPad}
+            onPress={() => handleClick("4")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               4
@@ -117,8 +127,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(5)}
-            style={styles.customPad}
+            onPress={() => handleClick("5")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               5
@@ -127,8 +137,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(6)}
-            style={styles.customPad}
+            onPress={() => handleClick("6")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               6
@@ -140,8 +150,8 @@ export default function PinComponent({
       <Box style={styles.container}>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(7)}
-            style={styles.customPad}
+            onPress={() => handleClick("7")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               7
@@ -150,8 +160,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(8)}
-            style={styles.customPad}
+            onPress={() => handleClick("8")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               8
@@ -160,8 +170,8 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(9)}
-            style={styles.customPad}
+            onPress={() => handleClick("9")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               9
@@ -175,8 +185,8 @@ export default function PinComponent({
 
         <Box style={styles.boxContainer}>
           <TouchableOpacity
-            onPress={() => handleClick(0)}
-            style={styles.customPad}
+            onPress={() => handleClick("0")}
+            style={onepassPin ? styles.customonepassPad : styles.customPad}
           >
             <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
               0

@@ -38,8 +38,59 @@
       "quick": "Quick Options"
     }
   },
+  "onepass": {
+    "onePassHome": {
+      "onePass": "OnePass",
+      "welcome": "OnePass by Stanbic IBTC allows you link and access all your active profiles with one ID & password",
+      "createOnePass": "CREATE A ONEPASS ID",
+      "onePassDescription": "We need you to login to one of your active Stanbic IBTC Profiles,This helps us verify your identity before we create a OnePass ID for you.",
+      "understand": "I UNDERSTAND",
+      "chooseProfile": "Choose a profile"
+    },
+    "onepasslogin": {
+      "login": "Login to My Bank",
+      "enterDetails": "Enter your ID & Password",
+      "verify": "VERIFY",
+      "loginInfo": "Logging in to one of your Stanbic IBTC profiles helps to verify your identity before creating your OnePass ID.",
+      "okay": "OKAY"
+    },
+    "onepassVerified": {
+      "verificationSuccessful": "Your verification was successful, you can now create your OnePass ID",
+      "createId": "CREATE ID"
+    },
+    "createOnePassID": {
+      "createOnePass": "Create a OnePass ID",
+      "uniqueID": "Your ID has to be unique",
+      "onepassId": "ONEPASS ID",
+      "minimumCharacters": "minimum of 8 characters",
+      "next": "NEXT"
+    },
+    "createOnePassPassword": {
+      "createPassword": "Create a password",
+      "submit": "SUBMIT"
+    },
+    "addSecretQuestion": {
+      "addSecretQuestion": "Add a Secret Question",
+      "requireQuestion": "We require this for security purposes"
+    }
+  },
   "pension": {
     "welcome": "Welcome to the pension 2.0"
+  },
+  "quickAirtime": {
+    "quickAirtimeScreen": {
+      "selectNetwork": "Select Network",
+      "glo": "Glo",
+      "mtn": "MTN",
+      "ninemobile": "9Mobile",
+      "airtel": "Airtel",
+      "confirmPurchase": "CONFIRM PURCHASE"
+    },
+    "quickairtimeConfirmation": {
+      "transactionConfirmation": "Transaction confirmation",
+      "enterPin": "Enter your 4 digit pin to continue",
+      "confirmPurchase": "CONFIRM PURCHASE"
+    }
   },
   "stocks": {
     "welcome": "Welcome to the stocks 2.0"

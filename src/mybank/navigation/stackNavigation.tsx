@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
+import PayWithQr from "@/mybank/screens/payment/PayWithQr";
 import {
   BankTransfer,
   BankTransferEnterPin,
@@ -12,6 +13,9 @@ import {
   FXTransferTransactionHistory,
   TransferLandingPage,
 } from "@/mybank/screens/Transfer";
+import { IconVector } from "@/shared/assets/icons/IconVector";
+import { BaseButton } from "@/shared/components/Buttons";
+import { Text } from "@/shared/components/Typography";
 
 import {
   AvailableFlightsPage,
@@ -22,6 +26,27 @@ import BottomTabs from "./bottomNavigation";
 import { MyBankRootStackParameterList } from "./types";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
+
+type RenderBackButtonProps = {
+  onPress?: () => void;
+};
+
+const renderBackButton = ({ onPress }: RenderBackButtonProps) => (
+  <BaseButton
+    onPress={onPress}
+    paddingHorizontal="none"
+    paddingRight="md"
+    variant="transparent"
+  >
+    <IconVector name="chevron-back" size="sm" />
+  </BaseButton>
+);
+
+const renderTitle = (title: string) => (
+  <Text color="whiteColor" fontVariant="h6">
+    {title}
+  </Text>
+);
 
 function Home() {
   return (
@@ -75,10 +100,25 @@ function Payments() {
   return (
     <Stack.Navigator
       screenOptions={{
-        header: () => null,
+        // header: () => null,
+        headerTitleAlign: "center",
+        headerTransparent: true,
       }}
     >
-      <Stack.Screen component={EightScreen} name="EightScreen" />
+      <Stack.Screen
+        component={PayWithQr}
+        name="PayWithQr"
+        options={({ navigation }) => ({
+          headerBackVisible: false,
+          headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+          headerTitle: () => renderTitle("PAY WITH QR"),
+        })}
+      />
+      <Stack.Screen
+        component={EightScreen}
+        name="EightScreen"
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }
