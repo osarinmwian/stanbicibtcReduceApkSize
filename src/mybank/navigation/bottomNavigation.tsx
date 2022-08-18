@@ -11,7 +11,7 @@ import {
   transfer,
 } from "@/mybank/assets/image";
 import { ExampleScreen, HomeLanding } from "@/mybank/screens/";
-import { PaymentLandingPage } from "@/mybank/screens/payment";
+import { PaymentLandingPage } from "@/mybank/screens/Payment";
 import { TransferLandingPage } from "@/mybank/screens/Transfer";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
