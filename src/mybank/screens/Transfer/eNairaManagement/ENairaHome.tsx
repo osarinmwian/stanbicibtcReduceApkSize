@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ScrollView, TouchableOpacity } from "react-native";
 
 import { loginBackground } from "@/mybank/assets/image";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
@@ -10,9 +11,9 @@ import { Text } from "@/shared/components/Typography";
 import BuyOrSellEnairaButton from "../components/BuyOrSellEnairaButton";
 import CopyButton from "../components/CopyButton";
 
-const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
+export default function ENairaHome({
   navigation,
-}) => {
+}: ENairaNavigationProps<"BuyENaira">) {
   const { t } = useTranslation();
   const data = [1, 2, 3, 4, 5, 6];
 
@@ -154,6 +155,6 @@ const ENairaHome: ({ navigation }: { navigation: any }) => JSX.Element = ({
       </ImageBackground>
     </SafeAreaView>
   );
-};
+}
 
-export default ENairaHome;
+// export default ENairaHome;

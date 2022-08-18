@@ -5,6 +5,10 @@ export type RootStackParameterList = {
   LandingPage: undefined;
   MyBank: undefined;
   StoryBook: undefined;
+  LandingPage: undefined;
+  OnePass: undefined;
+  QuickAirtime: undefined;
+  BranchLocator: undefined;
 };
 
 export type RootNavigationProps<Screen extends keyof RootStackParameterList> =

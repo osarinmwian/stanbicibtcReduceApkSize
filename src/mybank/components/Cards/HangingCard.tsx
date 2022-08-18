@@ -1,13 +1,12 @@
+import { LinearGradient } from "expo-linear-gradient";
 import React, { VFC } from "react";
+import { useTranslation } from "react-i18next";
+import { RFValue } from "react-native-responsive-fontsize";
 
-import { PrimaryButton } from "@/shared/components/Buttons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import { Box, Card } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { RFValue } from "react-native-responsive-fontsize";
-import { LinearGradient } from "expo-linear-gradient";
 import { palette } from "@/shared/theme/palette";
-import { IconVector } from "@/shared/assets/icons/IconVector";
-import { useTranslation } from "react-i18next";
 
 export const SideIcon = () => (
   <Box

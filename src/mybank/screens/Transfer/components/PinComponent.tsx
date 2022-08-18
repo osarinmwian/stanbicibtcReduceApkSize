@@ -27,6 +27,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: RFValue(50),
   },
+  customonepassPad: {
+    alignItems: "center",
+    // backgroundColor: palette.cardSecondary,
+    borderRadius: RFValue(25),
+    height: RFValue(50),
+    justifyContent: "center",
+    width: RFValue(50),
+  },
 });
 
 export type CustomKeyboardProps = {
@@ -171,9 +179,9 @@ export default function PinComponent({
       <Box style={styles.container} justifyContent="center" alignItems="center">
         <Box width={RFValue(width)} maxWidth={RFValue(500)} flexDirection="row">
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(4)}>
+            <TouchableOpacity onPress={() => handleClick("4")}>
               <View
-                style={[
+                style={onepassPin ? styles.customonepassPad : [
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),
@@ -193,9 +201,9 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(5)}>
+            <TouchableOpacity onPress={() => handleClick("5")}>
               <View
-                style={[
+                style={onepassPin ? styles.customonepassPad : [
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),
@@ -215,9 +223,9 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(6)}>
+            <TouchableOpacity onPress={() => handleClick("6")}>
               <View
-                style={[
+                style={onepassPin ? styles.customonepassPad : [
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),

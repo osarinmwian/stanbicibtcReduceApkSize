@@ -13,12 +13,12 @@ import { TextInput } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
 type TransactionType = {
-  title: string;
-  leftIcon: SvgIconPackType;
-  subtitle: string;
-  iconBackgroundColor: PaletteType;
-  amount: string;
-};
+    title: string,
+    leftIcon: SvgIconPackType,
+    subtitle: string,
+    iconBackgroundColor: PaletteType,
+    amount: string;
+}
 
 const transactions: TransactionType[] = [
   {
@@ -109,3 +109,4 @@ export const EditCategoryNameScreen: VFC<
     </SafeAreaView>
   );
 };
+

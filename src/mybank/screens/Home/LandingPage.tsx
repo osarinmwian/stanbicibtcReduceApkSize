@@ -22,11 +22,11 @@ import {
   quick_links7,
   quick_links8,
 } from "@/mybank/assets/image";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { SvgIcon } from "@/shared/assets/icons";
 import { backgroundIcons, standardBankLogo } from "@/shared/assets/image";
 import { Box, BoxProps, SafeAreaBox } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { MyBankNavigationProps } from "@/mybank/navigation/types";
 
 const RF = (x: number) => x;
 const Currency = (x: number) => x;
@@ -84,7 +84,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
       id: 1,
       image: quick_links2,
       name: "Get Loan",
-      onPress: () => navigation.navigate("LoansNavigation"),
+      onPress: () => {},
     },
     {
       body: "Enquiries &",
@@ -290,7 +290,11 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
         >
           <Box flexDirection="row">
             <Box {...iconProps}>
-              <SvgIcon name="notification" />
+              <SvgIcon
+                name="notification"
+                onPress={() => navigation.navigate("Notifications")}
+                size="md"
+              />
             </Box>
             <Box {...iconProps}>
               <SvgIcon name="profile" />

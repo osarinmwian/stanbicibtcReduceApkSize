@@ -53,7 +53,7 @@ const LifestyleLandingPage = ({
         borderTopEndRadius="md"
         borderTopStartRadius="md"
         flex={1}
-        marginTop="rmd"
+        marginTop="md"
         padding="md"
       >
         {lifestyleData.map((item) => (

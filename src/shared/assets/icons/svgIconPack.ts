@@ -1,12 +1,12 @@
 import arrowBack from "@/shared/assets/svg/arrow-back.svg";
 import arrowBackward from "@/shared/assets/svg/arrow-backward.svg";
 import arrowForward from "@/shared/assets/svg/arrow-forward.svg";
+import ashPlane from "@/shared/assets/svg/ashPlane.svg";
 import companyLogo from "@/shared/assets/svg/bank-logo.svg";
 import bed from "@/shared/assets/svg/bed.svg";
 import briefcase from "@/shared/assets/svg/briefcase-medical.svg";
 import building from "@/shared/assets/svg/building.svg";
 import buyEnaira from "@/shared/assets/svg/buyEnaira.svg";
-import ashPlane from "@/shared/assets/svg/ashPlane.svg";
 import calculator from "@/shared/assets/svg/calculator.svg";
 import calendar from "@/shared/assets/svg/calendar.svg";
 import car from "@/shared/assets/svg/car.svg";
@@ -16,6 +16,7 @@ import centili from "@/shared/assets/svg/centili.svg";
 import checkCircle from "@/shared/assets/svg/check-circle.svg";
 import chevronBack from "@/shared/assets/svg/chevron-back.svg";
 import chevronDown from "@/shared/assets/svg/chevron-down.svg";
+import chevronDownSharp from "@/shared/assets/svg/chevron-down-sharp-white.svg";
 import chevronForward from "@/shared/assets/svg/chevron-forward.svg";
 import chevronRightSlim from "@/shared/assets/svg/chevron-right-slim.svg";
 import chevronDownward from "@/shared/assets/svg/chevronDown.svg";
@@ -46,7 +47,6 @@ import sellEnaira from "@/shared/assets/svg/sellEnaira.svg";
 import tshirt from "@/shared/assets/svg/tshirt.svg";
 import university from "@/shared/assets/svg/university.svg";
 import utensils from "@/shared/assets/svg/utensils.svg";
-import chevronDownSharp from '@/shared/assets/svg/chevron-down-sharp-white.svg'
 
 const svgIconPack = {
   "arrow-back": arrowBack,

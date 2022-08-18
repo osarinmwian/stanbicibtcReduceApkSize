@@ -10,6 +10,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import * as Yup from "yup";
 
 import { loginBackground } from "@/mybank/assets/image/";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 import { FilledTextInput } from "@/shared/components/TextInput";
@@ -23,16 +24,13 @@ interface MyFormValues {
   password: string;
 }
 
-const ENairaAccountVerification: ({
+export default function ENairaAccountVerification({
   navigation,
-}: {
-  navigation: any;
-}) => JSX.Element = ({ navigation }) => {
+}: ENairaNavigationProps<"BuyENaira">) {
   const { t } = useTranslation();
 
-  const onSubmit = (values: MyFormValues) => {
-    // console.log("values", values);
-  };
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = () => {};
   const handleLogin = () => {
     navigation.navigate("ENairaHome");
   };
@@ -77,17 +75,10 @@ const ENairaAccountVerification: ({
             <KeyboardAvoidingView style={styles.keyboardAvoidingView}>
               <Formik
                 initialValues={InitialValues}
-                onSubmit={(values) => onSubmit(values)}
+                onSubmit={() => onSubmit()}
                 validationSchema={validationSchema}
               >
-                {({
-                  handleChange,
-                  handleBlur,
-                  handleSubmit,
-                  values,
-                  errors,
-                  touched,
-                }) => (
+                {({ handleChange, handleBlur, handleSubmit, values }) => (
                   <Box marginTop="lg">
                     <Box marginBottom="md">
                       <Text color="black" marginBottom="xs" variant="bold14">
@@ -183,6 +174,6 @@ const ENairaAccountVerification: ({
       </ImageBackground>
     </SafeAreaView>
   );
-};
+}
 
-export default ENairaAccountVerification;
+// export default ENairaAccountVerification;

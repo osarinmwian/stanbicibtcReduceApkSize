@@ -7,13 +7,11 @@ import type { RootStackParameterList } from "@/shared/navigation/types";
 export type ThreeSBankingList = {
   Activate: undefined;
 };
-export type ENairaManagement = {
-  BuyENaira: undefined;
-  SellENaira: undefined;
-  ENairaHistory: undefined;
-  TransactionConfirmation: undefined;
-  ENairaHome: undefined;
-  ENairaAccountVerification: undefined;
+
+export type ExtrasNavigation = {
+  ChatBot: undefined;
+  ExtraSearchBar: undefined;
+  LoansAndOffers: undefined;
 };
 
 export type MyBankRootStackParameterList = RootStackParameterList & {
@@ -44,7 +42,15 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferEnterPin: undefined;
   FXTransferTransactionHistory: undefined;
   ENaira: undefined;
+  PayWithQr: undefined;
   PfmNavigation: undefined;
+  Beneficiary: undefined;
+  AddNewBeneficiary: undefined;
+  Notifications: undefined;
+  PrepaidCards: undefined;
+  PrepaidPinInput: undefined;
+  BeneficiaryPinInput: undefined;
+  LoansAndOffers: undefined;
 };
 
 // Tab routes
@@ -83,4 +89,17 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
 };
 
 export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
+ 
   StackScreenProps<PfmStackParameterList, T>;
+
+export type ENairaManagement = MyBankRootStackParameterList & {
+  BuyENaira: undefined;
+  SellENaira: undefined;
+  ENairaHistory: undefined;
+  TransactionConfirmation: undefined;
+  ENairaHome: undefined;
+  ENairaAccountVerification: undefined;
+};
+
+export type ENairaNavigationProps<T extends keyof ENairaManagement> =
+  StackScreenProps<ENairaManagement, T>;

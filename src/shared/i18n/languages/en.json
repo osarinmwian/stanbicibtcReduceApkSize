@@ -23,6 +23,78 @@
       "quick": "Quick",
       "slideToSeeMoreOptions": "Slide to see more options"
     },
+    "beneficiary": {
+      "title": "Beneficiaries",
+      "addPassport": "Add passport photo"
+    },
+    "AddNewBeneficiary": {
+      "AddPassport": "Add passport photo",
+      "beneficiaryName": "BENEFICIARY NAME",
+      "selectBankName": "SELECT BANK NAME",
+      "acccountNumber": "ACCOUNT NUMBER",
+      "addNewButton": "Add New",
+      "recipient": "RECIPIENT",
+      "addBeneficiaryButton": "Add Beneficiary"
+    },
+    "removeBeneficiaries": {
+      "removeBeneficiaryTitle": "Remove Beneficiary",
+      "confirmRequest": "Confirm request",
+      "pleaseNote": "Please note",
+      "actionNote": "This action cannot be undone, select continue to remove beneficiary",
+      "cancelButton": "Cancel",
+      "continueButton": "Continue"
+    },
+    "chatBot": {
+      "chatBotTitle": "Chatbot",
+      "bankName": "Stanbic IBTC",
+      "assistant": "Mobile Assistant",
+      "welcomeNote": "Welcome to Stanbic mobile assistant. Please select any options below and chat with one of our agents",
+      "buyAirtime": "I want to buy airtime and pay bills",
+      "transferMoney": "I want to transfer money",
+      "complaint": "I have complaint or feedback",
+      "helpwithSomething": "I need help with something else"
+    },
+    "prepaid": {
+      "prepaidTitle": "Load Prepaid Card",
+      "selectCard": "Select card type",
+      "customerId": "enter customer id",
+      "fourDigits": "last 4 digits",
+      "description": "description",
+      "nextButton": "NEXT",
+      "pinConfirmation": "PIN confirmation",
+      "enterFourDigits": "Enter your last 4 digit pin",
+      "hardwareTokenButton": "USe Hardware Token",
+      "modal": {
+        "accountCreateText": "Account Created Successfully",
+        "modalText": "Your instant account number will be sent via text.",
+        "modalSecondText": "We encourage you fund and begin transacting with ease on your account.",
+        "downloadButton": "DOWNLOAD RECEIPT",
+        "doneButton": "DONE"
+      },
+      "extrasearch": {
+        "extraSearchInstruction": "Try searching for app features"
+      }
+    },
+    "loanAndOffers": {
+      "lonasAndOffersTitle": "LOANS AND OFFERS",
+      "loansAndOffersSubheading": "All",
+      "cashloans": "EZ Cash Loans",
+      "LoanContent": "You are currently eligible for #450,000.00 EZ cash loan",
+      "accessLoans": "Access Your Loans",
+      "agricLoan": "Agric Loans",
+      "topUpLoans": "UPL TopUp Loans",
+      "vehicleLoans": "Vehicle Loans"
+    },
+    "notifications": {
+      "notificationTitle": "Notifications",
+      "notificationSubheading": "Recent",
+      "containerTitle": "Offer of the day",
+      "notificationContent": "Lorem ipsum dolor sit amet, conser adispiscing elit",
+      "topUpButton": "Top up loan to N4,000,000",
+      "mainSubheading": "Introducing Target Savings",
+      "savingsButton": "Start saving now",
+      "previousNotification": "Previous"
+    },
     "login": {
       "createInstantAccount": "Create Instant Account",
       "callCustomerCare": "Call Customer Care",
@@ -92,6 +164,42 @@
       "quick": "Quick Options"
     }
   },
+  "onepass": {
+    "onePassHome": {
+      "onePass": "OnePass",
+      "welcome": "OnePass by Stanbic IBTC allows you link and access all your active profiles with one ID & password",
+      "createOnePass": "CREATE A ONEPASS ID",
+      "onePassDescription": "We need you to login to one of your active Stanbic IBTC Profiles,This helps us verify your identity before we create a OnePass ID for you.",
+      "understand": "I UNDERSTAND",
+      "chooseProfile": "Choose a profile"
+    },
+    "onepasslogin": {
+      "login": "Login to My Bank",
+      "enterDetails": "Enter your ID & Password",
+      "verify": "VERIFY",
+      "loginInfo": "Logging in to one of your Stanbic IBTC profiles helps to verify your identity before creating your OnePass ID.",
+      "okay": "OKAY"
+    },
+    "onepassVerified": {
+      "verificationSuccessful": "Your verification was successful, you can now create your OnePass ID",
+      "createId": "CREATE ID"
+    },
+    "createOnePassID": {
+      "createOnePass": "Create a OnePass ID",
+      "uniqueID": "Your ID has to be unique",
+      "onepassId": "ONEPASS ID",
+      "minimumCharacters": "minimum of 8 characters",
+      "next": "NEXT"
+    },
+    "createOnePassPassword": {
+      "createPassword": "Create a password",
+      "submit": "SUBMIT"
+    },
+    "addSecretQuestion": {
+      "addSecretQuestion": "Add a Secret Question",
+      "requireQuestion": "We require this for security purposes"
+    }
+  },
   "loans":{
     "loanReqeust": "loanReqeust",
     "howMuchDoYouNeed": "How much do you need?",
@@ -103,6 +211,24 @@
   },
   "pension": {
     "welcome": "Welcome to the pension 2.0"
+  },
+  "quickAirtime": {
+    "quickAirtimeScreen": {
+      "selectNetwork": "Select Network",
+      "glo": "Glo",
+      "mtn": "MTN",
+      "ninemobile": "9Mobile",
+      "airtel": "Airtel",
+      "confirmPurchase": "CONFIRM PURCHASE"
+    },
+    "quickairtimeConfirmation": {
+      "transactionConfirmation": "Transaction confirmation",
+      "enterPin": "Enter your 4 digit pin to continue",
+      "confirmPurchase": "CONFIRM PURCHASE"
+    }
+  },
+  "stocks": {
+    "welcome": "Welcome to the stocks 2.0"
   },
   "pfm": {
     "current": "current",
@@ -133,8 +259,5 @@
     "downloadReciept": "Download Reciept",
     "changeTrasactionCategory": "Change Transaction Category",
     "selectCategoryFromList": "Select category from the list"
-  },
-  "stocks": {
-    "welcome": "Welcome to the stocks 2.0"
   }
 }

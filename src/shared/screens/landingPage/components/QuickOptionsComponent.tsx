@@ -1,16 +1,25 @@
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import { RefObject } from "react";
 import { Image, ImageSourcePropType } from "react-native";
 
 import Pressable from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
+import {
+  RootNavigationProps,
+  RootStackParameterList,
+} from "@/shared/navigation/types";
 import { RFValue } from "@/shared/utils/functions";
 
 interface ModuleProps {
   title: string;
   image: ImageSourcePropType;
+  navigation: RootNavigationProps<"QuickAirtime">["navigation"];
+  bottomSheetModalRef: RefObject<BottomSheetModal>;
+  destination: keyof RootStackParameterList;
 }
 
 export default function QuickOptionsComponent(props: ModuleProps) {
-  const { title, image } = props;
+  const { title, image, navigation, destination, bottomSheetModalRef } = props;
 
   return (
     <Pressable
@@ -19,6 +28,10 @@ export default function QuickOptionsComponent(props: ModuleProps) {
       height={RFValue(92)}
       marginHorizontal="sm"
       marginVertical="sm"
+      onPress={() => {
+        navigation.navigate(destination);
+        bottomSheetModalRef.current?.close();
+      }}
       width={RFValue(90)}
     >
       <Image source={image} />
@@ -28,7 +41,6 @@ export default function QuickOptionsComponent(props: ModuleProps) {
         fontWeight="300"
         marginTop="sm"
         textAlign="center"
-        // variant="medium8"
       >
         {title}
       </Text>

@@ -1,12 +1,14 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { GestureResponderEvent, TouchableOpacity } from "react-native";
 
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const CopyButton: ({ onPress }: { onPress: any }) => JSX.Element = ({
+const CopyButton: ({
   onPress,
-}) => (
+}: {
+  onPress: (event: GestureResponderEvent) => void;
+}) => JSX.Element = ({ onPress }) => (
   <TouchableOpacity onPress={onPress}>
     <Box
       alignItems="center"

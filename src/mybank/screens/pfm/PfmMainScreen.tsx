@@ -1,18 +1,17 @@
 import React, { VFC } from "react";
+import { useTranslation } from "react-i18next";
 import { ScrollView } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { loginBackground } from "@/mybank/assets/image/";
-import { EligibilityButton } from "@/mybank/components/Buttons";
-import { PfmNavigationProps } from "@/mybank/navigation/types";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
-import { HangingCard } from "@/mybank/components/Cards/HangingCard";
-import { Text } from "@/shared/components/Typography";
 import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
+import { HangingCard } from "@/mybank/components/Cards/HangingCard";
 import { BarChartUI } from "@/mybank/components/Charts";
-import { PaletteType } from "@/shared/theme/palette";
+import { PfmNavigationProps } from "@/mybank/navigation/types";
 import { SvgIconPackType } from "@/shared/assets/icons";
-import { useTranslation } from "react-i18next";
+import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
+import { PaletteType } from "@/shared/theme/palette";
 
 type CategoryProps = {
   title: string;

@@ -37,6 +37,13 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
         onPress={() => props.navigation.navigate("PfmNavigation")}
         variant="filled"
       />
+
+      <PrimaryButton
+        label="Go to Pay with QR"
+        mt="md"
+        onPress={() => props.navigation.navigate("Payments")}
+        variant="filled"
+      />
     </Box>
   );
 };

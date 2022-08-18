@@ -10,6 +10,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import * as Yup from "yup";
 
 import { loginBackground } from "@/mybank/assets/image/";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
 import { FilledTextInput } from "@/shared/components/TextInput";
@@ -25,15 +26,13 @@ const InitialValues: MyFormValues = {
   bankingId: "",
   password: "",
 };
-const SellENaira: ({ navigation }: { navigation: any }) => JSX.Element = ({
+export default function SellENaira({
   navigation,
-}) => {
+}: ENairaNavigationProps<"BuyENaira">) {
   const { t } = useTranslation();
 
   // eslint-disable-next-line unicorn/consistent-function-scoping
-  const onSubmit = (values: MyFormValues) => {
-    // console.log("values", values);
-  };
+  const onSubmit = () => {};
   const handleFinish = () => {
     navigation.navigate("TransactionConfirmation");
   };
@@ -75,17 +74,10 @@ const SellENaira: ({ navigation }: { navigation: any }) => JSX.Element = ({
             <KeyboardAvoidingView style={{ flex: 1 }}>
               <Formik
                 initialValues={InitialValues}
-                onSubmit={(values) => onSubmit(values)}
+                onSubmit={() => onSubmit()}
                 validationSchema={validationSchema}
               >
-                {({
-                  handleChange,
-                  handleBlur,
-                  handleSubmit,
-                  values,
-                  errors,
-                  touched,
-                }) => (
+                {({ handleChange, handleBlur, handleSubmit, values }) => (
                   <Box marginTop="lg">
                     <Box marginBottom="md">
                       <Text color="black" marginBottom="xs" variant="bold14">
@@ -164,6 +156,6 @@ const SellENaira: ({ navigation }: { navigation: any }) => JSX.Element = ({
       </ImageBackground>
     </SafeAreaView>
   );
-};
+}
 
-export default SellENaira;
+// export default SellENaira;

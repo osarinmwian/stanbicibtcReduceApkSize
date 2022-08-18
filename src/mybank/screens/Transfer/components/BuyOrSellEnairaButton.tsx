@@ -5,6 +5,7 @@ import { IconVector } from "@/shared/assets/icons/IconVector";
 import { GradientButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
+import { PaletteType } from "@/shared/theme/palette";
 
 const BuyOrSellEnairaButton: ({
   onPress,
@@ -12,10 +13,10 @@ const BuyOrSellEnairaButton: ({
   iconBackground,
   iconName,
 }: {
-  onPress: any;
-  gradient: any;
-  iconBackground: any;
-  iconName: any;
+  onPress: () => void;
+  gradient: "primary" | "secondary" | "tatiary" | undefined;
+  iconBackground: PaletteType;
+  iconName: boolean;
 }) => JSX.Element = ({ onPress, gradient, iconBackground, iconName }) => {
   const { t } = useTranslation();
   return (

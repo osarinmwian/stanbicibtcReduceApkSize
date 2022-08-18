@@ -2,7 +2,6 @@ import React from "react";
 
 import { loginBackground } from "@/mybank/assets/image";
 import BottomTabLandingPageTopBar from "@/mybank/components/TopBar";
-import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 

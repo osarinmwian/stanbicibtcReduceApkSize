@@ -1,8 +1,4 @@
-import {
-  BottomSheetBackdropProps,
-  BottomSheetFlatList,
-  BottomSheetModal,
-} from "@gorhom/bottom-sheet";
+import { BottomSheetFlatList, BottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useCallback, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Image, LogBox } from "react-native";
@@ -12,6 +8,7 @@ import { Box } from "@/shared/components/Layout";
 import { Backdrop } from "@/shared/components/Modal/Backdrop";
 import Pressable from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
+import { RootNavigationProps } from "@/shared/navigation/types";
 
 import quickOptions from "../files/quickOptions";
 import QuickOptionsComponent from "./QuickOptionsComponent";
@@ -20,7 +17,13 @@ LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
 
-const QuickOptions = () => {
+interface ModuleProps {
+  navigation: RootNavigationProps<"QuickAirtime">["navigation"];
+}
+
+const QuickOptions = (props: ModuleProps) => {
+  const { navigation } = props;
+
   const { t } = useTranslation();
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -39,10 +42,10 @@ const QuickOptions = () => {
 
   // renders
   const renderBackdrop = useCallback(
-    (props: BottomSheetBackdropProps) => (
+    (property) => (
       <Backdrop
         onPress={handleDismissModalPress}
-        {...props}
+        {...property}
         backdropChildren={
           <Pressable
             alignItems="center"
@@ -117,7 +120,13 @@ const QuickOptions = () => {
               keyExtractor={(item) => item.id}
               numColumns={3}
               renderItem={({ item }) => (
-                <QuickOptionsComponent image={item.image} title={item.title} />
+                <QuickOptionsComponent
+                  bottomSheetModalRef={bottomSheetModalRef}
+                  destination={item.destination}
+                  image={item.image}
+                  navigation={navigation}
+                  title={item.title}
+                />
               )}
             />
           </Box>

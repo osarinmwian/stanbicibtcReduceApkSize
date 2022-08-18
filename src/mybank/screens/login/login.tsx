@@ -77,7 +77,7 @@ export default function LoginScreen({
         <Formik
           initialValues={InitialValues}
           onSubmit={() => onSubmit()}
-        // validationSchema={validationSchema}
+          // validationSchema={validationSchema}
         >
           {({
             handleChange,
