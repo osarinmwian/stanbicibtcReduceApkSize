@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const CopyButton: ({ onPress }: { onPress: any }) => JSX.Element = ({
+const CopyButton: ({ onPress }: { onPress: () => void }) => JSX.Element = ({
   onPress,
 }) => (
   <TouchableOpacity onPress={onPress}>
@@ -13,7 +13,7 @@ const CopyButton: ({ onPress }: { onPress: any }) => JSX.Element = ({
       backgroundColor="confirmCard"
       borderRadius="sm"
       justifyContent="center"
-      paddingHorizontal="md"
+      paddingHorizontal="sml"
       paddingVertical="md"
     >
       <Text color="primaryColor" variant="medium12">

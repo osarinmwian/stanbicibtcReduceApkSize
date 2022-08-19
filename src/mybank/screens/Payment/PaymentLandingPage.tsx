@@ -30,6 +30,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="users"
             label="Buy Data"
+            onPress={() => navigation.navigate("BuyDataStack")}
             placeholder="Send to single or multiple beneficiaries"
           />
           <SelectComponent
@@ -40,7 +41,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="payments2"
             label="Scheduled Payment"
-            onPress={() => navigation.navigate("FXTransfer")}
+            onPress={() => navigation.navigate("SchedulePaymentStack")}
             placeholder="Send payment to international accounts"
           />
           <SelectComponent

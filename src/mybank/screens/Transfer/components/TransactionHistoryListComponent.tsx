@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
-import Image from "@/shared/components/Image";
+import { Image } from "@/shared/components/Image";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { palette } from "@/shared/theme/palette";

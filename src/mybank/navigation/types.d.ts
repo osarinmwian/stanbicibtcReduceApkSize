@@ -7,14 +7,6 @@ import type { RootStackParameterList } from "@/shared/navigation/types";
 export type ThreeSBankingList = {
   Activate: undefined;
 };
-export type ENairaManagement = {
-  BuyENaira: undefined;
-  SellENaira: undefined;
-  ENairaHistory: undefined;
-  TransactionConfirmation: undefined;
-  ENairaHome: undefined;
-  ENairaAccountVerification: undefined;
-};
 
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
@@ -45,8 +37,26 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferTransactionHistory: undefined;
   ENaira: undefined;
   PfmNavigation: undefined;
+  SchedulePaymentStack: undefined;
+  BuyDataStack: undefined;
 };
-
+export type ENairaManagement = {
+  BuyENaira: undefined;
+  SellENaira: undefined;
+  ENairaHistory: undefined;
+  TransactionConfirmation: undefined;
+  ENairaHome: undefined;
+  ENairaAccountVerification: undefined;
+};
+export type SchedulePaymentStack = {
+  SchedulePaymentLandingPage: undefined;
+  SchedulePayment: undefined;
+  ConfirmSchedulePayment: undefined;
+};
+export type BuyDataStack = {
+  BuyDataLandingPage: undefined;
+  ConfirmBuyData: undefined;
+};
 // Tab routes
 type MyTabRoutes = {
   HomeLandingPage: {
@@ -74,6 +84,16 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
   StackScreenProps<LoansStackParameterList, T>;
 
+export type BuydataNavigationProps<T extends keyof BuyDataStack> =
+  StackScreenProps<BuyDataStack, T>;
+
+export type SchdulePaymentNavigationProps<
+  T extends keyof SchedulePaymentStack,
+> = StackScreenProps<SchedulePaymentStack, T>;
+
+export type EnairaNavigationProps<T extends keyof ENairaManagement> =
+  StackScreenProps<ENairaManagement, T>;
+
 export type PfmStackParameterList = MyBankRootStackParameterList & {
   PfmMainScreen: undefined;
   financialManagementScreen: undefined;
@@ -81,4 +101,5 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
   EditCategoryNameScreen: undefined;
 };
 
-export type PfmNavigationProps<T extends keyof PfmStackParameterList> = StackScreenProps<PfmStackParameterList, T>;
+export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
+  StackScreenProps<PfmStackParameterList, T>;

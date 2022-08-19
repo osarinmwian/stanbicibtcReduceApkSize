@@ -20,7 +20,9 @@ import {
   NoFlightFound,
 } from "../screens/lifestyle";
 import BottomTabs from "./bottomNavigation";
+import BuyDataNavigation from "./BuyDataNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
+import { SchedulePaymentNavigation } from "./SchedulePaymentNavigation";
 import { MyBankRootStackParameterList } from "./types";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
@@ -60,6 +62,11 @@ function Home() {
       />
       <Stack.Screen component={SixthScreen} name="SixthScreen" />
       <Stack.Screen component={ENairaManagementNavigation} name="ENaira" />
+      <Stack.Screen
+        component={SchedulePaymentNavigation}
+        name="SchedulePaymentStack"
+      />
+      <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
     </Stack.Navigator>
   );
 }
