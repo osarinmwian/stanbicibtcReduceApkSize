@@ -3,7 +3,10 @@ import { useTranslation } from "react-i18next";
 import { Dimensions, FlatList, Image } from "react-native";
 
 import StatusTopBar from "@/mybank/components/StatusbarImageContainer";
-import { MyBankNavigationProps } from "@/mybank/navigation/types";
+import {
+  MyBankNavigationProps,
+  MyBankRootStackParameterList,
+} from "@/mybank/navigation/types";
 import { landingpagebackground } from "@/shared/assets/image";
 import logo from "@/shared/assets/image/logo.png";
 import { PrimaryButton } from "@/shared/components/Buttons";
@@ -28,7 +31,7 @@ export default function LandingPage({
       <StatusTopBar imageName={landingpagebackground}>
         <Box>
           <Box alignItems="flex-end">
-            <QuickOptionsModal />
+            <QuickOptionsModal navigation={navigation} />
           </Box>
           <Box paddingHorizontal="md">
             <Box
@@ -84,7 +87,10 @@ export default function LandingPage({
                 marginBottom="md"
                 marginTop="sm"
               >
-                <SelectChannelModal />
+                <SelectChannelModal
+                  destination={"OnePass" as keyof MyBankRootStackParameterList}
+                  navigation={navigation}
+                />
 
                 <PrimaryButton
                   alignItems="center"

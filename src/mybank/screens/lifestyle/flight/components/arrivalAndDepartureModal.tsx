@@ -57,7 +57,7 @@ const ArrivalAndDepartureModal = ({
         {...props}
       />
     ),
-    [bottomSheetModalRef, handleDismissModalPress],
+    [handleDismissModalPress],
   );
 
   return (

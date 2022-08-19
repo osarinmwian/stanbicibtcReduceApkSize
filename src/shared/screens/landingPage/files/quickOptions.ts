@@ -9,13 +9,23 @@ import {
   flights,
   forgotPassword,
 } from "@/shared/assets/image";
+import { RootStackParameterList } from "@/shared/navigation/types";
 
-export default [
+type Module = {
+  backgroundColor: string;
+  destination: keyof RootStackParameterList;
+  id: string;
+  image: number;
+  title: string;
+};
+
+const quickOptions: Module[] = [
   {
     backgroundColor: "#0032A1",
     id: "1",
     image: airtime,
     title: "Buy Airtime",
+    destination: "QuickAirtime",
   },
 
   {
@@ -23,6 +33,7 @@ export default [
     id: "2",
     image: balance,
     title: "Check Balance",
+    destination: "QuickAirtime",
   },
 
   {
@@ -30,6 +41,7 @@ export default [
     id: "3",
     image: flight,
     title: "Book Flights",
+    destination: "QuickAirtime",
   },
 
   {
@@ -37,6 +49,7 @@ export default [
     id: "4",
     image: atm,
     title: "Locate ATM",
+    destination: "BranchLocator",
   },
 
   {
@@ -44,6 +57,7 @@ export default [
     id: "5",
     image: customer,
     title: "Customer Care",
+    destination: "QuickAirtime",
   },
 
   {
@@ -51,6 +65,7 @@ export default [
     id: "6",
     image: forgotPassword,
     title: "Forgot Password",
+    destination: "QuickAirtime",
   },
 
   {
@@ -58,6 +73,7 @@ export default [
     id: "7",
     image: complain,
     title: "Send Complain",
+    destination: "QuickAirtime",
   },
 
   {
@@ -65,6 +81,7 @@ export default [
     id: "8",
     image: account,
     title: "Account Manager",
+    destination: "QuickAirtime",
   },
 
   {
@@ -72,5 +89,8 @@ export default [
     id: "9",
     image: flights,
     title: "Book Flight",
+    destination: "QuickAirtime",
   },
 ];
+
+export default quickOptions;

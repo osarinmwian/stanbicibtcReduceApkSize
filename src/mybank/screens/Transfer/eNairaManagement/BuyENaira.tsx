@@ -9,7 +9,7 @@ import {
 import { RFValue } from "react-native-responsive-fontsize";
 import * as Yup from "yup";
 
-import { EnairaNavigationProps } from "@/mybank/navigation/types";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
 import { FilledTextInput } from "@/shared/components/TextInput";
@@ -24,12 +24,12 @@ interface MyFormValues {
 }
 export default function BuyENaira({
   navigation,
-}: EnairaNavigationProps<"BuyENaira">) {
+}: ENairaNavigationProps<"BuyENaira">) {
   const { t } = useTranslation();
 
-  const onSubmit = (values: MyFormValues) => {
-    // console.log("values", values);
-  };
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const onSubmit = (values: MyFormValues) => {};
+
   const handleFinish = () => {
     navigation.navigate("TransactionConfirmation");
   };
@@ -38,6 +38,7 @@ export default function BuyENaira({
     accounttodebit: "",
     amount: "",
   };
+
   const validationSchema = Yup.object().shape({
     accounttodebit: Yup.string()
       .matches(/\w*[a-z]\w*/, "Password must have a small letter")

@@ -4,7 +4,9 @@ import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, Card } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const EligibilityCard: VFC = () => (
+const EligibilityCard: VFC<{ onPress?: () => void }> = ({
+  onPress = () => {},
+}) => (
   <Card backgroundColor="loanCard" padding="md">
     <Box>
       <Box alignItems="flex-start" mb="md">
@@ -46,6 +48,7 @@ const EligibilityCard: VFC = () => (
             fontVariant: "caption",
             fontWeight: "bold",
           }}
+          onPress={onPress}
           variant="transparent"
         />
       </Box>

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { ScrollView, TouchableOpacity } from "react-native";
 
-import { EnairaNavigationProps } from "@/mybank/navigation/types";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
@@ -12,7 +12,7 @@ import CopyButton from "../components/CopyButton";
 
 export default function ENairaHome({
   navigation,
-}: EnairaNavigationProps<"ENairaHome">) {
+}: ENairaNavigationProps<"ENairaHome">) {
   const { t } = useTranslation();
   const data = [1, 2, 3, 4, 5, 6];
 

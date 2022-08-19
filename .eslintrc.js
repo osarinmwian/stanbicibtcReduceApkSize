@@ -97,7 +97,7 @@ module.exports = {
     "react/style-prop-object": "off",
     "simple-import-sort/exports": "warn",
     "simple-import-sort/imports": "warn",
-    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-keys-fix/sort-keys-fix": "off",
     "unicorn/filename-case": [
       "error",
       {

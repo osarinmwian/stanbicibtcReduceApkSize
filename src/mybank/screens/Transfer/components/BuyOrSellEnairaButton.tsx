@@ -7,26 +7,27 @@ import { Text } from "@/shared/components/Typography";
 import { PaletteType } from "@/shared/theme/palette";
 
 const BuyOrSellEnairaButton: ({
-  iconName,
+  iconTitle,
   onPress,
   gradient,
   iconBackground,
-  iconTitle,
+  iconName,
 }: {
-  iconName: boolean;
   onPress: () => void;
-  gradient: "secondary" | "tatiary" | "primary" | undefined;
+  gradient: "primary" | "secondary" | "tatiary" | undefined;
   iconBackground: PaletteType;
-  iconTitle?: string;
+  iconName: boolean;
+  iconTitle: string;
 }) => JSX.Element = ({
   onPress,
   gradient,
   iconBackground,
-  iconTitle,
   iconName,
+  iconTitle,
 }) => (
   <GradientButton
     gradient={gradient}
+    marginRight="md"
     onPress={onPress}
     paddingVertical="md"
     size="xs"
@@ -41,13 +42,13 @@ const BuyOrSellEnairaButton: ({
           marginVertical="sm"
           padding="sm"
         >
-          <IconVector name={iconName ? "SellEnaira" : "buyEnaira"} />
+          <IconVector name={iconName ? "buyEnaira" : "sellEnaira"} />
         </Box>
       </Box>
       <Text color="whiteColor" marginVertical="sm" variant="bold14">
         {iconTitle}
       </Text>
-      <Text color="whiteColor" marginTop="xs" variant="regular14">
+      <Text color="whiteColor" variant="regular14">
         xjhvhvj
       </Text>
       <Text color="whiteColor" variant="regular14">

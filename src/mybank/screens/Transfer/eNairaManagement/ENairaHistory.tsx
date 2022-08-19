@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, TouchableOpacity } from "react-native";
 
-import { EnairaNavigationProps } from "@/mybank/navigation/types";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import TransactionHistoryListComponent from "@/mybank/screens/Transfer/components/TransactionHistoryListComponent";
 import { Icon } from "@/shared/assets/icons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
@@ -64,7 +64,7 @@ const HeaderComponent = () => (
 
 export default function ENairaHistory({
   navigation,
-}: EnairaNavigationProps<"ENairaHistory">) {
+}: ENairaNavigationProps<"ENairaHistory">) {
   // eslint-disable-next-line unused-imports/no-unused-vars
   const onPress = () => {
     navigation.navigate("ENairaHome");

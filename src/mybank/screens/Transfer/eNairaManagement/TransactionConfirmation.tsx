@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Keyboard, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import { EnairaNavigationProps } from "@/mybank/navigation/types";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import PinComponent from "@/mybank/screens/Transfer/components/PinComponent";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
@@ -11,7 +11,7 @@ import { Text } from "@/shared/components/Typography";
 
 export default function TransactionConfirmation({
   navigation,
-}: EnairaNavigationProps<"TransactionConfirmation">) {
+}: ENairaNavigationProps<"TransactionConfirmation">) {
   const { t } = useTranslation();
   const [pin, setPin] = useState("");
   // eslint-disable-next-line unused-imports/no-unused-vars

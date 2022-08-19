@@ -3,10 +3,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "@/mybank/screens/login/login";
 
 import LoansNavigation from "./loans/LoansNavigation";
+import PfmNavigation from "./pfm/PfmNavigation";
 import { Home, Lifestyle, More, Payments, Transfer } from "./stackNavigation";
 import { ThreeSBanking } from "./ThreeSBanking";
 import { MyBankRootStackParameterList } from "./types";
-import PfmNavigation from "./pfm/PfmNavigation";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 

@@ -8,6 +8,12 @@ export type ThreeSBankingList = {
   Activate: undefined;
 };
 
+export type ExtrasNavigation = {
+  ChatBot: undefined;
+  ExtraSearchBar: undefined;
+  LoansAndOffers: undefined;
+};
+
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
   BillersForm: undefined;
@@ -36,18 +42,19 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   FXTransferEnterPin: undefined;
   FXTransferTransactionHistory: undefined;
   ENaira: undefined;
+  PayWithQr: undefined;
   PfmNavigation: undefined;
+  Beneficiary: undefined;
+  AddNewBeneficiary: undefined;
+  Notifications: undefined;
+  PrepaidCards: undefined;
+  PrepaidPinInput: undefined;
+  BeneficiaryPinInput: undefined;
+  LoansAndOffers: undefined;
   SchedulePaymentStack: undefined;
   BuyDataStack: undefined;
 };
-export type ENairaManagement = {
-  BuyENaira: undefined;
-  SellENaira: undefined;
-  ENairaHistory: undefined;
-  TransactionConfirmation: undefined;
-  ENairaHome: undefined;
-  ENairaAccountVerification: undefined;
-};
+
 export type SchedulePaymentStack = {
   SchedulePaymentLandingPage: undefined;
   SchedulePayment: undefined;
@@ -79,6 +86,7 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
   LoansScreen: undefined;
   EzCashLoansScreen: undefined;
   LoanDetails: undefined;
+  LoanRequestScreen: undefined;
 };
 
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
@@ -91,9 +99,6 @@ export type SchdulePaymentNavigationProps<
   T extends keyof SchedulePaymentStack,
 > = StackScreenProps<SchedulePaymentStack, T>;
 
-export type EnairaNavigationProps<T extends keyof ENairaManagement> =
-  StackScreenProps<ENairaManagement, T>;
-
 export type PfmStackParameterList = MyBankRootStackParameterList & {
   PfmMainScreen: undefined;
   financialManagementScreen: undefined;
@@ -103,3 +108,15 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
 
 export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
   StackScreenProps<PfmStackParameterList, T>;
+
+export type ENairaManagement = MyBankRootStackParameterList & {
+  BuyENaira: undefined;
+  SellENaira: undefined;
+  ENairaHistory: undefined;
+  TransactionConfirmation: undefined;
+  ENairaHome: undefined;
+  ENairaAccountVerification: undefined;
+};
+
+export type ENairaNavigationProps<T extends keyof ENairaManagement> =
+  StackScreenProps<ENairaManagement, T>;

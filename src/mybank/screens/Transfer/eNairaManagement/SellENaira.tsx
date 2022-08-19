@@ -9,7 +9,7 @@ import {
 import { RFValue } from "react-native-responsive-fontsize";
 import * as Yup from "yup";
 
-import { EnairaNavigationProps } from "@/mybank/navigation/types";
+import { ENairaNavigationProps } from "@/mybank/navigation/types";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
 import { FilledTextInput } from "@/shared/components/TextInput";
@@ -27,13 +27,11 @@ const InitialValues: MyFormValues = {
 };
 export default function SellENaira({
   navigation,
-}: EnairaNavigationProps<"SellENaira">) {
+}: ENairaNavigationProps<"SellENaira">) {
   const { t } = useTranslation();
 
   // eslint-disable-next-line unicorn/consistent-function-scoping
-  const onSubmit = (values: MyFormValues) => {
-    // console.log("values", values);
-  };
+  const onSubmit = (values: MyFormValues) => {};
   const handleFinish = () => {
     navigation.navigate("TransactionConfirmation");
   };

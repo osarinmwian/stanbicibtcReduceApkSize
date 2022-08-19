@@ -16,15 +16,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: RFValue(25),
+    marginTop: RFValue(20),
   },
   customPad: {
     alignItems: "center",
     backgroundColor: palette.cardSecondary,
-    borderRadius: RFValue(35),
+    borderRadius: RFValue(25),
     height: RFValue(60),
     justifyContent: "center",
-    width: RFValue(60),
+    width: RFValue(0),
   },
 });
 
@@ -37,7 +37,7 @@ export default function PinComponent({
   value,
   onChangeText,
 }: CustomKeyboardProps) {
-  const handleClick = (item: number) => {
+  const handleClick = (item: any) => {
     if (value.length === 4) {
       return;
     }
@@ -64,7 +64,7 @@ export default function PinComponent({
       >
         <Text
           color="textTint"
-          marginTop="md"
+          marginTop="xs"
           style={{ fontSize: 30 }}
           variant="bold24"
         >
@@ -185,7 +185,7 @@ export default function PinComponent({
         </Box>
         <Box style={styles.boxContainer}>
           <TouchableOpacity onPress={() => handleDelete()}>
-            <Text color="textTint" style={{ fontSize: 12 }} variant="title">
+            <Text color="textTint" style={{ fontSize: 20 }} variant="title">
               DELETE
             </Text>
           </TouchableOpacity>

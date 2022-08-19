@@ -58,6 +58,7 @@ export default function TransferLandingPage({
           <SelectComponent
             iconName="users"
             label="Beneficiaries"
+            onPress={() => navigation.navigate("Beneficiary")}
             placeholder="Manage or add beneficiaries"
           />
           <BaseButton
