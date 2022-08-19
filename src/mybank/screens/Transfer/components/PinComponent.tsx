@@ -1,9 +1,10 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { useTranslation } from "react-i18next";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { palette } from "@/shared/theme/palette";
+import { palette, PaletteType } from "@/shared/theme/palette";
 import { RFValue } from "@/shared/utils/functions";
 
 const styles = StyleSheet.create({
@@ -15,30 +16,54 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     flexDirection: "row",
-    justifyContent: "space-between",
     marginTop: RFValue(20),
   },
   customPad: {
     alignItems: "center",
-    backgroundColor: palette.cardSecondary,
-    borderRadius: RFValue(25),
-    height: RFValue(60),
+    // backgroundColor: palette.cardSecondary,
+    borderRadius: RFValue(1000),
+    height: RFValue(50),
     justifyContent: "center",
-    width: RFValue(0),
+    width: RFValue(50),
+  },
+  customonepassPad: {
+    alignItems: "center",
+    // backgroundColor: palette.cardSecondary,
+    borderRadius: RFValue(25),
+    height: RFValue(50),
+    justifyContent: "center",
+    width: RFValue(50),
   },
 });
 
 export type CustomKeyboardProps = {
   value: string;
   onChangeText: (argument: string) => void;
+  size?: number;
+  numberColor?: PaletteType;
+  numberFontSize?: number;
+  padBackgroundColor?: PaletteType;
+  manageInput?: boolean;
+  isPin?: boolean;
+  width?: number;
+  onepassPin?: boolean;
 };
 
 export default function PinComponent({
   value,
   onChangeText,
+  size,
+  numberColor,
+  numberFontSize,
+  padBackgroundColor = "cardSecondary",
+  manageInput,
+  isPin,
+  width = 300,
+  onepassPin,
 }: CustomKeyboardProps) {
+  const { t } = useTranslation();
   const handleClick = (item: any) => {
-    if (value.length === 4) {
+    if (isPin && value.length === 4) {
       return;
     }
     const returnedValue = [...value, item].join("");
@@ -54,141 +79,295 @@ export default function PinComponent({
   };
 
   return (
-    <Box style={{ flex: 1, padding: RFValue(10) }}>
-      <Box
-        style={{
-          alignItems: "center",
-          height: RFValue(40),
-          justifyContent: "center",
-        }}
-      >
-        <Text
-          color="textTint"
-          marginTop="xs"
-          style={{ fontSize: 30 }}
-          variant="bold24"
+    <Box
+      style={{
+        flex: 1,
+      }}
+    >
+      {!manageInput && (
+        <Box
+          style={{
+            alignItems: "center",
+            height: RFValue(40),
+            justifyContent: "center",
+          }}
         >
-          {value}
-        </Text>
-      </Box>
-      <Box style={styles.container}>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(1)}
-            style={styles.customPad}
+          <Text
+            color={numberColor ?? "textTint"}
+            marginTop="xs"
+            style={{ fontSize: 30 }}
+            variant="bold24"
           >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              1
-            </Text>
-          </TouchableOpacity>
+            {value}
+          </Text>
         </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(2)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              2
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(3)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              3
-            </Text>
-          </TouchableOpacity>
-        </Box>
-      </Box>
-
-      <Box style={styles.container}>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(4)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              4
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(5)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              5
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(6)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              6
-            </Text>
-          </TouchableOpacity>
-        </Box>
-      </Box>
-
-      <Box style={styles.container}>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(7)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              7
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(8)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              8
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(9)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              9
-            </Text>
-          </TouchableOpacity>
+      )}
+      <Box
+        alignItems="center"
+        justifyContent="center"
+        style={[styles.container]}
+      >
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(1)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: size ?? 50,
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  1
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(2)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  2
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(3)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  3
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
         </Box>
       </Box>
 
-      <Box style={styles.container}>
-        <Box style={styles.boxContainer} />
-
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity
-            onPress={() => handleClick(0)}
-            style={styles.customPad}
-          >
-            <Text color="textTint" style={{ fontSize: 20 }} variant="bold14">
-              0
-            </Text>
-          </TouchableOpacity>
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick("4")}>
+              <View
+                style={
+                  isPin
+                    ? styles.customonepassPad
+                    : [
+                        styles.customPad,
+                        {
+                          height: RFValue(size ?? 50),
+                          width: RFValue(size ?? 50),
+                          backgroundColor: palette[padBackgroundColor],
+                        },
+                      ]
+                }
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  4
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick("5")}>
+              <View
+                style={
+                  isPin
+                    ? styles.customonepassPad
+                    : [
+                        styles.customPad,
+                        {
+                          height: RFValue(size ?? 50),
+                          width: RFValue(size ?? 50),
+                          backgroundColor: palette[padBackgroundColor],
+                        },
+                      ]
+                }
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  5
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick("6")}>
+              <View
+                style={
+                  onepassPin
+                    ? styles.customonepassPad
+                    : [
+                        styles.customPad,
+                        {
+                          height: RFValue(size ?? 50),
+                          width: RFValue(size ?? 50),
+                          backgroundColor: palette[padBackgroundColor],
+                        },
+                      ]
+                }
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  6
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
         </Box>
-        <Box style={styles.boxContainer}>
-          <TouchableOpacity onPress={() => handleDelete()}>
-            <Text color="textTint" style={{ fontSize: 20 }} variant="title">
-              DELETE
-            </Text>
-          </TouchableOpacity>
+      </Box>
+
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(7)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  7
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(8)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  8
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(9)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  9
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
+          <Box style={styles.boxContainer} />
+
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleClick(0)}>
+              <View
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
+              >
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={RFValue(numberFontSize ?? 14)}
+                  variant="bold14"
+                >
+                  0
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.boxContainer}>
+            <TouchableOpacity onPress={() => handleDelete()}>
+              <Text
+                color={numberColor ?? "textTint"}
+                fontSize={12}
+                variant="title"
+              >
+                {t("buttons.delete").toUpperCase()}
+              </Text>
+            </TouchableOpacity>
+          </Box>
         </Box>
       </Box>
     </Box>
