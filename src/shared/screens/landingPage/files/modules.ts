@@ -1,4 +1,3 @@
-import { MyBankRootStackParameterList } from "@/mybank/navigation/types";
 import {
   ease,
   insurance,
@@ -7,10 +6,11 @@ import {
   pension,
   stocks,
 } from "@/shared/assets/image";
+import { RootStackParameterList } from "@/shared/navigation/types";
 
 type Module = {
   backgroundColor: string;
-  destination: keyof MyBankRootStackParameterList;
+  destination: keyof RootStackParameterList;
   id: string;
   image: number;
   title: string;
@@ -27,7 +27,7 @@ const modules: Module[] = [
 
   {
     backgroundColor: "mutualFundsContainer",
-    destination: "MyBank",
+    destination: "LandingPage",
     id: "2",
     image: mutualfunds,
     title: "Mutual Funds",

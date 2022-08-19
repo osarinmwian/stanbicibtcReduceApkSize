@@ -1,12 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
+import { SvgIconProps } from "@/shared/assets/icons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { palette, PaletteType } from "@/shared/theme/palette";
 import { RFValue } from "@/shared/utils/functions";
-import { backgroundColor } from "@shopify/restyle";
-import { useTranslation } from "react-i18next";
 
 const styles = StyleSheet.create({
   boxContainer: {
@@ -21,16 +22,7 @@ const styles = StyleSheet.create({
   },
   customPad: {
     alignItems: "center",
-    // backgroundColor: palette.cardSecondary,
     borderRadius: RFValue(1000),
-    height: RFValue(50),
-    justifyContent: "center",
-    width: RFValue(50),
-  },
-  customonepassPad: {
-    alignItems: "center",
-    // backgroundColor: palette.cardSecondary,
-    borderRadius: RFValue(25),
     height: RFValue(50),
     justifyContent: "center",
     width: RFValue(50),
@@ -47,6 +39,7 @@ export type CustomKeyboardProps = {
   manageInput?: boolean;
   isPin?: boolean;
   width?: number;
+  deleteIcon?: SvgIconProps;
 };
 
 export default function PinComponent({
@@ -59,9 +52,10 @@ export default function PinComponent({
   manageInput,
   isPin,
   width = 300,
+  deleteIcon,
 }: CustomKeyboardProps) {
   const { t } = useTranslation();
-  const handleClick = (item: any) => {
+  const handleClick = (item: string) => {
     if (isPin && value.length === 4) {
       return;
     }
@@ -102,11 +96,11 @@ export default function PinComponent({
         </Box>
       )}
       <Box
-        style={[styles.container]}
-        justifyContent="center"
         alignItems="center"
+        justifyContent="center"
+        style={[styles.container]}
       >
-        <Box width={RFValue(width)} maxWidth={RFValue(500)} flexDirection="row">
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick(1)}>
               <View
@@ -176,12 +170,12 @@ export default function PinComponent({
         </Box>
       </Box>
 
-      <Box style={styles.container} justifyContent="center" alignItems="center">
-        <Box width={RFValue(width)} maxWidth={RFValue(500)} flexDirection="row">
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("4")}>
               <View
-                style={onepassPin ? styles.customonepassPad : [
+                style={[
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),
@@ -203,7 +197,7 @@ export default function PinComponent({
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("5")}>
               <View
-                style={onepassPin ? styles.customonepassPad : [
+                style={[
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),
@@ -225,7 +219,7 @@ export default function PinComponent({
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("6")}>
               <View
-                style={onepassPin ? styles.customonepassPad : [
+                style={[
                   styles.customPad,
                   {
                     height: RFValue(size ?? 50),
@@ -247,8 +241,8 @@ export default function PinComponent({
         </Box>
       </Box>
 
-      <Box style={styles.container} justifyContent="center" alignItems="center">
-        <Box width={RFValue(width)} maxWidth={RFValue(500)} flexDirection="row">
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick(7)}>
               <View
@@ -318,8 +312,8 @@ export default function PinComponent({
         </Box>
       </Box>
 
-      <Box style={styles.container} justifyContent="center" alignItems="center">
-        <Box width={RFValue(width)} maxWidth={RFValue(500)} flexDirection="row">
+      <Box alignItems="center" justifyContent="center" style={styles.container}>
+        <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer} />
 
           <Box style={styles.boxContainer}>
@@ -346,13 +340,17 @@ export default function PinComponent({
           </Box>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleDelete()}>
-              <Text
-                color={numberColor ?? "textTint"}
-                fontSize={12}
-                variant="title"
-              >
-                {t("buttons.delete").toUpperCase()}
-              </Text>
+              {deleteIcon ? (
+                <IconVector name={deleteIcon} size="sm" />
+              ) : (
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={12}
+                  variant="title"
+                >
+                  {t("buttons.delete").toUpperCase()}
+                </Text>
+              )}
             </TouchableOpacity>
           </Box>
         </Box>

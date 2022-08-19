@@ -9,6 +9,13 @@
 // export const a = "remove me";
 
 export { default as ease } from "./@ease.png";
+export { default as introBackground1 } from "./1.png";
+export { default as introBackground2 } from "./2.png";
+export { default as introBackground3 } from "./3.png";
+export { default as introBackground4 } from "./4.png";
+export { default as introBackground5 } from "./5.png";
+export { default as introBackground6 } from "./6.png";
+export { default as introBackground7 } from "./7.png";
 export { default as ninemobile } from "./9mobileIcon.png";
 export { default as account } from "./account.png";
 export { default as airtel } from "./airtelIcon.png";
@@ -46,10 +53,4 @@ export { default as pension } from "./pension.png";
 export { default as question } from "./question.png";
 export { default as standardBankLogo } from "./standardBankLogo.png";
 export { default as stocks } from "./stocks.png";
-export { default as introBackground1 } from "./1.png";
-export { default as introBackground2 } from "./2.png";
-export { default as introBackground3 } from "./3.png";
-export { default as introBackground4 } from "./4.png";
-export { default as introBackground5 } from "./5.png";
-export { default as introBackground6 } from "./6.png";
-export { default as introBackground7 } from "./7.png";
+export { default as verifiedIcon } from "./verifiedIcon.png";
