@@ -53,8 +53,8 @@ const SelectChannel = ({
             </Text>
             <Text variant="regular14">
               {type === "sign-up"
-                ? t("mybank.selectChannel.selectChannelToSignUpWith")
-                : t("mybank.selectChannel.selectChannelToSignInWith")}
+                ? t("mybank.selectChannel.selectChannelSignUpSubTitle")
+                : t("mybank.selectChannel.selectChannelSignInSubTitle")}
             </Text>
           </Box>
           <Box>
@@ -101,7 +101,15 @@ const SelectChannel = ({
           </Box>
 
           {type === "sign-in" && (
-            <GradientButton alignItems="center" borderRadius="md" size="md">
+            <GradientButton
+              alignItems="center"
+              borderRadius="md"
+              onPress={() => {
+                navigation.navigate("OnePass");
+                bottomRef.current?.dismiss();
+              }}
+              size="md"
+            >
               <Text color="whiteColor" variant="medium18">
                 {t("mybank.selectChannel.signUpWithOnePass")}
               </Text>

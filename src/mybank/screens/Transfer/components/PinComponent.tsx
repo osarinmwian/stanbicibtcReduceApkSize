@@ -2,6 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
+import { SvgIconProps } from "@/shared/assets/icons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { palette, PaletteType } from "@/shared/theme/palette";
@@ -20,16 +22,7 @@ const styles = StyleSheet.create({
   },
   customPad: {
     alignItems: "center",
-    // backgroundColor: palette.cardSecondary,
     borderRadius: RFValue(1000),
-    height: RFValue(50),
-    justifyContent: "center",
-    width: RFValue(50),
-  },
-  customonepassPad: {
-    alignItems: "center",
-    // backgroundColor: palette.cardSecondary,
-    borderRadius: RFValue(25),
     height: RFValue(50),
     justifyContent: "center",
     width: RFValue(50),
@@ -46,7 +39,7 @@ export type CustomKeyboardProps = {
   manageInput?: boolean;
   isPin?: boolean;
   width?: number;
-  onepassPin?: boolean;
+  deleteIcon?: SvgIconProps;
 };
 
 export default function PinComponent({
@@ -59,10 +52,10 @@ export default function PinComponent({
   manageInput,
   isPin,
   width = 300,
-  onepassPin,
+  deleteIcon,
 }: CustomKeyboardProps) {
   const { t } = useTranslation();
-  const handleClick = (item: any) => {
+  const handleClick = (item: string) => {
     if (isPin && value.length === 4) {
       return;
     }
@@ -182,18 +175,14 @@ export default function PinComponent({
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("4")}>
               <View
-                style={
-                  isPin
-                    ? styles.customonepassPad
-                    : [
-                        styles.customPad,
-                        {
-                          height: RFValue(size ?? 50),
-                          width: RFValue(size ?? 50),
-                          backgroundColor: palette[padBackgroundColor],
-                        },
-                      ]
-                }
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
               >
                 <Text
                   color={numberColor ?? "textTint"}
@@ -208,18 +197,14 @@ export default function PinComponent({
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("5")}>
               <View
-                style={
-                  isPin
-                    ? styles.customonepassPad
-                    : [
-                        styles.customPad,
-                        {
-                          height: RFValue(size ?? 50),
-                          width: RFValue(size ?? 50),
-                          backgroundColor: palette[padBackgroundColor],
-                        },
-                      ]
-                }
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
               >
                 <Text
                   color={numberColor ?? "textTint"}
@@ -234,18 +219,14 @@ export default function PinComponent({
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("6")}>
               <View
-                style={
-                  onepassPin
-                    ? styles.customonepassPad
-                    : [
-                        styles.customPad,
-                        {
-                          height: RFValue(size ?? 50),
-                          width: RFValue(size ?? 50),
-                          backgroundColor: palette[padBackgroundColor],
-                        },
-                      ]
-                }
+                style={[
+                  styles.customPad,
+                  {
+                    height: RFValue(size ?? 50),
+                    width: RFValue(size ?? 50),
+                    backgroundColor: palette[padBackgroundColor],
+                  },
+                ]}
               >
                 <Text
                   color={numberColor ?? "textTint"}
@@ -359,13 +340,17 @@ export default function PinComponent({
           </Box>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleDelete()}>
-              <Text
-                color={numberColor ?? "textTint"}
-                fontSize={12}
-                variant="title"
-              >
-                {t("buttons.delete").toUpperCase()}
-              </Text>
+              {deleteIcon ? (
+                <IconVector name={deleteIcon} size="sm" />
+              ) : (
+                <Text
+                  color={numberColor ?? "textTint"}
+                  fontSize={12}
+                  variant="title"
+                >
+                  {t("buttons.delete").toUpperCase()}
+                </Text>
+              )}
             </TouchableOpacity>
           </Box>
         </Box>

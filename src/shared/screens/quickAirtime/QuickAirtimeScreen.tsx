@@ -28,91 +28,93 @@ export default function QuickAirtimeScreen({
 
   return (
     <LayoutComponent isBackArrow label="QUICK AIRTIME">
-      <Text color="textColor" marginTop="xs" variant="medium14">
-        {t("quickAirtime.quickAirtimeScreen.selectNetwork")}
-      </Text>
-      <Box flexDirection="row" justifyContent="space-between" marginTop="xs">
-        <Box alignItems="center">
-          <Image source={glo} style={AIRTIMEICONSTYLE} />
-          <Text color="textColor" marginTop="xs">
-            {t("quickAirtime.quickAirtimeScreen.glo")}
-          </Text>
-        </Box>
-
-        <Box alignItems="center">
-          <Image source={mtn} style={AIRTIMEICONSTYLE} />
-          <Text color="textColor" marginTop="xs">
-            {t("quickAirtime.quickAirtimeScreen.mtn")}
-          </Text>
-        </Box>
-
-        <Box alignItems="center">
-          <Image source={ninemobile} style={AIRTIMEICONSTYLE} />
-          <Text color="textColor" marginTop="xs">
-            {t("quickAirtime.quickAirtimeScreen.ninemobile")}
-          </Text>
-        </Box>
-
-        <Box alignItems="center">
-          <Image source={airtel} style={AIRTIMEICONSTYLE} />
-          <Text color="textColor" marginTop="xs">
-            {t("quickAirtime.quickAirtimeScreen.airtel")}
-          </Text>
-        </Box>
-      </Box>
-
-      <Box
-        backgroundColor="cardSecondary"
-        borderRadius="sm"
-        mb="sm"
-        mt="none"
-        padding="sm"
-      >
-        <Text color="darkGrey" fontWeight="400">
-          AMOUNT
+      <Box flex={1} paddingHorizontal="md" paddingVertical="md">
+        <Text color="textColor" marginTop="xs" variant="medium14">
+          {t("quickAirtime.quickAirtimeScreen.selectNetwork")}
         </Text>
-        <TextInput
-          onChangeText={(text) => setAamount(text)}
-          placeholder="N20,000"
-          value={amount}
-        />
-      </Box>
+        <Box flexDirection="row" justifyContent="space-between" marginTop="xs">
+          <Box alignItems="center">
+            <Image source={glo} style={AIRTIMEICONSTYLE} />
+            <Text color="textColor" marginTop="xs">
+              {t("quickAirtime.quickAirtimeScreen.glo")}
+            </Text>
+          </Box>
 
-      <Box
-        backgroundColor="cardSecondary"
-        borderRadius="sm"
-        mb="sm"
-        mt="none"
-        padding="sm"
-      >
-        <Text color="darkGrey" fontWeight="400">
-          PHONE NUMBER
-        </Text>
-        <TextInput
-          onChangeText={(text) => setPhoneNumber(text)}
-          placeholder="08000000000"
-          value={phoneNumber}
-        />
-      </Box>
+          <Box alignItems="center">
+            <Image source={mtn} style={AIRTIMEICONSTYLE} />
+            <Text color="textColor" marginTop="xs">
+              {t("quickAirtime.quickAirtimeScreen.mtn")}
+            </Text>
+          </Box>
 
-      <Box
-        bottom={RFValue(0)}
-        marginHorizontal="md"
-        position="absolute"
-        width="90%"
-        // flex={1}
-      >
-        <PrimaryButton
-          alignItems="center"
-          backgroundColor="primaryColor"
-          justifyContent="center"
-          label={t("quickAirtime.quickAirtimeScreen.confirmPurchase")}
-          labelProps={{ color: "whiteColor" }}
-          labelVariant="regular14"
-          marginBottom="xs"
-          onPress={() => onSubmit()}
-          paddingVertical="md"
-        />
+          <Box alignItems="center">
+            <Image source={ninemobile} style={AIRTIMEICONSTYLE} />
+            <Text color="textColor" marginTop="xs">
+              {t("quickAirtime.quickAirtimeScreen.ninemobile")}
+            </Text>
+          </Box>
+
+          <Box alignItems="center">
+            <Image source={airtel} style={AIRTIMEICONSTYLE} />
+            <Text color="textColor" marginTop="xs">
+              {t("quickAirtime.quickAirtimeScreen.airtel")}
+            </Text>
+          </Box>
+        </Box>
+
+        <Box
+          backgroundColor="cardSecondary"
+          borderRadius="sm"
+          mb="sm"
+          mt="md"
+          padding="sm"
+        >
+          <Text color="darkGrey" fontWeight="400">
+            AMOUNT
+          </Text>
+          <TextInput
+            onChangeText={(text) => setAamount(text)}
+            placeholder="N20,000"
+            value={amount}
+          />
+        </Box>
+
+        <Box
+          backgroundColor="cardSecondary"
+          borderRadius="sm"
+          mb="sm"
+          mt="none"
+          padding="sm"
+        >
+          <Text color="darkGrey" fontWeight="400">
+            PHONE NUMBER
+          </Text>
+          <TextInput
+            onChangeText={(text) => setPhoneNumber(text)}
+            placeholder="08000000000"
+            value={phoneNumber}
+          />
+        </Box>
+
+        <Box
+          bottom={RFValue(0)}
+          marginHorizontal="md"
+          position="absolute"
+          width="100%"
+          // flex={1}
+        >
+          <PrimaryButton
+            alignItems="center"
+            backgroundColor="primaryColor"
+            justifyContent="center"
+            label={t("quickAirtime.quickAirtimeScreen.confirmPurchase")}
+            labelProps={{ color: "whiteColor" }}
+            labelVariant="regular14"
+            marginBottom="xs"
+            onPress={() => onSubmit()}
+            paddingVertical="md"
+          />
+        </Box>
       </Box>
     </LayoutComponent>
   );

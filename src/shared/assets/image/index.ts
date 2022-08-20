@@ -53,3 +53,4 @@ export { default as pension } from "./pension.png";
 export { default as question } from "./question.png";
 export { default as standardBankLogo } from "./standardBankLogo.png";
 export { default as stocks } from "./stocks.png";
+export { default as verifiedIcon } from "./verifiedIcon.png";

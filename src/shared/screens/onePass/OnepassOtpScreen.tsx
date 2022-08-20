@@ -19,6 +19,13 @@ export default function OnePassOTPScreen({
 
   const goToLoginVerified = () => navigation.navigate("OnePassVerification");
 
+  const onChangeText = (value: string) => {
+    setPin(value);
+    if (value.length === 4) {
+      goToLoginVerified();
+    }
+  };
+
   return (
     <Box backgroundColor="onepassContainer" flex={1}>
       <ImageBackground resizeMode="cover" source={backgroundIcons} style={ROOT}>
@@ -45,13 +52,12 @@ export default function OnePassOTPScreen({
             </Box>
 
             <PinComponent
-              onChangeText={(value) => {
-                setPin(value);
-                if (value.length === 4) {
-                  goToLoginVerified();
-                }
-              }}
+              deleteIcon="delete-icon"
+              numberFontSize={60}
+              onChangeText={onChangeText}
+              padBackgroundColor="transparent"
               value={pin}
+              width={280}
             />
 
             <Box alignItems="center" justifyContent="center">

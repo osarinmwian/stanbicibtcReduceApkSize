@@ -26,6 +26,7 @@ import coins from "@/shared/assets/svg/coins.svg";
 import coinsMany from "@/shared/assets/svg/coins-many.svg";
 import compass from "@/shared/assets/svg/compass.svg";
 import copy from "@/shared/assets/svg/copy.svg";
+import deleteIcon from "@/shared/assets/svg/delete.svg";
 import exchangeAlt from "@/shared/assets/svg/exchange-alt.svg";
 import eyeClosed from "@/shared/assets/svg/eye-closed.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
@@ -77,6 +78,7 @@ const svgIconPack = {
   "company-logo": companyLogo,
   compass,
   copy,
+  "delete-icon": deleteIcon,
   "exchange-alt": exchangeAlt,
   "eye-closed": eyeClosed,
   "eye-opened": eyeOpened,

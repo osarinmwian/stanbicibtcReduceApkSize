@@ -62,7 +62,6 @@ export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
         <Box px="sm">
           <Text
             color={rightColor}
-            fontFamily="Roboto"
             fontSize={16}
             fontWeight="700"
             variant="regular14"
