@@ -357,7 +357,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
                 style={{ height: 128, width: 343 }}
               >
                 <Box paddingHorizontal="lg" paddingTop="md">
-                  <Text paddingBottom="md" variant="medium14">
+                  <Text variant="medium14">
                     Loans
                   </Text>
                   <Text variant="bold18">N450,000</Text>

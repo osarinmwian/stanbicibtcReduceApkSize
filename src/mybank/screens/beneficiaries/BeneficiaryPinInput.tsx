@@ -92,7 +92,8 @@ function BeneficiaryPinInput() {
               paddingVertical="md"
               width="100%"
             />
-            <Modal ref={moreModalRef} />
+            <Modal ref={moreModalRef}>
+            </Modal>
           </Box>
         </SafeAreaView>
       </ImageBackground>

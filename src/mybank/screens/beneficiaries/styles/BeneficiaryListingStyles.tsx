@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   primaryButton: {
     maxWidth: 160,
     position: "absolute",
-    top: 365,
+    top: 400,
     right: 20,
   },
   delete: {
