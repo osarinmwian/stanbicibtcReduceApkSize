@@ -97,7 +97,6 @@ export default function AddNewBeneficiary() {
                   height={52}
                   paddingVertical="xxs"
                   paddingTop="md"
-                  keyboardType="number-pad"
                 />
                 <BaseButton flexDirection="row" justifyContent="space-between" height={70} backgroundColor="superlightGrey" marginTop="mmd" borderRadius="sm" onPress={handleMorePresent}>
                 <Box style={style.bankSelect} flexDirection="column" paddingVertical="none" height={100}>
@@ -143,7 +142,7 @@ export default function AddNewBeneficiary() {
                   <Image source={user} height={20} width={20} justifyContent="center" alignItems="center"/>
                   </BaseButton>
                   <BaseButton flexDirection="column" width={300} alignItems="flex-start" backgroundColor="transparent">
-                    <Text color="textTint" variant="medium12">{t("mybank.AddNewBeneficiary.recipient")}</Text>
+                    <Text color="textTint" variant="medium12" paddingBottom="xs">{t("mybank.AddNewBeneficiary.recipient")}</Text>
                     <TextInput placeholder="IHAYERE EHIZOJIE SOLOMON" placeholderTextColor="grey" style={style.bottomInput} />
                   </BaseButton>
                 </Box>

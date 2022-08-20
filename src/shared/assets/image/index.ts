@@ -22,7 +22,6 @@ export { default as close } from "./close.png";
 export { default as compass } from "./compass.png";
 export { default as complain } from "./complain.png";
 export { default as customer } from "./customer.png";
-export { default as delete } from "./delete.png";
 export { default as directions } from "./directions.png";
 export { default as fingerprint } from "./fingerprint.png";
 export { default as flight } from "./flight.png";

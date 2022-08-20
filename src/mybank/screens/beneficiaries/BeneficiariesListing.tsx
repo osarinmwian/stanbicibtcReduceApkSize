@@ -1,5 +1,5 @@
 import { Box } from "@/shared/components/Layout";
-import { TouchableOpacity, StyleSheet, Image } from "react-native";
+import { TouchableOpacity, View, Image } from "react-native";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
 import filterBeneficiaries from "@/mybank/screens/beneficiaries/files/filterBeneficiaries";
@@ -38,9 +38,9 @@ function BeneficiariesListing() {
           <Box
             flexDirection="row"
             key={item.name}
-            paddingHorizontal="sm"
             paddingVertical="lg"
           >
+            <LinearGradient colors={item.containerBackgroundColor} style={styles.containerBackground}>
             <LinearGradient colors={item.background} style={styles.container}>
               <TouchableOpacity
                 style={[
@@ -53,7 +53,7 @@ function BeneficiariesListing() {
                 </Text>
               </TouchableOpacity>
             </LinearGradient>
-            <Box height={100} flex={1} flexDirection="row">
+            <Box flex={1} flexDirection="row" justifyContent="center">
               <TouchableOpacity style={styles.note}>
                 <Text color="textTint" paddingHorizontal="sm" variant="bold14">
                   {item.name}
@@ -74,6 +74,7 @@ function BeneficiariesListing() {
                 </BaseButton>
               </Box>
             </Box>
+            </LinearGradient>
           </Box>
         ))}
       </Box>
@@ -101,8 +102,8 @@ function BeneficiariesListing() {
                 style={styles.image}
               />
             </Box>
-            <Box style={styles.note}>
-              <Text variant="medium14">
+            <Box style={styles.modalNote}>
+              <Text variant="medium14" marginBottom="xs">
               {t("mybank.removeBeneficiaries.pleaseNote")}
               </Text>
               <Text variant="regular14" marginBottom="md" style={styles.note}>

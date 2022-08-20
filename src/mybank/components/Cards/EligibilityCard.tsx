@@ -5,9 +5,9 @@ import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, Card } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const EligibilityCard: VFC<{ onPress?: () => void }> = ({
-  onPress = () => {},
-}) => (
+const EligibilityCard: VFC = () => {
+  const navigation = useNavigation();
+  return (
   <Card backgroundColor="loanCard" padding="md">
     <Box>
       <Box alignItems="flex-start" mb="md">
@@ -50,11 +50,12 @@ const EligibilityCard: VFC<{ onPress?: () => void }> = ({
             fontWeight: "bold",
           }}
           variant="transparent"
-          onPress={onPress}
+          onPress={() => navigation.navigate("LoansAndOffers")}
         />
       </Box>
     </Box>
   </Card>
-);
+  )
+};
 
 export { EligibilityCard };

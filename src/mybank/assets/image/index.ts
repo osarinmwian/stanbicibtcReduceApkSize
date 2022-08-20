@@ -18,7 +18,7 @@ export { default as close } from "./close.png";
 export { default as compass } from "./compass.png";
 export { default as complain } from "./complain.png";
 export { default as customer } from "./customer.png";
-export { default as delete } from "./delete.png";
+export { default as trash } from "./trash.png";
 export { default as flight } from "./flight.png";
 export { default as flights } from "./flights.png";
 export { default as forgotPassword } from "./forgotPassword.png";
