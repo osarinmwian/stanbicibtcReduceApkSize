@@ -41,6 +41,7 @@ function BeneficiariesListing() {
             paddingVertical="lg"
           >
             <LinearGradient colors={item.containerBackgroundColor} style={styles.containerBackground}>
+            <Box flex={1} flexDirection="row" justifyContent="center" paddingHorizontal="md">
             <LinearGradient colors={item.background} style={styles.container}>
               <TouchableOpacity
                 style={[
@@ -53,7 +54,6 @@ function BeneficiariesListing() {
                 </Text>
               </TouchableOpacity>
             </LinearGradient>
-            <Box flex={1} flexDirection="row" justifyContent="center">
               <TouchableOpacity style={styles.note}>
                 <Text color="textTint" paddingHorizontal="sm" variant="bold14">
                   {item.name}

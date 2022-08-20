@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     display:'flex',
     flexDirection:"row",
     paddingVertical: 20,
-    marginTop:-20
+    marginTop:-10
   },
   container: {
     borderRadius: RFValue(20),
@@ -23,16 +23,18 @@ export const styles = StyleSheet.create({
     tintColor: "white",
   },
   primaryButton: {
-    maxWidth: 160,
+    width: 125,
+    justifyContent:'center',
+    alignItems:'center',
+    height:48,
     position: "absolute",
     top: 380,
     right: 0,
   },
   delete: {
     width: 20,
-    height: 20,
+    height: 22,
     justifyContent: "center",
-    marginRight: 10,
     alignItems: "center",
     tintColor:"grey"
   },
