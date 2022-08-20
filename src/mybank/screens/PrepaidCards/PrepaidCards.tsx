@@ -101,11 +101,6 @@ function PrepaidCards() {
                   doSomethingAfterClick={changeBackgroundColor}
                 />
               </Box>
-              <Box style={styles.buttonNames}>
-              <Text>Visa</Text>
-              <Text style={styles.buttonVerve}>Verve</Text>
-              <Text style={styles.buttonMasterCard}>Mastercard</Text>
-              </Box>
             </Box>
             <Box flex={1} style={{ paddingTop: RFValue(32) }}>
               <Text
