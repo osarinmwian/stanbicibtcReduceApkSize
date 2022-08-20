@@ -14,16 +14,16 @@
 		274071B76FCF41B3B73927B1 /* BentonSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78745CC8084E44EFB07A752C /* BentonSans-Regular.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		4FE18514F47C42FD903EACBB /* BentonSans-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F85403A9C1C6468F8C72549A /* BentonSans-Book.ttf */; };
-		51474634889514125B52547B /* libPods-SIBTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB45E7F21A18DA28A63C86E /* libPods-SIBTC.a */; };
 		714204A162B941A4AABD460F /* BentonSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 923B0BA761794CD9A488720B /* BentonSans-Black.ttf */; };
 		946DDCF9B7FA4ED59764A2A3 /* BentonSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38412A53433D4017BDF78528 /* BentonSans-Bold.ttf */; };
+		B0CC8518D0A335ED3F465A06 /* libPods-SIBTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED46B324C01955B89968DFC1 /* libPods-SIBTC.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		0FB45E7F21A18DA28A63C86E /* libPods-SIBTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SIBTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F48D3E011619895E725E1C /* Pods-SIBTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.release.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SIBTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIBTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SIBTC/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SIBTC/AppDelegate.m; sourceTree = "<group>"; };
@@ -32,13 +32,13 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SIBTC/main.m; sourceTree = "<group>"; };
 		38412A53433D4017BDF78528 /* BentonSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Bold.ttf"; path = "../src/shared/assets/fonts/BentonSans-Bold.ttf"; sourceTree = "<group>"; };
 		78745CC8084E44EFB07A752C /* BentonSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Regular.ttf"; path = "../src/shared/assets/fonts/BentonSans-Regular.ttf"; sourceTree = "<group>"; };
-		78DC652788C162CC955E9AEF /* Pods-SIBTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.release.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.release.xcconfig"; sourceTree = "<group>"; };
 		923B0BA761794CD9A488720B /* BentonSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Black.ttf"; path = "../src/shared/assets/fonts/BentonSans-Black.ttf"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SIBTC/SplashScreen.storyboard; sourceTree = "<group>"; };
 		B501E4388A0140A4830B83A5 /* BentonSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Medium.ttf"; path = "../src/shared/assets/fonts/BentonSans-Medium.ttf"; sourceTree = "<group>"; };
+		B5914A6DE69EE2921E5E3C6C /* Pods-SIBTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.debug.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		DD2D80DF9CE09085C75BCC32 /* Pods-SIBTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIBTC.debug.xcconfig"; path = "Target Support Files/Pods-SIBTC/Pods-SIBTC.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED46B324C01955B89968DFC1 /* libPods-SIBTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SIBTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85403A9C1C6468F8C72549A /* BentonSans-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "BentonSans-Book.ttf"; path = "../src/shared/assets/fonts/BentonSans-Book.ttf"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SIBTC/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51474634889514125B52547B /* libPods-SIBTC.a in Frameworks */,
+				B0CC8518D0A335ED3F465A06 /* libPods-SIBTC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				0FB45E7F21A18DA28A63C86E /* libPods-SIBTC.a */,
+				ED46B324C01955B89968DFC1 /* libPods-SIBTC.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 		D65327D7A22EEC0BE12398D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD2D80DF9CE09085C75BCC32 /* Pods-SIBTC.debug.xcconfig */,
-				78DC652788C162CC955E9AEF /* Pods-SIBTC.release.xcconfig */,
+				B5914A6DE69EE2921E5E3C6C /* Pods-SIBTC.debug.xcconfig */,
+				09F48D3E011619895E725E1C /* Pods-SIBTC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -163,13 +163,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SIBTC" */;
 			buildPhases = (
-				341219C0C37415CCA037BFB0 /* [CP] Check Pods Manifest.lock */,
+				00EE7D923AAF63377CA9AF66 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				77A12CB62FBE23F4A06CEECE /* [CP] Copy Pods Resources */,
+				3E399E40F0E647254C160C94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +244,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\n`node --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n";
 		};
-		341219C0C37415CCA037BFB0 /* [CP] Check Pods Manifest.lock */ = {
+		00EE7D923AAF63377CA9AF66 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,7 +266,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77A12CB62FBE23F4A06CEECE /* [CP] Copy Pods Resources */ = {
+		3E399E40F0E647254C160C94 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,7 +357,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD2D80DF9CE09085C75BCC32 /* Pods-SIBTC.debug.xcconfig */;
+			baseConfigurationReference = B5914A6DE69EE2921E5E3C6C /* Pods-SIBTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -385,7 +385,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78DC652788C162CC955E9AEF /* Pods-SIBTC.release.xcconfig */;
+			baseConfigurationReference = 09F48D3E011619895E725E1C /* Pods-SIBTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

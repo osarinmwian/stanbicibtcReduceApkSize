@@ -27,7 +27,6 @@ const BuyOrSellEnairaButton: ({
 }) => (
   <GradientButton
     gradient={gradient}
-    marginRight="md"
     onPress={onPress}
     paddingVertical="md"
     size="xs"

@@ -10,9 +10,9 @@ import { Text } from "@/shared/components/Typography";
 import { styles } from "./styles/ENairaStyles";
 
 const HeaderComponent = () => (
-  <Box flex={1} flexDirection="row" padding="md">
+  <Box flex={1} flexDirection="row" paddingVertical="md">
     <Box flex={1} mt="md">
-      <Text color="secondaryBlack" mb="xs" variant="medium10">
+      <Text color="secondaryBlack" mb="xs" variant="regular10">
         Sort by:
       </Text>
       <TouchableOpacity activeOpacity={0.75} style={styles.container}>
@@ -20,7 +20,7 @@ const HeaderComponent = () => (
           All
         </Text>
         <Icon
-          color="secondaryBlack"
+          color="primaryColor"
           name="forward"
           size="xs"
           style={styles.rotate}
@@ -28,7 +28,7 @@ const HeaderComponent = () => (
       </TouchableOpacity>
     </Box>
     <Box flex={1} mt="md" paddingHorizontal="sm">
-      <Text color="secondaryBlack" mb="xs" variant="medium10">
+      <Text color="secondaryBlack" mb="xs" variant="regular10">
         Date From
       </Text>
       <TouchableOpacity activeOpacity={0.75} style={styles.container}>
@@ -36,7 +36,7 @@ const HeaderComponent = () => (
           May 1,2021
         </Text>
         <Icon
-          color="secondaryBlack"
+          color="primaryColor"
           name="forward"
           size="xs"
           style={styles.rotate}
@@ -44,7 +44,7 @@ const HeaderComponent = () => (
       </TouchableOpacity>
     </Box>
     <Box flex={1} mt="md">
-      <Text color="secondaryBlack" mb="xs" variant="medium10">
+      <Text color="secondaryBlack" mb="xs" variant="regular10">
         Date To
       </Text>
       <TouchableOpacity activeOpacity={0.75} style={styles.container}>
@@ -52,7 +52,7 @@ const HeaderComponent = () => (
           May 30,2021
         </Text>
         <Icon
-          color="secondaryBlack"
+          color="primaryColor"
           name="forward"
           size="xs"
           style={styles.rotate}

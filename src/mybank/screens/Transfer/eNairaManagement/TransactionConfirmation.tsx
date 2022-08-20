@@ -87,7 +87,7 @@ export default function TransactionConfirmation({
           <PrimaryButton
             alignItems="center"
             backgroundColor="primaryColor"
-            bottom={RFValue(10)}
+            bottom={RFValue(5)}
             height={RFValue(50)}
             justifyContent="center"
             label={t(
@@ -95,7 +95,6 @@ export default function TransactionConfirmation({
             )}
             labelProps={{ color: "whiteColor" }}
             labelVariant="medium10"
-            marginBottom="lg"
             onPress={() => {}}
             position="absolute"
             width="100%"

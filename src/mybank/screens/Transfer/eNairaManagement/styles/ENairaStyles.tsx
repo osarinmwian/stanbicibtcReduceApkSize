@@ -4,7 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-
+    borderRadius: 5,
     backgroundColor: "rgba(0, 137, 255, 0.1)",
 
     flexDirection: "row",
