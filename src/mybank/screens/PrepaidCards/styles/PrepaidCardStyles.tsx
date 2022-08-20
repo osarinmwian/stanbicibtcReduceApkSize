@@ -9,6 +9,19 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  buttonNames:{
+    display:'flex',
+    justifyContent:"flex-start",
+    marginVertical:10,
+    marginHorizontal:16,
+    flexDirection:'row'
+  },
+  buttonVerve:{
+    marginLeft:47
+  },
+  buttonMasterCard:{
+    marginLeft:26
+  },
   text: {
     textTransform: "uppercase",
     position: "relative",
