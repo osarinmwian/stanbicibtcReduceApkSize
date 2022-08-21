@@ -28,20 +28,20 @@ export default function TransactionConfirmation({
           flex={1}
           paddingHorizontal="md"
         >
-          <Box marginTop="lg">
-            <Text variant="bold14">
-              {t("mybank.transfer.enaira.transactionconfirmation.title")}
-            </Text>
-            <Text color="textTint" mb="md" mt="xs" variant="regular12">
-              {t(
-                "mybank.transfer.enaira.transactionconfirmation.titleparagraph",
-              )}
-            </Text>
-          </Box>
           <ScrollView
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
           >
+            <Box marginTop="lg">
+              <Text variant="bold14">
+                {t("mybank.transfer.enaira.transactionconfirmation.title")}
+              </Text>
+              <Text color="textTint" mb="md" mt="xs" variant="regular12">
+                {t(
+                  "mybank.transfer.enaira.transactionconfirmation.titleparagraph",
+                )}
+              </Text>
+            </Box>
             <Box
               backgroundColor="confirmCard"
               borderRadius="md"

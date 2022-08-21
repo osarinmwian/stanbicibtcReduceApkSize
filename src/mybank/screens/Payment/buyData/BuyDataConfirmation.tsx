@@ -27,18 +27,18 @@ export default function BuyDataConfirmation({
           flex={1}
           paddingHorizontal="md"
         >
-          <Box marginTop="lg">
-            <Text marginBottom="xs" variant="medium14">
-              {t("mybank.payment.buydata.confirmation.title")}
-            </Text>
-            <Text color="textTint" mb="md" mt="xs" variant="regular12">
-              {t("mybank.payment.buydata.confirmation.titleparagraph")}
-            </Text>
-          </Box>
           <ScrollView
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
           >
+            <Box marginTop="lg">
+              <Text marginBottom="xs" variant="medium14">
+                {t("mybank.payment.buydata.confirmation.title")}
+              </Text>
+              <Text color="textTint" mb="md" mt="xs" variant="regular12">
+                {t("mybank.payment.buydata.confirmation.titleparagraph")}
+              </Text>
+            </Box>
             <Box
               backgroundColor="confirmCard"
               borderRadius="md"
