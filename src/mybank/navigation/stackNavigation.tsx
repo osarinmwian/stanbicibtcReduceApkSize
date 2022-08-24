@@ -28,6 +28,9 @@ import LoansAndOffers from "../screens/Extras/LoansAndOffers";
 import {
   AvailableFlightsPage,
   FlightIndex,
+  Hotels,
+  HotelsList,
+  HotelView,
   NoFlightFound,
 } from "../screens/lifestyle";
 import Notifications from "../screens/notifications/Notifications";
@@ -157,6 +160,9 @@ function Lifestyle() {
     >
       <Stack.Screen component={FlightIndex} name="FlightIndex" />
       <Stack.Screen component={NoFlightFound} name="NoFlightFound" />
+      <Stack.Screen component={Hotels} name="Hotels" />
+      <Stack.Screen component={HotelsList} name="HotelsList" />
+      <Stack.Screen component={HotelView} name="HotelView" />
       <Stack.Screen
         component={AvailableFlightsPage}
         name="AvailableFlightsPage"
