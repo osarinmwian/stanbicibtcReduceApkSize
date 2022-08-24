@@ -4,4 +4,5 @@ export { default as NoFlightFound } from "./flight/noFlightFound";
 export { default as Hotels } from "./hotel/Hotels";
 export { default as HotelsList } from "./hotel/HotelsList";
 export { default as HotelView } from "./hotel/HotelView";
+export { default as SearchHotelError } from "./hotel/SearchHotelError";
 export { default as LifestyleLandingPage } from "./lifestyleLandingPage";

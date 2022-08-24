@@ -5,6 +5,7 @@ import {
   FlatList,
   Image,
   ImageBackground,
+  Modal,
   Pressable,
   StatusBar,
   TouchableOpacity,
@@ -31,7 +32,6 @@ import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { ImageIcon } from "@/shared/assets/icons";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
-import { Modal } from "@/shared/components/Modal";
 import { Text } from "@/shared/components/Typography";
 
 import BookHotel from "./components/BookHotel";
@@ -120,6 +120,7 @@ const hotelviewData = {
 };
 
 const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
+  const [modalVisible, setModalVisible] = useState(false);
   const [listData] = useState([
     { id: 1, title: "House Rule" },
     { id: 2, title: "House & Safety" },
@@ -130,7 +131,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
   const moreModalRef = useRef<BottomSheetModal>(null);
 
   const handleMorePresent = useCallback(() => {
-    moreModalRef.current?.present();
+    setModalVisible(!modalVisible);
   }, []);
   const [currentphoto, setcurrentphoto] = useState({ img: hotelbanner, id: 1 });
   const [currentphotoindex, setcurrentphotoindex] = useState<number>(0);
@@ -607,8 +608,11 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
         source={loginBackground}
         style={{ flex: 1 }}
       >
-        <Modal ref={moreModalRef}>
-          <BookHotel moreModalRef={moreModalRef} navigation={navigation} />
+        <Modal animationType="slide" transparent visible={modalVisible}>
+          <BookHotel
+            navigation={navigation}
+            setModalVisible={setModalVisible}
+          />
         </Modal>
         {renderHeader()}
         {renderHotelDetail()}
