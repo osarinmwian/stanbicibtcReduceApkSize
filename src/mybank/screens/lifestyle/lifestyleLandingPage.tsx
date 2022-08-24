@@ -20,7 +20,7 @@ const LifestyleLandingPage = ({
       subHeading: "Book flights easily",
     },
     {
-      destination: "FlightIndex",
+      destination: "Hotels",
       heading: "Hotels",
       iconName: "bed",
       id: "2",

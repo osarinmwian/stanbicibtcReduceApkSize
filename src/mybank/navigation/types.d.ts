@@ -51,6 +51,9 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   PrepaidPinInput: undefined;
   BeneficiaryPinInput: undefined;
   LoansAndOffers: undefined;
+  Hotels: undefined;
+  HotelsList: undefined;
+  HotelView: undefined;
 };
 
 // Tab routes
@@ -89,7 +92,6 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
 };
 
 export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
- 
   StackScreenProps<PfmStackParameterList, T>;
 
 export type ENairaManagement = MyBankRootStackParameterList & {
