@@ -3,23 +3,22 @@ import { useTranslation } from "react-i18next";
 import { Keyboard, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import { ENairaNavigationProps } from "@/mybank/navigation/types";
+import { BuydataNavigationProps } from "@/mybank/navigation/types";
 import PinComponent from "@/mybank/screens/Transfer/components/PinComponent";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-export default function TransactionConfirmation({
+export default function BuyDataConfirmation({
   navigation,
-}: ENairaNavigationProps<"TransactionConfirmation">) {
+}: BuydataNavigationProps<"ConfirmBuyData">) {
   const { t } = useTranslation();
   const [pin, setPin] = useState("");
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  const onPress = () => {
-    navigation.navigate("ENairaHome");
-  };
   return (
-    <LayoutComponent label="TRANSACTION CONFIRMATION" labelMarginLeftsmallLarge>
+    <LayoutComponent
+      label={t("mybank.payment.buydata.title")}
+      labelMarginLeftsmallLarge
+    >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Box
           backgroundColor="whiteColor"
@@ -33,13 +32,11 @@ export default function TransactionConfirmation({
             showsVerticalScrollIndicator={false}
           >
             <Box marginTop="lg">
-              <Text variant="bold14">
-                {t("mybank.transfer.enaira.transactionconfirmation.title")}
+              <Text marginBottom="xs" variant="medium14">
+                {t("mybank.payment.buydata.confirmation.title")}
               </Text>
               <Text color="textTint" mb="md" mt="xs" variant="regular12">
-                {t(
-                  "mybank.transfer.enaira.transactionconfirmation.titleparagraph",
-                )}
+                {t("mybank.payment.buydata.confirmation.titleparagraph")}
               </Text>
             </Box>
             <Box
@@ -49,10 +46,8 @@ export default function TransactionConfirmation({
               padding="sml"
             >
               <Box flexDirection="row" justifyContent="space-between">
-                <Text>
-                  {t("mybank.transfer.enaira.transactionconfirmation.account")}
-                </Text>
-                <Text variant="regular14">Account Name</Text>
+                <Text>{t("mybank.payment.buydata.confirmation.amount")}</Text>
+                <Text variant="regular14">N00.000</Text>
               </Box>
               <Box
                 flexDirection="row"
@@ -60,20 +55,19 @@ export default function TransactionConfirmation({
                 marginVertical="sm"
               >
                 <Text variant="regular14">
-                  {t("mybank.transfer.enaira.transactionconfirmation.balance")}
+                  {t("mybank.payment.buydata.confirmation.phone")}
                 </Text>
-                <Text variant="regular14">Account balance</Text>
+                <Text variant="regular14">08033765647</Text>
               </Box>
               <Box flexDirection="row" justifyContent="space-between">
                 <Text variant="regular14">
-                  {t("mybank.transfer.enaira.transactionconfirmation.amount")}
+                  {t("mybank.payment.buydata.confirmation.network")}
                 </Text>
-                <Text color="black" variant="bold14">
-                  N2000
+                <Text color="black" variant="regular14">
+                  Glo
                 </Text>
               </Box>
             </Box>
-
             <Box flex={1} marginBottom="lg" paddingHorizontal="md">
               <PinComponent
                 onChangeText={(value) => {
@@ -84,17 +78,17 @@ export default function TransactionConfirmation({
               <Box minHeight={RFValue(70)} />
             </Box>
           </ScrollView>
+
           <PrimaryButton
             alignItems="center"
             backgroundColor="primaryColor"
-            bottom={RFValue(5)}
+            bottom={RFValue(0)}
             height={RFValue(50)}
             justifyContent="center"
-            label={t(
-              "mybank.transfer.enaira.transactionconfirmation.buttonlable",
-            )}
+            label={t("mybank.payment.buydata.home.buttonlabel")}
             labelProps={{ color: "whiteColor" }}
             labelVariant="medium10"
+            marginTop="sm"
             onPress={() => {}}
             position="absolute"
             width="100%"

@@ -13,7 +13,7 @@ import { Text } from "@/shared/components/Typography";
 
 type LoanTenureModalProps = {
   bottomSheetModalRef: RefObject<BottomSheetModal>;
-  repaymentFn: Function;
+  repaymentFn: () => void;
 };
 const renderBackdrop = (props: BottomSheetBackdropProps) => (
   <BottomSheetBackdrop {...props} opacity={0.9} pressBehavior="close" />

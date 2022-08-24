@@ -1,24 +1,24 @@
-import { loginBackground } from "@/mybank/assets/image";
-import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
-import { PfmNavigationProps } from "@/mybank/navigation/types";
-import { SvgIconPackType } from "@/shared/assets/icons";
-import { IconVector } from "@/shared/assets/icons/IconVector";
-import { SafeAreaView, ImageBackground, Box } from "@/shared/components/Layout";
-import { Text } from "@/shared/components/Typography";
-import { PaletteType } from "@/shared/theme/palette";
 import { VFC } from "react";
 import { useTranslation } from "react-i18next";
 import { ScrollView } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import { loginBackground } from "@/mybank/assets/image";
+import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
+import { PfmNavigationProps } from "@/mybank/navigation/types";
+import { SvgIconPackType } from "@/shared/assets/icons";
+import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
+import { PaletteType } from "@/shared/theme/palette";
+
 type TransactionType = {
-    title: string,
-    leftIcon: SvgIconPackType,
-    subtitle: string,
-    iconBackgroundColor: PaletteType,
-    amount: string;
-}
+  title: string;
+  leftIcon: SvgIconPackType;
+  subtitle: string;
+  iconBackgroundColor: PaletteType;
+  amount: string;
+};
 
 const transactions: TransactionType[] = [
   {
@@ -60,10 +60,10 @@ export const EditCategoryNameScreen: VFC<
       <ImageBackground flex={1} source={loginBackground}>
         <Box height={RFValue(50)} />
         <Box
-          flex={1}
           backgroundColor="whiteColor"
-          borderTopStartRadius="sm"
           borderTopEndRadius="sm"
+          borderTopStartRadius="sm"
+          flex={1}
         >
           <ScrollView>
             <Box flex={1}>
@@ -78,18 +78,18 @@ export const EditCategoryNameScreen: VFC<
                     backgroundColor: "pfmeducationbackgroundcolor",
                   }}
                 />
-                <Box my="lg" alignItems="center" flexDirection="row">
-                  <Text fontWeight="500" fontStyle="normal" fontSize={16}>
+                <Box alignItems="center" flexDirection="row" my="lg">
+                  <Text fontSize={16} fontStyle="normal" fontWeight="500">
                     {t("pfm.modifyTransferLimit")}
                   </Text>
                 </Box>
 
                 <Box
-                  padding="md"
-                  mt="none"
-                  mb="sm"
-                  borderRadius="sm"
                   backgroundColor="cardSecondary"
+                  borderRadius="sm"
+                  mb="sm"
+                  mt="none"
+                  padding="md"
                 >
                   <Text color="darkGrey" fontWeight="400">
                     {t("pfm.newCategoryName")}
@@ -109,4 +109,3 @@ export const EditCategoryNameScreen: VFC<
     </SafeAreaView>
   );
 };
-

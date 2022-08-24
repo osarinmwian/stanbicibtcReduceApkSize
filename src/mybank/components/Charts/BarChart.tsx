@@ -1,7 +1,8 @@
-import { palette } from "@/shared/theme/palette";
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { BarChart } from "react-native-gifted-charts";
+
+import { palette } from "@/shared/theme/palette";
 
 export const BarChartUI = () => {
   const barData = [
@@ -55,15 +56,15 @@ export const BarChartUI = () => {
   return (
     <View>
       <BarChart
-        data={barData}
         barWidth={20.7}
-        spacing={21}
-        // hideRules
-        xAxisThickness={0}
-        yAxisThickness={0}
-        yAxisTextStyle={{ color: "gray" }}
-        noOfSections={5}
+        data={barData}
         maxValue={100}
+        // hideRules
+        noOfSections={5}
+        spacing={21}
+        xAxisThickness={0}
+        yAxisTextStyle={{ color: "gray" }}
+        yAxisThickness={0}
       />
     </View>
   );

@@ -12,6 +12,7 @@ interface ListComponentProps {
   label: string;
   placeholder: string;
   onPress?: () => void;
+  biggerPlaceHolder?: boolean;
 }
 
 const styles = StyleSheet.create({
@@ -20,8 +21,9 @@ const styles = StyleSheet.create({
     backgroundColor: palette.paleGrey25,
     borderRadius: RFValue(8),
     flexDirection: "row",
+    justifyContent: "center",
     paddingHorizontal: RFValue(15),
-    paddingVertical: RFValue(8),
+    paddingVertical: RFValue(10),
   },
   rotate: {
     transform: [{ rotate: "90deg" }],
@@ -32,10 +34,11 @@ export default function ListComponent({
   iconName,
   label,
   placeholder,
+  biggerPlaceHolder,
   onPress,
 }: ListComponentProps) {
   return (
-    <Box marginVertical="sm">
+    <Box justifyContent="center">
       <TouchableOpacity
         activeOpacity={0.75}
         onPress={onPress}
@@ -44,18 +47,22 @@ export default function ListComponent({
           minHeight: RFValue(52),
         }}
       >
-        <Box flex={1}>
-          <Text color="lightGrey" variant="medium10">
+        <Box flex={1} marginTop="sm">
+          <Text color="textDarkTint" variant="medium10">
             {label}
           </Text>
-          <Text color="lightGrey" paddingVertical="xxs" variant="regular10">
+          <Text
+            color="textDarkTint"
+            paddingVertical="xs"
+            variant={biggerPlaceHolder ? "regular14" : "regular10"}
+          >
             {placeholder}
           </Text>
         </Box>
         <Icon
           color="secondaryBlack"
           name={iconName || "forward"}
-          size="xs"
+          size={iconName ? "sm" : "xs"}
           style={!iconName && styles.rotate}
         />
       </TouchableOpacity>

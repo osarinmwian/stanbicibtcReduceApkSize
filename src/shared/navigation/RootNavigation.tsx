@@ -4,11 +4,11 @@ import MyBankNavigation from "@/mybank/navigation/index";
 import { StoryBookNavigation } from "@/shared/modules/storybook/navigation";
 
 import { BranchLocatorNaviagtion } from "../screens/atmBranchLocator/navigation";
+import { IntroScreen } from "../screens/introScreens";
 import { LandingPage } from "../screens/landingPage";
 import { OnePassNavigation } from "../screens/onePass/navigation";
 import { QuickAirtimeNavigation } from "../screens/quickAirtime/navigation";
 import type { RootStackParameterList } from "./types";
-import { IntroScreen } from "../screens/introScreens";
 
 const Stack = createNativeStackNavigator<RootStackParameterList>();
 

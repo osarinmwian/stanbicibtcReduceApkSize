@@ -67,8 +67,8 @@ export const FinancialManagementScreen: VFC<
         <Box height={RFValue(50)} />
         <Box
           backgroundColor="whiteColor"
-          borderTopStartRadius="md"
           borderTopEndRadius="md"
+          borderTopStartRadius="md"
         >
           <ScrollView>
             <Box flex={1}>
@@ -152,7 +152,7 @@ export const FinancialManagementScreen: VFC<
               </Box>
               {transactions.map((item, index) => (
                 <CategoryButton
-                  key={`transaction-category-${index}`}
+                  key={`transaction-category-${item}`}
                   {...item}
                   {...{
                     backgroundColor:

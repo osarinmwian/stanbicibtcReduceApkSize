@@ -346,7 +346,7 @@ export default function PinComponent({
                 <Text
                   color={numberColor ?? "textTint"}
                   fontSize={12}
-                  variant="title"
+                  variant="regular12"
                 >
                   {t("buttons.delete").toUpperCase()}
                 </Text>

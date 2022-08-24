@@ -15,7 +15,7 @@ const CopyButton: ({
       backgroundColor="confirmCard"
       borderRadius="sm"
       justifyContent="center"
-      paddingHorizontal="md"
+      paddingHorizontal="sml"
       paddingVertical="md"
     >
       <Text color="primaryColor" variant="medium12">

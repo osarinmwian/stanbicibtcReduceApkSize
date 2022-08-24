@@ -10,12 +10,12 @@ import { palette } from "@/shared/theme/palette";
 
 export const SideIcon = () => (
   <Box
-    backgroundColor="transparentWhite"
-    height={RFValue(25)}
-    width={RFValue(25)}
-    borderRadius="lg"
-    justifyContent="center"
     alignItems="center"
+    backgroundColor="transparentWhite"
+    borderRadius="lg"
+    height={RFValue(25)}
+    justifyContent="center"
+    width={RFValue(25)}
   >
     <IconVector name="chevron-down-sharp-white" size="sm" width={RFValue(12)} />
   </Box>
@@ -33,36 +33,36 @@ export const HangingCard: VFC = () => {
             {t("pfm.learnMore")}
           </Text>
         </Box>
-        <Text color="textColor2" my="md" variant="font12" fontWeight="500">
+        <Text color="textColor2" fontWeight="500" my="md" variant="font12">
           {t("pfm.selectAccount").toUpperCase()}
         </Text>
-        <Box borderWidth={0} borderRadius="sm">
+        <Box borderRadius="sm" borderWidth={0}>
           <LinearGradient
-            style={{ borderRadius: 8 }}
-            start={{ x: 0.05, y: 0.0 }}
             colors={[
               palette.pfminnercardlineargradientcolorstart,
               palette.pfminnercardlineargradientcolorend,
             ]}
+            start={{ x: 0.05, y: 0 }}
+            style={{ borderRadius: 8 }}
           >
             <Box
-              padding="sm"
-              paddingHorizontal="md"
               flexDirection="row"
               justifyContent="space-between"
+              padding="sm"
+              paddingHorizontal="md"
             >
               <Box>
                 <Text
                   color="whiteColor"
-                  variant="regular10"
                   fontSize={RFValue(11)}
+                  variant="regular10"
                 >
                   0000826353 - {t("pfm.current").toUpperCase()}
                 </Text>
                 <Text color="whiteColor" variant="bold12">
                   EHINOZIE SOLOMON IHAYERE
                 </Text>
-                <Box my="md" flexDirection="row" alignItems="center">
+                <Box alignItems="center" flexDirection="row" my="md">
                   <Box>
                     <Text>
                       <Text color="whiteColor" fontWeight="bold">

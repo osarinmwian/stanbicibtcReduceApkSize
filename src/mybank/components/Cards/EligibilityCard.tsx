@@ -1,4 +1,3 @@
-import { useNavigation } from "@react-navigation/native";
 import React, { VFC } from "react";
 
 import { PrimaryButton } from "@/shared/components/Buttons";
@@ -49,8 +48,8 @@ const EligibilityCard: VFC<{ onPress?: () => void }> = ({
             fontVariant: "caption",
             fontWeight: "bold",
           }}
-          variant="transparent"
           onPress={onPress}
+          variant="transparent"
         />
       </Box>
     </Box>

@@ -3,23 +3,22 @@ import { useTranslation } from "react-i18next";
 import { Keyboard, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import { ENairaNavigationProps } from "@/mybank/navigation/types";
+import { SchdulePaymentNavigationProps } from "@/mybank/navigation/types";
 import PinComponent from "@/mybank/screens/Transfer/components/PinComponent";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-export default function TransactionConfirmation({
+export default function ConfirmSchedulePayment({
   navigation,
-}: ENairaNavigationProps<"TransactionConfirmation">) {
+}: SchdulePaymentNavigationProps<"ConfirmSchedulePayment">) {
   const { t } = useTranslation();
   const [pin, setPin] = useState("");
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  const onPress = () => {
-    navigation.navigate("ENairaHome");
-  };
   return (
-    <LayoutComponent label="TRANSACTION CONFIRMATION" labelMarginLeftsmallLarge>
+    <LayoutComponent
+      label={t("mybank.payment.scheculedpayment.landing.title")}
+      labelMarginLeftsmallLarge
+    >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Box
           backgroundColor="whiteColor"
@@ -33,15 +32,16 @@ export default function TransactionConfirmation({
             showsVerticalScrollIndicator={false}
           >
             <Box marginTop="lg">
-              <Text variant="bold14">
-                {t("mybank.transfer.enaira.transactionconfirmation.title")}
+              <Text marginBottom="xs" variant="medium14">
+                {t("mybank.payment.scheculedpayment.confirmation.title")}
               </Text>
               <Text color="textTint" mb="md" mt="xs" variant="regular12">
                 {t(
-                  "mybank.transfer.enaira.transactionconfirmation.titleparagraph",
+                  "mybank.payment.scheculedpayment.confirmation.titleparagraph",
                 )}
               </Text>
             </Box>
+
             <Box
               backgroundColor="confirmCard"
               borderRadius="md"
@@ -50,9 +50,9 @@ export default function TransactionConfirmation({
             >
               <Box flexDirection="row" justifyContent="space-between">
                 <Text>
-                  {t("mybank.transfer.enaira.transactionconfirmation.account")}
+                  {t("mybank.payment.scheculedpayment.confirmation.amount")}
                 </Text>
-                <Text variant="regular14">Account Name</Text>
+                <Text variant="regular14">Amount</Text>
               </Box>
               <Box
                 flexDirection="row"
@@ -60,20 +60,19 @@ export default function TransactionConfirmation({
                 marginVertical="sm"
               >
                 <Text variant="regular14">
-                  {t("mybank.transfer.enaira.transactionconfirmation.balance")}
+                  {t("mybank.payment.scheculedpayment.confirmation.date")}
                 </Text>
-                <Text variant="regular14">Account balance</Text>
+                <Text variant="regular14">DD/MM/YYYY</Text>
               </Box>
               <Box flexDirection="row" justifyContent="space-between">
                 <Text variant="regular14">
-                  {t("mybank.transfer.enaira.transactionconfirmation.amount")}
+                  {t("mybank.payment.scheculedpayment.confirmation.type")}
                 </Text>
-                <Text color="black" variant="bold14">
-                  N2000
+                <Text color="black" variant="regular14">
+                  Single
                 </Text>
               </Box>
             </Box>
-
             <Box flex={1} marginBottom="lg" paddingHorizontal="md">
               <PinComponent
                 onChangeText={(value) => {
@@ -87,7 +86,7 @@ export default function TransactionConfirmation({
           <PrimaryButton
             alignItems="center"
             backgroundColor="primaryColor"
-            bottom={RFValue(5)}
+            bottom={RFValue(0)}
             height={RFValue(50)}
             justifyContent="center"
             label={t(
@@ -95,6 +94,7 @@ export default function TransactionConfirmation({
             )}
             labelProps={{ color: "whiteColor" }}
             labelVariant="medium10"
+            marginTop="sm"
             onPress={() => {}}
             position="absolute"
             width="100%"
