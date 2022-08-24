@@ -4,12 +4,12 @@ import React, { VFC } from "react";
 import { LoansStackParameterList } from "@/mybank/navigation/types";
 import EzCashLoansScreen from "@/mybank/screens/loans/EzCashLoansScreen";
 import LoanDetails from "@/mybank/screens/loans/LoanDetails";
+import LoansRequestScreen from "@/mybank/screens/loans/LoansRequestScreen";
 import LoansScreen from "@/mybank/screens/loans/LoansScreen";
 import { IconVector } from "@/shared/assets/icons/IconVector";
 import { BaseButton } from "@/shared/components/Buttons";
 import { Logo } from "@/shared/components/Logo";
 import { Text } from "@/shared/components/Typography";
-import LoansRequestScreen from "@/mybank/screens/loans/LoansRequestScreen";
 
 const Stack = createNativeStackNavigator<LoansStackParameterList>();
 

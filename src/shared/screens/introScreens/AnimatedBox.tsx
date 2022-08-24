@@ -1,8 +1,9 @@
-import { logo } from "@/mybank/assets/image";
-import { Box } from "@/shared/components/Layout";
 import { useFocusEffect } from "@react-navigation/native";
 import { useCallback, useRef } from "react";
 import { Animated, Dimensions } from "react-native";
+
+import { logo } from "@/mybank/assets/image";
+import { Box } from "@/shared/components/Layout";
 
 const { width, height } = Dimensions.get("window");
 
@@ -11,7 +12,7 @@ const AnimatedBox = () => {
   const posY = useRef(new Animated.Value(height / 2 - 44)).current;
   const scale = useRef(new Animated.Value(1)).current;
 
-  const scaleFn = () => {
+  const scaleFunction = () => {
     Animated.timing(scale, {
       toValue: 0.6,
       duration: 1000,
@@ -19,7 +20,7 @@ const AnimatedBox = () => {
     }).start();
   };
 
-  const posYFn = () => {
+  const posYFunction = () => {
     Animated.timing(posY, {
       toValue: 20,
       duration: 1000,
@@ -27,7 +28,7 @@ const AnimatedBox = () => {
     }).start();
   };
 
-  const posXFn = () => {
+  const posXFunction = () => {
     Animated.timing(posX, {
       toValue: width - 88,
       duration: 1000,
@@ -37,13 +38,13 @@ const AnimatedBox = () => {
 
   useFocusEffect(
     useCallback(() => {
-      posYFn();
-      posXFn();
-      scaleFn();
+      posYFunction();
+      posXFunction();
+      scaleFunction();
     }, []),
   );
   return (
-    <Box position="absolute" top={0} right={0} left={0}>
+    <Box left={0} position="absolute" right={0} top={0}>
       <Animated.View>
         <Animated.Image
           source={logo}

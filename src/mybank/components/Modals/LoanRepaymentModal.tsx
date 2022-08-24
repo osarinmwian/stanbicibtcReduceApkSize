@@ -10,7 +10,6 @@ import { RepaymentButton } from "@/mybank/components/Buttons";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import Pressable from "@/shared/components/Pressable";
 
 type LoanRepaymentModalProps = {
   bottomSheetModalRef: RefObject<BottomSheetModal>;

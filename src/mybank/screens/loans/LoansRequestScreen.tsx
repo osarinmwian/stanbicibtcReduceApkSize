@@ -1,18 +1,19 @@
-import React, { useMemo, useRef, useState, VFC } from "react";
-import { loginBackground } from "@/mybank/assets/image";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
-import PinComponent from "../Transfer/components/PinComponent";
-import { Text } from "@/shared/components/Typography";
-import { RFValue } from "react-native-responsive-fontsize";
-import { BaseButton } from "@/shared/components/Buttons";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import React, { useRef, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { Dimensions, useWindowDimensions } from "react-native";
-import { FormatMoney } from "@/shared/utils/functions/formatMoney";
+import { RFValue } from "react-native-responsive-fontsize";
+
+import { loginBackground } from "@/mybank/assets/image";
 import {
   LoanRepaymentModal,
   LoanTenureModal,
 } from "@/mybank/components/Modals";
-import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import { BaseButton } from "@/shared/components/Buttons";
+import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
+import { FormatMoney } from "@/shared/utils/functions/formatMoney";
+
+import PinComponent from "../Transfer/components/PinComponent";
 
 const LoansRequestScreen: VFC = () => {
   const { t } = useTranslation();
@@ -32,20 +33,20 @@ const LoansRequestScreen: VFC = () => {
     <ImageBackground flex={1} source={loginBackground}>
       <SafeAreaView flex={1}>
         <Box flex={1}>
-          <Box mt="xl" alignItems="center" flex={2}>
+          <Box alignItems="center" flex={2} mt="xl">
             <Box>
               <Text
                 color="whiteColor"
-                fontWeight="700"
                 fontSize={RFValue(18)}
+                fontWeight="700"
                 textAlign="center"
               >
                 {t("loans.loanReqeust")}
               </Text>
               <Text
                 color="whiteColor"
-                fontWeight="400"
                 fontSize={RFValue(14)}
+                fontWeight="400"
                 textAlign="center"
               >
                 {t("loans.howMuchDoYouNeed")}
@@ -58,27 +59,27 @@ const LoansRequestScreen: VFC = () => {
               <Box justifyContent="flex-end" pb="none">
                 <Text
                   color="loanTransparentColor"
-                  fontWeight="700"
                   fontSize={RFValue(24)}
-                  textAlign="center"
+                  fontWeight="700"
                   mr="sm"
+                  textAlign="center"
                 >
                   N
                 </Text>
               </Box>
               <Text
                 color="loanTransparentColor"
-                fontWeight="700"
                 fontSize={RFValue(40)}
+                fontWeight="700"
                 textAlign="center"
               >
-                {FormatMoney(parseInt(state))}
+                {FormatMoney(Number.parseInt(state, 10))}
               </Text>
             </Box>
             <Text
               color="loanTransparentColor"
-              fontWeight="400"
               fontSize={RFValue(14)}
+              fontWeight="400"
               textAlign="center"
             >
               {t("loans.currentLoanPayable")}: N200,000
@@ -86,26 +87,26 @@ const LoansRequestScreen: VFC = () => {
           </Box>
           <Box flex={10}>
             <PinComponent
-              size={60}
-              value={state}
-              padBackgroundColor="loanTransparentBackgroundColor"
+              manageInput
               numberColor="whiteColor"
               numberFontSize={24}
               onChangeText={onChangeText}
-              manageInput
+              padBackgroundColor="loanTransparentBackgroundColor"
+              size={60}
+              value={state}
             />
           </Box>
-          <Box paddingHorizontal="md" flex={1.5}>
+          <Box flex={1.5} paddingHorizontal="md">
             <BaseButton
-              justifyContent="center"
               backgroundColor="whiteColor"
+              justifyContent="center"
               onPress={onOpenLoanTenureModal}
             >
               <Box padding="sm">
                 <Text
                   color="imageBackgroundTint"
-                  fontWeight="400"
                   fontSize={RFValue(12)}
+                  fontWeight="400"
                 >
                   {t("buttons.continue").toUpperCase()}
                 </Text>

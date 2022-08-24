@@ -67,16 +67,26 @@ const FilledTextInput: VFC<MaterialTextInputProps> = (props) => {
   );
 
   return (
-    <Box position="relative" width="100%">
-      <Box flex={1}>
+    <Box
+      backgroundColor="textInputbackground"
+      justifyContent="center"
+      position="relative"
+      width="100%"
+    >
+      <Box
+        backgroundColor="textInputbackground"
+        flex={1}
+        justifyContent="center"
+      >
         <FilledTextField
           allowFontScaling={false}
           baseColor={theme.colors.lightGrey}
           fontSize={theme.fontSizes.p}
           inputContainerStyle={{
-            backgroundColor: theme.colors.paleGrey50,
+            backgroundColor: theme.colors.textInputbackground,
             borderRadius: 5,
             height: RFValue(61),
+            justifyContent: "center",
             paddingRight: secureTextEntry ? RFValue(40) : 0,
           }}
           secureTextEntry={secureTextEntry && !showPassword}
@@ -85,7 +95,13 @@ const FilledTextInput: VFC<MaterialTextInputProps> = (props) => {
         />
       </Box>
       {secureTextEntry ? (
-        <Box position="absolute" right={RFValue(4)} top={RFValue(4)}>
+        <Box
+          backgroundColor="textInputbackground"
+          justifyContent="center"
+          position="absolute"
+          right={RFValue(4)}
+          top={RFValue(4)}
+        >
           <TogglePasswordIconButton
             isVisible={showPassword}
             onPress={toggleShowPassword}

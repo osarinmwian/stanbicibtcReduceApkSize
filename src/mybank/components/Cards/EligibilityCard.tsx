@@ -1,4 +1,3 @@
-import { useNavigation } from "@react-navigation/native";
 import React, { VFC } from "react";
 
 import { PrimaryButton } from "@/shared/components/Buttons";

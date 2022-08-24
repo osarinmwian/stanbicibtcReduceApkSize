@@ -51,8 +51,19 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   PrepaidPinInput: undefined;
   BeneficiaryPinInput: undefined;
   LoansAndOffers: undefined;
+  SchedulePaymentStack: undefined;
+  BuyDataStack: undefined;
 };
 
+export type SchedulePaymentStack = {
+  SchedulePaymentLandingPage: undefined;
+  SchedulePayment: undefined;
+  ConfirmSchedulePayment: undefined;
+};
+export type BuyDataStack = {
+  BuyDataLandingPage: undefined;
+  ConfirmBuyData: undefined;
+};
 // Tab routes
 type MyTabRoutes = {
   HomeLandingPage: {
@@ -81,6 +92,13 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
   StackScreenProps<LoansStackParameterList, T>;
 
+export type BuydataNavigationProps<T extends keyof BuyDataStack> =
+  StackScreenProps<BuyDataStack, T>;
+
+export type SchdulePaymentNavigationProps<
+  T extends keyof SchedulePaymentStack,
+> = StackScreenProps<SchedulePaymentStack, T>;
+
 export type PfmStackParameterList = MyBankRootStackParameterList & {
   PfmMainScreen: undefined;
   financialManagementScreen: undefined;
@@ -89,7 +107,6 @@ export type PfmStackParameterList = MyBankRootStackParameterList & {
 };
 
 export type PfmNavigationProps<T extends keyof PfmStackParameterList> =
- 
   StackScreenProps<PfmStackParameterList, T>;
 
 export type ENairaManagement = MyBankRootStackParameterList & {
