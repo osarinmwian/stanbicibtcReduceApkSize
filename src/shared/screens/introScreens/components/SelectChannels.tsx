@@ -2,19 +2,21 @@ import {
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
-import { t } from "i18next";
-import React, { RefObject, useCallback, useEffect, useMemo } from "react";
-import { Dimensions, FlatList } from "react-native";
-import { Backdrop } from "@/shared/components/Modal/Backdrop";
-import { Box } from "@/shared/components/Layout";
-import { GradientButton, PrimaryButton } from "@/shared/components/Buttons";
-import { Text } from "@/shared/components/Typography";
-import Pressable, { PressableProps } from "@/shared/components/Pressable";
-import modules from "../../landingPage/files/modules";
-import { Image } from "@/shared/components/Image";
 import { useNavigation } from "@react-navigation/native";
+import { t } from "i18next";
+import React, { RefObject, useCallback, useMemo } from "react";
+import { Dimensions, FlatList } from "react-native";
 
-type PropType = {
+import { GradientButton } from "@/shared/components/Buttons";
+import { Image } from "@/shared/components/Image";
+import { Box } from "@/shared/components/Layout";
+import { Backdrop } from "@/shared/components/Modal/Backdrop";
+import Pressable, { PressableProps } from "@/shared/components/Pressable";
+import { Text } from "@/shared/components/Typography";
+
+import modules from "../../landingPage/files/modules";
+
+type PropertyType = {
   handleDismissModalPress: () => void;
   bottomRef: RefObject<BottomSheetModal>;
   type: "sign-in" | "sign-up";
@@ -25,7 +27,7 @@ const SelectChannel = ({
   handleDismissModalPress,
   bottomRef,
   type,
-}: PropType) => {
+}: PropertyType) => {
   const navigation = useNavigation();
   const snapPoints = useMemo(() => ["55%", "55%"], []);
 
@@ -51,8 +53,8 @@ const SelectChannel = ({
             </Text>
             <Text variant="regular14">
               {type === "sign-up"
-                ? t("mybank.selectChannel.selectChannelToSignUpWith")
-                : t("mybank.selectChannel.selectChannelToSignInWith")}
+                ? t("mybank.selectChannel.selectChannelSignUpSubTitle")
+                : t("mybank.selectChannel.selectChannelSignInSubTitle")}
             </Text>
           </Box>
           <Box>
@@ -99,7 +101,15 @@ const SelectChannel = ({
           </Box>
 
           {type === "sign-in" && (
-            <GradientButton alignItems="center" borderRadius="md" size="md">
+            <GradientButton
+              alignItems="center"
+              borderRadius="md"
+              onPress={() => {
+                navigation.navigate("OnePass");
+                bottomRef.current?.dismiss();
+              }}
+              size="md"
+            >
               <Text color="whiteColor" variant="medium18">
                 {t("mybank.selectChannel.signUpWithOnePass")}
               </Text>
