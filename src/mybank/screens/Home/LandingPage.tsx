@@ -293,7 +293,8 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
               <SvgIcon
                 name="notification"
                 onPress={() => navigation.navigate("Notifications")}
-                size="sm"
+                size="md"
+                style={{ padding: 5 }}
               />
             </Box>
             <Box {...iconProps}>
@@ -357,9 +358,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
                 style={{ height: 128, width: 343 }}
               >
                 <Box paddingHorizontal="lg" paddingTop="md">
-                  <Text variant="medium14">
-                    Loans
-                  </Text>
+                  <Text variant="medium14">Loans</Text>
                   <Text variant="bold18">N450,000</Text>
                   <Text marginBottom="sm" variant="regular14">
                     Currently eligiblity{" "}

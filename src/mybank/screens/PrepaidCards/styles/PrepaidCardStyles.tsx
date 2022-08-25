@@ -9,18 +9,18 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonNames:{
-    display:'flex',
-    justifyContent:"flex-start",
-    marginVertical:10,
-    marginHorizontal:16,
-    flexDirection:'row'
+  buttonNames: {
+    display: "flex",
+    justifyContent: "flex-start",
+    marginVertical: 10,
+    marginHorizontal: 16,
+    flexDirection: "row",
   },
-  buttonVerve:{
-    marginLeft:47
+  buttonVerve: {
+    marginLeft: 47,
   },
-  buttonMasterCard:{
-    marginLeft:26
+  buttonMasterCard: {
+    marginLeft: 26,
   },
   text: {
     textTransform: "uppercase",
@@ -42,9 +42,9 @@ export const styles = StyleSheet.create({
     borderColor: "#fff",
   },
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 50,
+    width: 60,
+    height: 60,
+    borderRadius: 25,
   },
   primaryButton: {
     backgroundColor: "#0033AA",
