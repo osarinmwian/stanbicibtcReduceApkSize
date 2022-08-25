@@ -2,6 +2,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
 import {
+  GuestDetail,
+  HotelConfirmation,
+  SearchHotelError,
+} from "@/mybank/screens/lifestyle";
+import {
   BillersForm,
   CorporateBillers,
   PayWithQr,
@@ -170,6 +175,9 @@ function Lifestyle() {
       <Stack.Screen component={Hotels} name="Hotels" />
       <Stack.Screen component={HotelsList} name="HotelsList" />
       <Stack.Screen component={HotelView} name="HotelView" />
+      <Stack.Screen component={SearchHotelError} name="SearchHotelError" />
+      <Stack.Screen component={GuestDetail} name="GuestDetail" />
+      <Stack.Screen component={HotelConfirmation} name="HotelConfirmation" />
       <Stack.Screen
         component={AvailableFlightsPage}
         name="AvailableFlightsPage"

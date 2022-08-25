@@ -13,9 +13,9 @@ import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 const BookHotel: FC<{
-  moreModalRef: any;
+  setModalVisible: any;
   navigation: MyBankNavigationProps<"HotelView">;
-}> = ({ moreModalRef, navigation }) => {
+}> = ({ setModalVisible, navigation }) => {
   const myCards = [
     {
       id: 1,
@@ -44,8 +44,8 @@ const BookHotel: FC<{
   };
 
   const handleSubmit = () => {
-    moreModalRef?.current.dismiss();
     navigation.navigate("GuestDetail");
+    setModalVisible(false);
   };
 
   const renderItemCard = ({ item, index }: any) => (
@@ -108,7 +108,16 @@ const BookHotel: FC<{
   );
 
   return (
-    <Box backgroundColor="transparentWhite" flex={1} justifyContent="flex-end">
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={() => setModalVisible(false)}
+      style={{
+        backgroundColor: "transparentWhite",
+        flex: 1,
+        height: "70%",
+        justifyContent: "flex-end",
+      }}
+    >
       <Box backgroundColor="whiteColor">
         <Box>
           <FlatList
@@ -133,7 +142,7 @@ const BookHotel: FC<{
               labelVariant="medium12"
               marginBottom="xs"
               marginTop="md"
-              onPress={() => moreModalRef?.current.dismiss()}
+              onPress={() => handleSubmit()}
               paddingVertical="md"
               width="100%"
             />
@@ -154,7 +163,7 @@ const BookHotel: FC<{
           )}
         </Box>
       </Box>
-    </Box>
+    </TouchableOpacity>
   );
 };
 
