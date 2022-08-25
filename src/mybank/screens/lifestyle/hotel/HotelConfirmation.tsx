@@ -73,7 +73,7 @@ const HotelConfirmation: FC = ({
             </Box>
             <Box flexDirection="row" justifyContent="space-between">
               <Text>Going to</Text>
-              <Text variant="medium12">Victoria island, Land</Text>
+              <Text variant="bold12">Victoria island, Land</Text>
             </Box>
           </Box>
         </Box>
