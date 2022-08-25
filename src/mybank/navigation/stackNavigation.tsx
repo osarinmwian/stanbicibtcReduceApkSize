@@ -42,7 +42,9 @@ import Notifications from "../screens/notifications/Notifications";
 import PrepaidCards from "../screens/PrepaidCards/PrepaidCards";
 import PrepaidPinInput from "../screens/PrepaidCards/PrepaidPinInput";
 import BottomTabs from "./bottomNavigation";
+import BuyDataNavigation from "./BuyDataNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
+import { SchedulePaymentNavigation } from "./SchedulePaymentNavigation";
 import { MyBankRootStackParameterList } from "./types";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
@@ -113,6 +115,11 @@ function Home() {
       <Stack.Screen component={PrepaidCards} name="PrepaidCards" />
       <Stack.Screen component={PrepaidPinInput} name="PrepaidPinInput" />
       <Stack.Screen component={LoansAndOffers} name="LoansAndOffers" />
+      <Stack.Screen
+        component={SchedulePaymentNavigation}
+        name="SchedulePaymentStack"
+      />
+      <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
     </Stack.Navigator>
   );
 }

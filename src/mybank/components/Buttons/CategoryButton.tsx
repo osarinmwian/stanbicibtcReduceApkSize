@@ -4,7 +4,6 @@ import { BaseButton } from "@/shared/components/Buttons";
 import { BaseButtonProps } from "@/shared/components/Buttons/BaseButton";
 import { Box, BoxProps } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { RFValue } from "react-native-responsive-fontsize";
 import { PaletteType } from "@/shared/theme/palette";
 
 type CategoryButtonProps = BaseButtonProps & {
@@ -47,8 +46,6 @@ export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
     <BaseButton
       backgroundColor={backgroundColor}
       borderRadius="lg"
-      padding="lg"
-      size="none"
       leftIconProps={{
         size: "md",
         containerProps: {
@@ -60,31 +57,32 @@ export const CategoryButton: VFC<CategoryButtonProps> = (props) => {
         },
         ...leftIconProps,
       }}
+      padding="lg"
       rightComponent={
         <Box px="sm">
           <Text
             color={rightColor}
-            variant="regular14"
             fontSize={16}
-            fontFamily="Roboto"
             fontWeight="700"
+            variant="regular14"
           >
             ₦{amount}
           </Text>
         </Box>
       }
+      size="none"
       {...rest}
     >
       <Box flex={1} {...containerProps} justifyContent="center" padding="ss">
         <Box>
-          <Text variant="font14" fontWeight="500" color="black">
+          <Text color="black" fontWeight="500" variant="font14">
             {title}
           </Text>
           {!hideSubtitle && (
             <Text
               fontVariant="caption"
-              variant="regular12"
               fontWeight={subtitleFontWeight}
+              variant="regular12"
             >
               {subtitle}
             </Text>

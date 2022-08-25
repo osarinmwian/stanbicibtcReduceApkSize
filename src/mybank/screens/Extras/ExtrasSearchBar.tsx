@@ -152,9 +152,7 @@ const ExtrasSearchBar: React.FC = () => {
                 </ScrollView>
               </Box>
             </Box>
-            <Modal ref={moreModalRef} >
-              
-            </Modal>
+            <Modal ref={moreModalRef} />
           </Box>
         </ImageBackground>
       </Box>

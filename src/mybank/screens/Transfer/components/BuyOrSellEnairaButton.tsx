@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 import { IconVector } from "@/shared/assets/icons/IconVector";
 import { GradientButton } from "@/shared/components/Buttons";
@@ -8,6 +7,7 @@ import { Text } from "@/shared/components/Typography";
 import { PaletteType } from "@/shared/theme/palette";
 
 const BuyOrSellEnairaButton: ({
+  iconTitle,
   onPress,
   gradient,
   iconBackground,
@@ -17,41 +17,44 @@ const BuyOrSellEnairaButton: ({
   gradient: "primary" | "secondary" | "tatiary" | undefined;
   iconBackground: PaletteType;
   iconName: boolean;
-}) => JSX.Element = ({ onPress, gradient, iconBackground, iconName }) => {
-  const { t } = useTranslation();
-  return (
-    <GradientButton
-      gradient={gradient}
-      marginRight="md"
-      onPress={onPress}
-      paddingVertical="md"
-      size="xs"
-    >
-      <Box>
-        <Box alignItems="flex-start">
-          <Box
-            alignItems="center"
-            backgroundColor={iconBackground}
-            borderRadius="lg"
-            justifyContent="center"
-            marginVertical="sm"
-            padding="sm"
-          >
-            <IconVector name={iconName ? "buyEnaira" : "sellEnaira"} />
-          </Box>
+  iconTitle: string;
+}) => JSX.Element = ({
+  onPress,
+  gradient,
+  iconBackground,
+  iconName,
+  iconTitle,
+}) => (
+  <GradientButton
+    gradient={gradient}
+    onPress={onPress}
+    paddingVertical="md"
+    size="xs"
+  >
+    <Box>
+      <Box alignItems="flex-start">
+        <Box
+          alignItems="center"
+          backgroundColor={iconBackground}
+          borderRadius="lg"
+          justifyContent="center"
+          marginVertical="sm"
+          padding="sm"
+        >
+          <IconVector name={iconName ? "buyEnaira" : "sellEnaira"} />
         </Box>
-        <Text color="whiteColor" marginVertical="sm" variant="bold14">
-          {t("mybank.transfer.enaira.home.buy")}
-        </Text>
-        <Text color="whiteColor" variant="regular14">
-          xjhvhvj
-        </Text>
-        <Text color="whiteColor" variant="regular14">
-          xjhvhvjxvxvgxvgvxjvx
-        </Text>
       </Box>
-    </GradientButton>
-  );
-};
+      <Text color="whiteColor" marginVertical="sm" variant="bold14">
+        {iconTitle}
+      </Text>
+      <Text color="whiteColor" variant="regular14">
+        xjhvhvj
+      </Text>
+      <Text color="whiteColor" variant="regular14">
+        xjhvhvjxvxvgxvgvxjvx
+      </Text>
+    </Box>
+  </GradientButton>
+);
 
 export default BuyOrSellEnairaButton;

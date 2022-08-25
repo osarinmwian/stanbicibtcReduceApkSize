@@ -152,6 +152,59 @@
         }
       }
     },
+    "payment": {
+      "buydata": {
+        "title": "AIRTIME PURCHASE",
+        "home": {
+          "selectnetwork": "SELECT NETWORK",
+          "amount": "AMOUNT",
+          "phone": "PHONE NUMBER",
+          "buttonlabel": "CONFIRM PURCHASE"
+        },
+        "confirmation": {
+          "title": "Transaction confirmation",
+          "titleparagraph": "Enter your 4 digit pin to continue",
+          "amount": "Amount",
+          "phone": "Phone Number",
+          "network": "Network"
+        }
+      },
+      "scheculedpayment": {
+        "landing": {
+          "record": "No record found",
+          "welcomeparagraph": "Create a scheduled payment to get started",
+          "buttontitle": "SCHEDULE PAYMENT",
+          "title": "SCHEDULED PAYMENT"
+        },
+        "main": {
+          "title": "Schedule a payment",
+          "selectaccount": "SELECT ACCOUNT",
+          "amount": "AMOUNT",
+          "recepient": "RECEPIENT ACCOUNT NUMBER",
+          "recepientdetails": "RECEPIENT",
+          "selectaccountplaceholder": "SAVINGS ACCOUNT",
+          "amountplaceholder": "N00,000",
+          "recepientplaceholder": "ENTER RECEPIENT ACCOUNT",
+          "transactioncatergory": "TRANSACTION CATEGORY",
+          "transactioncatergoryplaceholder": "Education",
+          "narration": "NARRATION",
+          "narrationplaceholder": "Enter narration here",
+          "scheduletype": "SCHEDULE TYPE",
+          "scheduletypeplaceholder": "Select option",
+          "scheculepaymentdate": "SCHEDULE PAYMENT DATE",
+          "scheculepaymentdateplaceholder": "DD/MM/YYYY",
+          "savebeneficiary": "Save as beneficiary for later",
+          "buttontitle": "CONFIRM PAYMENT"
+        },
+        "confirmation": {
+          "title": "Confirm scheduled payment",
+          "titleparagraph": "Enter your 4 digit pin to continue",
+          "amount": "Amount",
+          "date": "Scheduled date",
+          "type": "Scheduled type"
+        }
+      }
+    },
     "selectChannel": {
       "signUpWithOnePass": "SIGN UP WITH ONE PASS",
       "selectChannelHeading": "Select channel",
@@ -200,7 +253,7 @@
       "requireQuestion": "We require this for security purposes"
     }
   },
-  "loans":{
+  "loans": {
     "loanReqeust": "loanReqeust",
     "howMuchDoYouNeed": "How much do you need?",
     "currentLoanPayable": "Current loan payable"

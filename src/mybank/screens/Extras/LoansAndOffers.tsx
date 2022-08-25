@@ -234,7 +234,9 @@ function LoansAndOffers() {
             </Box>
           </Box>
         </SafeAreaView>
-        <Modal ref={moreModalRef} />
+        <Modal ref={moreModalRef}>
+          
+        </Modal>
       </ImageBackground>
     </Box>
   );

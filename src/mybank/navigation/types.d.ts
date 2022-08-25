@@ -59,6 +59,15 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   HotelConfirmation: undefined;
 };
 
+export type SchedulePaymentStack = {
+  SchedulePaymentLandingPage: undefined;
+  SchedulePayment: undefined;
+  ConfirmSchedulePayment: undefined;
+};
+export type BuyDataStack = {
+  BuyDataLandingPage: undefined;
+  ConfirmBuyData: undefined;
+};
 // Tab routes
 type MyTabRoutes = {
   HomeLandingPage: {
@@ -86,6 +95,13 @@ export type LoansStackParameterList = MyBankRootStackParameterList & {
 
 export type LoansNavigationProps<T extends keyof LoansStackParameterList> =
   StackScreenProps<LoansStackParameterList, T>;
+
+export type BuydataNavigationProps<T extends keyof BuyDataStack> =
+  StackScreenProps<BuyDataStack, T>;
+
+export type SchdulePaymentNavigationProps<
+  T extends keyof SchedulePaymentStack,
+> = StackScreenProps<SchedulePaymentStack, T>;
 
 export type PfmStackParameterList = MyBankRootStackParameterList & {
   PfmMainScreen: undefined;

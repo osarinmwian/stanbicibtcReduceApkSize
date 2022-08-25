@@ -180,66 +180,66 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
             >
               <Box my="sm">
                 <Box my="md">
-                  <Text variant="medium12" fontWeight="400">
+                  <Text fontWeight="400" variant="medium12">
                     {t("pfm.transactionSummary").toUpperCase()}
                   </Text>
-                  <Text fontVariant="p" variant="regular12" color="textColor3">
+                  <Text color="textColor3" fontVariant="p" variant="regular12">
                     {t("pfm.showingSummary")}
                   </Text>
                 </Box>
 
                 <Box flexDirection="row" justifyContent="space-evenly">
                   <Box
+                    backgroundColor="cardSecondary"
+                    borderRadius="sm"
                     flex={0.9}
                     padding="md"
-                    borderRadius="sm"
-                    backgroundColor="cardSecondary"
                   >
                     <Box alignItems="center">
-                      <Text variant="font14" color="textColor3">
+                      <Text color="textColor3" variant="font14">
                         N10,125,540.00
                       </Text>
                     </Box>
                     <Box
-                      flexDirection="row"
                       alignItems="center"
-                      mt="xs"
+                      flexDirection="row"
                       justifyContent="center"
+                      mt="xs"
                     >
                       <Box
-                        height={RFValue(5)}
-                        width={RFValue(12)}
-                        marginRight="sm"
                         backgroundColor="pfmorange"
                         borderRadius="md"
+                        height={RFValue(5)}
+                        marginRight="sm"
+                        width={RFValue(12)}
                       />
                       <Text color="pfmorange">{t("pfm.withdrawal")}</Text>
                     </Box>
                   </Box>
-                  <Box flex={0.1}></Box>
+                  <Box flex={0.1} />
                   <Box
+                    backgroundColor="cardSecondary"
+                    borderRadius="sm"
                     flex={0.9}
                     padding="md"
-                    borderRadius="sm"
-                    backgroundColor="cardSecondary"
                   >
                     <Box alignItems="center">
-                      <Text variant="font14" color="textColor3">
+                      <Text color="textColor3" variant="font14">
                         N10,125,540.00
                       </Text>
                     </Box>
                     <Box
-                      flexDirection="row"
                       alignItems="center"
-                      mt="xs"
+                      flexDirection="row"
                       justifyContent="center"
+                      mt="xs"
                     >
                       <Box
-                        height={RFValue(5)}
-                        width={RFValue(12)}
-                        marginRight="sm"
                         backgroundColor="pfmgreen"
                         borderRadius="md"
+                        height={RFValue(5)}
+                        marginRight="sm"
+                        width={RFValue(12)}
                       />
                       <Text color="pfmgreen">{t("pfm.deposit")}</Text>
                     </Box>
@@ -250,15 +250,15 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                 </Box>
 
                 <Box my="lg">
-                  <Text variant="medium12" fontWeight="400">
+                  <Text fontWeight="400" variant="medium12">
                     {t("pfm.category").toUpperCase()}
                   </Text>
-                  <Text fontVariant="p" variant="regular12" color="textColor3">
+                  <Text color="textColor3" fontVariant="p" variant="regular12">
                     {t("pfm.clickCategory")}
                   </Text>
                 </Box>
                 {data.map((dataItem, index) => (
-                  <Box mb="md" key={`transacton-category-main-${index}`}>
+                  <Box key={`transacton-category-main-${dataItem}`} mb="md">
                     <CategoryButton
                       {...dataItem}
                       onPress={() =>

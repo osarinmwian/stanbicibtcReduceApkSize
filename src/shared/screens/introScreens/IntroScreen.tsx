@@ -1,12 +1,10 @@
-import React, { useCallback, useRef, useState } from "react";
-import { Box, ImageBackground } from "@/shared/components/Layout";
-import AnimatedBox from "./AnimatedBox";
-import { Animated, Dimensions } from "react-native";
-import { Text } from "@/shared/components/Typography";
-import { RFValue } from "react-native-responsive-fontsize";
-import { palette } from "@/shared/theme/palette";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import { useFocusEffect } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
-import { BaseButton } from "@/shared/components/Buttons";
+import React, { useCallback, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Animated, Dimensions, TouchableOpacity } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
 
 import {
   introBackground1,
@@ -18,11 +16,13 @@ import {
   introBackground7,
   landingpagebackground,
 } from "@/shared/assets/image";
-import { useFocusEffect } from "@react-navigation/native";
+import { BaseButton } from "@/shared/components/Buttons";
+import { Box, ImageBackground } from "@/shared/components/Layout";
+import { Text } from "@/shared/components/Typography";
+import { palette } from "@/shared/theme/palette";
+
+import AnimatedBox from "./AnimatedBox";
 import { SelectChannelModal } from "./components";
-import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import { useTranslation } from "react-i18next";
-import { TouchableOpacity } from "react-native";
 
 const allSlides = [
   { text: "Bank as quick as you think with this Super App" },
@@ -50,19 +50,19 @@ export default function IntroScreen() {
   const { t } = useTranslation();
 
   const [activeSlide, setActiveSlide] = useState(0);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const slide = allSlides.map(() => useRef(new Animated.Value(0)).current);
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
-  const slideFn = (active: number) => {
-    return Animated.timing(slide[active], {
+  const slideFunction = (active: number) =>
+    Animated.timing(slide[active], {
       toValue: 34,
       duration: DURATION,
       useNativeDriver: false,
     });
-  };
 
-  const fadeFn = useCallback(() => {
+  const fadeFunction = useCallback(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: DURATION / 4,
@@ -70,7 +70,8 @@ export default function IntroScreen() {
     }).start();
   }, [fadeAnim]);
 
-  const resetFadeFn = () => {
+  const resetFadeFunction = () => {
+    // eslint-disable-next-line array-callback-return
     slide.map((s, index) => {
       if (index > activeSlide - 1) {
         Animated.timing(slide[index], {
@@ -91,9 +92,9 @@ export default function IntroScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      resetFadeFn();
-      fadeFn();
-      slideFn(activeSlide).start(({ finished }) => {
+      resetFadeFunction();
+      fadeFunction();
+      slideFunction(activeSlide).start(({ finished }) => {
         if (finished) {
           setActiveSlide(
             activeSlide < allSlides.length - 1 ? activeSlide + 1 : 0,
@@ -104,8 +105,8 @@ export default function IntroScreen() {
   );
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-
-  const handlePresentModalPress = (typeToShow: typeof type) => {
+  const [type, setType] = useState<"sign-in" | "sign-up">("sign-in");
+  const handlePresentModalPress = (typeToShow: "sign-in" | "sign-up") => {
     setType(typeToShow);
     bottomSheetModalRef.current?.present();
   };
@@ -114,24 +115,22 @@ export default function IntroScreen() {
     bottomSheetModalRef.current?.dismiss();
   }, []);
 
-  const [type, setType] = useState<"sign-in" | "sign-up">("sign-in");
-
   return (
     <>
       <ImageBackground flex={1} source={landingpagebackground}>
         <Animated.View style={{ flex: 1, opacity: fadeAnim }}>
           <ImageBackground flex={1} source={allSlidesBackgrounds[activeSlide]}>
             <Box flex={1}>
-              <Box flex={3} p="md" mt="lg">
+              <Box flex={3} mt="lg" p="md">
                 <Box flexDirection="row">
                   {allSlides.map((eachSlide, index) => (
                     <Box
-                      key={`slide-${index}`}
-                      height={4}
-                      width={34}
-                      mr="sm"
                       backgroundColor="transparentWhite"
                       borderRadius="lg"
+                      height={4}
+                      key={`slide-${eachSlide}`}
+                      mr="sm"
+                      width={34}
                     >
                       <Animated.View
                         style={{
@@ -141,16 +140,16 @@ export default function IntroScreen() {
                           backgroundColor: palette.whiteColor,
                           borderRadius: 100,
                         }}
-                      ></Animated.View>
+                      />
                     </Box>
                   ))}
                 </Box>
                 <Box p="lg" py="lg">
                   <Text
                     color="whiteColor"
-                    variant="bold22"
                     fontSize={RFValue(22)}
                     lineHeight={RFValue(22)}
+                    variant="bold22"
                   >
                     {allSlides[activeSlide].text}
                   </Text>
@@ -158,9 +157,9 @@ export default function IntroScreen() {
               </Box>
               <Box flex={2}>
                 <LinearGradient
-                  style={{ flex: 1 }}
-                  start={{ x: 0.005, y: 0.0 }}
                   colors={[palette.transparent, palette.black]}
+                  start={{ x: 0.005, y: 0 }}
+                  style={{ flex: 1 }}
                 >
                   <Box flex={1} justifyContent="flex-end">
                     <Box
@@ -171,11 +170,11 @@ export default function IntroScreen() {
                     >
                       <Box>
                         <BaseButton
-                          size="md"
                           backgroundColor="whiteColor"
-                          width={Dimensions.get("window").width / 2 - 30}
-                          paddingHorizontal="none"
                           onPress={() => handlePresentModalPress("sign-up")}
+                          paddingHorizontal="none"
+                          size="md"
+                          width={Dimensions.get("window").width / 2 - 30}
                         >
                           <Box
                             alignItems="center"
@@ -190,16 +189,16 @@ export default function IntroScreen() {
                       </Box>
                       <Box>
                         <BaseButton
-                          size="md"
                           backgroundColor="whiteColor"
-                          width={Dimensions.get("window").width / 2 - 30}
                           onPress={() => handlePresentModalPress("sign-in")}
+                          size="md"
+                          width={Dimensions.get("window").width / 2 - 30}
                         >
                           <Box width="100%">
                             <Text
+                              fontWeight="400"
                               textAlign="center"
                               variant="medium12"
-                              fontWeight="400"
                             >
                               {t("intro.signIn").toUpperCase()}
                             </Text>
@@ -215,11 +214,11 @@ export default function IntroScreen() {
         </Animated.View>
         <AnimatedBox />
         <SelectChannelModal
-          type={type}
           bottomRef={bottomSheetModalRef}
           handleDismissModalPress={handleDismissModalPress}
+          type={type}
         />
-        <Box position="absolute" top={0} left={0} right={0} bottom="10%">
+        <Box bottom="10%" left={0} position="absolute" right={0} top={0}>
           <Box flex={1} flexDirection="row">
             <Box flex={1}>
               <TouchableOpacity
@@ -229,10 +228,10 @@ export default function IntroScreen() {
                 }}
                 style={{ flex: 1 }}
               >
-                <Box flex={1}></Box>
+                <Box flex={1} />
               </TouchableOpacity>
             </Box>
-            <Box flex={3}></Box>
+            <Box flex={3} />
             <TouchableOpacity
               onPress={() => {
                 setActiveSlide(
@@ -241,7 +240,7 @@ export default function IntroScreen() {
               }}
               style={{ flex: 1 }}
             >
-              <Box flex={1}></Box>
+              <Box flex={1} />
             </TouchableOpacity>
           </Box>
         </Box>

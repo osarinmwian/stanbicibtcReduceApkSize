@@ -12,7 +12,6 @@ import { RepayLoanCard } from "@/mybank/components/Cards";
 import {
   ConfirmLoanRequestModal,
   LoanRepaymentModal,
-  LoanTenureModal,
   TermsAndConditionsModal,
 } from "@/mybank/components/Modals";
 import { LoansNavigationProps } from "@/mybank/navigation/types";

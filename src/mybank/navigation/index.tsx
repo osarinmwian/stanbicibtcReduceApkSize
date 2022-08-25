@@ -21,6 +21,7 @@ function MyBankNavigation() {
     >
       {isLoggedIn ? (
         <Stack.Group>
+          <Stack.Screen component={LoginScreen} name="LoginScreen" />
           <Stack.Screen component={Home} name="Home" />
           <Stack.Screen component={ThreeSBanking} name="ThreeSBanking" />
           <Stack.Screen component={Lifestyle} name="Lifestyle" />

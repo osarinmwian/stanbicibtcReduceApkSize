@@ -26,6 +26,7 @@ import coins from "@/shared/assets/svg/coins.svg";
 import coinsMany from "@/shared/assets/svg/coins-many.svg";
 import compass from "@/shared/assets/svg/compass.svg";
 import copy from "@/shared/assets/svg/copy.svg";
+import deleteIcon from "@/shared/assets/svg/delete.svg";
 import exchangeAlt from "@/shared/assets/svg/exchange-alt.svg";
 import eyeClosed from "@/shared/assets/svg/eye-closed.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
@@ -67,23 +68,24 @@ const svgIconPack = {
   "check-circle-unchecked": circle,
   "chevron-back": chevronBack,
   "chevron-down": chevronDown,
+  "chevron-down-sharp-white": chevronDownSharp,
   "chevron-downward": chevronDownward,
   "chevron-forward": chevronForward,
   "chevron-right-slim": chevronRightSlim,
-  "chevron-down-sharp-white": chevronDownSharp,
   close,
   coins,
   "coins-many": coinsMany,
   "company-logo": companyLogo,
   compass,
   copy,
+  "delete-icon": deleteIcon,
   "exchange-alt": exchangeAlt,
-  "eye-opened": eyeOpened,
   "eye-closed": eyeClosed,
+  "eye-opened": eyeOpened,
   gift,
   graduationCap,
-  home,
   history,
+  home,
   hotel: bed,
   leaf,
   minusSquare,
@@ -96,8 +98,8 @@ const svgIconPack = {
   profile,
   sellEnaira,
   tshirt,
-  utensils,
   university,
+  utensils,
 };
 
 export { svgIconPack };
