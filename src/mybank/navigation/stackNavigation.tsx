@@ -176,8 +176,8 @@ function Lifestyle() {
       <Stack.Screen component={HotelsList} name="HotelsList" />
       <Stack.Screen component={HotelView} name="HotelView" />
       <Stack.Screen component={SearchHotelError} name="SearchHotelError" />
-      <Stack.Screen component={GuestDetail} name="GuestDetail" />
       <Stack.Screen component={HotelConfirmation} name="HotelConfirmation" />
+      <Stack.Screen component={GuestDetail} name="GuestDetail" />
       <Stack.Screen
         component={AvailableFlightsPage}
         name="AvailableFlightsPage"
