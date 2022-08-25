@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import MyBankNavigation from "@/mybank/navigation/index";
+import { GuestDetail } from "@/mybank/screens/lifestyle";
 import { StoryBookNavigation } from "@/shared/modules/storybook/navigation";
 
 import { BranchLocatorNaviagtion } from "../screens/atmBranchLocator/navigation";
@@ -8,7 +9,6 @@ import { LandingPage } from "../screens/landingPage";
 import { OnePassNavigation } from "../screens/onePass/navigation";
 import { QuickAirtimeNavigation } from "../screens/quickAirtime/navigation";
 import type { RootStackParameterList } from "./types";
-import { IntroScreen } from "../screens/introScreens";
 
 const Stack = createNativeStackNavigator<RootStackParameterList>();
 
@@ -18,7 +18,7 @@ function RootNavigation() {
       initialRouteName="IntroScreen"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen component={IntroScreen} name="IntroScreen" />
+      <Stack.Screen component={GuestDetail} name="IntroScreen" />
       <Stack.Screen component={LandingPage} name="LandingPage" />
       <Stack.Screen component={OnePassNavigation} name="OnePass" />
       <Stack.Screen component={QuickAirtimeNavigation} name="QuickAirtime" />

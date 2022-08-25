@@ -44,8 +44,8 @@ const BookHotel: FC<{
   };
 
   const handleSubmit = () => {
-    // setModalVisible(false);
-    navigation.navigate("Hotels");
+    navigation.navigate("GuestDetail");
+    setModalVisible(false);
   };
 
   const renderItemCard = ({ item, index }: any) => (

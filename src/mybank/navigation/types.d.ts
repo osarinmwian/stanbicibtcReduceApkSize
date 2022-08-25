@@ -55,6 +55,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   HotelsList: undefined;
   HotelView: undefined;
   SearchHotelError: undefined;
+  GuestDetail: undefined;
 };
 
 // Tab routes
