@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: RFValue(50),
+    borderRadius: RFValue(32),
     height: RFValue(64),
     width: RFValue(64),
   },

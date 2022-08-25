@@ -51,8 +51,12 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   PrepaidPinInput: undefined;
   BeneficiaryPinInput: undefined;
   LoansAndOffers: undefined;
-  SchedulePaymentStack: undefined;
-  BuyDataStack: undefined;
+  Hotels: undefined;
+  HotelsList: undefined;
+  HotelView: undefined;
+  SearchHotelError: undefined;
+  GuestDetail: undefined;
+  HotelConfirmation: undefined;
 };
 
 export type SchedulePaymentStack = {

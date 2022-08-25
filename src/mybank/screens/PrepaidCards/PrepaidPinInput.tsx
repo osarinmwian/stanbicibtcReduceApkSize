@@ -14,7 +14,7 @@ import { Modal } from "@/shared/components/Modal";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
 
-import PinComponent from "../Transfer/components/PinComponent";
+import PinComponent from "@/mybank/screens/Transfer/components/PinComponent";
 
 function PrepaidPinInput() {
   const moreModalRef = useRef<BottomSheetModal>(null);

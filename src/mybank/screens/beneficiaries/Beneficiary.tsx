@@ -10,7 +10,6 @@ import { Box } from "@/shared/components/Layout";
 import { TextInput } from "@/shared/components/TextInput";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
-
 import BeneficiariesListing from "./BeneficiariesListing";
 import RecentTransactionsForBeneficiaries from "./RecentTransactionsForBeneficiaries";
 

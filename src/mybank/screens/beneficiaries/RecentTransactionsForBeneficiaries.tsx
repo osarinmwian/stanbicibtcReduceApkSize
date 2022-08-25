@@ -36,7 +36,7 @@ function RecentTransactionsForBeneficiaries() {
                   { alignItems: "center", justifyContent: "center" },
                 ]}
               >
-                <Text color="whiteColor" textAlign="center" variant="medium18">
+                <Text color="whiteColor" textAlign="center" variant="regular22">
                   {item.name.slice(0, 2).toUpperCase()}
                 </Text>
               </TouchableOpacity>

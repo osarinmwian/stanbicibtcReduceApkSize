@@ -24,9 +24,11 @@ export const style = StyleSheet.create({
   },
   bankSelect: {
     position: "relative",
-    backgroundColor: "transparent",
     top: -10,
-    left: -10,
+    left: -8,
+  },
+  bottomContainer:{
+    marginTop:-15,
   },
   smallImageContainer: {
     width: RFValue(40),
@@ -39,11 +41,15 @@ export const style = StyleSheet.create({
   smallImage: {
     tintColor: "#616E88",
   },
+  arrowImage:{
+    tintColor:"#767676"
+  },
   inputContainer: {
     width: 300,
   },
   bottomInput: {
     position: "absolute",
-    width: 290,
+    marginLeft: -10,
+    width: 280,
   },
 });

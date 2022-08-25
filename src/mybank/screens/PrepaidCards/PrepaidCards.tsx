@@ -168,7 +168,9 @@ function PrepaidCards() {
                 </Text>
               </BaseButton>
             </Box>
-            <Modal ref={moreModalRef} />
+            <Modal ref={moreModalRef}>
+
+            </Modal>
           </Box>
         </SafeAreaView>
       </ImageBackground>
