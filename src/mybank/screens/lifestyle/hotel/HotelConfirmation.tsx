@@ -4,17 +4,16 @@ import { ImageBackground, Pressable, StatusBar } from "react-native";
 import { loginBackground } from "@/mybank/assets/image";
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { ImageIcon } from "@/shared/assets/icons";
+import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
+
+import PinComponent from "../../Transfer/components/PinComponent";
 
 const HotelConfirmation: FC = ({
   navigation,
 }: MyBankNavigationProps<"HotelConfirmation">) => {
-  const titleData = [
-    { id: 1, name: "Mr" },
-    { id: 1, name: "Mrs" },
-  ];
-  const [dob, setDob] = useState<string>("2020-07-13");
+  const [pin, setPin] = useState<string>("");
 
   const renderHeader = () => (
     <Box
@@ -35,7 +34,29 @@ const HotelConfirmation: FC = ({
     </Box>
   );
 
-  const renderTranscationPin = () => <Box />;
+  const renderTranscationPin = () => (
+    <Box flex={1} marginTop="md">
+      <PinComponent
+        onChangeText={(value) => {
+          setPin(value);
+        }}
+        value={pin}
+      />
+      <PrimaryButton
+        alignItems="center"
+        backgroundColor="primaryColor"
+        justifyContent="center"
+        label="DONE"
+        labelProps={{ color: "whiteColor" }}
+        labelVariant="medium12"
+        marginBottom="lg"
+        marginTop="md"
+        // onPress={() => navigation.navigate("HotelConfirmation")}
+        paddingVertical="md"
+        width="100%"
+      />
+    </Box>
+  );
 
   return (
     <>
@@ -76,8 +97,8 @@ const HotelConfirmation: FC = ({
               <Text variant="bold12">Victoria island, Land</Text>
             </Box>
           </Box>
+          {renderTranscationPin()}
         </Box>
-        {renderTranscationPin()}
       </ImageBackground>
     </>
   );
