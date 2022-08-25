@@ -2,6 +2,7 @@ export { default as AvailableFlightsPage } from "./flight/availableFlightsPage";
 export { default as FlightIndex } from "./flight/flightIndex";
 export { default as NoFlightFound } from "./flight/noFlightFound";
 export { default as GuestDetail } from "./hotel/GuestDetail";
+export { default as HotelConfirmation } from "./hotel/HotelConfirmation";
 export { default as Hotels } from "./hotel/Hotels";
 export { default as HotelsList } from "./hotel/HotelsList";
 export { default as HotelView } from "./hotel/HotelView";
