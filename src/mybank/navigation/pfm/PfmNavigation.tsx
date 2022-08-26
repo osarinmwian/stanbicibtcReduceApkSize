@@ -44,13 +44,12 @@ const PfmNavigation: VFC = () => (
     <Stack.Screen
       component={PfmMainScreen}
       name="PfmMainScreen"
-      options={{
+      options={({ navigation }) => ({
         headerBackVisible: false,
-        // headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+        headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
         headerRight: renderLogo,
-        title: "",
-        headerLeft: () => renderTitle("PFM"),
-      }}
+        headerTitle: () => renderTitle("PFM"),
+      })}
     />
     <Stack.Screen
       component={FinancialManagementScreen}

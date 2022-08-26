@@ -3,7 +3,12 @@ import { useFocusEffect } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Animated, Dimensions, TouchableOpacity } from "react-native";
+import {
+  Animated,
+  Dimensions,
+  StatusBar,
+  TouchableOpacity,
+} from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import {
@@ -23,15 +28,23 @@ import { palette } from "@/shared/theme/palette";
 
 import AnimatedBox from "./AnimatedBox";
 import { SelectChannelModal } from "./components";
+import navigation from "@/shared/navigation";
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 
 const allSlides = [
-  { text: "Bank as quick as you think with this Super App" },
-  { text: "Login made better with One Pass " },
-  { text: "Invest like a hero with the Mutual Funds module" },
-  { text: "Content here for pension module Max of 10 word" },
-  { text: "Bank as quick as you think with this Super App" },
-  { text: "Enjoy easy banking with the electronic wallet - @ease" },
-  { text: "Defend your treasures with the new stockbroking  module" },
+  { id: "oworkf", text: "Bank as quick as you think with this Super App" },
+  { id: "sowike", text: "Login made better with One Pass " },
+  { id: "apoow2", text: "Invest like a hero with the Mutual Funds module" },
+  { id: "as9w3i", text: "Content here for pension module Max of 10 word" },
+  { id: "osaooq2", text: "Bank as quick as you think with this Super App" },
+  {
+    id: "s288348s",
+    text: "Enjoy easy banking with the electronic wallet - @ease",
+  },
+  {
+    id: "oworkfo3203",
+    text: "Defend your treasures with the new stockbroking  module",
+  },
 ];
 
 const allSlidesBackgrounds = [
@@ -46,7 +59,9 @@ const allSlidesBackgrounds = [
 
 const DURATION = 5000;
 
-export default function IntroScreen() {
+export default function IntroScreen({
+  navigation,
+}: MyBankNavigationProps<"LandingPage">) {
   const { t } = useTranslation();
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -105,6 +120,7 @@ export default function IntroScreen() {
   );
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+
   const [type, setType] = useState<"sign-in" | "sign-up">("sign-in");
   const handlePresentModalPress = (typeToShow: "sign-in" | "sign-up") => {
     setType(typeToShow);
@@ -118,6 +134,12 @@ export default function IntroScreen() {
   return (
     <>
       <ImageBackground flex={1} source={landingpagebackground}>
+        <StatusBar
+          animated
+          backgroundColor="transparent"
+          barStyle="light-content"
+          translucent
+        />
         <Animated.View style={{ flex: 1, opacity: fadeAnim }}>
           <ImageBackground flex={1} source={allSlidesBackgrounds[activeSlide]}>
             <Box flex={1}>
@@ -128,7 +150,7 @@ export default function IntroScreen() {
                       backgroundColor="transparentWhite"
                       borderRadius="lg"
                       height={4}
-                      key={`slide-${eachSlide}`}
+                      key={eachSlide.id}
                       mr="sm"
                       width={34}
                     >
@@ -190,7 +212,7 @@ export default function IntroScreen() {
                       <Box>
                         <BaseButton
                           backgroundColor="whiteColor"
-                          onPress={() => handlePresentModalPress("sign-in")}
+                          onPress={() => navigation.navigate("LandingPage")}
                           size="md"
                           width={Dimensions.get("window").width / 2 - 30}
                         >

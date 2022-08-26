@@ -1,6 +1,6 @@
 import { VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { ScrollView } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 import { BaseButton } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -62,116 +62,118 @@ export const FinancialManagementScreen: VFC<
     },
   ];
   return (
-    <SafeAreaView flex={1}>
-      <ImageBackground flex={1} source={loginBackground}>
-        <Box height={RFValue(50)} />
-        <Box
-          backgroundColor="whiteColor"
-          borderTopEndRadius="md"
-          borderTopStartRadius="md"
-        >
-          <ScrollView>
-            <Box flex={1}>
-              <Box padding="md" pb="none">
-                <CategoryButton
-                  {...{
-                    title: "Education",
-                    leftIcon: "graduationCap",
-                    subtitle: "140 transactions",
-                    amount: "30,000,000",
-                    rightColor: "pfmeducationblue",
-                    backgroundColor: "pfmeducationbackgroundcolor",
-                  }}
-                />
-                <BaseButton
-                  onPress={() => navigation.navigate("EditCategoryNameScreen")}
-                >
-                  <Box alignItems="center" flexDirection="row" my="lg">
-                    <Text
-                      color="primaryColor"
-                      fontSize={RFValue(12)}
-                      fontWeight="500"
-                    >
-                      {t("pfm.editCategoryName").toUpperCase()}
-                    </Text>
-                    <Box ml="sm">
-                      <IconVector name="chevron-right-slim" size="m" />
-                    </Box>
-                  </Box>
-                </BaseButton>
-
-                <Box flexDirection="row" justifyContent="space-evenly">
-                  <Box
-                    backgroundColor="cardSecondary"
-                    borderRadius="sm"
-                    flex={0.9}
-                    padding="md"
+    <ImageBackground flex={1} source={loginBackground}>
+      <StatusBar
+        animated
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent
+      />
+      <Box height={RFValue(70)} />
+      <Box
+        backgroundColor="whiteColor"
+        borderTopEndRadius="md"
+        borderTopStartRadius="md"
+      >
+        <ScrollView>
+          <Box flex={1}>
+            <Box padding="md" pb="none">
+              <CategoryButton
+                {...{
+                  title: "Education",
+                  leftIcon: "graduationCap",
+                  subtitle: "140 transactions",
+                  amount: "30,000,000",
+                  rightColor: "pfmeducationblue",
+                  backgroundColor: "pfmeducationbackgroundcolor",
+                }}
+              />
+              <BaseButton
+                onPress={() => navigation.navigate("EditCategoryNameScreen")}
+              >
+                <Box alignItems="center" flexDirection="row" my="lg">
+                  <Text
+                    color="primaryColor"
+                    fontSize={RFValue(12)}
+                    fontWeight="500"
                   >
-                    <Box alignItems="center">
-                      <Text fontSize={RFValue(14)} fontWeight="400">
-                        N10,125,540.00
-                      </Text>
-                    </Box>
-                    <Box
-                      alignItems="center"
-                      flexDirection="row"
-                      justifyContent="center"
-                      mt="xs"
-                    >
-                      <Text color="pfmorange">{t("pfm.withdrawal")}</Text>
-                    </Box>
-                  </Box>
-                  <Box flex={0.2} />
-                  <Box
-                    backgroundColor="cardSecondary"
-                    borderRadius="sm"
-                    flex={0.9}
-                    padding="md"
-                  >
-                    <Box alignItems="center">
-                      <Text fontSize={RFValue(14)} fontWeight="400">
-                        N100,56,700.86
-                      </Text>
-                    </Box>
-                    <Box
-                      alignItems="center"
-                      flexDirection="row"
-                      justifyContent="center"
-                      mt="xs"
-                    >
-                      <Text color="pfmgreen">{t("pfm.deposit")}</Text>
-                    </Box>
+                    {t("pfm.editCategoryName").toUpperCase()}
+                  </Text>
+                  <Box ml="sm">
+                    <IconVector name="chevron-right-slim" size="m" />
                   </Box>
                 </Box>
+              </BaseButton>
 
-                <Box alignItems="center" flexDirection="row" my="lg">
-                  <Text color="primaryColor" fontSize={14} fontWeight="400">
-                    {t("pfm.category").toUpperCase()}
-                  </Text>
+              <Box flexDirection="row" justifyContent="space-evenly">
+                <Box
+                  backgroundColor="cardSecondary"
+                  borderRadius="sm"
+                  flex={0.9}
+                  padding="md"
+                >
+                  <Box alignItems="center">
+                    <Text fontSize={RFValue(14)} fontWeight="400">
+                      N10,125,540.00
+                    </Text>
+                  </Box>
+                  <Box
+                    alignItems="center"
+                    flexDirection="row"
+                    justifyContent="center"
+                    mt="xs"
+                  >
+                    <Text color="pfmorange">{t("pfm.withdrawal")}</Text>
+                  </Box>
+                </Box>
+                <Box flex={0.2} />
+                <Box
+                  backgroundColor="cardSecondary"
+                  borderRadius="sm"
+                  flex={0.9}
+                  padding="md"
+                >
+                  <Box alignItems="center">
+                    <Text fontSize={RFValue(14)} fontWeight="400">
+                      N100,56,700.86
+                    </Text>
+                  </Box>
+                  <Box
+                    alignItems="center"
+                    flexDirection="row"
+                    justifyContent="center"
+                    mt="xs"
+                  >
+                    <Text color="pfmgreen">{t("pfm.deposit")}</Text>
+                  </Box>
                 </Box>
               </Box>
-              {transactions.map((item, index) => (
-                <CategoryButton
-                  key={`transaction-category-${item}`}
-                  {...item}
-                  {...{
-                    backgroundColor:
-                      index % 2 ? "pfmeducationbackgroundcolor" : "transparent",
-                    rightColor: "black",
-                    size: "sm",
-                    borderRadius: "none",
-                    mb: "sm",
-                    leftIconProps: { size: "sm" },
-                  }}
-                  onPress={() =>
-                    navigation.navigate("TransactionHistoryScreen")
-                  }
-                />
-              ))}
+
+              <Box alignItems="center" flexDirection="row" my="lg">
+                <Text color="primaryColor" fontSize={14} fontWeight="400">
+                  {t("pfm.category").toUpperCase()}
+                </Text>
+              </Box>
             </Box>
-          </ScrollView>
-        </Box>
-      </ImageBackground>
-    </SafeAreaView>
+            {transactions.map((item, index) => (
+              <CategoryButton
+                key={item.id}
+                {...item}
+                {...{
+                  backgroundColor:
+                    index % 2 ? "pfmeducationbackgroundcolor" : "transparent",
+                  rightColor: "black",
+                  size: "sm",
+                  borderRadius: "none",
+                  mb: "sm",
+                  leftIconProps: { size: "sm" },
+                }}
+                onPress={() => navigation.navigate("TransactionHistoryScreen")}
+              />
+            ))}
+          </Box>
+        </ScrollView>
+      </Box>
+    </ImageBackground>
   );
 };

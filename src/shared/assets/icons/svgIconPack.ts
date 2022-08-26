@@ -48,6 +48,10 @@ import sellEnaira from "@/shared/assets/svg/sellEnaira.svg";
 import tshirt from "@/shared/assets/svg/tshirt.svg";
 import university from "@/shared/assets/svg/university.svg";
 import utensils from "@/shared/assets/svg/utensils.svg";
+import fingerprint from "@/shared/assets/svg/fingerprint.svg";
+import userGear from "@/shared/assets/svg/user-gear.svg";
+import lightning from "@/shared/assets/svg/lightning.svg";
+import phoneReverse from "@/shared/assets/svg/phone-reverse.svg";
 
 const svgIconPack = {
   "arrow-back": arrowBack,
@@ -82,15 +86,18 @@ const svgIconPack = {
   "exchange-alt": exchangeAlt,
   "eye-closed": eyeClosed,
   "eye-opened": eyeOpened,
+  fingerprint,
   gift,
   graduationCap,
   history,
   home,
   hotel: bed,
   leaf,
+  lightning,
   minusSquare,
   "money-bill": moneyBill,
   notification,
+  "phone-reverse": phoneReverse,
   "piggy-bank": piggyBank,
   plane,
   "plane-horizontal": horizontalPlane,
@@ -99,6 +106,7 @@ const svgIconPack = {
   sellEnaira,
   tshirt,
   university,
+  "user-gear": userGear,
   utensils,
 };
 
