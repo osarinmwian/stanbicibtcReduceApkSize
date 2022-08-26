@@ -35,7 +35,7 @@ const OtherBanksModal: VFC<OtherBanksProps> = (props) => {
         snapPoints={snapPoints}
       >
         <BottomSheetScrollView>
-          <Box paddingVertical="md">
+          <Box marginTop="sm" paddingVertical="md">
             <Box paddingHorizontal="sm">
               <Box
                 alignItems="center"

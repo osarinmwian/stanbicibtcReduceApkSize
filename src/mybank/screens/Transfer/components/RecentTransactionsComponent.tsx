@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export default function RecentTransactionsComponent() {
   return (
-    <Box flex={1} flexDirection="row">
+    <Box flexDirection="row">
       {recentTransactionList.map((item) => (
         <Box
           alignItems="center"

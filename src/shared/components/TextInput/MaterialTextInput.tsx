@@ -84,7 +84,7 @@ const FilledTextInput: VFC<MaterialTextInputProps> = (props) => {
           fontSize={theme.fontSizes.p}
           inputContainerStyle={{
             backgroundColor: theme.colors.textInputbackground,
-            borderRadius: 5,
+            borderRadius: 10,
             height: RFValue(61),
             justifyContent: "center",
             paddingRight: secureTextEntry ? RFValue(40) : 0,

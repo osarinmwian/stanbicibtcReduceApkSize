@@ -42,7 +42,7 @@ const ApproveBankTransferModal: VFC<ApproveBankTransferProps> = (props) => {
             <Text fontVariant="h6" fontWeight="bold" mb="xs">
               Approve bank transfer
             </Text>
-            <Text mb="md" variant="regular12">
+            <Text mb="sml" variant="regular12">
               Payment confirmation is irreversible.
             </Text>
             <TotalAmountCard />

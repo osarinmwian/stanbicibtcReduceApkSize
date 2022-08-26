@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Pressable, SafeAreaView, StyleSheet } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { loginBackground } from "@/mybank/assets/image";
 import { Icon } from "@/shared/assets/icons";
@@ -38,8 +39,9 @@ function LayoutComponent({
   children,
 }: LayoutComponentProps) {
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
   return (
-    <>
+    <Box backgroundColor="primaryColor" flex={1} height={insets.top}>
       <SafeAreaView style={{ flex: 1, marginTop: RFValue(20) }}>
         <StatusBar
           backgroundColor={palette.primaryColor}
@@ -81,7 +83,7 @@ function LayoutComponent({
             )}
           </Box>
           <Box
-            backgroundColor="primaryColor"
+            backgroundColor="whiteColor"
             borderTopLeftRadius="sm"
             borderTopRightRadius="sm"
             flex={1}
@@ -90,7 +92,7 @@ function LayoutComponent({
           </Box>
         </ImageBackground>
       </SafeAreaView>
-    </>
+    </Box>
   );
 }
 
