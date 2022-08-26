@@ -120,6 +120,7 @@ function Home() {
         name="SchedulePaymentStack"
       />
       <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
+      <Stack.Screen component={PayWithQr} name="PayWithQr" />
     </Stack.Navigator>
   );
 }

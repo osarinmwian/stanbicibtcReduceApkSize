@@ -53,6 +53,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="users"
             label="Pay With QR Code"
+            onPress={() => navigation.navigate("PayWithQr")}
             placeholder="Manage or add beneficiaries"
           />
         </Box>
