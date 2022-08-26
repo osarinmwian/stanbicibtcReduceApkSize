@@ -73,16 +73,16 @@ const hotelviewData = {
     id: 1,
     img: mapcreenshot,
     region: {
-      latitude: "3.4060448",
-      longitude: "6.4650422",
-      latitudeDelta: "3.4060448",
-      longitudeDelta: "3.4060448",
+      latitude: "3.406448",
+      longitude: "6.465422",
+      latitudeDelta: "3.406448",
+      longitudeDelta: "3.406448",
     },
     markers: [
       {
         id: 1,
-        latitude: "6.431040107107470725",
-        longitude: "3.4300374",
+        latitude: "6.431401715747725",
+        longitude: "3.430374",
         title: "Eko Hotel And Suites Victoria Island",
       },
     ],
@@ -226,18 +226,12 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
     } else {
       setcurrentphotoindex((previous) => previous + 1);
     }
-    // hotelviewData.hotelsImages.map((item, index) => {
-    //   if (index === currentphotoindex) {
-    //     setcurrentphoto(item);
-    //   }
-    // })
 
     // eslint-disable-next-line no-plusplus
     for (let index = 0; index <= hotelviewData.hotelsImages.length; index++) {
       if (index === currentphotoindex) {
         setcurrentphoto(hotelviewData.hotelsImages[index]);
       }
-      // console.log(hotelviewData.hotelsImages[i]);
     }
   };
   const handleSwipeRigth = () => {
@@ -402,8 +396,8 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
           {hotelviewData.location.markers.map((marker) => (
             <Marker
               coordinate={{
-                latitude: marker.latitude,
-                longitude: marker.longitude,
+                latitude: Number.parseFloat(marker.latitude),
+                longitude: Number.parseFloat(marker.longitude),
               }}
               key={marker.id}
               title={marker.title}
@@ -461,7 +455,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
       <FlatList
         data={hotelviewData.reviews}
         horizontal
-        keyExtractor={({ index }) => `item-${index}`}
+        keyExtractor={({ index }: any) => `item-${index}`}
         renderItem={renderReviewItem}
         showsHorizontalScrollIndicator={false}
       />

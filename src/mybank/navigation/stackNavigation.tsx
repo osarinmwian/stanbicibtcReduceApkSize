@@ -29,6 +29,7 @@ import { Text } from "@/shared/components/Typography";
 
 import { AddNewBeneficiary, Beneficiary } from "../screens/beneficiaries";
 import BeneficiaryPinInput from "../screens/beneficiaries/BeneficiaryPinInput";
+import ChatBot from "../screens/Extras/ChatBot";
 import LoansAndOffers from "../screens/Extras/LoansAndOffers";
 import {
   AvailableFlightsPage,
@@ -117,6 +118,9 @@ function Home() {
       <Stack.Screen component={PrepaidCards} name="PrepaidCards" />
       <Stack.Screen component={PrepaidPinInput} name="PrepaidPinInput" />
       <Stack.Screen component={LoansAndOffers} name="LoansAndOffers" />
+      <Stack.Screen component={FlightIndex} name="FlightIndex" />
+      <Stack.Screen component={ChatBot} name="Chatbot" />
+      <Stack.Screen component={Hotels} name="Hotels" />
       <Stack.Screen
         component={SchedulePaymentNavigation}
         name="SchedulePaymentStack"

@@ -8,12 +8,6 @@ export type ThreeSBankingList = {
   Activate: undefined;
 };
 
-export type ExtrasNavigation = {
-  ChatBot: undefined;
-  ExtraSearchBar: undefined;
-  LoansAndOffers: undefined;
-};
-
 export type MyBankRootStackParameterList = RootStackParameterList & {
   BottomTabs: undefined;
   BillersForm: undefined;
@@ -44,6 +38,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   ENaira: undefined;
   PayWithQr: undefined;
   PfmNavigation: undefined;
+  FlightIndex: undefined;
   Beneficiary: undefined;
   AddNewBeneficiary: undefined;
   Notifications: undefined;

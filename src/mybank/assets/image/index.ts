@@ -35,6 +35,7 @@ export { default as homeIcon } from "./home.png";
 export { default as hotelbanner } from "./hotelbanner.png";
 export { default as hotelbanner2 } from "./hotelBanner2.png";
 export { default as hotelsave } from "./hotelsave.png";
+export { default as imageSlide } from "./imageSlide.png";
 export { default as insurance } from "./insurance.png";
 export { default as landingpagebackground } from "./LandingPageBackground.png";
 export { default as lifestyle } from "./lifestyle.png";
