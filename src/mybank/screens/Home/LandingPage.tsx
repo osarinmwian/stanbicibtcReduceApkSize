@@ -107,7 +107,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
       id: 0,
       image: quick_links1,
       name: "Buy Airtime",
-      onPress: () => {},
+      onPress: () => navigation.navigate("BuyDataStack")
     },
     {
       body: "Generate",
@@ -121,7 +121,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
       id: 2,
       image: quick_links3,
       name: "Book Hotel",
-      onPress: () => {},
+      onPress: () => navigation.navigate("Hotels"),
     },
     {
       body: "Account",
@@ -132,30 +132,30 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
     },
     {
       body: "Pending",
-      id: 0,
+      id: 4,
       image: quick_links5,
-      name: "Buy Airtime",
-      onPress: () => {},
+      name: "Book Flight",
+      onPress: () => navigation.navigate("FlightIndex"),
     },
     {
       body: "Generate",
-      id: 1,
+      id: 5,
       image: quick_links6,
-      name: "Get Loan",
-      onPress: () => {},
+      name: "3S Banking",
+      onPress: () => navigation.navigate("ThreeSBanking"),
     },
     {
       body: "Enquiries &",
-      id: 2,
+      id: 6,
       image: quick_links7,
-      name: "Book Hotel",
-      onPress: () => {},
+      name: "eNaira",
+      onPress: () => navigation.navigate("ENaira"),
     },
     {
       body: "Account",
-      id: 3,
+      id: 7,
       image: quick_links8,
-      name: "PFM",
+      name: "Get Statement",
       onPress: () => {},
     },
   ];
@@ -491,15 +491,17 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
               <Text marginBottom="md" marginHorizontal="md" variant="medium12">
                 QUICK LINKS
               </Text>
+              <Box>
               <Box flexDirection="row" paddingHorizontal="md">
                 {quickLinks.slice(0, 4).map((item) => (
-                  <RenderQuickLinks item={item} key={item.name} />
+                  <RenderQuickLinks item={item} key={item.id}/>
                 ))}
               </Box>
               <Box flexDirection="row" paddingHorizontal="md">
                 {quickLinks.slice(4, 8).map((item) => (
-                  <RenderQuickLinks item={item} key={item.name} />
+                  <RenderQuickLinks item={item} key={item.id} />
                 ))}
+              </Box>
               </Box>
             </Box>
             <Box>
