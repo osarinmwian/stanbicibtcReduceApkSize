@@ -105,7 +105,7 @@ export default function PinComponent({
         {noAmountBox ? <Box height={RFValue(70)} /> : null}
         <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(1)}>
+            <TouchableOpacity onPress={() => handleClick("1")}>
               <View
                 style={[
                   styles.customPad,
@@ -127,7 +127,7 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(2)}>
+            <TouchableOpacity onPress={() => handleClick("2")}>
               <View
                 style={[
                   styles.customPad,
@@ -149,7 +149,7 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(3)}>
+            <TouchableOpacity onPress={() => handleClick("3")}>
               <View
                 style={[
                   styles.customPad,
@@ -247,7 +247,7 @@ export default function PinComponent({
       <Box alignItems="center" justifyContent="center" style={styles.container}>
         <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(7)}>
+            <TouchableOpacity onPress={() => handleClick("7")}>
               <View
                 style={[
                   styles.customPad,
@@ -269,7 +269,7 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(8)}>
+            <TouchableOpacity onPress={() => handleClick("8")}>
               <View
                 style={[
                   styles.customPad,
@@ -291,7 +291,7 @@ export default function PinComponent({
             </TouchableOpacity>
           </Box>
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(9)}>
+            <TouchableOpacity onPress={() => handleClick("9")}>
               <View
                 style={[
                   styles.customPad,
@@ -320,7 +320,7 @@ export default function PinComponent({
           <Box style={styles.boxContainer} />
 
           <Box style={styles.boxContainer}>
-            <TouchableOpacity onPress={() => handleClick(0)}>
+            <TouchableOpacity onPress={() => handleClick("0")}>
               <View
                 style={[
                   styles.customPad,
