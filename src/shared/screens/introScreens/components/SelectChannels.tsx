@@ -29,7 +29,7 @@ const SelectChannel = ({
   type,
 }: PropertyType) => {
   const navigation = useNavigation();
-  const snapPoints = useMemo(() => ["55%", "55%"], []);
+  const snapPoints = useMemo(() => ["47%", "47%"], []);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -85,11 +85,12 @@ const SelectChannel = ({
                   width={width / 3.5}
                 >
                   <Image source={item.image} />
+                  <Box height={8} />
                   <Text
                     color="whiteColor"
                     marginTop="sm"
                     textAlign="center"
-                    variant="regular8"
+                    variant="regular12"
                   >
                     {item.title}
                   </Text>

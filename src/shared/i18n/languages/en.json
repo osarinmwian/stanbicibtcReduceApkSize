@@ -254,7 +254,7 @@
     }
   },
   "loans": {
-    "loanReqeust": "loanReqeust",
+    "loanRequest": "Loan Request",
     "howMuchDoYouNeed": "How much do you need?",
     "currentLoanPayable": "Current loan payable"
   },
