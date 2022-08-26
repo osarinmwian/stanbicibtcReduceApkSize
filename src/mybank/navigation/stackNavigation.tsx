@@ -80,8 +80,8 @@ function Home() {
         header: () => null,
       }}
     >
-      <Stack.Screen component={BankTransfer} name="BankTransfer" />
       <Stack.Screen component={BottomTabs} name="BottomTabs" />
+      <Stack.Screen component={BankTransfer} name="BankTransfer" />
       <Stack.Screen component={CorporateBillers} name="CorporateBillers" />
       <Stack.Screen component={BillersForm} name="BillersForm" />
       <Stack.Screen
