@@ -19,6 +19,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="star"
             label="Pay Bills"
+            onPress={() => navigation.navigate("BillPayment")}
             placeholder="Send money to yourself and other banks"
           />
           <SelectComponent
@@ -36,6 +37,7 @@ export default function PaymentLandingPage({
           <SelectComponent
             iconName="@ease2"
             label="Cardless Withdrawal"
+            onPress={() => navigation.navigate("CardLessWithDrawal")}
             placeholder="Send money to @ease accounts"
           />
           <SelectComponent

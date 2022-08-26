@@ -73,16 +73,16 @@ const hotelviewData = {
     id: 1,
     img: mapcreenshot,
     region: {
-      latitude: 3.406_448,
-      longitude: 6.465_422,
-      latitudeDelta: 3.406_448,
-      longitudeDelta: 3.406_448,
+      latitude: "3.4060448",
+      longitude: "6.4650422",
+      latitudeDelta: "3.4060448",
+      longitudeDelta: "3.4060448",
     },
     markers: [
       {
         id: 1,
-        latitude: 6.431_401_715_747_725,
-        longitude: 3.430_374,
+        latitude: "6.431040107107470725",
+        longitude: "3.4300374",
         title: "Eko Hotel And Suites Victoria Island",
       },
     ],

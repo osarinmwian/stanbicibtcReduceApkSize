@@ -57,6 +57,8 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   SearchHotelError: undefined;
   GuestDetail: undefined;
   HotelConfirmation: undefined;
+  BillPayment: undefined;
+  CardLessWithDrawal: undefined;
 };
 
 export type SchedulePaymentStack = {
