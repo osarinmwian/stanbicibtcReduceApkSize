@@ -8,7 +8,7 @@ import React, { RefObject, useMemo, VFC } from "react";
 import { TouchableOpacity } from "react-native";
 
 import { PrimaryButton } from "@/shared/components/Buttons";
-import Image from "@/shared/components/Image";
+import { Image } from "@/shared/components/Image";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
@@ -35,11 +35,11 @@ const RecipientBankModal: VFC<RecipientBankProps> = (props) => {
         snapPoints={snapPoints}
       >
         <BottomSheetScrollView>
-          <Box paddingVertical="md">
+          <Box marginTop="sm" paddingVertical="md">
             <Text
               fontVariant="h6"
               fontWeight="bold"
-              mb="md"
+              mb="sml"
               paddingHorizontal="md"
             >
               Select recipient bank

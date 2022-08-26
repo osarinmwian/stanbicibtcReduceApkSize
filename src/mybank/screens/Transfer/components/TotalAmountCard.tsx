@@ -14,8 +14,8 @@ const TotalAmountCard: VFC<TotalAmountCardProps> = ({
   charges = "N2,000.00",
   total = "N2,103,000.00",
 }) => (
-  <Box mb="md">
-    <Box backgroundColor="confirmCard" borderRadius="sm" p="md">
+  <Box mb="sm">
+    <Box backgroundColor="confirmCard" borderRadius="sm" p="sml">
       <Box flexDirection="row" justifyContent="space-between">
         <Text variant="regular12">Amount</Text>
         <Text variant="regular12">{amount}</Text>
@@ -26,7 +26,7 @@ const TotalAmountCard: VFC<TotalAmountCardProps> = ({
       </Box>
       <Box flexDirection="row" justifyContent="space-between" mt="md">
         <Text variant="regular12">Total</Text>
-        <Text variant="medium12">{total}</Text>
+        <Text variant="bold12">{total}</Text>
       </Box>
     </Box>
   </Box>

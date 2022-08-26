@@ -79,7 +79,7 @@ const FxTransferHistoryDetailsModal: VFC<FXTransferHistoryDetailsProps> = (
                   <Text variant="regular10">Amount</Text>
                   <Text variant="medium10">N2,000.00</Text>
                 </Box>
-                <Text mb="sm" mt="md" variant="medium10">
+                <Text mb="sm" mt="sml" variant="medium10">
                   UPLOADED DOCUMENTS
                 </Text>
                 <Text variant="regular10">Medical Bill.pdf</Text>

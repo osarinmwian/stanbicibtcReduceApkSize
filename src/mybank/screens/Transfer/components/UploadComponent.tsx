@@ -43,7 +43,7 @@ export default function UploadComponent({
         style={[styles.container, { minHeight: RFValue(52) }]}
       >
         <Box flex={1}>
-          <Text color="secondaryBlack" variant="medium10">
+          <Text color="secondaryBlack" variant="regular10">
             {label}
           </Text>
           <Box alignItems="center" flex={1} flexDirection="row">
@@ -56,7 +56,7 @@ export default function UploadComponent({
               color="secondaryBlack"
               paddingLeft="sm"
               paddingVertical="xxs"
-              variant="regular10"
+              variant="medium10"
             >
               {placeholder}
             </Text>

@@ -40,6 +40,7 @@ export type CustomKeyboardProps = {
   isPin?: boolean;
   width?: number;
   deleteIcon?: SvgIconProps;
+  noAmountBox?: boolean;
 };
 
 export default function PinComponent({
@@ -53,6 +54,7 @@ export default function PinComponent({
   isPin,
   width = 300,
   deleteIcon,
+  noAmountBox,
 }: CustomKeyboardProps) {
   const { t } = useTranslation();
   const handleClick = (item: string) => {
@@ -100,6 +102,7 @@ export default function PinComponent({
         justifyContent="center"
         style={[styles.container]}
       >
+        {noAmountBox ? <Box height={RFValue(70)} /> : null}
         <Box flexDirection="row" maxWidth={RFValue(500)} width={RFValue(width)}>
           <Box style={styles.boxContainer}>
             <TouchableOpacity onPress={() => handleClick("1")}>

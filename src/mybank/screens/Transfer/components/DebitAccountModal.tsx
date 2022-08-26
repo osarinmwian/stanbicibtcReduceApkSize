@@ -35,7 +35,7 @@ const DebitAccountModal: VFC<DebitAccountProps> = (props) => {
         snapPoints={snapPoints}
       >
         <BottomSheetScrollView>
-          <Box p="md">
+          <Box marginTop="md" p="md">
             <Text fontVariant="h6" fontWeight="bold" mb="md">
               Select debit account
             </Text>

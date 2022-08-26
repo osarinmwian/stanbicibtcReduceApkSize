@@ -19,7 +19,9 @@ export default function TransferLandingPage({
         paddingHorizontal="md"
         paddingVertical="md"
       >
-        <Text variant="medium12">RECENT TRANSACTIONS</Text>
+        <Text marginTop="xs" variant="medium12">
+          RECENT TRANSACTIONS
+        </Text>
         <RecentTransactionsComponent />
         <Box marginBottom="lg">
           <SelectComponent
