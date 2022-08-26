@@ -30,15 +30,18 @@ import deleteIcon from "@/shared/assets/svg/delete.svg";
 import exchangeAlt from "@/shared/assets/svg/exchange-alt.svg";
 import eyeClosed from "@/shared/assets/svg/eye-closed.svg";
 import eyeOpened from "@/shared/assets/svg/eye-opened.svg";
+import fingerprint from "@/shared/assets/svg/fingerprint.svg";
 import gift from "@/shared/assets/svg/gift.svg";
 import graduationCap from "@/shared/assets/svg/graduation-cap.svg";
 import history from "@/shared/assets/svg/history.svg";
 import home from "@/shared/assets/svg/home.svg";
 import leaf from "@/shared/assets/svg/leaf.svg";
+import lightning from "@/shared/assets/svg/lightning.svg";
 import minusSquare from "@/shared/assets/svg/minus-square.svg";
 import moneyBill from "@/shared/assets/svg/money-bill.svg";
 import notification from "@/shared/assets/svg/notification.svg";
 import carWhite from "@/shared/assets/svg/pfm-cars.svg";
+import phoneReverse from "@/shared/assets/svg/phone-reverse.svg";
 import piggyBank from "@/shared/assets/svg/piggy-bank.svg";
 import horizontalPlane from "@/shared/assets/svg/plane (1).svg";
 import plane from "@/shared/assets/svg/plane.svg";
@@ -47,6 +50,7 @@ import profile from "@/shared/assets/svg/profile.svg";
 import sellEnaira from "@/shared/assets/svg/sellEnaira.svg";
 import tshirt from "@/shared/assets/svg/tshirt.svg";
 import university from "@/shared/assets/svg/university.svg";
+import userGear from "@/shared/assets/svg/user-gear.svg";
 import utensils from "@/shared/assets/svg/utensils.svg";
 
 const svgIconPack = {
@@ -82,15 +86,18 @@ const svgIconPack = {
   "exchange-alt": exchangeAlt,
   "eye-closed": eyeClosed,
   "eye-opened": eyeOpened,
+  fingerprint,
   gift,
   graduationCap,
   history,
   home,
   hotel: bed,
   leaf,
+  lightning,
   minusSquare,
   "money-bill": moneyBill,
   notification,
+  "phone-reverse": phoneReverse,
   "piggy-bank": piggyBank,
   plane,
   "plane-horizontal": horizontalPlane,
@@ -99,6 +106,7 @@ const svgIconPack = {
   sellEnaira,
   tshirt,
   university,
+  "user-gear": userGear,
   utensils,
 };
 

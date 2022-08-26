@@ -41,7 +41,7 @@ const LoansRequestScreen: VFC = () => {
                 fontWeight="700"
                 textAlign="center"
               >
-                {t("loans.loanReqeust")}
+                {t("loans.loanRequest")}
               </Text>
               <Text
                 color="whiteColor"
