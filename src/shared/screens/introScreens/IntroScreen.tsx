@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import {
   introBackground1,
   introBackground2,
@@ -28,8 +29,6 @@ import { palette } from "@/shared/theme/palette";
 
 import AnimatedBox from "./AnimatedBox";
 import { SelectChannelModal } from "./components";
-import navigation from "@/shared/navigation";
-import { MyBankNavigationProps } from "@/mybank/navigation/types";
 
 const allSlides = [
   { id: "oworkf", text: "Bank as quick as you think with this Super App" },

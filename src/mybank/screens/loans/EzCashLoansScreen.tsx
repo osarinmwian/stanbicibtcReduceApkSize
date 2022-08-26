@@ -1,5 +1,6 @@
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useRef, VFC } from "react";
+import { StatusBar } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -15,9 +16,8 @@ import {
   TermsAndConditionsModal,
 } from "@/mybank/components/Modals";
 import { LoansNavigationProps } from "@/mybank/navigation/types";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Box, ImageBackground } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
-import { StatusBar } from "react-native";
 
 const EZCashLoansScreen: VFC<LoansNavigationProps<"LoansNavigation">> = ({
   navigation,

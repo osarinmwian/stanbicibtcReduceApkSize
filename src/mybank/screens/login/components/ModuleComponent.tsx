@@ -1,11 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
-import { Dimensions, Image, ImageSourcePropType } from "react-native";
+import { Dimensions } from "react-native";
 
+import { SvgIconPackType } from "@/shared/assets/icons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
-import { IconVector } from "@/shared/assets/icons/IconVector";
-import { Item } from "react-native-paper/lib/typescript/components/List/List";
-import { SvgIconPackType } from "@/shared/assets/icons";
 import { PaletteType } from "@/shared/theme/palette";
 
 interface ModuleProps {
@@ -36,10 +35,10 @@ export default function ModuleComponent(props: ModuleProps) {
       <IconVector name={iconName} stroke="white" />
       <Text
         color={textColor}
+        lineHeight={22}
         marginTop="sm"
         textAlign="center"
         variant="regular12"
-        lineHeight={22}
       >
         {title}
       </Text>

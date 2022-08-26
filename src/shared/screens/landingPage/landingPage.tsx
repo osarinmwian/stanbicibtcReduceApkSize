@@ -10,7 +10,7 @@ import {
 import { landingpagebackground } from "@/shared/assets/image";
 import logo from "@/shared/assets/image/logo.png";
 import { PrimaryButton } from "@/shared/components/Buttons";
-import { Box, ImageBackground } from "@/shared/components/Layout";
+import { Box } from "@/shared/components/Layout";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import SelectChannelModal from "@/shared/components/selectChannelModal";
 import { Text } from "@/shared/components/Typography";
@@ -20,8 +20,6 @@ import ModuleComponent from "../../components/Card/SelectChannelCard";
 import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE } from "./landingPageStyles";
-import BottomTabLandingPageTopBar from "@/mybank/components/bottomTabLandingPageTopBar";
-import { loginBackground } from "@/mybank/assets/image";
 
 export default function LandingPage({
   navigation,

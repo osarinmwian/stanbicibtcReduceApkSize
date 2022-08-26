@@ -52,7 +52,8 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   SearchHotelError: undefined;
   GuestDetail: undefined;
   HotelConfirmation: undefined;
-  Chatbot: undefined;
+  BillPayment: undefined;
+  CardLessWithDrawal: undefined;
 };
 
 export type SchedulePaymentStack = {
@@ -64,6 +65,7 @@ export type BuyDataStack = {
   BuyDataLandingPage: undefined;
   ConfirmBuyData: undefined;
 };
+
 // Tab routes
 type MyTabRoutes = {
   HomeLandingPage: {

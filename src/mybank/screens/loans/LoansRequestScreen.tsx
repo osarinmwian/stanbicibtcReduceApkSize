@@ -1,5 +1,6 @@
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useRef, useState, VFC } from "react";
+import { useTranslation } from "react-i18next";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { loginBackground } from "@/mybank/assets/image";
@@ -13,7 +14,6 @@ import { Text } from "@/shared/components/Typography";
 import { FormatMoney } from "@/shared/utils/functions/formatMoney";
 
 import PinComponent from "../Transfer/components/PinComponent";
-import { useTranslation } from "react-i18next";
 
 const LoansRequestScreen: VFC = () => {
   const { t } = useTranslation();

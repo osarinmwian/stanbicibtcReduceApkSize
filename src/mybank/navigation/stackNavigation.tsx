@@ -29,6 +29,7 @@ import { Text } from "@/shared/components/Typography";
 
 import { AddNewBeneficiary, Beneficiary } from "../screens/beneficiaries";
 import BeneficiaryPinInput from "../screens/beneficiaries/BeneficiaryPinInput";
+import ChatBot from "../screens/Extras/ChatBot";
 import LoansAndOffers from "../screens/Extras/LoansAndOffers";
 import {
   AvailableFlightsPage,
@@ -39,6 +40,8 @@ import {
   NoFlightFound,
 } from "../screens/lifestyle";
 import Notifications from "../screens/notifications/Notifications";
+import BillPayment from "../screens/Payment/BillPayment";
+import CardLessWithDrawal from "../screens/Payment/CardLessWithDrawal";
 import PrepaidCards from "../screens/PrepaidCards/PrepaidCards";
 import PrepaidPinInput from "../screens/PrepaidCards/PrepaidPinInput";
 import BottomTabs from "./bottomNavigation";
@@ -46,7 +49,6 @@ import BuyDataNavigation from "./BuyDataNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
 import { SchedulePaymentNavigation } from "./SchedulePaymentNavigation";
 import { MyBankRootStackParameterList } from "./types";
-import ChatBot from "../screens/Extras/ChatBot";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
@@ -124,6 +126,9 @@ function Home() {
         name="SchedulePaymentStack"
       />
       <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
+      <Stack.Screen component={PayWithQr} name="PayWithQr" />
+      <Stack.Screen component={CardLessWithDrawal} name="CardLessWithDrawal" />
+      <Stack.Screen component={BillPayment} name="BillPayment" />
     </Stack.Navigator>
   );
 }
@@ -156,6 +161,15 @@ function Payments() {
           headerBackVisible: false,
           headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
           headerTitle: () => renderTitle("PAY WITH QR"),
+        })}
+      />
+      <Stack.Screen
+        component={BillPayment}
+        name="BillPayment"
+        options={({ navigation }) => ({
+          headerBackVisible: false,
+          headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+          headerTitle: () => renderTitle("Bill Payment"),
         })}
       />
       <Stack.Screen

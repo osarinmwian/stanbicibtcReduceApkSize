@@ -1,7 +1,7 @@
 import { SvgIconPackType } from "@/shared/assets/icons";
 import { PressableProps } from "@/shared/components/Pressable";
-import { palette, PaletteType } from "@/shared/theme/palette";
-import { backgroundColor } from "@shopify/restyle";
+import { PaletteType } from "@/shared/theme/palette";
+
 interface ModuleProps {
   title: string;
   backgroundColor: PressableProps["backgroundColor"];

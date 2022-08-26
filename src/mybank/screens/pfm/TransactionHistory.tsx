@@ -9,7 +9,7 @@ import { loginBackground } from "@/mybank/assets/image";
 import { TransactionCategoryModal } from "@/mybank/components/Modals/TransactionCategoryModal";
 import { PfmNavigationProps } from "@/mybank/navigation/types";
 import { BaseButton } from "@/shared/components/Buttons";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Box, ImageBackground } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 export const TransactionHistoryScreen: VFC<

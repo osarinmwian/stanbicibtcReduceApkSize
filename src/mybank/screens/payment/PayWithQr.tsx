@@ -1,7 +1,8 @@
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import React, { useRef } from "react";
+import React, { FC, useRef } from "react";
 import { Image, ImageBackground, Pressable } from "react-native";
 
+import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { backgroundIcons, imagedisplay, logo } from "@/shared/assets/image";
 import { Box, SafeAreaView } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
@@ -9,9 +10,8 @@ import { Text } from "@/shared/components/Typography";
 import ApproveBankTransferModal from "../Transfer/components/ApproveBankTransferModal";
 import SelectDebitAccountModal from "./components/modals/SelectDebitAccountModal";
 import { PAYWITHQRLOGOSTYLE, QRSTYLE, ROOT } from "./styles/PaymentStyles";
-// import { Pressable } from '@/shared/components';
 
-export default function PayWithQr() {
+const PayWithQr: FC = ({ navigation }: MyBankNavigationProps<"PayWithQr">) => {
   const debitAccountModalRef = useRef<BottomSheetModal>(null);
   const approveTransferModalRef = useRef<BottomSheetModal>(null);
 
@@ -50,4 +50,6 @@ export default function PayWithQr() {
       </ImageBackground>
     </Box>
   );
-}
+};
+
+export default PayWithQr;

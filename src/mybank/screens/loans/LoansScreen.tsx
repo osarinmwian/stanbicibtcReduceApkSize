@@ -6,7 +6,7 @@ import { loginBackground } from "@/mybank/assets/image/";
 import { EligibilityButton } from "@/mybank/components/Buttons";
 import { EligibilityCard } from "@/mybank/components/Cards";
 import { LoansNavigationProps } from "@/mybank/navigation/types";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Box, ImageBackground } from "@/shared/components/Layout";
 
 const LoansScreen: VFC<LoansNavigationProps<"LoansScreen">> = ({
   navigation,

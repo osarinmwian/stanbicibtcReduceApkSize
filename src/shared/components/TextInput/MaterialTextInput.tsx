@@ -31,10 +31,10 @@ const OutlinedTextInput: VFC<MaterialTextInputProps> = (props) => {
         <OutlinedTextField
           allowFontScaling={false}
           baseColor={theme.colors.lightGrey}
-          fontSize={theme.fontSizes.p}
           containerStyle={{
             borderRadius: theme.borderRadii.md,
           }}
+          fontSize={theme.fontSizes.p}
           inputContainerStyle={{
             borderRadius: theme.borderRadii.md,
             height: RFValue(61),

@@ -8,7 +8,7 @@ import { loginBackground } from "@/mybank/assets/image";
 import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
 import { PfmNavigationProps } from "@/mybank/navigation/types";
 import { SvgIconPackType } from "@/shared/assets/icons";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Box, ImageBackground } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { PaletteType } from "@/shared/theme/palette";
 
