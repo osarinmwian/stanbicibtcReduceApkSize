@@ -51,7 +51,7 @@ function ChatBot() {
                 {t("mybank.chatBot.chatBotTitle")}
               </Text>
               <TouchableOpacity
-                onPress={() => navigation.navigate("LandingPage")}
+                onPress={() => navigation.goBack()}
                 style={styles.cancel}
               >
                 <Image source={require("@/shared/assets/image/close.png")} />

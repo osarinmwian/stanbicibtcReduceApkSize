@@ -46,6 +46,7 @@ import BuyDataNavigation from "./BuyDataNavigation";
 import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
 import { SchedulePaymentNavigation } from "./SchedulePaymentNavigation";
 import { MyBankRootStackParameterList } from "./types";
+import ChatBot from "../screens/Extras/ChatBot";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
@@ -115,6 +116,9 @@ function Home() {
       <Stack.Screen component={PrepaidCards} name="PrepaidCards" />
       <Stack.Screen component={PrepaidPinInput} name="PrepaidPinInput" />
       <Stack.Screen component={LoansAndOffers} name="LoansAndOffers" />
+      <Stack.Screen component={FlightIndex} name="FlightIndex" />
+      <Stack.Screen component={ChatBot} name="Chatbot" />
+      <Stack.Screen component={Hotels} name="Hotels" />
       <Stack.Screen
         component={SchedulePaymentNavigation}
         name="SchedulePaymentStack"
@@ -176,8 +180,8 @@ function Lifestyle() {
       <Stack.Screen component={HotelsList} name="HotelsList" />
       <Stack.Screen component={HotelView} name="HotelView" />
       <Stack.Screen component={SearchHotelError} name="SearchHotelError" />
-      <Stack.Screen component={GuestDetail} name="GuestDetail" />
       <Stack.Screen component={HotelConfirmation} name="HotelConfirmation" />
+      <Stack.Screen component={GuestDetail} name="GuestDetail" />
       <Stack.Screen
         component={AvailableFlightsPage}
         name="AvailableFlightsPage"
