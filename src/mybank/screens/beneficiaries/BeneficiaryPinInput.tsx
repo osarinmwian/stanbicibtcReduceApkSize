@@ -75,11 +75,14 @@ function BeneficiaryPinInput() {
               <Text variant="bold14">PIN Confirmation</Text>
               <Text color="lightGrey">Enter your 4 digit pin</Text>
             </Box>
+            <Box height={RFValue(0)} />
             <Box flex={1}>
               <PinComponent
+                noAmountBox
                 onChangeText={(value) => {
                   setPin(value);
                 }}
+                size={60}
                 value={pin}
               />
             </Box>
@@ -92,8 +95,7 @@ function BeneficiaryPinInput() {
               paddingVertical="md"
               width="100%"
             />
-            <Modal ref={moreModalRef}>
-            </Modal>
+            <Modal ref={moreModalRef}>{}</Modal>
           </Box>
         </SafeAreaView>
       </ImageBackground>

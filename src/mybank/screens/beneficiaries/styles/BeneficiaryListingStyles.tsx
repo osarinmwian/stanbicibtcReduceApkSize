@@ -2,20 +2,21 @@ import { StyleSheet } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const styles = StyleSheet.create({
-  containerBackground:{
+  containerBackground: {
     height: RFValue(100),
-    paddingHorizontal:8,
+    paddingHorizontal: 8,
     width: "100%",
-    display:'flex',
-    flexDirection:"row",
+    display: "flex",
+    flexDirection: "row",
     paddingVertical: 20,
-    marginTop:-10
+    marginTop: -10,
   },
   container: {
-    borderRadius: RFValue(20),
-    height:34,
-    width:34,
-    alignItems:'center',
+    borderRadius: RFValue(17),
+    height: 34,
+    width: 34,
+    alignItems: "center",
+    justifyContent: "center",
   },
   addition: {
     width: 16,
@@ -23,10 +24,10 @@ export const styles = StyleSheet.create({
     tintColor: "white",
   },
   primaryButton: {
-    width: 125,
-    justifyContent:'center',
-    alignItems:'center',
-    height:48,
+    width: 130,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 50,
     position: "absolute",
     top: 380,
     right: 0,
@@ -36,7 +37,7 @@ export const styles = StyleSheet.create({
     height: 22,
     justifyContent: "center",
     alignItems: "center",
-    tintColor:"grey"
+    tintColor: "grey",
   },
   warning: {
     width: "100%",
@@ -57,11 +58,11 @@ export const styles = StyleSheet.create({
   },
   note: {
     width: "85%",
-    marginTop:-6
+    alignItems: "flex-start",
   },
-  modalNote:{
+  modalNote: {
     width: "85%",
-    lineHeight:20
+    lineHeight: 20,
   },
   cancel: {
     padding: 10,

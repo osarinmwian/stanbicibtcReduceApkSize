@@ -1,18 +1,18 @@
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import { useNavigation } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
+import { useCallback, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { Image, TouchableOpacity } from "react-native";
+
+import addition from "@/mybank/assets/image/addition.png";
+import filterBeneficiaries from "@/mybank/screens/beneficiaries/files/filterBeneficiaries";
+import { styles } from "@/mybank/screens/beneficiaries/styles/BeneficiaryListingStyles";
+import { BaseButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
-import { TouchableOpacity, View, Image } from "react-native";
+import { Modal } from "@/shared/components/Modal";
 import { Text } from "@/shared/components/Typography";
 import { RFValue } from "@/shared/utils/functions";
-import filterBeneficiaries from "@/mybank/screens/beneficiaries/files/filterBeneficiaries";
-import { Modal } from "@/shared/components/Modal";
-import { LinearGradient } from "expo-linear-gradient";
-import { useRef, useCallback } from "react";
-import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import { BaseButton } from "@/shared/components/Buttons";
-import { useNavigation } from "@react-navigation/native";
-import { PrimaryButton } from "@/shared/components/Buttons";
-import addition from "@/mybank/assets/image/addition.png";
-import { styles } from "@/mybank/screens/beneficiaries/styles/BeneficiaryListingStyles";
-import { useTranslation } from "react-i18next";
 
 function BeneficiariesListing() {
   const moreModalRef = useRef<BottomSheetModal>(null);
@@ -21,80 +21,98 @@ function BeneficiariesListing() {
   const handleMorePresent = useCallback(() => {
     moreModalRef.current?.present();
   }, []);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <Box>
       <Text
+        color="textTint"
+        marginTop="sm"
         style={{ paddingTop: RFValue(24) }}
         textTransform="uppercase"
         variant="bold14"
-        marginTop="sm"
-        color="textTint"
       >
         {t("mybank.beneficiary.title")}
       </Text>
       <Box flex={1} flexDirection="column">
         {filterBeneficiaries.map((item) => (
-          <Box
-            flexDirection="row"
-            key={item.name}
-            paddingVertical="lg"
-          >
-            <LinearGradient colors={item.containerBackgroundColor} style={styles.containerBackground}>
-            <Box flex={1} flexDirection="row" justifyContent="center" paddingHorizontal="md">
-            <LinearGradient colors={item.background} style={styles.container}>
-              <TouchableOpacity
-                style={[
-                  styles.container,
-                  { alignItems: "center", justifyContent: "center" },
-                ]}
+          <Box flexDirection="row" key={item.name} paddingVertical="lg">
+            <LinearGradient
+              colors={item.containerBackgroundColor}
+              style={styles.containerBackground}
+            >
+              <Box
+                flex={1}
+                flexDirection="row"
+                justifyContent="center"
+                paddingHorizontal="md"
               >
-                <Text color="whiteColor" variant="medium14">
-                  {item.name.slice(0, 1).toUpperCase()}
-                </Text>
-              </TouchableOpacity>
-            </LinearGradient>
-              <TouchableOpacity style={styles.note}>
-                <Text color="textTint" paddingHorizontal="sm" variant="bold14">
-                  {item.name}
-                </Text>
-                <Box>
+                <LinearGradient
+                  colors={item.background}
+                  style={styles.container}
+                >
+                  <TouchableOpacity
+                    style={[
+                      styles.container,
+                      { alignItems: "center", justifyContent: "center" },
+                    ]}
+                  >
+                    <Text color="whiteColor" variant="medium14">
+                      {item.name.slice(0, 1).toUpperCase()}
+                    </Text>
+                  </TouchableOpacity>
+                </LinearGradient>
+                <TouchableOpacity style={styles.note}>
                   <Text
                     color="textTint"
                     paddingHorizontal="sm"
-                    variant="regular14"
+                    variant="bold14"
                   >
-                    {item.details}
+                    {item.name}
                   </Text>
+                  <Box>
+                    <Text
+                      color="textTint"
+                      marginTop="sm"
+                      paddingHorizontal="sm"
+                      variant="regular12"
+                    >
+                      {item.details}
+                    </Text>
+                  </Box>
+                </TouchableOpacity>
+                <Box marginLeft="xs">
+                  <BaseButton onPress={handleMorePresent} variant="transparent">
+                    <Image source={item.img} style={styles.delete} />
+                  </BaseButton>
                 </Box>
-              </TouchableOpacity>
-              <Box>
-                <BaseButton variant="transparent" onPress={handleMorePresent}>
-                  <Image source={item.img} style={styles.delete} />
-                </BaseButton>
               </Box>
-            </Box>
             </LinearGradient>
           </Box>
         ))}
       </Box>
       <Box style={styles.primaryButton}>
         <BaseButton
+          alignItems="center"
+          borderRadius="lg"
           justifyContent="center"
-          alignItems='center'
           onPress={() => navigation.navigate("AddNewBeneficiary")}
           paddingVertical="md"
-          borderRadius="lg"
           width="100%"
         >
-          <Image source={addition} style={styles.addition}/>
-          <Text color="whiteColor" marginHorizontal="sm" variant="medium14">{t("mybank.AddNewBeneficiary.addNewButton")}</Text>
+          <Image source={addition} style={styles.addition} />
+          <Text color="whiteColor" marginHorizontal="sm" variant="medium14">
+            {t("mybank.AddNewBeneficiary.addNewButton")}
+          </Text>
         </BaseButton>
       </Box>
       <Modal ref={moreModalRef}>
         <Box marginHorizontal="md" marginVertical="md">
-          <Text variant="bold14">{t("mybank.removeBeneficiaries.pleaseNote")}</Text>
-          <Text marginBottom="md">{t("mybank.removeBeneficiaries.confirmRequest")}</Text>
+          <Text variant="bold14">
+            {t("mybank.removeBeneficiaries.pleaseNote")}
+          </Text>
+          <Text marginBottom="md">
+            {t("mybank.removeBeneficiaries.confirmRequest")}
+          </Text>
           <Box style={styles.warning}>
             <Box>
               <Image
@@ -103,39 +121,39 @@ function BeneficiariesListing() {
               />
             </Box>
             <Box style={styles.modalNote}>
-              <Text variant="medium14" marginBottom="xs">
-              {t("mybank.removeBeneficiaries.pleaseNote")}
+              <Text marginBottom="xs" variant="medium14">
+                {t("mybank.removeBeneficiaries.pleaseNote")}
               </Text>
-              <Text variant="regular14" marginBottom="md" style={styles.note}>
-              {t("mybank.removeBeneficiaries.actionNote")}
+              <Text marginBottom="md" style={styles.note} variant="regular14">
+                {t("mybank.removeBeneficiaries.actionNote")}
               </Text>
             </Box>
           </Box>
           <Box>
             <BaseButton
-              style={styles.cancelButton}
               backgroundColor="superlightGrey"
               height={52}
+              style={styles.cancelButton}
             >
               <Text
-                style={styles.cancel}
-                variant="medium12"
                 color="lightGrey"
+                style={styles.cancel}
                 textTransform="uppercase"
+                variant="medium12"
               >
                 {t("mybank.removeBeneficiaries.cancelButton")}
               </Text>
             </BaseButton>
             <BaseButton
-              style={styles.continueButton}
               backgroundColor="mediumRed"
               height={52}
+              style={styles.continueButton}
             >
               <Text
-                style={styles.continue}
-                variant="medium12"
                 color="whiteColor"
+                style={styles.continue}
                 textTransform="uppercase"
+                variant="medium12"
               >
                 {t("mybank.removeBeneficiaries.continueButton")}
               </Text>

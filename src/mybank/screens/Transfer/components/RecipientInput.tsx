@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
 
     flexDirection: "row",
 
-    paddingHorizontal: RFValue(10),
+    paddingHorizontal: RFValue(14),
 
-    paddingVertical: RFValue(8),
+    paddingVertical: RFValue(12),
   },
 });
 
@@ -37,13 +37,13 @@ export default function RecipientInput({
       <Box style={styles.container}>
         <Icon color="secondaryBlack" name="user" size="lg" />
         <Box flex={1} paddingHorizontal="md">
-          <Text color="secondaryBlack" variant="medium10">
+          <Text color="secondaryBlack" variant="regular10">
             RECIPIENT
           </Text>
-          <Text color="secondaryBlack" marginTop="xs" variant="regular10">
+          <Text color="secondaryBlack" marginTop="xs" variant="regular12">
             {recipientName}
           </Text>
-          <Text color="secondaryBlack" marginTop="xs" variant="regular10">
+          <Text color="secondaryBlack" marginTop="xs" variant="regular12">
             {bankName}
           </Text>
         </Box>
