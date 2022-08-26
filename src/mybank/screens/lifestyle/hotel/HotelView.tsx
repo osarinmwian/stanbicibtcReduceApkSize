@@ -73,16 +73,16 @@ const hotelviewData = {
     id: 1,
     img: mapcreenshot,
     region: {
-      latitude: 3.406_448,
-      longitude: 6.465_422,
-      latitudeDelta: 3.406_448,
-      longitudeDelta: 3.406_448,
+      latitude: 3.406448,
+      longitude: 6.465422,
+      latitudeDelta: 3.406448,
+      longitudeDelta: 3.406448,
     },
     markers: [
       {
         id: 1,
-        latitude: 6.431_401_715_747_725,
-        longitude: 3.430_374,
+        latitude: 6.431401715747725,
+        longitude: 3.430374,
         title: "Eko Hotel And Suites Victoria Island",
       },
     ],
@@ -461,7 +461,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
       <FlatList
         data={hotelviewData.reviews}
         horizontal
-        keyExtractor={({ index }) => `item-${index}`}
+        keyExtractor={(index) => `item-${index}`}
         renderItem={renderReviewItem}
         showsHorizontalScrollIndicator={false}
       />
