@@ -20,6 +20,7 @@ import ModuleComponent from "../../components/Card/SelectChannelCard";
 import QuickOptionsModal from "./components/quickOptionsModal";
 import modules from "./files/modules";
 import { LOGOSTYLE } from "./landingPageStyles";
+import BottomTabLandingPageTopBar from "@/mybank/components/bottomTabLandingPageTopBar";
 
 export default function LandingPage({
   navigation,
@@ -28,102 +29,114 @@ export default function LandingPage({
   const { height } = Dimensions.get("window");
   return (
     <>
-      <StatusTopBar imageName={landingpagebackground}>
-        <Box>
-          <Box alignItems="flex-end">
-            <QuickOptionsModal navigation={navigation} />
-          </Box>
-          <Box paddingHorizontal="md">
-            <Box
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: height / 20,
-                marginTop: height / 30,
-              }}
-            >
-              <Image source={logo} style={LOGOSTYLE} />
-              <Text color="whiteColor" marginTop="sm" variant="medium18">
-                {t("mybank.landing.hello")}
-              </Text>
+      <Box>
+        <BottomTabLandingPageTopBar
+          hotlstyle={{ flex: 0.4 }}
+          imageName={landingpagebackground}
+          landingPage={false}
+        >
+          <Box>
+            <Box alignItems="flex-end">
+              <QuickOptionsModal navigation={navigation} />
             </Box>
-
-            <Box marginVertical="md">
-              <Box>
-                <Text color="whiteColor">
-                  {t("mybank.landing.slideToSeeMoreOptions")}
-                </Text>
-              </Box>
-              <Box alignItems="center">
-                <FlatList
-                  data={modules}
-                  keyExtractor={(item: { id: string }) => item.id}
-                  numColumns={3}
-                  renderItem={({ item }) => (
-                    <ModuleComponent
-                      backgroundColor={
-                        item.backgroundColor as PressableProps["backgroundColor"]
-                      }
-                      image={item.image}
-                      onPress={() => navigation.navigate(item.destination)}
-                      title={item.title}
-                    />
-                  )}
-                  showsHorizontalScrollIndicator={false}
-                  showsVerticalScrollIndicator={false}
-                />
-              </Box>
-            </Box>
-
-            <Box>
-              <Pressable alignItems="flex-start" marginTop="md">
-                <Text color="whiteColor" marginBottom="xs" variant="regular14">
-                  {t("mybank.landing.new")}
-                </Text>
-              </Pressable>
+            <Box paddingHorizontal="md">
               <Box
-                flexDirection="row"
-                justifyContent="space-between"
-                marginBottom="md"
-                marginTop="sm"
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: height / 20,
+                  marginTop: height / 30,
+                }}
               >
-                <SelectChannelModal
-                  destination={"OnePass" as keyof MyBankRootStackParameterList}
-                  navigation={navigation}
-                />
-
-                <PrimaryButton
-                  alignItems="center"
-                  backgroundColor="whiteColor"
-                  height={RFValue(51)}
-                  justifyContent="center"
-                  label={t("mybank.landing.onePass")}
-                  labelProps={{
-                    color: "wealthColor",
-                  }}
-                  labelVariant="medium12"
-                  width={RFValue(150)}
-                />
+                <Image source={logo} style={LOGOSTYLE} />
+                <Text color="whiteColor" marginTop="sm" variant="medium18">
+                  {t("mybank.landing.hello")}
+                </Text>
               </Box>
-            </Box>
 
-            <PrimaryButton
-              alignItems="center"
-              backgroundColor="transparent"
-              borderColor="whiteColor"
-              borderRadius="sm"
-              borderWidth={2}
-              height={RFValue(51)}
-              justifyContent="center"
-              label={t("mybank.landing.explore")}
-              labelProps={{ color: "whiteColor" }}
-              labelVariant="regular14"
-              leftIcon="compass"
-              // size="md"
-            />
+              <Box marginVertical="md">
+                <Box>
+                  <Text color="whiteColor">
+                    {t("mybank.landing.slideToSeeMoreOptions")}
+                  </Text>
+                </Box>
+                <Box alignItems="center">
+                  <FlatList
+                    data={modules}
+                    keyExtractor={(item: { id: string }) => item.id}
+                    numColumns={3}
+                    renderItem={({ item }) => (
+                      <ModuleComponent
+                        backgroundColor={
+                          item.backgroundColor as PressableProps["backgroundColor"]
+                        }
+                        image={item.image}
+                        onPress={() => navigation.navigate(item.destination)}
+                        title={item.title}
+                      />
+                    )}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                  />
+                </Box>
+              </Box>
+
+              <Box>
+                <Pressable alignItems="flex-start" marginTop="md">
+                  <Text
+                    color="whiteColor"
+                    marginBottom="xs"
+                    variant="regular14"
+                  >
+                    {t("mybank.landing.new")}
+                  </Text>
+                </Pressable>
+                <Box
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  marginBottom="md"
+                  marginTop="sm"
+                >
+                  <SelectChannelModal
+                    destination={
+                      "OnePass" as keyof MyBankRootStackParameterList
+                    }
+                    navigation={navigation}
+                  />
+
+                  <PrimaryButton
+                    alignItems="center"
+                    backgroundColor="whiteColor"
+                    height={RFValue(51)}
+                    justifyContent="center"
+                    label={t("mybank.landing.onePass")}
+                    labelProps={{
+                      color: "wealthColor",
+                    }}
+                    labelVariant="medium12"
+                    width={RFValue(150)}
+                  />
+                </Box>
+              </Box>
+
+              <PrimaryButton
+                alignItems="center"
+                backgroundColor="transparent"
+                borderColor="whiteColor"
+                borderRadius="sm"
+                borderWidth={2}
+                height={RFValue(51)}
+                justifyContent="center"
+                label={t("mybank.landing.explore")}
+                labelProps={{ color: "whiteColor" }}
+                labelVariant="regular14"
+                leftIcon="compass"
+                // size="md"
+              />
+            </Box>
           </Box>
-        </Box>
-      </StatusTopBar>
+        </BottomTabLandingPageTopBar>
+      </Box>
     </>
   );
 }

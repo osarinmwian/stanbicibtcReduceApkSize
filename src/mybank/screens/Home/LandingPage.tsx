@@ -1,17 +1,23 @@
 // react
-import React, { useState, VFC } from "react";
+import React, { useRef, useState, VFC } from "react";
 // react-native
+import { landingPageStyles } from "@/mybank/screens/Home/styles/Styles";
 import {
+  Dimensions,
   FlatList,
   Image,
   ImageBackground,
   ScrollView,
   TouchableOpacity,
+  View,
 } from "react-native";
-
 // third-parties
 import {
   account_bg1,
+  account_bg2,
+  account_bg3,
+  account_bg4,
+  imageSlide,
   loan_card,
   quick_links1,
   quick_links2,
@@ -27,6 +33,8 @@ import { SvgIcon } from "@/shared/assets/icons";
 import { backgroundIcons, standardBankLogo } from "@/shared/assets/image";
 import { Box, BoxProps, SafeAreaBox } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
+import { RFValue } from "react-native-responsive-fontsize";
+const { width, height } = Dimensions.get("window");
 
 const RF = (x: number) => x;
 const Currency = (x: number) => x;
@@ -45,28 +53,50 @@ const iconProps: BoxProps = {
 
 const accounts = [
   {
-    accountName: "Hello",
-    accountNumber: "090200",
-    availableBalance: 200,
-    currency: 2,
-    effectiveBalance: "10",
+    imageBackground: account_bg1,
+    accountName: "EHIZOJIE SOLOMON IHAYERE",
+    accountNumber: "0000826353",
+    availableBalance: "1,200.450",
+    currency: "N",
+    effectiveBalance: "1,200.450",
   },
   {
-    accountName: "Hello",
-    accountNumber: "040200",
-    availableBalance: 200,
-    currency: 2,
-    effectiveBalance: "10",
+    imageBackground: account_bg2,
+    accountName: "EHIZOJIE SOLOMON IHAYERE",
+    accountNumber: "0000826353",
+    availableBalance: "1,200.450",
+    currency: "N",
+    effectiveBalance: "1,200.450",
   },
   {
-    accountName: "Hello",
-    accountNumber: "0950200",
-    availableBalance: 200,
-    currency: 2,
-    effectiveBalance: "10",
+    imageBackground: account_bg3,
+    accountName: "EHIZOJIE SOLOMON IHAYERE",
+    accountNumber: "0000826353",
+    availableBalance: "1,200.450",
+    currency: "N",
+    effectiveBalance: "1,200.450",
+  },
+  {
+    imageBackground: account_bg4,
+    accountName: "EHIZOJIE SOLOMON IHAYERE",
+    accountNumber: "0000826353",
+    availableBalance: "1,200.450",
+    currency: "N",
+    effectiveBalance: "1,200.450",
   },
 ];
 
+const imageSlider = [
+  {
+    image: imageSlide,
+  },
+  {
+    image: imageSlide,
+  },
+  {
+    image: imageSlide,
+  },
+];
 const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
   const [showBalance, setShowBalance] = useState(true);
   const [currentAccountNumber, setCurrentAccountNumber] = useState("");
@@ -134,9 +164,10 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
     item,
   }: {
     item: {
+      imageBackground: number;
       accountName: string;
       accountNumber: string;
-      availableBalance: number;
+      availableBalance: string;
       currency: number;
       effectiveBalance: string;
     };
@@ -151,13 +182,13 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
     } = item;
     return (
       <ImageBackground
-        source={account_bg1}
+        source={item.imageBackground}
         style={{
           borderRadius: 16,
-          height: 180,
+          height: 162,
           paddingHorizontal: 16,
           paddingVertical: 20,
-          width: 343,
+          width: 324,
         }}
       >
         <Box paddingHorizontal="md">
@@ -170,7 +201,12 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
             marginTop="sm"
             width="100%"
           >
-            <Text color="mainBackground" numberOfLines={1} variant="medium12">
+            <Text
+              color="mainBackground"
+              numberOfLines={1}
+              variant="medium12"
+              fontSize={12}
+            >
               {accountName}
             </Text>
 
@@ -182,7 +218,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
           <Box
             style={{
               flexDirection: "row",
-              marginTop: 32,
+              marginTop: 30,
               width: "100%",
             }}
           >
@@ -206,6 +242,7 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
               </Text>
             </Box>
             <TouchableOpacity
+              style={{ marginLeft: -20 }}
               onPress={() => {
                 setCurrentAccountNumber(accountNumber);
                 return accountNumber === currentAccountNumber
@@ -213,13 +250,13 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
                   : setShowBalance(true);
               }}
             >
-              <SvgIcon name="eye-opened" />
+              <SvgIcon name="eye-opened" size="sm" />
             </TouchableOpacity>
           </Box>
           <Text
             color="mainBackground"
             style={{
-              fontSize: RF(9),
+              fontSize: RF(12),
               marginTop: 8,
             }}
             variant="regular12"
@@ -231,6 +268,49 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
           </Text>
         </Box>
       </ImageBackground>
+    );
+  };
+
+  interface imageSliderProps {
+    image: number;
+  }
+  let flatListRef = useRef<FlatList<imageSliderProps> | null>();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const viewConfigRef = React.useRef({ viewAreaCoveragePercentThreshold: 50 });
+
+  //To get our Index
+  const onViewRef = useRef(({ changed }: { changed: any }) => {
+    if (changed[0].isViewable) {
+      setCurrentIndex(changed[0].index);
+    }
+  });
+
+  // Using clicks to scroll to index
+  const scrollToIndex = (index: number) => {
+    flatListRef.current?.scrollToIndex({ animated: true, index: index });
+  };
+
+  const renderImageSlider: React.FC<{ item: imageSliderProps }> = ({
+    item,
+  }) => {
+    return (
+      <TouchableOpacity
+        style={{ flex: 1, marginHorizontal: 20 }}
+      >
+        <Image
+          source={item.image}
+          style={{
+            height: 190,
+            width: 350,
+            justifyContent:'center',
+            alignSelf:'center',
+            resizeMode: "contain",
+            borderRadius: 10,
+          }}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
     );
   };
 
@@ -289,27 +369,53 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
           marginTop="sm"
         >
           <Box flexDirection="row">
-            <Box {...iconProps}>
+            <Box
+              {...iconProps}
+              flexDirection="row"
+              width={RFValue(43)}
+              height={RFValue(43)}
+            >
               <SvgIcon
                 name="notification"
                 onPress={() => navigation.navigate("Notifications")}
                 size="md"
                 style={{ padding: 5 }}
               />
+              <Box
+                borderRadius="lg"
+                backgroundColor="mediumRed"
+                padding="xs"
+                position="absolute"
+                style={{ top: 2, right: -8 }}
+                width={RFValue(20)}
+                height={RFValue(20)}
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Text
+                  color="whiteColor"
+                  fontSize={9}
+                  fontWeight="bold"
+                  textAlign="center"
+                >
+                  12
+                </Text>
+              </Box>
             </Box>
-            <Box {...iconProps}>
-              <SvgIcon name="profile" />
+            <Box {...iconProps} width={RFValue(43)} height={RFValue(43)}>
+              <SvgIcon name="profile" size="md" />
             </Box>
             <Box
               flexDirection="row"
               {...iconProps}
               paddingHorizontal="md"
               width={undefined}
+              borderRadius="sm"
             >
               <Text color="mainBackground" variant="medium12">
                 My Bank
               </Text>
-              <SvgIcon name="chevron-down" />
+              <SvgIcon name="chevron-down" size="md" />
             </Box>
           </Box>
           <Image source={standardBankLogo} />
@@ -344,10 +450,10 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
             <Box
               flexDirection="row"
               justifyContent="space-between"
-              marginTop="sml"
               paddingHorizontal="md"
+              paddingVertical="md"
             >
-              <Text variant="medium12">LOANS & Offers</Text>
+              <Text variant="medium12">LOANS & OFFERS</Text>
               <Text color="primaryColor" variant="medium12">
                 SEE ALL
               </Text>
@@ -355,31 +461,89 @@ const SMEHomepage: VFC<MyBankNavigationProps<"Home">> = ({ navigation }) => {
             <Box>
               <ImageBackground
                 source={loan_card}
-                style={{ height: 128, width: 343 }}
+                style={{
+                  height: 205,
+                  width: "98%",
+                  position: "relative",
+                  top: -30,
+                }}
+                resizeMode="cover"
               >
-                <Box paddingHorizontal="lg" paddingTop="md">
-                  <Text variant="medium14">Loans</Text>
-                  <Text variant="bold18">N450,000</Text>
+                <Box paddingHorizontal="lg" style={{ marginTop: 50 }}>
+                  <Text marginBottom="sm" variant="medium14">
+                    Loans
+                  </Text>
+                  <Text fontSize={20} fontWeight="bold">
+                    N450,000
+                  </Text>
                   <Text marginBottom="sm" variant="regular14">
                     Currently eligiblity{" "}
                   </Text>
-                  <Text>Access your loan </Text>
+                  <Box>
+                    <Text variant="medium12" color="primaryColor30">
+                      ACCESS YOUR LOAN
+                    </Text>
+                  </Box>
                 </Box>
               </ImageBackground>
             </Box>
-
-            <Text marginBottom="md" marginHorizontal="md" variant="medium12">
-              QUICK LINKS
-            </Text>
-            <Box flexDirection="row" paddingHorizontal="md">
-              {quickLinks.slice(0, 4).map((item) => (
-                <RenderQuickLinks item={item} key={item.name} />
-              ))}
+            <Box style={{ marginTop: -40 }}>
+              <Text marginBottom="md" marginHorizontal="md" variant="medium12">
+                QUICK LINKS
+              </Text>
+              <Box flexDirection="row" paddingHorizontal="md">
+                {quickLinks.slice(0, 4).map((item) => (
+                  <RenderQuickLinks item={item} key={item.name} />
+                ))}
+              </Box>
+              <Box flexDirection="row" paddingHorizontal="md">
+                {quickLinks.slice(4, 8).map((item) => (
+                  <RenderQuickLinks item={item} key={item.name} />
+                ))}
+              </Box>
             </Box>
-            <Box flexDirection="row" paddingHorizontal="md">
-              {quickLinks.slice(4, 8).map((item) => (
-                <RenderQuickLinks item={item} key={item.name} />
-              ))}
+            <Box>
+              <Box
+                flexDirection="row"
+                justifyContent="space-between"
+                paddingHorizontal="lg"
+                paddingVertical="md"
+              >
+                <Text variant="medium12">ADS</Text>
+                <Box flexDirection="row">
+                  <Text color="primaryColor" variant="medium12">
+                    Scroll to see more
+                  </Text>
+                  <View style={landingPageStyles.dotView}>
+                    {imageSlider.map(({}, index: number) => {
+                      <TouchableOpacity
+                        key={index.toString()}
+                        style={[
+                          landingPageStyles.circle,
+                          {
+                            backgroundColor:
+                              index == currentIndex ? 'black' : 'grey'
+                          },
+                        ]}
+                        onPress={() => scrollToIndex(index)}
+                      />;
+                    })}
+                  </View>
+                </Box>
+              </Box>
+              <FlatList
+                data={imageSlider}
+                renderItem={renderImageSlider}
+                keyExtractor={(item, index) => index.toString()}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                pagingEnabled
+                ref={(ref) => {
+                  flatListRef.current = ref;
+                }}
+                style={{ maxHeight: 300 }}
+                onViewableItemsChanged={onViewRef.current}
+              />
             </Box>
           </ScrollView>
         </Box>
