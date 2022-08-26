@@ -127,8 +127,8 @@ function Home() {
       />
       <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
       <Stack.Screen component={PayWithQr} name="PayWithQr" />
-      <Stack.Screen component={BillPayment} name="BillPayment" />
       <Stack.Screen component={CardLessWithDrawal} name="CardLessWithDrawal" />
+      <Stack.Screen component={BillPayment} name="BillPayment" />
     </Stack.Navigator>
   );
 }
