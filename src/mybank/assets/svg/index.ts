@@ -13,3 +13,6 @@ export { default as ArrowIcon } from "./ArrowRight.svg";
 export { default as BookmarkIcon } from "./bookmark.svg";
 export { default as ArrowDown } from "./􀆉.svg";
 export { default as MapImage } from "./Map.svg";
+export { default as CloseIcon } from "./Close.svg";
+export { default as SeatView } from "./SeatViewFlight.svg";
+export { default as ToiletIcon } from "./toilet.svg";

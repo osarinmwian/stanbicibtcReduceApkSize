@@ -18,7 +18,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { Flight, Hotel, LineIcon } from "@/mybank/assets/svg";
 import FareSummary from "./components/FareSummary";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import { PassengerDetailsModal } from "../components/passengerDeatilsModal";
+import { PassengerDetailsModal } from "../components/passengerDetailsModal";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import BookingSummary from "./components/BookingSummary";

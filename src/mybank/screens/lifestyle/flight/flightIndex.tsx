@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView } from "react-native";
+import { Pressable, ScrollView } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import BottomTabLandingPageTopBar from "@/mybank/components/TopBar";
@@ -97,9 +97,11 @@ const FlightIndex = ({ navigation }: MyBankNavigationProps<"FlightIndex">) => {
           <Text marginVertical="sm" variant="medium12">
             Search and book flights
           </Text>
-          {/* <Text color="primaryColor" marginVertical="sm" variant="medium12">
-            Booking History
-          </Text> */}
+          <Pressable onPress={() => navigation.navigate("BookingHistory")}>
+            <Text color="primaryColor" marginVertical="sm" variant="medium12">
+              BOOKING HISTORY
+            </Text>
+          </Pressable>
         </Box>
         <Box marginBottom="md">
           <DepartureModal />

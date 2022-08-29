@@ -56,6 +56,8 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   BookingHistory: undefined;
   FlightDetails: undefined | Record<"item", DetailsRoute>;
   BookFlightDetails: undefined;
+  SelectSeats: undefined;
+  PassengerDetails: undefined;
 };
 
 export type SchedulePaymentStack = {

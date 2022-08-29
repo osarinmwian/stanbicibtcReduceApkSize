@@ -55,7 +55,7 @@ const flightData = [
 
 const AvailableFlight = ({
   navigation,
-}: MyBankNavigationProps<"BookingHistory">) => {
+}: MyBankNavigationProps<"AvailableFlight">) => {
   const [viewData, setViewData] = useState<boolean>(false);
   const [seeHotel, setSeeHotel] = useState<boolean>(false);
   const [flight, setFlight] = useState<boolean>(true);

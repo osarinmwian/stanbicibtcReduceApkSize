@@ -12,7 +12,7 @@ import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
-const BookHotel: FC<{
+const SelectCard: FC<{
   setModalVisible: any;
   navigation: MyBankNavigationProps<"HotelView">;
 }> = ({ setModalVisible, navigation }) => {
@@ -44,7 +44,7 @@ const BookHotel: FC<{
   };
 
   const handleSubmit = () => {
-    navigation.navigate("GuestDetail");
+    navigation.navigate("SelectSeats");
     setModalVisible(false);
   };
 
@@ -167,6 +167,6 @@ const BookHotel: FC<{
   );
 };
 
-export default BookHotel;
+export default SelectCard;
 
 const styles = StyleSheet.create({});

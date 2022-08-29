@@ -2,7 +2,7 @@ import {
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
-import React, { useCallback, useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import SearchableDropdown from "react-native-searchable-dropdown";
@@ -42,6 +42,7 @@ const DestinationModal = () => {
     ),
     [handleDismissModalPress],
   );
+  const [departure, setDeparure] = useState("");
 
   const items = [
     // name key is must.It is to show the text in front
@@ -111,7 +112,7 @@ const DestinationModal = () => {
                   // text style of a single dropdown item
                   color: "#222",
                 }}
-                // onItemSelect={(item: string) => console.log(item)}
+                onItemSelect={(item: string) => setDeparure(item)}
                 // onTextChange={(text: string) => console.log(text)}
                 placeholder="Enter destination"
                 // mapping of item array
@@ -140,7 +141,7 @@ const DestinationModal = () => {
               label="Done"
               labelProps={{ color: "whiteColor" }}
               labelVariant="medium10"
-              // marginTop="md"
+              onPress={handleDismissModalPress}
               paddingVertical="mmd"
             />
           </Box>
