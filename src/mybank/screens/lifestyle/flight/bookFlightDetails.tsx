@@ -1,13 +1,14 @@
 import {
   Dimensions,
   ImageBackground,
+  Modal,
   Pressable,
   StatusBar,
   StyleSheet,
   Text,
   View,
 } from "react-native";
-import React, { useRef } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { loginBackground } from "@/mybank/assets/image";
 import { Box, ScrollBox } from "@/shared/components/Layout";
 import { ImageIcon } from "@/shared/assets/icons";
@@ -19,16 +20,18 @@ import { Flight, Hotel, LineIcon } from "@/mybank/assets/svg";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import { PassengerDetailsModal } from "../components/passengerDeatilsModal";
 import FareSummary from "./components/FareSummary";
+import BookHotel from "../hotel/components/BookHotel";
 
 const { width, height } = Dimensions.get("screen");
 
 const BookFlightDetails = ({
   navigation,
-}: MyBankNavigationProps<"BookFlight">) => {
-  const passengerDetailsBottomSheetModalRef = useRef<BottomSheetModal>(null);
+}: MyBankNavigationProps<"BookFlightDetails">) => {
+  const [modalVisible, setModalVisible] = useState(false);
 
-  const onOpenLoanRepaymentModal = () =>
-    passengerDetailsBottomSheetModalRef.current?.present();
+  const handleMorePresent = useCallback(() => {
+    setModalVisible(!modalVisible);
+  }, []);
 
   return (
     <>
@@ -38,6 +41,12 @@ const BookFlightDetails = ({
         source={loginBackground}
         style={{ flex: 1 }}
       >
+        <Modal animationType="slide" transparent visible={modalVisible}>
+          <BookHotel
+            navigation={navigation}
+            setModalVisible={setModalVisible}
+          />
+        </Modal>
         <Box
           alignContent="center"
           flexDirection="row"
@@ -75,12 +84,9 @@ const BookFlightDetails = ({
             </Box>
           </Box>
 
-          <FareSummary />
+          <FareSummary destination={handleMorePresent} />
         </ScrollBox>
       </ImageBackground>
-      <PassengerDetailsModal
-        bottomSheetModalRef={passengerDetailsBottomSheetModalRef}
-      />
     </>
   );
 };

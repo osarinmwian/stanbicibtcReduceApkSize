@@ -59,7 +59,8 @@ const GuestDetail: FC = ({
         {renderHeader()}
         <Box
           backgroundColor="whiteColor"
-          borderRadius="md"
+          borderTopLeftRadius="md"
+          borderTopRightRadius="md"
           flex={1}
           padding="md"
         >

@@ -212,7 +212,11 @@ const HotelsList: FC = ({
 
   const renderList = () => (
     <FlatList
-      contentContainerStyle={{ backgroundColor: "#fff", borderRadius: 20 }}
+      contentContainerStyle={{
+        backgroundColor: "#fff",
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+      }}
       data={hotelData}
       keyExtractor={(item) => `item-${item.id}`}
       ListFooterComponent={<Box marginBottom="xl" />}

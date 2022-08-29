@@ -35,6 +35,7 @@ import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 import BookHotel from "./components/BookHotel";
+import { MapImage } from "@/mybank/assets/svg";
 
 const hotelviewData = {
   id: 1,
@@ -409,6 +410,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
             />
           ))}
         </MapView> */}
+        <MapImage />
       </Box>
       <Box width="90%">
         <Text

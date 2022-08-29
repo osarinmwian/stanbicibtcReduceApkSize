@@ -17,9 +17,10 @@ interface FareProps {
   arrival: string;
   date: string;
   amount: string;
+  destination: any;
 }
 
-const FareSummary = () => {
+const FareSummary = ({ destination }: FareProps) => {
   return (
     <ScrollBox bounces={false} marginBottom="lg" marginTop="md">
       <Text marginBottom="md" variant="medium12">
@@ -112,7 +113,7 @@ const FareSummary = () => {
           labelVariant="medium12"
           marginBottom="xs"
           marginTop="ssm"
-          //   onPress={destination}
+          onPress={destination}
           paddingVertical="md"
         />
       </Box>

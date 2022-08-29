@@ -12,3 +12,4 @@ export { default as CreditCardIcon } from "./credit-card.svg";
 export { default as ArrowIcon } from "./ArrowRight.svg";
 export { default as BookmarkIcon } from "./bookmark.svg";
 export { default as ArrowDown } from "./􀆉.svg";
+export { default as MapImage } from "./Map.svg";
