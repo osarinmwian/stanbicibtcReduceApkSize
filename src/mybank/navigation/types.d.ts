@@ -19,7 +19,7 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   Transfer: undefined;
   FlightIndex: undefined;
   NoFlightFound: undefined;
-  AvailableFlightsPage: undefined;
+  AvailableFlights: undefined;
   LoginScreen: undefined;
   SixthScreen: undefined;
   SeventhScreen: undefined;
@@ -53,6 +53,9 @@ export type MyBankRootStackParameterList = RootStackParameterList & {
   GuestDetail: undefined;
   HotelConfirmation: undefined;
   Chatbot: undefined;
+  BookingHistory: undefined;
+  FlightDetails: undefined | Record<"item", DetailsRoute>;
+  BookFlightDetails: undefined;
 };
 
 export type SchedulePaymentStack = {
@@ -74,6 +77,12 @@ type MyTabRoutes = {
   LifestyleLandingPage: undefined;
   MoreLandingPage: undefined;
 };
+
+export interface DetailsRoute {
+  id: number | null;
+  title: string;
+  status: string;
+}
 
 export type MyBankNavigationProps<
   Screen extends keyof MyBankRootStackParameterList,

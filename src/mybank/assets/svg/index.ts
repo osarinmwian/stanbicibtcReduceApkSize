@@ -1,0 +1,14 @@
+export { default as Flight } from "./Flight.svg";
+export { default as Hotel } from "./Hotel.svg";
+export { default as NoBooking } from "./NoBooking.svg";
+export { default as FlagIcon } from "./Ethiopian-Airlines-Logo 8.svg";
+export { default as LineIcon } from "./Line 213.svg";
+export { default as UserIcon } from "./users.svg";
+export { default as BagIcon } from "./suitcase-rolling.svg";
+export { default as LocationIcon } from "./map-marker-alt.svg";
+export { default as BedIcon } from "./bed.svg";
+export { default as CalendarIcon } from "./calendar.svg";
+export { default as CreditCardIcon } from "./credit-card.svg";
+export { default as ArrowIcon } from "./ArrowRight.svg";
+export { default as BookmarkIcon } from "./bookmark.svg";
+export { default as ArrowDown } from "./􀆉.svg";

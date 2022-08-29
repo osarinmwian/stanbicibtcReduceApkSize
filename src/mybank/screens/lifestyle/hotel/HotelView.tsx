@@ -392,8 +392,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
         ADDRESS
       </Text>
       <Box height={200} width="100%">
-        <MapView
-          // onRegionChange = {(e) => console.log(e)}
+        {/* <MapView
           region={hotelviewData.location.region}
           style={{ flex: 1, borderRadius: 10 }}
           zoomControlEnabled
@@ -409,7 +408,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
               title={marker.title}
             />
           ))}
-        </MapView>
+        </MapView> */}
       </Box>
       <Box width="90%">
         <Text

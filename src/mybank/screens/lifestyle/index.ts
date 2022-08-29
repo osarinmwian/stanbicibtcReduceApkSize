@@ -1,4 +1,4 @@
-export { default as AvailableFlightsPage } from "./flight/availableFlightsPage";
+export { default as AvailableFlights } from "./flight/availableFlight";
 export { default as FlightIndex } from "./flight/flightIndex";
 export { default as NoFlightFound } from "./flight/noFlightFound";
 export { default as GuestDetail } from "./hotel/GuestDetail";
@@ -8,3 +8,4 @@ export { default as HotelsList } from "./hotel/HotelsList";
 export { default as HotelView } from "./hotel/HotelView";
 export { default as SearchHotelError } from "./hotel/SearchHotelError";
 export { default as LifestyleLandingPage } from "./lifestyleLandingPage";
+export { default as BookingHistory } from "./bookingHistory/BookingHistory";

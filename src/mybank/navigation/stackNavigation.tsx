@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
 import {
+  BookingHistory,
   GuestDetail,
   HotelConfirmation,
   SearchHotelError,
@@ -47,6 +48,9 @@ import { ENairaManagementNavigation } from "./ENairaManagementNavigation";
 import { SchedulePaymentNavigation } from "./SchedulePaymentNavigation";
 import { MyBankRootStackParameterList } from "./types";
 import ChatBot from "../screens/Extras/ChatBot";
+import FlightDetails from "../screens/lifestyle/bookingHistory/FlightDetails";
+import AvailableFlight from "../screens/lifestyle/flight/availableFlight";
+import BookFlightDetails from "../screens/lifestyle/flight/bookFlightDetails";
 
 const Stack = createNativeStackNavigator<MyBankRootStackParameterList>();
 
@@ -119,6 +123,7 @@ function Home() {
       <Stack.Screen component={FlightIndex} name="FlightIndex" />
       <Stack.Screen component={ChatBot} name="Chatbot" />
       <Stack.Screen component={Hotels} name="Hotels" />
+      {/* <Stack.Screen component={BookingHistory} name="BookingHistory" /> */}
       <Stack.Screen
         component={SchedulePaymentNavigation}
         name="SchedulePaymentStack"
@@ -182,10 +187,10 @@ function Lifestyle() {
       <Stack.Screen component={SearchHotelError} name="SearchHotelError" />
       <Stack.Screen component={HotelConfirmation} name="HotelConfirmation" />
       <Stack.Screen component={GuestDetail} name="GuestDetail" />
-      <Stack.Screen
-        component={AvailableFlightsPage}
-        name="AvailableFlightsPage"
-      />
+      <Stack.Screen component={BookingHistory} name="BookingHistory" />
+      <Stack.Screen component={FlightDetails} name="FlightDetails" />
+      <Stack.Screen component={AvailableFlight} name="AvailableFlights" />
+      <Stack.Screen component={BookFlightDetails} name="BookFlightDetails" />
     </Stack.Navigator>
   );
 }
