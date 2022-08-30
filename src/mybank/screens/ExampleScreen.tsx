@@ -9,6 +9,7 @@ import Animated, {
 import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import { PrimaryButton } from "@/shared/components/Buttons";
 import { Box } from "@/shared/components/Layout";
+import Tile from "@/shared/components/Tile/Tile";
 
 const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
   const { t } = useTranslation();
@@ -44,6 +45,9 @@ const ExampleScreen: VFC<MyBankNavigationProps<"Home">> = (props) => {
         onPress={() => props.navigation.navigate("Payments")}
         variant="filled"
       />
+      <Tile title="The new title" subtitle="subtitle" />
+      <Tile title="Manage Transaction Limit" backgroundColor="whiteColor" />
+      <Tile title="Refer a friend" />
     </Box>
   );
 };

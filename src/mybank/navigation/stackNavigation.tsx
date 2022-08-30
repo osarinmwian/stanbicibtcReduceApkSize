@@ -2,9 +2,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { EightScreen, SixthScreen } from "@/mybank/screens/";
 import {
+  AvailableFlights,
+  BookFlightDetails,
+  BookingHistory,
+  FlightDetails,
   GuestDetail,
   HotelConfirmation,
+  PassengerDetails,
   SearchHotelError,
+  SelectSeats,
 } from "@/mybank/screens/lifestyle";
 import {
   BillersForm,
@@ -29,9 +35,9 @@ import { Text } from "@/shared/components/Typography";
 
 import { AddNewBeneficiary, Beneficiary } from "../screens/beneficiaries";
 import BeneficiaryPinInput from "../screens/beneficiaries/BeneficiaryPinInput";
+import ChatBot from "../screens/Extras/ChatBot";
 import LoansAndOffers from "../screens/Extras/LoansAndOffers";
 import {
-  AvailableFlightsPage,
   FlightIndex,
   Hotels,
   HotelsList,
@@ -39,6 +45,8 @@ import {
   NoFlightFound,
 } from "../screens/lifestyle";
 import Notifications from "../screens/notifications/Notifications";
+import BillPayment from "../screens/Payment/BillPayment";
+import CardLessWithDrawal from "../screens/Payment/CardLessWithDrawal";
 import PrepaidCards from "../screens/PrepaidCards/PrepaidCards";
 import PrepaidPinInput from "../screens/PrepaidCards/PrepaidPinInput";
 import BottomTabs from "./bottomNavigation";
@@ -115,11 +123,18 @@ function Home() {
       <Stack.Screen component={PrepaidCards} name="PrepaidCards" />
       <Stack.Screen component={PrepaidPinInput} name="PrepaidPinInput" />
       <Stack.Screen component={LoansAndOffers} name="LoansAndOffers" />
+      <Stack.Screen component={FlightIndex} name="FlightIndex" />
+      <Stack.Screen component={ChatBot} name="Chatbot" />
+      <Stack.Screen component={Hotels} name="Hotels" />
+      {/* <Stack.Screen component={BookingHistory} name="BookingHistory" /> */}
       <Stack.Screen
         component={SchedulePaymentNavigation}
         name="SchedulePaymentStack"
       />
       <Stack.Screen component={BuyDataNavigation} name="BuyDataStack" />
+      <Stack.Screen component={PayWithQr} name="PayWithQr" />
+      <Stack.Screen component={CardLessWithDrawal} name="CardLessWithDrawal" />
+      <Stack.Screen component={BillPayment} name="BillPayment" />
     </Stack.Navigator>
   );
 }
@@ -155,6 +170,15 @@ function Payments() {
         })}
       />
       <Stack.Screen
+        component={BillPayment}
+        name="BillPayment"
+        options={({ navigation }) => ({
+          headerBackVisible: false,
+          headerLeft: () => renderBackButton({ onPress: navigation.goBack }),
+          headerTitle: () => renderTitle("Bill Payment"),
+        })}
+      />
+      <Stack.Screen
         component={EightScreen}
         name="EightScreen"
         options={{ headerShown: false }}
@@ -176,12 +200,14 @@ function Lifestyle() {
       <Stack.Screen component={HotelsList} name="HotelsList" />
       <Stack.Screen component={HotelView} name="HotelView" />
       <Stack.Screen component={SearchHotelError} name="SearchHotelError" />
-      <Stack.Screen component={GuestDetail} name="GuestDetail" />
       <Stack.Screen component={HotelConfirmation} name="HotelConfirmation" />
-      <Stack.Screen
-        component={AvailableFlightsPage}
-        name="AvailableFlightsPage"
-      />
+      <Stack.Screen component={GuestDetail} name="GuestDetail" />
+      <Stack.Screen component={BookingHistory} name="BookingHistory" />
+      <Stack.Screen component={FlightDetails} name="FlightDetails" />
+      <Stack.Screen component={AvailableFlights} name="AvailableFlights" />
+      <Stack.Screen component={BookFlightDetails} name="BookFlightDetails" />
+      <Stack.Screen component={SelectSeats} name="SelectSeats" />
+      <Stack.Screen component={PassengerDetails} name="PassengerDetails" />
     </Stack.Navigator>
   );
 }

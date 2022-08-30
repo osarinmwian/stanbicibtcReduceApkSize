@@ -114,7 +114,7 @@ const BookHotel: FC<{
       style={{
         backgroundColor: "transparentWhite",
         flex: 1,
-        height: "70%",
+        height: "50%",
         justifyContent: "flex-end",
       }}
     >

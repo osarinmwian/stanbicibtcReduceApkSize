@@ -4,7 +4,7 @@ import { MyBankNavigationProps } from "@/mybank/navigation/types";
 import ListComponent from "@/mybank/screens/Transfer/components/ListComponent";
 import { CheckBoxButton, PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent, ScrollBox } from "@/shared/components/Layout";
-import { OutlinedTextInput } from "@/shared/components/TextInput";
+import { FilledTextInput } from "@/shared/components/TextInput";
 import { Text } from "@/shared/components/Typography";
 import { useTheme } from "@/shared/theme";
 import { RFValue } from "@/shared/utils/functions";
@@ -57,31 +57,43 @@ export default function FxTransferNewRequestSecondScreen({
             </Box>
           </Box>
           <Box flex={1} mb="md" mt="md">
-            <Box height={RFValue(52)} marginTop="sm">
-              <OutlinedTextInput
+            <Box height={RFValue(52)} marginBottom="xs" marginTop="sm">
+              <FilledTextInput
                 baseColor={theme.colors.whiteColor}
-                fontSize={RFValue(10)}
                 inputContainerStyle={{
                   backgroundColor: theme.colors.cardSecondary,
                   borderRadius: 10,
                   height: RFValue(52),
+                  justifyContent: "center",
+
+                  paddingVertical: 50,
                 }}
                 label="ENTER AMOUNT"
                 labelTextStyle={{ color: theme.colors.primaryBlack }}
                 placeholder="₦0.00"
+                placeholderTextColor="#222222"
+                style={{
+                  borderRadius: 10,
+                  color: "#EFEFEF",
+                  justifyContent: "center",
+                  paddingVertical: 10,
+                }}
                 tintColor={theme.colors.cardSecondary}
               />
             </Box>
-            <Box flex={1} mt="xs">
+            <Box flex={1} mt="md">
               <ListComponent
+                biggerPlaceHolder
                 label="SELECT BANK STATE"
                 onPress={() => {}}
                 placeholder="Lagos"
               />
+              <Box mt="md" />
               <ListComponent
+                biggerPlaceHolder
                 label="SELECT BANK BRANCH"
                 onPress={() => {}}
-                placeholder=""
+                placeholder="select branch"
               />
               <Box mt="md">
                 <CheckBoxButton

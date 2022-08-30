@@ -72,7 +72,7 @@ const NoFlightFound = ({
           labelVariant="medium12"
           marginBottom="xs"
           marginTop="md"
-          onPress={() => navigation.navigate("AvailableFlightsPage")}
+          onPress={() => navigation.navigate("AvailableFlights")}
           paddingHorizontal="lg"
           paddingVertical="mmd"
         />

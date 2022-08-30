@@ -2,7 +2,7 @@ import {
   BottomSheetBackdropProps,
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
-import React, { useCallback, useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import SearchableDropdown from "react-native-searchable-dropdown";
@@ -24,6 +24,21 @@ import FlightMenuPicker from "../../components/flightMenuPicker";
 //   onTextChange: () => string;
 //   placeholder: string;
 // }
+
+const items = [
+  // name key is must.It is to show the text in front
+  { id: 1, name: "angellist" },
+  { id: 2, name: "codepen" },
+  { id: 3, name: "envelope" },
+  { id: 4, name: "etsy" },
+  { id: 5, name: "facebook" },
+  { id: 6, name: "foursquare" },
+  { id: 7, name: "github-alt" },
+  { id: 8, name: "github" },
+  { id: 9, name: "gitlab" },
+  { id: 10, name: "instagram" },
+];
+
 const DepartureModal = () => {
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -40,6 +55,8 @@ const DepartureModal = () => {
     bottomSheetModalRef.current?.dismiss();
   }, []);
 
+  const [departure, setDeparure] = useState("");
+
   // renders
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -52,20 +69,6 @@ const DepartureModal = () => {
     ),
     [handleDismissModalPress],
   );
-
-  const items = [
-    // name key is must.It is to show the text in front
-    { id: 1, name: "angellist" },
-    { id: 2, name: "codepen" },
-    { id: 3, name: "envelope" },
-    { id: 4, name: "etsy" },
-    { id: 5, name: "facebook" },
-    { id: 6, name: "foursquare" },
-    { id: 7, name: "github-alt" },
-    { id: 8, name: "github" },
-    { id: 9, name: "gitlab" },
-    { id: 10, name: "instagram" },
-  ];
 
   return (
     <Box>
@@ -121,8 +124,8 @@ const DepartureModal = () => {
                   // text style of a single dropdown item
                   color: "#222",
                 }}
-                // onItemSelect={(item: string) => alert(JSON.stringify(item))}
-                // onTextChange={(text: string) => alert(JSON.stringify(text))}
+                onItemSelect={(item: string) => setDeparure(item)}
+                // onTextChange={(text: string) => setDeparure(text)}
                 placeholder="Enter you departure location"
                 // mapping of item array
                 // defaultIndex={2}
@@ -150,7 +153,7 @@ const DepartureModal = () => {
               label="Done"
               labelProps={{ color: "whiteColor" }}
               labelVariant="medium10"
-              // marginTop="md"
+              onPress={handleDismissModalPress}
               paddingVertical="mmd"
             />
           </Box>

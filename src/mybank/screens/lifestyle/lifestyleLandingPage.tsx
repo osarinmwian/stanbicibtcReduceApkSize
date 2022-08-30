@@ -27,7 +27,7 @@ const LifestyleLandingPage = ({
       subHeading: "Find and reserve your hotel bookings",
     },
     {
-      destination: "FlightIndex",
+      destination: "BookingHistory",
       heading: "Booking history",
       iconName: "history",
       id: "3",

@@ -12,7 +12,7 @@ import SchedulePaymentModal from "@/mybank/screens/Transfer/components/ScheduleP
 import { Icon } from "@/shared/assets/icons";
 import { BaseButton, PrimaryButton } from "@/shared/components/Buttons";
 import { Box, LayoutComponent, ScrollBox } from "@/shared/components/Layout";
-import { OutlinedTextInput } from "@/shared/components/TextInput";
+import { FilledTextInput } from "@/shared/components/TextInput";
 import { Text } from "@/shared/components/Typography";
 import { useTheme } from "@/shared/theme";
 import { RFValue } from "@/shared/utils/functions";
@@ -62,62 +62,87 @@ export default function BankTransfer() {
         paddingHorizontal="md"
         paddingVertical="md"
       >
-        <Text marginBottom="sm" variant="medium12">
+        <Text marginBottom="sml" marginTop="xxs" variant="bold16">
           Bank transfers
         </Text>
         <ListComponent
+          biggerPlaceHolder
           label="SELECT ACCOUNT"
           placeholder="SAVINGS ACCOUNT - 0034512321"
         />
-        <Box marginTop="sm">
-          <OutlinedTextInput
+        <Box marginTop="md">
+          <FilledTextInput
             baseColor={theme.colors.whiteColor}
-            fontSize={RFValue(10)}
             inputContainerStyle={{
               backgroundColor: theme.colors.cardSecondary,
               borderRadius: 10,
               height: RFValue(52),
+              justifyContent: "center",
+              marginTop: 5,
+              paddingVertical: 50,
             }}
             label="AMOUNT"
-            labelTextStyle={{ color: theme.colors.primaryBlack }}
+            labelTextStyle={{ color: theme.colors.primaryBlack, marginTop: 4 }}
+            placeholder="N20,000"
+            placeholderTextColor="#222222"
+            style={{
+              borderRadius: 10,
+              color: "#EFEFEF",
+              justifyContent: "center",
+            }}
             tintColor={theme.colors.cardSecondary}
           />
         </Box>
-        <Box marginTop="sm">
-          <OutlinedTextInput
+        <Box marginTop="md">
+          <FilledTextInput
             baseColor={theme.colors.whiteColor}
-            fontSize={RFValue(10)}
             inputContainerStyle={{
               backgroundColor: theme.colors.cardSecondary,
               borderRadius: 10,
               height: RFValue(52),
+              justifyContent: "center",
+              marginTop: 5,
+              paddingVertical: 50,
             }}
             label="RECIPIENT ACCOUNT NUMBER"
             labelTextStyle={{ color: theme.colors.primaryBlack }}
+            placeholder="3084676456"
+            placeholderTextColor="#222222"
             tintColor={theme.colors.cardSecondary}
           />
         </Box>
+        <Box marginTop="sm" />
         <RecipientInput
           bankName="FIRST BANK"
           recipientName="IHAYERE EHIZOJIE SOLOMON"
         />
-
+        <Box marginTop="sm" />
         <ListComponent
+          biggerPlaceHolder
           label="TRANSACTION CATEGORY"
           onPress={() => {}}
           placeholder="Education"
         />
-        <Box marginTop="sm">
-          <OutlinedTextInput
+        <Box marginTop="md">
+          <FilledTextInput
             baseColor={theme.colors.whiteColor}
-            fontSize={RFValue(10)}
             inputContainerStyle={{
               backgroundColor: theme.colors.cardSecondary,
               borderRadius: 10,
               height: RFValue(52),
+              justifyContent: "center",
+              marginTop: 5,
+              paddingVertical: 50,
             }}
             label="NARRATION"
             labelTextStyle={{ color: theme.colors.primaryBlack }}
+            placeholder="N0.00"
+            placeholderTextColor="#222222"
+            style={{
+              borderRadius: 10,
+              color: "#EFEFEF",
+              justifyContent: "center",
+            }}
             tintColor={theme.colors.cardSecondary}
           />
         </Box>
@@ -125,16 +150,18 @@ export default function BankTransfer() {
           alignItems="center"
           flex={1}
           flexDirection="row"
+          marginTop="md"
           paddingVertical="sm"
         >
           <Switch
             ios_backgroundColor="#3e3e3e"
             onValueChange={toggleSwitch}
+            style={{ height: 30 }}
             thumbColor="#f4f3f4"
             trackColor={{ false: "#616E88", true: "#2DA74C" }}
             value={isEnabled}
           />
-          <Text marginLeft="sm" variant="regular14">
+          <Text marginLeft="md" variant="medium14">
             Save as beneficiary for later
           </Text>
         </Box>
@@ -147,7 +174,7 @@ export default function BankTransfer() {
           labelProps={{ color: "whiteColor" }}
           labelVariant="medium12"
           marginBottom="xs"
-          marginTop="md"
+          marginTop="sml"
           onPress={() => onOpenDebitAccountModal()}
           paddingVertical="md"
         />
@@ -155,6 +182,7 @@ export default function BankTransfer() {
         <BaseButton
           alignItems="center"
           backgroundColor="confirmCard"
+          borderRadius="lg"
           height={RFValue(52)}
           justifyContent="center"
           marginVertical="sm"
@@ -164,6 +192,7 @@ export default function BankTransfer() {
           <Icon color="primaryColor" name="calender" size="sm" />
           <Text
             color="primaryColor"
+            marginTop="xs"
             paddingHorizontal="sm"
             textAlign="center"
             variant="medium14"

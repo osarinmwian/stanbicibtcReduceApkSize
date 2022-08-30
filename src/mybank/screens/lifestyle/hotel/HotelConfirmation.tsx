@@ -49,8 +49,6 @@ const HotelConfirmation: FC = ({
         label="DONE"
         labelProps={{ color: "whiteColor" }}
         labelVariant="medium12"
-        marginBottom="lg"
-        marginTop="md"
         // onPress={() => navigation.navigate("HotelConfirmation")}
         paddingVertical="md"
         width="100%"
@@ -69,7 +67,8 @@ const HotelConfirmation: FC = ({
         {renderHeader()}
         <Box
           backgroundColor="whiteColor"
-          borderRadius="md"
+          borderTopLeftRadius="md"
+          borderTopRightRadius="md"
           flex={1}
           padding="md"
         >
@@ -94,7 +93,7 @@ const HotelConfirmation: FC = ({
             </Box>
             <Box flexDirection="row" justifyContent="space-between">
               <Text>Going to</Text>
-              <Text variant="bold12">Victoria island, Land</Text>
+              <Text variant="bold12">Victoria island, Lagos</Text>
             </Box>
           </Box>
           {renderTranscationPin()}

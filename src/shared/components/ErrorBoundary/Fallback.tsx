@@ -19,10 +19,10 @@ const handleRestart = () => {
 function FallBack() {
   return (
     <Box alignItems="center" flex={1} justifyContent="center">
-      <Text fontSize={24} marginBottom="Ml">
+      <Text fontSize={24} marginBottom="md">
         Oops 😞!
       </Text>
-      <Text fontSize={16} marginTop="l">
+      <Text fontSize={16} marginTop="lg">
         We Encountered an error,
       </Text>
       <Pressable onPress={handleRestart}>

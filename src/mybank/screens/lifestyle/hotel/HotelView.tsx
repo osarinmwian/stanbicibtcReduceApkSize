@@ -35,6 +35,7 @@ import { Box } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 
 import BookHotel from "./components/BookHotel";
+import { MapImage } from "@/mybank/assets/svg";
 
 const hotelviewData = {
   id: 1,
@@ -73,16 +74,16 @@ const hotelviewData = {
     id: 1,
     img: mapcreenshot,
     region: {
-      latitude: 3.406_448,
-      longitude: 6.465_422,
-      latitudeDelta: 3.406_448,
-      longitudeDelta: 3.406_448,
+      latitude: 3.406448,
+      longitude: 6.465422,
+      latitudeDelta: 3.406448,
+      longitudeDelta: 3.406448,
     },
     markers: [
       {
         id: 1,
-        latitude: 6.431_401_715_747_725,
-        longitude: 3.430_374,
+        latitude: 6.431401715747725,
+        longitude: 3.430374,
         title: "Eko Hotel And Suites Victoria Island",
       },
     ],
@@ -226,18 +227,12 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
     } else {
       setcurrentphotoindex((previous) => previous + 1);
     }
-    // hotelviewData.hotelsImages.map((item, index) => {
-    //   if (index === currentphotoindex) {
-    //     setcurrentphoto(item);
-    //   }
-    // })
 
     // eslint-disable-next-line no-plusplus
     for (let index = 0; index <= hotelviewData.hotelsImages.length; index++) {
       if (index === currentphotoindex) {
         setcurrentphoto(hotelviewData.hotelsImages[index]);
       }
-      // console.log(hotelviewData.hotelsImages[i]);
     }
   };
   const handleSwipeRigth = () => {
@@ -392,8 +387,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
         ADDRESS
       </Text>
       <Box height={200} width="100%">
-        <MapView
-          // onRegionChange = {(e) => console.log(e)}
+        {/* <MapView
           region={hotelviewData.location.region}
           style={{ flex: 1, borderRadius: 10 }}
           zoomControlEnabled
@@ -409,7 +403,8 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
               title={marker.title}
             />
           ))}
-        </MapView>
+        </MapView> */}
+        <MapImage />
       </Box>
       <Box width="90%">
         <Text
@@ -461,7 +456,7 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
       <FlatList
         data={hotelviewData.reviews}
         horizontal
-        keyExtractor={({ index }) => `item-${index}`}
+        keyExtractor={(index) => `item-${index}`}
         renderItem={renderReviewItem}
         showsHorizontalScrollIndicator={false}
       />

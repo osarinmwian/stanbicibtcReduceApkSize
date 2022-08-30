@@ -55,20 +55,25 @@ export default function FxTransferNewRequestFirstScreen({
           </Box>
           <Box mb="md" mt="md">
             <ListComponent
-              label="Select PURCHASE TYPE"
+              biggerPlaceHolder
+              label="SELECT PURCHASE TYPE"
               onPress={() => {}}
               placeholder="Adult"
             />
+            <Box marginTop="md" />
             <ListComponent
-              label="Select TRANSACTION TYPE"
+              label="SELECT TRANSACTION TYPE"
               onPress={() => {}}
               placeholder=""
             />
+            <Box marginTop="md" />
             <ListComponent
+              biggerPlaceHolder
               label="SCHOOL FEES"
               onPress={() => {}}
               placeholder="IMAG_2021_12_CAC_FILE_..."
             />
+            <Box marginTop="sm" />
             <UploadComponent
               label="MEDICAL BILL"
               onPress={() => {}}

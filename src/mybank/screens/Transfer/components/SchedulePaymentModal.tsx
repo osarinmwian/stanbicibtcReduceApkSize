@@ -32,21 +32,22 @@ const SchedulePaymentModal: VFC<SchedulePaymentModalProps> = (props) => {
         snapPoints={snapPoints}
       >
         <BottomSheetScrollView>
-          <Box p="md">
+          <Box marginTop="md" p="md">
             <Text fontVariant="h6" fontWeight="bold" mb="md">
               Schedule payment
             </Text>
             <Box mb="md">
               <ListComponent
-                body="Select option"
                 label="Schedule type"
                 onPress={() => {}}
+                placeholder="Select option"
               />
+              <Box marginTop="md" />
               <ListComponent
-                body="DD/MM/YYYY"
                 iconName="calender"
                 label="Payment date"
                 onPress={() => {}}
+                placeholder="DD/MM/YYYY"
               />
             </Box>
           </Box>
