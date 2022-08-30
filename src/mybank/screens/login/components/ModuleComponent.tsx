@@ -1,20 +1,24 @@
 import { useNavigation } from "@react-navigation/native";
-import { Dimensions, Image, ImageSourcePropType } from "react-native";
+import { Dimensions } from "react-native";
 
+import { SvgIconPackType } from "@/shared/assets/icons";
+import { IconVector } from "@/shared/assets/icons/IconVector";
 import Pressable, { PressableProps } from "@/shared/components/Pressable";
 import { Text } from "@/shared/components/Typography";
+import { PaletteType } from "@/shared/theme/palette";
 
 interface ModuleProps {
   title: string;
   backgroundColor: PressableProps["backgroundColor"];
-  image: ImageSourcePropType;
+  iconName: SvgIconPackType;
   destination: string;
+  textColor: PaletteType;
 }
 
 const { width } = Dimensions.get("screen");
 
 export default function ModuleComponent(props: ModuleProps) {
-  const { title, backgroundColor, image, destination } = props;
+  const { title, backgroundColor, iconName, destination, textColor } = props;
   const navigation = useNavigation();
   return (
     <Pressable
@@ -28,12 +32,13 @@ export default function ModuleComponent(props: ModuleProps) {
       padding="sm"
       width={width / 3.5}
     >
-      <Image source={image} />
+      <IconVector name={iconName} stroke="white" />
       <Text
-        color="whiteColor"
+        color={textColor}
+        lineHeight={22}
         marginTop="sm"
         textAlign="center"
-        variant="regular8"
+        variant="regular12"
       >
         {title}
       </Text>

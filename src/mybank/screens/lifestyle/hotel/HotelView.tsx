@@ -227,18 +227,12 @@ const HotelView: FC = ({ navigation }: MyBankNavigationProps<"HotelView">) => {
     } else {
       setcurrentphotoindex((previous) => previous + 1);
     }
-    // hotelviewData.hotelsImages.map((item, index) => {
-    //   if (index === currentphotoindex) {
-    //     setcurrentphoto(item);
-    //   }
-    // })
 
     // eslint-disable-next-line no-plusplus
     for (let index = 0; index <= hotelviewData.hotelsImages.length; index++) {
       if (index === currentphotoindex) {
         setcurrentphoto(hotelviewData.hotelsImages[index]);
       }
-      // console.log(hotelviewData.hotelsImages[i]);
     }
   };
   const handleSwipeRigth = () => {

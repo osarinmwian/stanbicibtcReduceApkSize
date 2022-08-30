@@ -22,7 +22,9 @@ export default function BankTransferEnterPin() {
         paddingHorizontal="md"
         paddingVertical="md"
       >
-        <Text variant="medium12">Transaction confirmation</Text>
+        <Text marginTop="xs" variant="medium12">
+          Transaction confirmation
+        </Text>
         <Text color="textTint" mb="md" mt="xs" variant="regular10">
           Enter your 4 digit pin to continue
         </Text>
@@ -38,9 +40,9 @@ export default function BankTransferEnterPin() {
         />
         <Text
           color="primaryColor"
-          mt="sm"
+          mt="lg"
           textAlign="center"
-          variant="medium12"
+          variant="medium14"
         >
           USE HARDWARETOKEN INSTEAD
         </Text>

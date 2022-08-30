@@ -1,7 +1,13 @@
 import { Formik } from "formik";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, Image } from "react-native";
+import {
+  Dimensions,
+  FlatList,
+  Image,
+  KeyboardAvoidingView,
+  ScrollView,
+} from "react-native";
 
 // import * as Yup from "yup";
 import { loginBackground } from "@/mybank/assets/image";
@@ -37,23 +43,6 @@ export default function LoginScreen({
     bankingId: "",
     password: "",
   };
-  // const validationSchema = Yup.object().shape({
-  //   bankingId: Yup.string()
-  //     .required("Internet Banking is required")
-  //     .label("Internet Banking Id"),
-  //   password: Yup.string()
-  //     .matches(/\w*[a-z]\w*/, "Password must have a small letter")
-  //     .matches(/\w*[A-Z]\w*/, "Password must have a capital letter")
-  //     .matches(/\d/, "Password must have a number")
-  //     .matches(
-  //       /[ !"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~-]/,
-  //       "Must contain a special character",
-  //     )
-  //     .min(8, ({ min }) => `Password must be at least ${min} characters`)
-  //     .required("Password is required")
-  //     .label("Password"),
-  // });
-
   return (
     <StatusbarImageContainer imageName={loginBackground}>
       <Box paddingHorizontal="md">
@@ -68,123 +57,137 @@ export default function LoginScreen({
           <Image source={logo} style={LOGO} />
         </Box>
 
-        <Pressable>
-          <Text color="whiteColor" marginTop="md">
-            {t("mybank.login.newHere")}
-          </Text>
-        </Pressable>
-
-        <Formik
-          initialValues={InitialValues}
-          onSubmit={() => onSubmit()}
-          // validationSchema={validationSchema}
+        <KeyboardAvoidingView
+          style={{ height: Dimensions.get("window").height - 100 }}
         >
-          {({
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            values,
-            // errors,
-            // touched,
-          }) => (
+          <ScrollView
+            contentContainerStyle={{ paddingBottom: 100 }}
+            showsVerticalScrollIndicator={false}
+          >
+            <Box padding="sm" />
+
+            <Pressable>
+              <Text color="whiteColor" marginTop="md">
+                {t("mybank.login.newHere")}
+              </Text>
+            </Pressable>
+
+            <Formik
+              initialValues={InitialValues}
+              onSubmit={() => onSubmit()}
+              // validationSchema={validationSchema}
+            >
+              {({
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                values,
+                // errors,
+                // touched,
+              }) => (
+                <Box>
+                  <Box marginTop="lg">
+                    <OutlinedTextInput
+                      baseColor="#fff"
+                      label={"Internet Banking ID".toUpperCase()}
+                      labelTextStyle={{ color: "#fff" }}
+                      onBlur={handleBlur("bankingId")}
+                      onChangeText={handleChange("bankingId")}
+                      style={{ color: "#fff" }}
+                      tintColor="#fff"
+                      value={values.bankingId}
+                    />
+                  </Box>
+
+                  <Box marginVertical="sm">
+                    <OutlinedTextInput
+                      baseColor="#fff"
+                      label={"Password".toUpperCase()}
+                      labelTextStyle={{ color: "#fff" }}
+                      onBlur={handleBlur("password")}
+                      onChangeText={handleChange("password")}
+                      secureTextEntry
+                      style={{ color: "#fff", marginVertical: 16 }}
+                      tintColor="#fff"
+                      value={values.password}
+                    />
+                  </Box>
+
+                  <Pressable marginVertical="sm">
+                    <Text color="whiteColor" variant="medium14">
+                      {t("mybank.login.forgotPassword")}
+                    </Text>
+                  </Pressable>
+
+                  <PrimaryButton
+                    alignItems="center"
+                    backgroundColor="whiteColor"
+                    justifyContent="center"
+                    label={t("mybank.login.login")}
+                    labelProps={{ color: "primaryColor" }}
+                    labelVariant="medium14"
+                    marginBottom="xs"
+                    marginTop="md"
+                    onPress={() => handleSubmit()}
+                    paddingVertical="mmd"
+                  />
+                </Box>
+              )}
+            </Formik>
+
             <Box>
-              <Box marginTop="md">
-                <OutlinedTextInput
-                  baseColor="#fff"
-                  label="Internet Banking ID"
-                  labelTextStyle={{ color: "#fff" }}
-                  onBlur={handleBlur("bankingId")}
-                  onChangeText={handleChange("bankingId")}
-                  style={{ color: "#fff" }}
-                  tintColor="#fff"
-                  value={values.bankingId}
-                />
-              </Box>
-
-              <Box marginVertical="sm">
-                <OutlinedTextInput
-                  baseColor="#fff"
-                  label="Password"
-                  labelTextStyle={{ color: "#fff" }}
-                  onBlur={handleBlur("password")}
-                  onChangeText={handleChange("password")}
-                  secureTextEntry
-                  style={{ color: "#fff", marginVertical: 16 }}
-                  tintColor="#fff"
-                  value={values.password}
-                />
-              </Box>
-
-              <Pressable marginVertical="sm">
-                <Text color="whiteColor" variant="medium10">
-                  {t("mybank.login.forgotPassword")}
-                </Text>
-              </Pressable>
-
               <PrimaryButton
                 alignItems="center"
-                backgroundColor="whiteColor"
+                borderColor="whiteColor"
+                borderWidth={2}
                 justifyContent="center"
-                label={t("mybank.login.login")}
-                labelProps={{ color: "primaryColor" }}
-                labelVariant="medium10"
+                label={t("mybank.login.loginWithOnePass")}
+                labelProps={{ color: "whiteColor" }}
+                labelVariant="medium14"
                 marginBottom="xs"
-                marginTop="md"
-                onPress={() => handleSubmit()}
+                marginVertical="xs"
                 paddingVertical="mmd"
               />
-            </Box>
-          )}
-        </Formik>
 
-        <Box>
-          <PrimaryButton
-            alignItems="center"
-            borderColor="whiteColor"
-            borderWidth={2}
-            justifyContent="center"
-            label={t("mybank.login.loginWithOnePass")}
-            labelProps={{ color: "whiteColor" }}
-            labelVariant="medium10"
-            marginBottom="xs"
-            marginVertical="xs"
-            paddingVertical="mmd"
-          />
-
-          <PrimaryButton
-            backgroundColor="transparent"
-            justifyContent="center"
-            label={t("mybank.login.loginWithFingerPrint")}
-            labelProps={{ color: "whiteColor" }}
-            labelVariant="medium10"
-            // leftIcon="fingerprint"
-            marginVertical="lg"
-          />
-        </Box>
-
-        <Box alignItems="center" width="100%">
-          <FlatList
-            contentContainerStyle={{
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-            data={modules}
-            horizontal
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <ModuleComponent
-                backgroundColor={
-                  item.backgroundColor as PressableProps["backgroundColor"]
-                }
-                destination={item.destination}
-                image={item.image}
-                title={item.title}
+              <PrimaryButton
+                backgroundColor="transparent"
+                justifyContent="center"
+                label={t("mybank.login.loginWithFingerPrint")}
+                labelProps={{ color: "whiteColor" }}
+                labelVariant="medium14"
+                leftIcon="fingerprint"
+                leftIconProps={{ size: "md" }}
+                marginVertical="lg"
               />
-            )}
-            showsHorizontalScrollIndicator={false}
-            showsVerticalScrollIndicator={false}
-          />
-        </Box>
+            </Box>
+            <Box height={30} />
+
+            <Box alignItems="center" width="100%">
+              <FlatList
+                contentContainerStyle={{
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+                data={modules}
+                horizontal
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                  <ModuleComponent
+                    backgroundColor={
+                      item.backgroundColor as PressableProps["backgroundColor"]
+                    }
+                    destination={item.destination}
+                    iconName={item.iconName}
+                    textColor={item.textColor}
+                    title={item.title}
+                  />
+                )}
+                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
+              />
+            </Box>
+          </ScrollView>
+        </KeyboardAvoidingView>
       </Box>
     </StatusbarImageContainer>
   );

@@ -1,6 +1,6 @@
 import { VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { ScrollView } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -8,7 +8,7 @@ import { loginBackground } from "@/mybank/assets/image";
 import { CategoryButton } from "@/mybank/components/Buttons/CategoryButton";
 import { PfmNavigationProps } from "@/mybank/navigation/types";
 import { SvgIconPackType } from "@/shared/assets/icons";
-import { Box, ImageBackground, SafeAreaView } from "@/shared/components/Layout";
+import { Box, ImageBackground } from "@/shared/components/Layout";
 import { Text } from "@/shared/components/Typography";
 import { PaletteType } from "@/shared/theme/palette";
 
@@ -56,56 +56,60 @@ export const EditCategoryNameScreen: VFC<
 > = () => {
   const { t } = useTranslation();
   return (
-    <SafeAreaView flex={1}>
-      <ImageBackground flex={1} source={loginBackground}>
-        <Box height={RFValue(50)} />
-        <Box
-          backgroundColor="whiteColor"
-          borderTopEndRadius="sm"
-          borderTopStartRadius="sm"
-          flex={1}
-        >
-          <ScrollView>
-            <Box flex={1}>
-              <Box padding="md" pb="none">
-                <CategoryButton
-                  {...{
-                    title: "Education",
-                    leftIcon: "graduationCap",
-                    subtitle: "140 transactions",
-                    amount: "30,000,000",
-                    rightColor: "pfmeducationblue",
-                    backgroundColor: "pfmeducationbackgroundcolor",
-                  }}
-                />
-                <Box alignItems="center" flexDirection="row" my="lg">
-                  <Text fontSize={16} fontStyle="normal" fontWeight="500">
-                    {t("pfm.modifyTransferLimit")}
-                  </Text>
-                </Box>
+    <ImageBackground flex={1} source={loginBackground}>
+      <StatusBar
+        animated
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent
+      />
+      <Box height={RFValue(70)} />
+      <Box
+        backgroundColor="whiteColor"
+        borderTopEndRadius="sm"
+        borderTopStartRadius="sm"
+        flex={1}
+      >
+        <ScrollView>
+          <Box flex={1}>
+            <Box padding="md" pb="none">
+              <CategoryButton
+                {...{
+                  title: "Education",
+                  leftIcon: "graduationCap",
+                  subtitle: "140 transactions",
+                  amount: "30,000,000",
+                  rightColor: "pfmeducationblue",
+                  backgroundColor: "pfmeducationbackgroundcolor",
+                }}
+              />
+              <Box alignItems="center" flexDirection="row" my="lg">
+                <Text fontSize={16} fontStyle="normal" fontWeight="500">
+                  {t("pfm.modifyTransferLimit")}
+                </Text>
+              </Box>
 
-                <Box
-                  backgroundColor="cardSecondary"
-                  borderRadius="sm"
-                  mb="sm"
-                  mt="none"
-                  padding="md"
-                >
-                  <Text color="darkGrey" fontWeight="400">
-                    {t("pfm.newCategoryName")}
-                  </Text>
-                  <TextInput placeholder="Enter name" />
-                </Box>
-                <Box justifyContent="center">
-                  <Text fontSize={RFValue(12)} fontWeight="400">
-                    {t("pfm.onlyCategoryNameInfo")}
-                  </Text>
-                </Box>
+              <Box
+                backgroundColor="cardSecondary"
+                borderRadius="sm"
+                mb="sm"
+                mt="none"
+                padding="md"
+              >
+                <Text color="darkGrey" fontWeight="400">
+                  {t("pfm.newCategoryName")}
+                </Text>
+                <TextInput placeholder="Enter name" />
+              </Box>
+              <Box justifyContent="center">
+                <Text fontSize={RFValue(12)} fontWeight="400">
+                  {t("pfm.onlyCategoryNameInfo")}
+                </Text>
               </Box>
             </Box>
-          </ScrollView>
-        </Box>
-      </ImageBackground>
-    </SafeAreaView>
+          </Box>
+        </ScrollView>
+      </Box>
+    </ImageBackground>
   );
 };

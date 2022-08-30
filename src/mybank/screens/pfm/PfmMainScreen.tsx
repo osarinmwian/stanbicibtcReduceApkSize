@@ -258,7 +258,7 @@ const PfmMainScreen: VFC<PfmNavigationProps<"PfmMainScreen">> = ({
                   </Text>
                 </Box>
                 {data.map((dataItem, index) => (
-                  <Box key={`transacton-category-main-${dataItem}`} mb="md">
+                  <Box key={`transacton-category-main-${dataItem.id}`} mb="md">
                     <CategoryButton
                       {...dataItem}
                       onPress={() =>

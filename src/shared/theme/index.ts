@@ -289,6 +289,13 @@ const lightTheme = createTheme({
       fontFamily: "BentonSans-Regular",
       fontSize: RFValue(14),
       fontWeight: "400",
+      lineHeight: RFValue(16),
+    },
+    regular16: {
+      color: "textColor",
+      fontFamily: "BentonSans-Regular",
+      fontSize: RFValue(16),
+      fontWeight: "400",
       lineHeight: RFValue(20),
     },
     regular22: {

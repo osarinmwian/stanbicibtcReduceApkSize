@@ -69,6 +69,7 @@ export type BuyDataStack = {
   BuyDataLandingPage: undefined;
   ConfirmBuyData: undefined;
 };
+
 // Tab routes
 type MyTabRoutes = {
   HomeLandingPage: {
